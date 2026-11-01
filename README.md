@@ -10,13 +10,13 @@ This is a **distribution-only repository**: installers, installation helpers, ch
 
 ### Option 1: Install with a few clicks
 
-1. [Download Power Portal Desktop 1.6.1 for Windows x64](https://github.com/luisgnserra/powerportaldesktop/releases/download/v1.6.1/PowerPortal-Setup-1.6.1-x64.exe).
+1. [Download Power Portal Desktop 1.6.2 for Windows x64](https://github.com/luisgnserra/powerportaldesktop/releases/download/v1.6.2/PowerPortal-Setup-1.6.2-x64.exe).
 2. Run the installer and approve the Windows administrator prompt.
 3. Choose the installation folder and default language.
 4. Finish installation, then close and reopen Power BI Desktop.
 5. Open a PBIX and select **External Tools > Power Portal**.
 
-**Windows may warn that the publisher is unknown:** version 1.6.1 is not digitally signed. Only proceed if you trust this distribution. If your organization blocks unsigned software, contact IT rather than bypassing its policy.
+**Windows may warn that the publisher is unknown:** version 1.6.2 is not digitally signed. Only proceed if you trust this distribution. If your organization blocks unsigned software, contact IT rather than bypassing its policy.
 
 [Latest release](https://github.com/luisgnserra/powerportaldesktop/releases/latest) · [Installation guide](docs/INSTALLATION.md) · [Configuration](docs/CONFIGURATION.md) · [Troubleshooting](docs/TROUBLESHOOTING.md)
 
@@ -28,11 +28,23 @@ The installer adds **Power Portal** to **External Tools** in Power BI Desktop. C
 
 The supplied ribbon screenshot uses Portuguese: **Ferramentas externas** means **External Tools**. Power Portal opens a **separate window connected to Power BI**, not an embedded report visual or a new internal Power BI pane.
 
-![Power Portal 1.6.1 home, full sidebar and startup connection notice](docs/images/home.png)
+![Power Portal 1.6.2 home, full sidebar and startup connection notice](docs/images/home.png)
 
 **Already have Power BI open?** When launched from a shortcut, Power Portal detects open local models and displays a connection notice. Choose **Find open models**, select your file, and connect. You can then query its data and send supported changes back with confirmation.
 
 [See all ten tools, connection screens and direct Power BI actions in the illustrated guide](docs/SCREENSHOTS.md).
+
+### Built-in update checks
+
+Starting in **1.6.2**, the installed application checks the latest official GitHub Release when opened. If a newer stable version exists, it shows **Update now**. Click it to download, verify SHA-256/size, and start the installer automatically.
+
+Windows asks for administrator authorization. Only Power Portal closes; Power BI remains open. Save/export unsent tool edits first. Failed downloads or canceled authorization leave an explicit error and a retry option.
+
+![New-version notification and Update now button](docs/images/update-available.png)
+
+The screenshot uses a **simulated future 1.6.3 notification** to illustrate the UI, not an announcement of a published version. [Update guide](docs/UPDATES.md).
+
+**On 1.6.1 or older? Install 1.6.2 manually once** to enable this feature. You can also use **Check for updates** to retry a failed/offline check. The updater never installs merely because you opened the application.
 
 ### Option 2: Install from PowerShell
 
@@ -40,13 +52,13 @@ Open **Windows PowerShell 5.1 or PowerShell 7 on Windows**:
 
 ```powershell
 $script = Join-Path $env:TEMP 'Install-PowerPortal.ps1'
-Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/luisgnserra/powerportaldesktop/v1.6.1/install.ps1' -OutFile $script
+Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/luisgnserra/powerportaldesktop/v1.6.2/install.ps1' -OutFile $script
 # Review the downloaded script before running it.
 Get-Content -LiteralPath $script
 & $script
 ```
 
-The helper downloads **version 1.6.1**, verifies its pinned SHA-256 checksum, and opens the same installer. It does not install Node.js, PHP, a .NET SDK, or build anything.
+The helper downloads **version 1.6.2**, verifies its pinned SHA-256 checksum, and opens the same installer. It does not install Node.js, PHP, a .NET SDK, or build anything.
 
 For unattended installation, run the same helper from an **administrator PowerShell window**:
 
@@ -113,7 +125,7 @@ The installer suggests the Windows UI language. A user's later language selectio
 - Theme application uses **visible Windows UI Automation** and requires confirmation. There is no supported generic theme-write API for an open Desktop PBIX; dialogs are not hidden.
 - TOM connects to the semantic model, not the active report's filters, pages or visual placement. An HTML measure does not automatically add a visual to a report.
 - Report-analysis and measure-audit scores are heuristics, not measured visual performance.
-- Local model data is not sent to the Power Portal website. User-opened external links, online presentations and DirectQuery sources can require network access.
+- Local model data is not sent to the Power Portal website. The updater requests only official GitHub release metadata/installers, never model contents. User-opened external links, online presentations and DirectQuery sources can require network access.
 - Documentation exports, metadata backups and change logs can contain confidential model details. Store and share them appropriately.
 
 Read the [usage and safety guide](docs/USAGE.md) before modifying a model.

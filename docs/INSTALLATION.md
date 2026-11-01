@@ -11,7 +11,7 @@ Allow approximately 1 GB of free disk space for the download and installed runti
 ## Simple installation
 
 1. Open the [latest Release](https://github.com/luisgnserra/powerportaldesktop/releases/latest).
-2. Under **Assets**, download `PowerPortal-Setup-1.6.1-x64.exe` for this release. Do not download the automatically generated source archives as an installer.
+2. Under **Assets**, download `PowerPortal-Setup-1.6.2-x64.exe` for this release. Do not download the automatically generated source archives as an installer.
 3. Optionally [verify SHA-256](#verify-the-installer).
 4. Run the executable and approve User Account Control.
 5. Accept the displayed dependency terms, choose a folder, and select a default language using the flags. Windows UI language is suggested; unsupported languages default to English.
@@ -36,12 +36,12 @@ Launching the Windows shortcut instead displays a notice when open models are de
 
 ```powershell
 $script = Join-Path $env:TEMP 'Install-PowerPortal.ps1'
-Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/luisgnserra/powerportaldesktop/v1.6.1/install.ps1' -OutFile $script
+Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/luisgnserra/powerportaldesktop/v1.6.2/install.ps1' -OutFile $script
 Get-Content -LiteralPath $script
 & $script
 ```
 
-This versioned URL pins the helper to the 1.6.1 release. It does not silently track future releases. The helper also pins the installer filename and SHA-256 checksum, downloads over HTTPS, verifies the executable before running it, and checks installation registration after a successful installer exit.
+This versioned URL pins the helper to the 1.6.2 release. It does not silently track future releases. The helper also pins the installer filename and SHA-256 checksum, downloads over HTTPS, verifies the executable before running it, and checks installation registration after a successful installer exit.
 
 ### Unattended installation
 
@@ -78,7 +78,7 @@ Do not paste an unreviewed script into `Invoke-Expression`. If a downloaded scri
 After checksum verification, an administrator can run:
 
 ```powershell
-$setup = "$env:USERPROFILE\Downloads\PowerPortal-Setup-1.6.1-x64.exe"
+$setup = "$env:USERPROFILE\Downloads\PowerPortal-Setup-1.6.2-x64.exe"
 $process = Start-Process -FilePath $setup -ArgumentList '/S' -Wait -PassThru
 if ($process.ExitCode -ne 0) { throw "Installer failed: $($process.ExitCode)" }
 ```
@@ -87,15 +87,15 @@ The PowerShell helper is recommended because it checks both the download and the
 
 ## Verify the installer
 
-Expected SHA-256 for **1.6.1 x64**:
+Expected SHA-256 for **1.6.2 x64**:
 
 ```text
-8DE83D00D3005839C5BD73BA726C0445461554304FA03EBAD6643D81D46A89DC
+4E021A00BB2D44238CB5FBAD94233EACF53C3E6392460269D1583392C9D97C3C
 ```
 
 ```powershell
-$file = "$env:USERPROFILE\Downloads\PowerPortal-Setup-1.6.1-x64.exe"
-$expected = '8DE83D00D3005839C5BD73BA726C0445461554304FA03EBAD6643D81D46A89DC'
+$file = "$env:USERPROFILE\Downloads\PowerPortal-Setup-1.6.2-x64.exe"
+$expected = '4E021A00BB2D44238CB5FBAD94233EACF53C3E6392460269D1583392C9D97C3C'
 if ((Get-FileHash -LiteralPath $file -Algorithm SHA256).Hash -ne $expected) {
     throw 'Checksum mismatch. Do not run this installer.'
 }
@@ -109,7 +109,9 @@ Download a newer official installer and run it over the existing installation. T
 
 Close Power Portal yourself before an unattended update. Restart Power BI Desktop after installation so it reloads the External Tools registration. Existing per-user language/sidebar preferences and local backups are retained.
 
-There is **no automatic updater configured in this release**. Check Releases for updates. Downgrades are not certified; save your work and contact support before using an older installer.
+Starting with **1.6.2**, startup checks and **Check for updates** notify you about newer official releases. **Update now** downloads/verifies the installer and starts an elevated silent update in the current installation folder, only after your click. Power BI is not closed. Reopen Power Portal after installation completes. [Update details](UPDATES.md).
+
+Versions **1.6.1 and older require a one-time manual upgrade to 1.6.2**. Downgrades are not certified; save your work and contact support before using an older installer.
 
 ## Uninstall
 

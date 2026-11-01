@@ -16,6 +16,7 @@
 !/docs/TROUBLESHOOTING.md
 !/docs/SCREENSHOTS.md
 !/docs/RELEASING.md
+!/docs/UPDATES.md
 !/docs/images/
 /docs/images/*
 !/docs/images/powerbi-external-tools.png
@@ -34,6 +35,7 @@
 !/docs/images/measure-auditor.png
 !/docs/images/consulting-training.png
 !/docs/images/collapsed-sidebar.png
+!/docs/images/update-available.png
 !/.github/
 /.github/*
 !/.github/ISSUE_TEMPLATE/

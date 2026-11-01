@@ -1,5 +1,23 @@
 # Release notes
 
+## 1.6.2
+
+- Startup checks for the latest official stable GitHub Release in the installed application.
+- **Update now** downloads and verifies the exact x64 EXE using GitHub's SHA-256 asset digest and size, then starts an elevated silent installer in the current installation folder.
+- Installation only happens after the user's click and Windows authorization. Power BI is not closed; unsent-edit warnings are displayed.
+- Update/model-write concurrency protection, bounded HTTPS downloads, explicit offline/checksum/UAC errors and retry controls.
+- Eight-language notification, manual **Check for updates**, refreshed screenshots and English update guide.
+
+The application remains unsigned. Install 1.6.2 manually once if you are on 1.6.1 or older. Reopen Power Portal after an update finishes.
+
+### Assets
+
+- `PowerPortal-Setup-1.6.2-x64.exe`
+- `SHA256SUMS.txt`
+- `install.ps1`
+
+Validated version comparisons, official release validation, streamed hash/size rejection, partial cleanup, installer launch arguments, UI consent/localization/error behavior and packaged registration. No actual application update or customer model write was performed during automated tests.
+
 ## 1.6.1
 
 - Sidebar catalog fits the supported window height without a navigation scrollbar, in all eight languages and both expanded/collapsed modes.

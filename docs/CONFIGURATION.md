@@ -79,6 +79,7 @@ Relevant subfolders include:
 
 - `themes`: generated JSON and `.applied.json` verification exports.
 - `model-changes`: local records of confirmed write attempts and their outcomes.
+- `updates`: verified downloaded update installers. Partial downloads are removed on handled failures. Verified installers can be retained after installation; do not mistake them for model backups.
 - The profile also stores per-user interface preferences.
 
 Metadata backups are stored locally and the exact backup path is displayed after a successful write. Exported documentation and downloaded/generated files use the destination selected by the user.
@@ -90,6 +91,7 @@ To reset UI preferences, select another language or expand the sidebar in the ap
 ## Network and accounts
 
 - Local previews and bundled tools do not require a Power Portal account.
+- The installed app checks public GitHub release metadata at startup. Its main-process updater downloads official assets over HTTPS after **Update now**. No model names, expressions, rows or credentials are included in update requests.
 - Model-enabled local windows block arbitrary remote web requests.
 - Consulting links and videos open the default browser on request.
 - TV Tool uses an isolated online presentation window for published Power BI/Microsoft pages. It does not share local model access; its Microsoft login is separate and does not persist between sessions.
@@ -98,4 +100,4 @@ To reset UI preferences, select another language or expand the sidebar in the ap
 
 There are no API keys, passwords, portal credentials or source-code configuration files to supply for installation.
 
-[Installation](INSTALLATION.md) · [Usage and safety](USAGE.md)
+[Installation](INSTALLATION.md) · [Usage and safety](USAGE.md) · [Update behavior](UPDATES.md)
