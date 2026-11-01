@@ -23,7 +23,11 @@ The development/source run does not download or install updates.
 
 ![Update notification and user-controlled Update now button](images/update-available.png)
 
-The screenshot is a **simulated future 1.6.3 notification** inside 1.6.2, demonstrating the UI only. It is not a release announcement.
+The screenshot is a **simulated future 1.6.4 notification** inside 1.6.3, demonstrating the UI only. It is not an announcement of 1.6.4.
+
+### Test the real 1.6.2 to 1.6.3 notification
+
+Keep version **1.6.2** installed, reopen it or click **Check for updates**. The published stable **1.6.3** should appear with **Update now**. Do not install 1.6.3 manually first if you want to observe this notification. Click the update button only when ready to test installation and approve Windows authorization.
 
 The app reports installer launch, not a verified completed installation: installation completes after the old app closes. Check the displayed application version after reopening. Windows can still block the unsigned installer or require IT approval.
 

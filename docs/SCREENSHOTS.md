@@ -2,7 +2,7 @@
 
 [Back to home](../README.md) · [Install](INSTALLATION.md) · [Safety guide](USAGE.md)
 
-**Application screenshots: Power Portal Desktop 1.6.2, English interface.**
+**Application screenshots: Power Portal Desktop 1.6.3, English interface.**
 The screenshots use **synthetic demonstration metadata and query values**, not a customer PBIX. Connected states illustrate supported UI actions; no customer model was changed to make these images. Native file-picker labels can follow the Windows language. The actual Power BI ribbon screenshot was supplied by the owner and cropped to remove the private file title.
 
 ## Open Power Portal from External Tools
@@ -35,7 +35,7 @@ Launching from the External Tools ribbon instead passes that Desktop instance's 
 
 ![New version available with Update now and the authorization/unsent-edits warning](images/update-available.png)
 
-The screenshot uses a **synthetic future 1.6.3 result** to show the notification in version 1.6.2. It is not a claim that 1.6.3 has been published.
+The screenshot uses a **synthetic future 1.6.4 result** to show the notification in version 1.6.3. It is not a claim that 1.6.4 has been published. Users on 1.6.2 can test the real 1.6.3 notification now.
 
 The installed application checks the latest stable official Release at startup. Click **Update now** to download and verify the installer, then approve the Windows administrator request. It updates the existing installation folder and closes only Power Portal. **Connecting or checking alone never installs anything.** Save/export unsent tool edits first and reopen the app when installation finishes.
 

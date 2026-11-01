@@ -1,5 +1,19 @@
 # Release notes
 
+## 1.6.3
+
+- Stable version increment to allow users on 1.6.2 to test the real update notification and **Update now** flow.
+- No functional changes; includes the same consent-based updater and ten tools.
+- Refreshed installer/checksum/helper, documentation and screenshots for 1.6.3.
+
+Keep 1.6.2 installed to test: reopen the application or click **Check for updates**. Choose **Update now** only when ready to install. The maintainer did not update the user's local installation during publication.
+
+### Assets
+
+- `PowerPortal-Setup-1.6.3-x64.exe`
+- `SHA256SUMS.txt`
+- `install.ps1`
+
 ## 1.6.2
 
 - Startup checks for the latest official stable GitHub Release in the installed application.
