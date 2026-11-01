@@ -13,7 +13,7 @@ The development/source run does not download or install updates.
 ## Update flow
 
 1. Open Power Portal. With internet available, it checks for a newer release.
-2. If available, a notification displays the version and **Update now**.
+2. If available, a prominent amber notification displays the version and **Update now**. It stays visible while scrolling, with a gentle glow animation; reduced-motion preferences disable the animation. The check button is also highlighted.
 3. **Save/export unsent tool edits** before proceeding. Model writes/themes already in progress block updating.
 4. Click **Update now**. There is no installation merely from opening the app or checking for updates.
 5. The main process downloads the official x64 installer over HTTPS and checks its exact size and SHA-256 against the published GitHub Release asset metadata.
@@ -23,17 +23,19 @@ The development/source run does not download or install updates.
 
 ![Update notification and user-controlled Update now button](images/update-available.png)
 
-The screenshot is a **simulated future 1.6.4 notification** inside 1.6.3, demonstrating the UI only. It is not an announcement of 1.6.4.
+The screenshot is a **simulated future 1.6.5 notification** inside 1.6.4, demonstrating the UI only. It is not an announcement of 1.6.5.
 
-### Test the real 1.6.2 to 1.6.3 notification
+### Test the real notification from 1.6.2 or 1.6.3
 
-Keep version **1.6.2** installed, reopen it or click **Check for updates**. The published stable **1.6.3** should appear with **Update now**. Do not install 1.6.3 manually first if you want to observe this notification. Click the update button only when ready to test installation and approve Windows authorization.
+Keep version **1.6.2 or 1.6.3** installed, reopen it or click **Check for updates**. The published stable **1.6.4** should appear with **Update now**. Do not install 1.6.4 manually first if you want to observe this notification. Older versions use their original banner; the new visual styling appears after updating to 1.6.4 and is used for subsequent updates. Click the update button only when ready to test installation and approve Windows authorization.
 
 The app reports installer launch, not a verified completed installation: installation completes after the old app closes. Check the displayed application version after reopening. Windows can still block the unsigned installer or require IT approval.
 
 ## Checks, retries and failures
 
 **Check for updates** in the top actions retries the check manually. There is no background polling loop or forced installation.
+
+In 1.6.4, a successful check finding no newer version does not leave an "up to date" banner occupying a line. Errors and available updates still remain visible.
 
 - Offline, firewall/proxy or GitHub API rate-limit errors are displayed in the update notice; local tools remain usable.
 - Invalid release metadata, missing asset digest, checksum mismatch, unexpected redirect hosts, excessive download size or timeouts prevent execution.

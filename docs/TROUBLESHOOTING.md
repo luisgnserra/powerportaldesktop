@@ -23,7 +23,7 @@
 | SHA-256 mismatch | **Do not run the file.** Remove/move the invalid download, get the official asset again, and compare against the published checksum. |
 | GitHub download fails | Check connectivity, proxy/firewall restrictions and the Release URL. IT can distribute the verified EXE through an approved channel. |
 | PowerShell reports an underlying connection/TLS send error | Use the documented TLS 1.2 line before fetching the helper in Windows PowerShell, then retry. The native application updater already uses HTTPS/TLS independently. |
-| SmartScreen/unknown publisher | 1.6.3 is unsigned. Verify the checksum and publisher source; ask IT if your device blocks unsigned programs. |
+| SmartScreen/unknown publisher | 1.6.4 is unsigned. Verify the checksum and publisher source; ask IT if your device blocks unsigned programs. |
 | Updates are not checked on startup | Versions 1.6.1 and older need a one-time manual upgrade to 1.6.2. The development/source run intentionally does not update. |
 | Update check fails/offline/HTTP 403 or 429 | Local tools remain available. Check internet/proxy/firewall and retry **Check for updates**. GitHub API rate limits can apply. |
 | Update now fails checksum or size verification | The installer was not executed. Retry or download the official Release manually; do not run a corrupt cached file. |
@@ -40,7 +40,7 @@ Email **[contato@consultoriaexcelencia.com.br](mailto:contato@consultoriaexcelen
 
 Include:
 
-- Power Portal version (1.6.3 for this release).
+- Power Portal version (1.6.4 for this release).
 - Windows version and Power BI Desktop version/edition.
 - Installation method (wizard or PowerShell).
 - Steps to reproduce and the exact visible error.

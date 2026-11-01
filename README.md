@@ -10,13 +10,13 @@ This is a **distribution-only repository**: installers, installation helpers, ch
 
 ### Option 1: Install with a few clicks
 
-1. [Download Power Portal Desktop 1.6.3 for Windows x64](https://github.com/luisgnserra/powerportaldesktop/releases/download/v1.6.3/PowerPortal-Setup-1.6.3-x64.exe).
+1. [Download Power Portal Desktop 1.6.4 for Windows x64](https://github.com/luisgnserra/powerportaldesktop/releases/download/v1.6.4/PowerPortal-Setup-1.6.4-x64.exe).
 2. Run the installer and approve the Windows administrator prompt.
 3. Choose the installation folder and default language.
 4. Finish installation, then close and reopen Power BI Desktop.
 5. Open a PBIX and select **External Tools > Power Portal**.
 
-**Windows may warn that the publisher is unknown:** version 1.6.3 is not digitally signed. Only proceed if you trust this distribution. If your organization blocks unsigned software, contact IT rather than bypassing its policy.
+**Windows may warn that the publisher is unknown:** version 1.6.4 is not digitally signed. Only proceed if you trust this distribution. If your organization blocks unsigned software, contact IT rather than bypassing its policy.
 
 [Latest release](https://github.com/luisgnserra/powerportaldesktop/releases/latest) · [Installation guide](docs/INSTALLATION.md) · [Configuration](docs/CONFIGURATION.md) · [Troubleshooting](docs/TROUBLESHOOTING.md)
 
@@ -28,21 +28,23 @@ The installer adds **Power Portal** to **External Tools** in Power BI Desktop. C
 
 The supplied ribbon screenshot uses Portuguese: **Ferramentas externas** means **External Tools**. Power Portal opens a **separate window connected to Power BI**, not an embedded report visual or a new internal Power BI pane.
 
-![Power Portal 1.6.3 home, full sidebar and startup connection notice](docs/images/home.png)
+![Power Portal 1.6.4 home, full sidebar and startup connection notice](docs/images/home.png)
 
 **Already have Power BI open?** When launched from a shortcut, Power Portal detects open local models and displays a connection notice. Choose **Find open models**, select your file, and connect. You can then query its data and send supported changes back with confirmation.
+
+Once connected, the status is summarized in the header rather than occupying a separate banner.
 
 [See all ten tools, connection screens and direct Power BI actions in the illustrated guide](docs/SCREENSHOTS.md).
 
 ### Built-in update checks
 
-Starting in **1.6.2**, the installed application checks the latest official GitHub Release when opened. If a newer stable version exists, it shows **Update now**. Click it to download, verify SHA-256/size, and start the installer automatically.
+Starting in **1.6.2**, the installed application checks the latest official GitHub Release when opened. If a newer stable version exists, it shows **Update now**. In 1.6.4 the banner is prominent, animated and stays visible while scrolling, respecting reduced-motion preferences. No persistent "up to date" line is shown. Click to download, verify SHA-256/size, and start the installer automatically.
 
 Windows asks for administrator authorization. Only Power Portal closes; Power BI remains open. Save/export unsent tool edits first. Failed downloads or canceled authorization leave an explicit error and a retry option.
 
 ![New-version notification and Update now button](docs/images/update-available.png)
 
-The screenshot uses a **simulated future 1.6.4 notification** to illustrate the UI, not an announcement of a published version. **Version 1.6.3 is now published:** users on 1.6.2 can reopen the app or click **Check for updates** to test the real notification. [Update guide](docs/UPDATES.md).
+The screenshot uses a **simulated future 1.6.5 notification** to illustrate the UI, not an announcement of a published version. **Version 1.6.4 is now published:** users on 1.6.2 or 1.6.3 can reopen the app or click **Check for updates** to test the real notification. [Update guide](docs/UPDATES.md).
 
 **On 1.6.1 or older? Install 1.6.2 manually once** to enable this feature. You can also use **Check for updates** to retry a failed/offline check. The updater never installs merely because you opened the application.
 
@@ -53,13 +55,13 @@ Open **Windows PowerShell 5.1 or PowerShell 7 on Windows**:
 ```powershell
 $script = Join-Path $env:TEMP 'Install-PowerPortal.ps1'
 [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
-Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/luisgnserra/powerportaldesktop/v1.6.3/install.ps1' -OutFile $script
+Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/luisgnserra/powerportaldesktop/v1.6.4/install.ps1' -OutFile $script
 # Review the downloaded script before running it.
 Get-Content -LiteralPath $script
 & $script
 ```
 
-The helper downloads **version 1.6.3**, verifies its pinned SHA-256 checksum, and opens the same installer. It does not install Node.js, PHP, a .NET SDK, or build anything.
+The helper downloads **version 1.6.4**, verifies its pinned SHA-256 checksum, and opens the same installer. It does not install Node.js, PHP, a .NET SDK, or build anything.
 
 For unattended installation, run the same helper from an **administrator PowerShell window**:
 
@@ -89,8 +91,8 @@ The desktop application includes its required runtime components. You do not nee
 
 | Tool | What it does |
 |---|---|
-| Theme generator | Live local preview, theme JSON import/export, and confirmed application to the connected Power BI window. |
-| TV Tool | Present published report pages or local images, configure timing and transitions, and export presentation HTML. |
+| Theme generator | Highlighted JSON import, live local preview, JSON export, and confirmed direct sending at the end of the page. |
+| TV Tool | Open a working official example in the browser, present published report pages or local images, configure timing/transitions, and export HTML. |
 | Calendar generator | Read existing calendar metadata and dates, export scripts, or create a calculated calendar table with confirmation and backup. |
 | Performance checklist | Assess a report using the portal's checklist and available model metadata. |
 | Component library | Build HTML/DAX components and create an HTML measure in a connected model. |

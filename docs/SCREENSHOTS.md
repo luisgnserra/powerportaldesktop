@@ -2,7 +2,7 @@
 
 [Back to home](../README.md) · [Install](INSTALLATION.md) · [Safety guide](USAGE.md)
 
-**Application screenshots: Power Portal Desktop 1.6.3, English interface.**
+**Application screenshots: Power Portal Desktop 1.6.4, English interface.**
 The screenshots use **synthetic demonstration metadata and query values**, not a customer PBIX. Connected states illustrate supported UI actions; no customer model was changed to make these images. Native file-picker labels can follow the Windows language. The actual Power BI ribbon screenshot was supplied by the owner and cropped to remove the private file title.
 
 ## Open Power Portal from External Tools
@@ -35,7 +35,9 @@ Launching from the External Tools ribbon instead passes that Desktop instance's 
 
 ![New version available with Update now and the authorization/unsent-edits warning](images/update-available.png)
 
-The screenshot uses a **synthetic future 1.6.4 result** to show the notification in version 1.6.3. It is not a claim that 1.6.4 has been published. Users on 1.6.2 can test the real 1.6.3 notification now.
+The screenshot uses a **synthetic future 1.6.5 result** to show the notification in version 1.6.4. It is not a claim that 1.6.5 has been published. Users on 1.6.2 or 1.6.3 can test the real 1.6.4 notification now.
+
+In 1.6.4, the amber banner stays visible while scrolling and gently animates unless reduced motion is enabled. No persistent "up to date" banner occupies space.
 
 The installed application checks the latest stable official Release at startup. Click **Update now** to download and verify the installer, then approve the Windows administrator request. It updates the existing installation folder and closes only Power Portal. **Connecting or checking alone never installs anything.** Save/export unsent tool edits first and reopen the app when installation finishes.
 
@@ -60,13 +62,15 @@ These are not limited to downloading text or JSON:
 
 ![Table, column and measure selectors with a queried demonstration result](images/live-model-data.png)
 
-Select a table/column/measure and query a value, row count, column sample or date range. The connected notice explains how to refresh metadata or send confirmed changes. This data panel appears where relevant, such as calendars and components.
+Select a table/column/measure and query a value, row count, column sample or date range. Connected status is summarized in the green header text; its tooltip reminds you to save a PBIX copy. This data panel appears where relevant, such as calendars and components.
 
 ### Theme generator
 
-![Live theme preview and prominent Send theme directly to Power BI action](images/theme-generator.png)
+![Highlighted JSON import and live theme preview](images/theme-generator.png)
 
-Edit colors/fonts and watch the live preview. Use **Send theme directly to Power BI** to apply to the selected Desktop window, or export JSON for manual import.
+Use the highlighted **Load report theme (JSON)** area, edit colors/fonts and watch the live preview. Export JSON, or scroll to the end of the page, below the form and preview, to use **Send theme directly to Power BI**.
+
+![Send theme directly to Power BI at the end of the generator page](images/theme-send.png)
 
 To start from the existing report theme, save its JSON in Desktop and load it here. A semantic-model connection does not read report themes. Direct sending still uses the **visible import dialog**: no supported generic Desktop theme API eliminates it. Do not interact with Power BI while automation runs.
 
@@ -96,9 +100,11 @@ Select the existing model measure, format its expression, then choose **Update m
 
 ### Power BI TV Tool
 
-![TV controls, HTML export and local illustrative presentation](images/tv-tool.png)
+![Highlighted TV Tool in action example at the top of the tool](images/tv-tool.png)
 
-Rotate published report pages or local images, set durations/transitions, preview and export HTML. The screen above uses the bundled illustrative presentation. TV does **not** rotate pages of the open local PBIX. Private published reports require appropriate Microsoft sign-in/licensing/permissions.
+The top **TV Tool in action** banner opens a [working official example](https://www.powerportal.com.br/tv_tool/painel_exemplo_power_bi_tv_tool.html) in your default browser, requiring internet but sending no local model data. The form's local illustrative presentation remains available.
+
+Rotate published report pages or local images, set durations/transitions, preview and export HTML. TV does **not** rotate pages of the open local PBIX. Private published reports require appropriate Microsoft sign-in/licensing/permissions.
 
 ### Performance checklist
 

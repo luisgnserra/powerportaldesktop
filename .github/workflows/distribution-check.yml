@@ -23,7 +23,7 @@ jobs:
             'docs/SCREENSHOTS.md', 'docs/RELEASING.md', 'docs/UPDATES.md',
             'docs/images/powerbi-external-tools.png', 'docs/images/home.png',
             'docs/images/connect-open-model.png', 'docs/images/live-model-data.png',
-            'docs/images/theme-generator.png', 'docs/images/calendar-generator.png',
+            'docs/images/theme-generator.png', 'docs/images/theme-send.png', 'docs/images/calendar-generator.png',
             'docs/images/components.png', 'docs/images/dax-formatter.png',
             'docs/images/tv-tool.png', 'docs/images/performance-checklist.png',
             'docs/images/contrast-calculator.png', 'docs/images/project-analyzer.png',

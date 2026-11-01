@@ -1,5 +1,19 @@
 # Release notes
 
+## 1.6.4
+
+- Prominent TV Tool example at the top opens the working official dashboard in the default browser; local illustrative slides remain available.
+- Available-update notification has stronger colors, larger version text, a sticky banner and gentle animation respecting reduced-motion preferences.
+- No persistent "up to date" line. Connected state is compact in the header, with the PBIX-copy reminder in its tooltip.
+- Theme JSON import is highlighted; **Send theme directly to Power BI** is now at the end of the page. Removed redundant explanatory paragraphs from the tool, retaining native confirmation and documented automation limitations.
+- All new text supports eight languages. Updated installer, helper, checksum and 18 screenshots, including the end-of-page theme action.
+
+### Assets
+
+- `PowerPortal-Setup-1.6.4-x64.exe`
+- `SHA256SUMS.txt`
+- `install.ps1`
+
 ## 1.6.3
 
 - Stable version increment to allow users on 1.6.2 to test the real update notification and **Update now** flow.

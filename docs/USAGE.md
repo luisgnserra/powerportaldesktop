@@ -8,6 +8,8 @@ Start from Power BI's External Tools ribbon for an automatic local model connect
 
 Use the sidebar collapse button and flags as needed. The connection header shows the file name when available, rather than the internal database GUID.
 
+After connecting, a compact green status in the header replaces the larger connected banner. Its tooltip reminds you to save a separate PBIX copy. Supported changes still require confirmation.
+
 [Illustrated walkthrough of all screens and Power BI interactions](SCREENSHOTS.md).
 
 ## Read-only work
@@ -23,9 +25,9 @@ ZIP limits are 50 MB compressed, 500 MB extracted, 10,000 files and 64 MB per en
 ## Themes
 
 1. In Power BI Desktop, save the current theme JSON from the Themes menu if you want to edit it.
-2. In Power Portal's theme generator, import that JSON. A TOM model connection cannot retrieve the report theme.
+2. In Power Portal's theme generator, use the highlighted **Load report theme (JSON)** area. A TOM model connection cannot retrieve the report theme.
 3. Edit colors/fonts/backgrounds while watching the local live preview.
-4. Export JSON, or choose **Send theme directly to Power BI**.
+4. Export JSON, or scroll to the end of the page, below the settings and preview, and choose **Send theme directly to Power BI**.
 5. Verify the file name in the confirmation, approve, and do not interact with Power BI during import.
 6. Save the PBIX in Power BI when satisfied.
 
@@ -35,7 +37,9 @@ There is no supported generic Desktop API for applying a theme to any open PBIX 
 
 The live preview is a local implementation of the site's theme screen, not a pixel-identical representation of every Power BI visual.
 
-![Theme live preview and Send theme directly to Power BI button](images/theme-generator.png)
+![Highlighted theme import and live preview](images/theme-generator.png)
+
+![Send theme directly to Power BI at the end of the page](images/theme-send.png)
 
 ## Write operations
 
@@ -74,6 +78,8 @@ Select a model measure in the DAX formatter, format its expression, then use **U
 ![Model measure selection, formatted DAX and Update measure in Power BI](images/dax-formatter.png)
 
 ## TV Tool
+
+The highlighted **TV Tool in action** area at the top opens a [working official dashboard example](https://www.powerportal.com.br/tv_tool/painel_exemplo_power_bi_tv_tool.html) in your default browser. It requires internet and does not send the local model. The form's illustrative example still loads local sample slides.
 
 Use published report links or local images, adjust durations/transitions and export HTML. Service links preserve supported page identifiers. The tool does **not** rotate pages of the locally open PBIX.
 
