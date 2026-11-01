@@ -2,7 +2,7 @@
 
 [Back to home](../README.md) · [Install](INSTALLATION.md) · [Safety guide](USAGE.md)
 
-**Application screenshots: Power Portal Desktop 1.6.4, English interface.**
+**Application screenshots: Power Portal Desktop 1.7.0, English interface.**
 The screenshots use **synthetic demonstration metadata and query values**, not a customer PBIX. Connected states illustrate supported UI actions; no customer model was changed to make these images. Native file-picker labels can follow the Windows language. The actual Power BI ribbon screenshot was supplied by the owner and cropped to remove the private file title.
 
 ## Open Power Portal from External Tools
@@ -17,7 +17,7 @@ The Portuguese tab **Ferramentas externas** corresponds to **External Tools** in
 
 ![Home gallery, all ten tool buttons and the startup notice](images/home.png)
 
-Home shows the official tool covers and short descriptions. The sidebar fits all ten tools **without navigation scrolling** at supported window sizes. **Consulting and training** sits below **About the development**, with the ownership logos below. Language flags stay in two rows.
+Home shows ten official tool covers and the new Desktop-only relationship-map cover, with short descriptions. The sidebar fits all eleven tools **without navigation scrolling** at supported window sizes. **Consulting and training** sits below **About the development**, with the ownership logos below. Language flags stay in two rows.
 
 ![Collapsed sidebar keeps tool icons, flags, About and consulting accessible](images/collapsed-sidebar.png)
 
@@ -35,7 +35,7 @@ Launching from the External Tools ribbon instead passes that Desktop instance's 
 
 ![New version available with Update now and the authorization/unsent-edits warning](images/update-available.png)
 
-The screenshot uses a **synthetic future 1.6.5 result** to show the notification in version 1.6.4. It is not a claim that 1.6.5 has been published. Users on 1.6.2 or 1.6.3 can test the real 1.6.4 notification now.
+The screenshot uses a **synthetic future 1.7.1 result** to show the notification in version 1.7.0. It is not a claim that 1.7.1 has been published. Users on 1.6.2 or newer can receive the real 1.7.0 notification now.
 
 In 1.6.4, the amber banner stays visible while scrolling and gently animates unless reduced motion is enabled. No persistent "up to date" banner occupies space.
 
@@ -55,6 +55,7 @@ These are not limited to downloading text or JSON:
 | Create calendar in Power BI | Creates a new calculated date table in the semantic model. | Confirmation and metadata backup; refresh afterward in Desktop. |
 | Create HTML measure in Power BI | Creates a new measure in the chosen model table. | Confirmation and metadata backup; add the HTML visual manually. |
 | Update measure in Power BI | Writes the formatted DAX to the selected existing measure. | Confirmation, metadata backup and concurrent-change protection. |
+| Apply/delete relationship in Power BI | Creates, edits, activates/deactivates or deletes the selected column relationship. | Native confirmation, metadata backup, stale-state checks and engine validation; RLS/integrity settings preserved. |
 
 **Save a separate PBIX copy before applying changes.** Confirm the target file and expression, then save the PBIX in Desktop afterward. The app never silently saves the PBIX.
 
@@ -97,6 +98,16 @@ A compatible HTML visual must be added to the report manually and assigned that 
 Select the existing model measure, format its expression, then choose **Update measure in Power BI** to submit the DAX back to that measure. Copy/export actions are separate. The update refuses concurrent expression changes and requires confirmation.
 
 ## Remaining tools
+
+### Relationship map
+
+![Freely draggable table boxes, Facts/Dimensions groups and relationship indicators](images/relationship-map.png)
+
+The new Desktop-only tool shows real table links, cardinalities, filter arrows and inactive dashed lines. Drag boxes/groups freely, zoom/pan, assign friendly names/icons, and customize group and line colors. Visual layouts save automatically per model and can be exported/imported as JSON without submitting model writes.
+
+![Relationship fields with Apply and Delete actions](images/relationship-editor.png)
+
+Select a line to inspect its exact columns, cardinality, filter direction and active state. **Apply relationship to Power BI** or **Delete relationship in Power BI** commits each edit after native confirmation and backup. Imported projects remain read-only. Styling does not rename tables or change Power BI's native diagram. [Complete walkthrough and safety limits](RELATIONSHIPS.md).
 
 ### Power BI TV Tool
 

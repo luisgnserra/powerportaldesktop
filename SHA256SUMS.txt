@@ -1,1 +1,1 @@
-1dde8204c950879dca6f634faaa2882c7a03e14474fec786074a04f7216c184f  PowerPortal-Setup-1.6.4-x64.exe
+dc94cfb7b4a17a683470d1ae9af5169d6b27427750a5b4ae25ad4106dac1067f  PowerPortal-Setup-1.7.0-x64.exe

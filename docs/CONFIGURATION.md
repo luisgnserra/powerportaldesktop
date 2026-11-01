@@ -6,7 +6,7 @@
 
 Use the sidebar flags to switch languages. The preference persists in your Windows user's local application profile. The sidebar's collapsed/expanded state is saved too.
 
-All ten tool buttons remain visible without sidebar scrolling at supported window sizes. Long localized labels use up to two visible lines and keep their complete accessible name/tooltip. **Consulting and training** is below **About the development**. [Expanded and collapsed screenshots](SCREENSHOTS.md#home-and-navigation).
+All eleven tool buttons remain visible without sidebar scrolling at supported window sizes. Long localized labels use up to two visible lines and keep their complete accessible name/tooltip. **Consulting and training** is below **About the development**. [Expanded and collapsed screenshots](SCREENSHOTS.md#home-and-navigation).
 
 Language precedence:
 
@@ -45,7 +45,7 @@ If launched from a Windows shortcut:
 2. A startup notice appears when open local models are detected. Use **Find open models** and select the file name.
 3. Use **Read Power BI model** to reload metadata after changes.
 
-Detection only lists availability; it does not automatically select a file or write to one. Once connected, the notice provides **Refresh Power BI model** and explains confirmed adjustments. [Connection screenshots](SCREENSHOTS.md#connect-to-a-file-already-open-in-power-bi).
+Detection only lists availability; it does not automatically select a file or write to one. Once connected, a compact green header status indicates confirmed adjustments; use **Refresh Power BI model** to reload metadata. [Connection screenshots](SCREENSHOTS.md#connect-to-a-file-already-open-in-power-bi).
 
 With a single open model, reading can discover it automatically. If several models are open, explicitly select the intended file. Similar file names are distinguished by a number; Power BI window titles do not always expose full paths.
 
@@ -79,6 +79,7 @@ Relevant subfolders include:
 
 - `themes`: generated JSON and `.applied.json` verification exports.
 - `model-changes`: local records of confirmed write attempts and their outcomes.
+- `relationship-diagrams`: per-model visual layouts, including table/group names, icons, colors, positions and viewport. Export/import the layout from [Relationship map](RELATIONSHIPS.md#save-and-share-the-organization); it never submits model writes.
 - `updates`: verified downloaded update installers. Partial downloads are removed on handled failures. Verified installers can be retained after installation; do not mistake them for model backups.
 - The profile also stores per-user interface preferences.
 

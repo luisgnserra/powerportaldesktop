@@ -43,7 +43,7 @@ The live preview is a local implementation of the site's theme screen, not a pix
 
 ## Write operations
 
-Supported semantic-model writes are creating a measure, updating the selected measure's DAX, and creating a new calculated calendar table.
+Supported semantic-model writes are creating a measure, updating the selected measure's DAX, creating a new calculated calendar table, and creating/editing/deleting relationships.
 
 Before any write:
 
@@ -84,6 +84,18 @@ The highlighted **TV Tool in action** area at the top opens a [working official 
 Use published report links or local images, adjust durations/transitions and export HTML. Service links preserve supported page identifiers. The tool does **not** rotate pages of the locally open PBIX.
 
 Private reports require appropriate Power BI licensing, Microsoft authentication, permissions and embedding policy. Report reload is not a semantic-model data refresh. Local image slides are the offline presentation option.
+
+## Relationship map
+
+Open the new tool to understand the model's table links in a draggable canvas, with cardinalities, filter arrows, inactive dashed lines, custom groups, colors and friendly names/icons.
+
+![Relationship map with Facts and Dimensions groups](images/relationship-map.png)
+
+Visual organization saves automatically per model and can be exported/imported as JSON. It does not rename model objects, change Power BI's native layout or submit relationship edits.
+
+For a live connection, **Apply relationship to Power BI** and **Delete relationship in Power BI** submit each edit after native confirmation and a metadata backup. Endpoints, cardinalities, filter direction and active state can be changed; existing security/integrity settings are preserved. Stale metadata, duplicate links, inconsistent column types and engine validation errors are rejected explicitly.
+
+**Relationships affect report results and filters. Save a PBIX copy first, then save the PBIX in Desktop afterward.** There is no automatic full-model rollback. [Complete relationship tutorial, persistence and limits](RELATIONSHIPS.md).
 
 ## Diagnostics and privacy
 

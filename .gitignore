@@ -17,6 +17,7 @@
 !/docs/SCREENSHOTS.md
 !/docs/RELEASING.md
 !/docs/UPDATES.md
+!/docs/RELATIONSHIPS.md
 !/docs/images/
 /docs/images/*
 !/docs/images/powerbi-external-tools.png
@@ -25,6 +26,8 @@
 !/docs/images/live-model-data.png
 !/docs/images/theme-generator.png
 !/docs/images/theme-send.png
+!/docs/images/relationship-map.png
+!/docs/images/relationship-editor.png
 !/docs/images/calendar-generator.png
 !/docs/images/components.png
 !/docs/images/dax-formatter.png

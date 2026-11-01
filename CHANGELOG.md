@@ -1,5 +1,20 @@
 # Release notes
 
+## 1.7.0
+
+- New Desktop-only **Relationship map**, the eleventh tool: draggable table boxes, pan/zoom, cardinality/filter-direction indicators and inactive dashed links.
+- Custom Facts/Dimensions/business groups with names, icons, colors and collective dragging. Friendly table headings and colored relationship lines.
+- Automatic per-model visual-layout saving and validated JSON import/export, with visible save failures and retry. Visual properties do not rename model objects or alter the native Power BI diagram.
+- Live TOM creation, editing, activation/deactivation and deletion of relationships. Every edit requires explicit native confirmation, metadata backup and stale-state protection; existing RLS/integrity settings are preserved.
+- Imported projects remain read-only; unsupported relationships and engine validation failures are explicit.
+- Eight-language interface, compact eleven-item sidebar without scrolling, refreshed installer and English guides with 20 screenshots.
+
+### Assets
+
+- `PowerPortal-Setup-1.7.0-x64.exe`
+- `SHA256SUMS.txt`
+- `install.ps1`
+
 ## 1.6.4
 
 - Prominent TV Tool example at the top opens the working official dashboard in the default browser; local illustrative slides remain available.
