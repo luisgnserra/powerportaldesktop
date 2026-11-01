@@ -52,6 +52,7 @@ Open **Windows PowerShell 5.1 or PowerShell 7 on Windows**:
 
 ```powershell
 $script = Join-Path $env:TEMP 'Install-PowerPortal.ps1'
+[Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
 Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/luisgnserra/powerportaldesktop/v1.6.2/install.ps1' -OutFile $script
 # Review the downloaded script before running it.
 Get-Content -LiteralPath $script

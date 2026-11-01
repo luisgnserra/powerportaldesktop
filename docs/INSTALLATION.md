@@ -36,12 +36,15 @@ Launching the Windows shortcut instead displays a notice when open models are de
 
 ```powershell
 $script = Join-Path $env:TEMP 'Install-PowerPortal.ps1'
+[Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
 Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/luisgnserra/powerportaldesktop/v1.6.2/install.ps1' -OutFile $script
 Get-Content -LiteralPath $script
 & $script
 ```
 
 This versioned URL pins the helper to the 1.6.2 release. It does not silently track future releases. The helper also pins the installer filename and SHA-256 checksum, downloads over HTTPS, verifies the executable before running it, and checks installation registration after a successful installer exit.
+
+The TLS line enables HTTPS TLS 1.2 in this PowerShell process for older Windows PowerShell defaults. It does not change Windows security or execution policies.
 
 ### Unattended installation
 
