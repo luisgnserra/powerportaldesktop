@@ -10,15 +10,29 @@ This is a **distribution-only repository**: installers, installation helpers, ch
 
 ### Option 1: Install with a few clicks
 
-1. [Download Power Portal Desktop 1.6.0 for Windows x64](https://github.com/luisgnserra/powerportaldesktop/releases/download/v1.6.0/PowerPortal-Setup-1.6.0-x64.exe).
+1. [Download Power Portal Desktop 1.6.1 for Windows x64](https://github.com/luisgnserra/powerportaldesktop/releases/download/v1.6.1/PowerPortal-Setup-1.6.1-x64.exe).
 2. Run the installer and approve the Windows administrator prompt.
 3. Choose the installation folder and default language.
 4. Finish installation, then close and reopen Power BI Desktop.
 5. Open a PBIX and select **External Tools > Power Portal**.
 
-**Windows may warn that the publisher is unknown:** version 1.6.0 is not digitally signed. Only proceed if you trust this distribution. If your organization blocks unsigned software, contact IT rather than bypassing its policy.
+**Windows may warn that the publisher is unknown:** version 1.6.1 is not digitally signed. Only proceed if you trust this distribution. If your organization blocks unsigned software, contact IT rather than bypassing its policy.
 
 [Latest release](https://github.com/luisgnserra/powerportaldesktop/releases/latest) · [Installation guide](docs/INSTALLATION.md) · [Configuration](docs/CONFIGURATION.md) · [Troubleshooting](docs/TROUBLESHOOTING.md)
+
+### Launch from Power BI's External Tools ribbon
+
+The installer adds **Power Portal** to **External Tools** in Power BI Desktop. Click the icon with your PBIX open to launch the companion application and read that file's local model automatically.
+
+![Power Portal installed in the Power BI Desktop External Tools ribbon](docs/images/powerbi-external-tools.png)
+
+The supplied ribbon screenshot uses Portuguese: **Ferramentas externas** means **External Tools**. Power Portal opens a **separate window connected to Power BI**, not an embedded report visual or a new internal Power BI pane.
+
+![Power Portal 1.6.1 home, full sidebar and startup connection notice](docs/images/home.png)
+
+**Already have Power BI open?** When launched from a shortcut, Power Portal detects open local models and displays a connection notice. Choose **Find open models**, select your file, and connect. You can then query its data and send supported changes back with confirmation.
+
+[See all ten tools, connection screens and direct Power BI actions in the illustrated guide](docs/SCREENSHOTS.md).
 
 ### Option 2: Install from PowerShell
 
@@ -26,13 +40,13 @@ Open **Windows PowerShell 5.1 or PowerShell 7 on Windows**:
 
 ```powershell
 $script = Join-Path $env:TEMP 'Install-PowerPortal.ps1'
-Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/luisgnserra/powerportaldesktop/v1.6.0/install.ps1' -OutFile $script
+Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/luisgnserra/powerportaldesktop/v1.6.1/install.ps1' -OutFile $script
 # Review the downloaded script before running it.
 Get-Content -LiteralPath $script
 & $script
 ```
 
-The helper downloads **version 1.6.0**, verifies its pinned SHA-256 checksum, and opens the same installer. It does not install Node.js, PHP, a .NET SDK, or build anything.
+The helper downloads **version 1.6.1**, verifies its pinned SHA-256 checksum, and opens the same installer. It does not install Node.js, PHP, a .NET SDK, or build anything.
 
 For unattended installation, run the same helper from an **administrator PowerShell window**:
 
@@ -73,7 +87,19 @@ The desktop application includes its required runtime components. You do not nee
 | Measure auditor | Review model measures or supplied DAX using heuristic checks. |
 | DAX formatter | Format locally, export/copy, or update a selected connected measure with confirmation. |
 
-Also includes a home gallery, a collapsible sidebar, ownership/development information, and a consulting and training area with the two featured videos.
+Also includes a home gallery, a collapsible sidebar with all ten tools visible without sidebar scrolling at supported window sizes, ownership/development information, and a consulting and training area with the two featured videos. **Consulting and training** is below **About the development**.
+
+### Changes that interact directly with your open Power BI file
+
+| Action | Direct interaction |
+|---|---|
+| Refresh/read model and query samples | Reads the selected local model; does not edit it. |
+| Send theme directly to Power BI | Imports theme JSON into the selected Desktop window through visible UI Automation, with confirmation and verification. |
+| Create calendar in Power BI | Creates a new calculated table, with metadata backup and confirmation. Refresh in Desktop afterward. |
+| Create HTML measure in Power BI | Creates a measure in the selected table, with backup and confirmation. Place a compatible HTML visual manually. |
+| Update measure in Power BI | Updates the selected measure's DAX, with backup, confirmation and concurrent-change checks. |
+
+**Connecting alone never writes changes. Save a PBIX copy first, review each confirmation, and save the PBIX yourself afterward.** [Screenshots and step-by-step examples](docs/SCREENSHOTS.md#direct-interactions-with-the-open-power-bi-file).
 
 ## Eight languages
 
@@ -110,6 +136,6 @@ Microsoft, Power BI and Microsoft Fabric are trademarks of Microsoft. MVP identi
 
 ## Support and distribution
 
-[Troubleshooting and support](docs/TROUBLESHOOTING.md) · [Release notes](CHANGELOG.md) · [Distribution notice](DISTRIBUTION.md)
+[Troubleshooting and support](docs/TROUBLESHOOTING.md) · [Release notes](CHANGELOG.md) · [Distribution notice](DISTRIBUTION.md) · [Release maintenance](docs/RELEASING.md)
 
 Use **Release assets** to download the application. GitHub's automatic "Source code" ZIP/TAR archives contain only this distribution repository's documentation and installer helper, not the application or its source code.

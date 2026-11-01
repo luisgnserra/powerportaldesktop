@@ -1,5 +1,24 @@
 # Release notes
 
+## 1.6.1
+
+- Sidebar catalog fits the supported window height without a navigation scrollbar, in all eight languages and both expanded/collapsed modes.
+- **Consulting and training** moved below **About the development**, above the ownership logos.
+- Startup notice detects available open Power BI models when launched independently and offers explicit connection.
+- Connected notice explains querying and confirmed changes, with a PBIX-copy reminder and a model refresh button.
+- English illustrated documentation covers the External Tools ribbon, every tool, model selection, queries and direct-send buttons.
+- Updated installer, pinned PowerShell helper, checksums and release manifest remain synchronized.
+
+Validated the sidebar at 680, 768 and 900 pixel window heights in eight languages, startup/selection/refresh without model writes, and packaged registration/installer closure. Documentation screenshots use synthetic data; no customer file was changed.
+
+### Assets
+
+- `PowerPortal-Setup-1.6.1-x64.exe`
+- `SHA256SUMS.txt`
+- `install.ps1`
+
+The application remains unsigned. Direct theme sending still uses visible Desktop UI Automation. See the [illustrated guide](docs/SCREENSHOTS.md) and [usage/safety guide](docs/USAGE.md).
+
 ## 1.6.0
 
 Initial public installer release in this distribution-only repository.

@@ -22,7 +22,8 @@
 | `-Silent` asks for administrator PowerShell | Close that terminal and launch PowerShell **Run as administrator**, then retry. |
 | SHA-256 mismatch | **Do not run the file.** Remove/move the invalid download, get the official asset again, and compare against the published checksum. |
 | GitHub download fails | Check connectivity, proxy/firewall restrictions and the Release URL. IT can distribute the verified EXE through an approved channel. |
-| SmartScreen/unknown publisher | 1.6.0 is unsigned. Verify the checksum and publisher source; ask IT if your device blocks unsigned programs. |
+| SmartScreen/unknown publisher | 1.6.1 is unsigned. Verify the checksum and publisher source; ask IT if your device blocks unsigned programs. |
+| No startup connection notice | Detection needs an open local semantic model, not merely Desktop's welcome screen. Use **Find open models** after opening a PBIX. If detection fails, check the visible error and reconnect. |
 | Installer cannot close the running app | Save your work, close Power Portal manually and retry. Only the exact installed executable is targeted. Power BI is not closed. |
 | Email button does nothing | Configure a default email client, use **Copy email**, or write to the address below manually. |
 | Online TV report cannot sign in/load | Verify Microsoft account, report permissions, license, embedding restrictions and internet access. Use local images for offline TV. |
@@ -33,7 +34,7 @@ Email **[contato@consultoriaexcelencia.com.br](mailto:contato@consultoriaexcelen
 
 Include:
 
-- Power Portal version (1.6.0 for this release).
+- Power Portal version (1.6.1 for this release).
 - Windows version and Power BI Desktop version/edition.
 - Installation method (wizard or PowerShell).
 - Steps to reproduce and the exact visible error.

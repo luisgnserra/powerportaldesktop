@@ -11,7 +11,7 @@ Allow approximately 1 GB of free disk space for the download and installed runti
 ## Simple installation
 
 1. Open the [latest Release](https://github.com/luisgnserra/powerportaldesktop/releases/latest).
-2. Under **Assets**, download `PowerPortal-Setup-1.6.0-x64.exe` for this release. Do not download the automatically generated source archives as an installer.
+2. Under **Assets**, download `PowerPortal-Setup-1.6.1-x64.exe` for this release. Do not download the automatically generated source archives as an installer.
 3. Optionally [verify SHA-256](#verify-the-installer).
 4. Run the executable and approve User Account Control.
 5. Accept the displayed dependency terms, choose a folder, and select a default language using the flags. Windows UI language is suggested; unsupported languages default to English.
@@ -19,6 +19,14 @@ Allow approximately 1 GB of free disk space for the download and installed runti
 7. Close and reopen Power BI Desktop. Open a PBIX and select **External Tools > Power Portal**.
 
 The installation is machine-wide and includes desktop/Start menu shortcuts and the external-tool registration. The application itself does not require elevation during normal use.
+
+![Power Portal icon in Power BI Desktop's External Tools ribbon](images/powerbi-external-tools.png)
+
+Click **External Tools > Power Portal** with your PBIX open. The screenshot's **Ferramentas externas** is the Portuguese ribbon label. The icon launches a **separate companion window** and passes the open file's local model connection; it is not an embedded visual or internal report pane.
+
+![Startup notice offers connection to files already open in Power BI](images/connect-open-model.png)
+
+Launching the Windows shortcut instead displays a notice when open models are detected. Select **Find open models**, verify the file name and connect. No change is made simply by detecting or connecting. [See the illustrated walkthrough](SCREENSHOTS.md).
 
 **Unsigned release:** Windows may display SmartScreen or an unknown-publisher warning. SHA-256 verifies that you have the published file; it is not a digital publisher signature. Do not bypass enterprise restrictions. Ask IT if approval is needed.
 
@@ -28,12 +36,12 @@ The installation is machine-wide and includes desktop/Start menu shortcuts and t
 
 ```powershell
 $script = Join-Path $env:TEMP 'Install-PowerPortal.ps1'
-Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/luisgnserra/powerportaldesktop/v1.6.0/install.ps1' -OutFile $script
+Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/luisgnserra/powerportaldesktop/v1.6.1/install.ps1' -OutFile $script
 Get-Content -LiteralPath $script
 & $script
 ```
 
-This versioned URL pins the helper to the 1.6.0 release. It does not silently track future releases. The helper also pins the installer filename and SHA-256 checksum, downloads over HTTPS, verifies the executable before running it, and checks installation registration after a successful installer exit.
+This versioned URL pins the helper to the 1.6.1 release. It does not silently track future releases. The helper also pins the installer filename and SHA-256 checksum, downloads over HTTPS, verifies the executable before running it, and checks installation registration after a successful installer exit.
 
 ### Unattended installation
 
@@ -70,7 +78,7 @@ Do not paste an unreviewed script into `Invoke-Expression`. If a downloaded scri
 After checksum verification, an administrator can run:
 
 ```powershell
-$setup = "$env:USERPROFILE\Downloads\PowerPortal-Setup-1.6.0-x64.exe"
+$setup = "$env:USERPROFILE\Downloads\PowerPortal-Setup-1.6.1-x64.exe"
 $process = Start-Process -FilePath $setup -ArgumentList '/S' -Wait -PassThru
 if ($process.ExitCode -ne 0) { throw "Installer failed: $($process.ExitCode)" }
 ```
@@ -79,15 +87,15 @@ The PowerShell helper is recommended because it checks both the download and the
 
 ## Verify the installer
 
-Expected SHA-256 for **1.6.0 x64**:
+Expected SHA-256 for **1.6.1 x64**:
 
 ```text
-EB38DFCCF6909F4B5BEFD01A77B04399B23D3B552653D8FB3893E39AB55066D7
+8DE83D00D3005839C5BD73BA726C0445461554304FA03EBAD6643D81D46A89DC
 ```
 
 ```powershell
-$file = "$env:USERPROFILE\Downloads\PowerPortal-Setup-1.6.0-x64.exe"
-$expected = 'EB38DFCCF6909F4B5BEFD01A77B04399B23D3B552653D8FB3893E39AB55066D7'
+$file = "$env:USERPROFILE\Downloads\PowerPortal-Setup-1.6.1-x64.exe"
+$expected = '8DE83D00D3005839C5BD73BA726C0445461554304FA03EBAD6643D81D46A89DC'
 if ((Get-FileHash -LiteralPath $file -Algorithm SHA256).Hash -ne $expected) {
     throw 'Checksum mismatch. Do not run this installer.'
 }

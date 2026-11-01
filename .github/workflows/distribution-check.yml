@@ -19,7 +19,16 @@ jobs:
             'DISTRIBUTION.md', 'SHA256SUMS.txt', 'release.json', 'install.ps1',
             'docs/INSTALLATION.md', 'docs/CONFIGURATION.md', 'docs/USAGE.md',
             'docs/TROUBLESHOOTING.md', '.github/ISSUE_TEMPLATE/config.yml',
-            '.github/ISSUE_TEMPLATE/installation.yml', '.github/workflows/distribution-check.yml'
+            '.github/ISSUE_TEMPLATE/installation.yml', '.github/workflows/distribution-check.yml',
+            'docs/SCREENSHOTS.md', 'docs/RELEASING.md',
+            'docs/images/powerbi-external-tools.png', 'docs/images/home.png',
+            'docs/images/connect-open-model.png', 'docs/images/live-model-data.png',
+            'docs/images/theme-generator.png', 'docs/images/calendar-generator.png',
+            'docs/images/components.png', 'docs/images/dax-formatter.png',
+            'docs/images/tv-tool.png', 'docs/images/performance-checklist.png',
+            'docs/images/contrast-calculator.png', 'docs/images/project-analyzer.png',
+            'docs/images/model-documenter.png', 'docs/images/measure-auditor.png',
+            'docs/images/consulting-training.png', 'docs/images/collapsed-sidebar.png'
           )
           $tracked = @(git ls-files)
           if ($LASTEXITCODE -ne 0) { throw 'Unable to inspect tracked files.' }
@@ -47,4 +56,13 @@ jobs:
           $helper = Get-Content install.ps1 -Raw
           if (-not $helper.Contains($release.sha256.ToUpperInvariant())) { throw 'Helper checksum mismatch.' }
           if (-not $helper.Contains("`$version = '$($release.version)'")) { throw 'Helper version mismatch.' }
+          if ($release.screenshotsVersion -ne $release.version) { throw 'Screenshot version is outdated.' }
+          $screenshots = Get-Content docs/SCREENSHOTS.md -Raw
+          if (-not $screenshots.Contains("Power Portal Desktop $($release.version)")) { throw 'Screenshot guide version mismatch.' }
+          foreach ($file in $allowed | Where-Object { $_ -like '*.png' }) {
+            $signature = [IO.File]::ReadAllBytes((Join-Path $PWD $file))
+            if ($signature.Length -lt 8 -or [BitConverter]::ToString($signature[0..7]) -ne '89-50-4E-47-0D-0A-1A-0A') {
+              throw "Invalid screenshot PNG: $file"
+            }
+          }
           Write-Host 'Distribution-only files, PowerShell syntax and release metadata validated. No installer was run.'

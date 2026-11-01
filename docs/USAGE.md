@@ -8,6 +8,8 @@ Start from Power BI's External Tools ribbon for an automatic local model connect
 
 Use the sidebar collapse button and flags as needed. The connection header shows the file name when available, rather than the internal database GUID.
 
+[Illustrated walkthrough of all screens and Power BI interactions](SCREENSHOTS.md).
+
 ## Read-only work
 
 Read model metadata, query small data samples, audit measures, check contrast, format DAX or export documentation without submitting writes. Model data represents the semantic model **without the active page's report filters or slicers**.
@@ -33,6 +35,8 @@ There is no supported generic Desktop API for applying a theme to any open PBIX 
 
 The live preview is a local implementation of the site's theme screen, not a pixel-identical representation of every Power BI visual.
 
+![Theme live preview and Send theme directly to Power BI button](images/theme-generator.png)
+
 ## Write operations
 
 Supported semantic-model writes are creating a measure, updating the selected measure's DAX, and creating a new calculated calendar table.
@@ -53,11 +57,21 @@ Read an existing calendar's calculated expression, date range and sample. Export
 
 After creation, refresh in Power BI Desktop; Power Portal does not process the Desktop model. The session's **Revert created calendar** action is guarded and refuses to remove a table if its structure/expression changed or it acquired measures, relationships or DAX dependencies.
 
+![Read, export and create-calendar actions connected to the demonstration model](images/calendar-generator.png)
+
 The BIM backup protects model metadata, **not report pages, visuals, all data rows or the full PBIX**. Automatic full-model restore is not provided.
 
 ### HTML components
 
 Sending a component creates an HTML measure. Add a compatible HTML visual manually to the report and assign the measure. TOM cannot automatically place visuals on a report canvas.
+
+![HTML measure destination and direct creation button](images/components.png)
+
+### Update measure DAX
+
+Select a model measure in the DAX formatter, format its expression, then use **Update measure in Power BI**. This action updates that selected measure with confirmation and checks that its previous expression has not changed concurrently. It is not merely a local text export.
+
+![Model measure selection, formatted DAX and Update measure in Power BI](images/dax-formatter.png)
 
 ## TV Tool
 

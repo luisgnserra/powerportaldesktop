@@ -6,6 +6,8 @@
 
 Use the sidebar flags to switch languages. The preference persists in your Windows user's local application profile. The sidebar's collapsed/expanded state is saved too.
 
+All ten tool buttons remain visible without sidebar scrolling at supported window sizes. Long localized labels use up to two visible lines and keep their complete accessible name/tooltip. **Consulting and training** is below **About the development**. [Expanded and collapsed screenshots](SCREENSHOTS.md#home-and-navigation).
+
 Language precedence:
 
 1. Your saved selection in the application.
@@ -40,8 +42,10 @@ Recommended: open the PBIX in Power BI Desktop and launch **External Tools > Pow
 If launched from a Windows shortcut:
 
 1. Open the PBIX in Power BI Desktop.
-2. Use **Find open models** and select the file name.
+2. A startup notice appears when open local models are detected. Use **Find open models** and select the file name.
 3. Use **Read Power BI model** to reload metadata after changes.
+
+Detection only lists availability; it does not automatically select a file or write to one. Once connected, the notice provides **Refresh Power BI model** and explains confirmed adjustments. [Connection screenshots](SCREENSHOTS.md#connect-to-a-file-already-open-in-power-bi).
 
 With a single open model, reading can discover it automatically. If several models are open, explicitly select the intended file. Similar file names are distinguished by a number; Power BI window titles do not always expose full paths.
 
