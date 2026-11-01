@@ -1,0 +1,13 @@
+{
+  "product": "Power Portal Desktop",
+  "version": "1.6.0",
+  "tag": "v1.6.0",
+  "platform": "windows-x64",
+  "installer": "PowerPortal-Setup-1.6.0-x64.exe",
+  "downloadUrl": "https://github.com/luisgnserra/powerportaldesktop/releases/download/v1.6.0/PowerPortal-Setup-1.6.0-x64.exe",
+  "sha256": "eb38dfccf6909f4b5befd01a77b04399b23d3b552653d8fb3893e39ab55066d7",
+  "sizeBytes": 302424374,
+  "digitallySigned": false,
+  "silentSwitch": "/S",
+  "languages": ["pt", "en", "es", "zh", "fr", "ja", "hi", "ar"]
+}

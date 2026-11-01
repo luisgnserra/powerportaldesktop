@@ -1,0 +1,46 @@
+name: Installation or usage problem
+description: Report a reproducible issue without confidential model data.
+title: "[Support]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This is a distribution-only repository. Do not attach PBIX/BIM files, credentials, connection details, confidential data, backups or unsanitized logs. For private support, email contato@consultoriaexcelencia.com.br.
+  - type: input
+    id: version
+    attributes:
+      label: Power Portal version
+      placeholder: "1.6.0"
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Windows and Power BI Desktop versions
+      placeholder: Windows 11 x64; Power BI Desktop version and edition
+    validations:
+      required: true
+  - type: dropdown
+    id: installation
+    attributes:
+      label: Installation method
+      options:
+        - EXE wizard
+        - PowerShell helper
+        - Silent EXE deployment
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps, expected outcome and exact error
+      description: Include only sanitized details. Do not include business data or connection credentials.
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy check
+      options:
+        - label: I have removed confidential data, credentials and model files from this report.
+          required: true

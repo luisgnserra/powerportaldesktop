@@ -1,0 +1,25 @@
+# Distribution-only allowlist. Installer binaries belong in GitHub Release assets.
+*
+!/.gitignore
+!/.gitattributes
+!/README.md
+!/CHANGELOG.md
+!/DISTRIBUTION.md
+!/SHA256SUMS.txt
+!/release.json
+!/install.ps1
+!/docs/
+/docs/*
+!/docs/INSTALLATION.md
+!/docs/CONFIGURATION.md
+!/docs/USAGE.md
+!/docs/TROUBLESHOOTING.md
+!/.github/
+/.github/*
+!/.github/ISSUE_TEMPLATE/
+/.github/ISSUE_TEMPLATE/*
+!/.github/ISSUE_TEMPLATE/config.yml
+!/.github/ISSUE_TEMPLATE/installation.yml
+!/.github/workflows/
+/.github/workflows/*
+!/.github/workflows/distribution-check.yml
