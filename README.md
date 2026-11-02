@@ -1,9 +1,18 @@
 # Power Portal Desktop
 
 <!-- language-selector -->
-[<img src="https://shields.io" height="18">](README.md) · [<img src="https://shields.io" height="18">](README.pt-BR.md) · [<img src="https://shields.io" height="18">](README.es.md) · [<img src="https://shields.io" height="18">](README.zh-CN.md) · [<img src="https://shields.io" height="18">](README.fr.md) · [<img src="https://shields.io" height="18">](README.ja.md) · [<img src="https://shields.ioिन्दी-orange?style=flat-square" height="18">](README.hi.md) · [<img src="https://shields.io" height="18">](README.ar.md)
-<!-- /language-selector -->
 
+| Idioma / Language | Link |
+| :--- | :--- |
+| 🇺🇸 English | [README.md](README.md) |
+| 🇧🇷 Português | [README.pt-BR.md](README.pt-BR.md) |
+| 🇪🇸 Español | [README.es.md](README.es.md) |
+| 🇨🇳 简体中文 | [README.zh-CN.md](README.zh-CN.md) |
+| 🇫🇷 Français | [README.fr.md](README.fr.md) |
+| 🇯🇵 日本語 | [README.ja.md](README.ja.md) |
+| 🇮🇳 हिन्दी | [README.hi.md](README.hi.md) |
+| 🇸🇦 العربية | [README.ar.md](README.ar.md) |
+<!-- /language-selector -->
 
 
 <!-- /language-selector -->
