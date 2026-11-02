@@ -1,5 +1,9 @@
 # Release notes
 
+<!-- language-selector -->
+[🇺🇸 English](CHANGELOG.md) · [🇧🇷 Português](CHANGELOG.pt-BR.md) · [🇪🇸 Español](CHANGELOG.es.md) · [🇨🇳 简体中文](CHANGELOG.zh-CN.md) · [🇫🇷 Français](CHANGELOG.fr.md) · [🇯🇵 日本語](CHANGELOG.ja.md) · [🇮🇳 हिन्दी](CHANGELOG.hi.md) · [🇸🇦 العربية](CHANGELOG.ar.md)
+<!-- /language-selector -->
+
 ## 1.7.0
 
 - New Desktop-only **Relationship map**, the eleventh tool: draggable table boxes, pan/zoom, cardinality/filter-direction indicators and inactive dashed links.

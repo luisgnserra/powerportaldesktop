@@ -1,0 +1,179 @@
+# Captures et interactions avec Power BI
+
+<!-- language-selector -->
+[🇺🇸 English](../SCREENSHOTS.md) · [🇧🇷 Português](../pt-BR/SCREENSHOTS.md) · [🇪🇸 Español](../es/SCREENSHOTS.md) · [🇨🇳 简体中文](../zh-CN/SCREENSHOTS.md) · [🇫🇷 Français](SCREENSHOTS.md) · [🇯🇵 日本語](../ja/SCREENSHOTS.md) · [🇮🇳 हिन्दी](../hi/SCREENSHOTS.md) · [🇸🇦 العربية](../ar/SCREENSHOTS.md)
+<!-- /language-selector -->
+
+[Retour à l’accueil](../../README.fr.md) · [Installer](INSTALLATION.md) · [Guide de sécurité](USAGE.md)
+
+**Captures de l’application : Power Portal Desktop 1.7.0, interface dans la langue sélectionnée (français).**
+Les captures utilisent des **métadonnées et valeurs de requêtes synthétiques de démonstration**, et non un PBIX client. Les états connectés illustrent les actions prises en charge par l’interface ; aucun modèle client n’a été modifié pour créer ces images. Les libellés du sélecteur de fichiers natif peuvent suivre la langue de Windows. La capture réelle du ruban Power BI a été fournie par le propriétaire et recadrée pour supprimer le titre privé du fichier ; elle conserve son portugais d’origine.
+
+<a name="open-power-portal-from-external-tools"></a>
+## Ouvrir Power Portal depuis les outils externes
+
+Après l’installation, redémarrez Power BI Desktop, ouvrez un PBIX et cliquez sur **Outils externes > Power Portal**.
+
+![Power Portal dans le véritable ruban Outils externes de Power BI](../images/powerbi-external-tools.png)
+
+L’onglet portugais **Ferramentas externas** correspond à **Outils externes** en français (**External Tools** en anglais). Le programme d’installation enregistre l’icône dans ce ruban. Cliquer dessus lance **une fenêtre Power Portal distincte connectée au modèle du fichier ouvert**. C’est une application complémentaire externe, et non un visuel de rapport, un volet intégré ou une extension interne Microsoft.
+
+<a name="home-and-navigation"></a>
+## Accueil et navigation
+
+![Galerie d’accueil, les onze boutons d’outils et l’avis de démarrage](../images/fr/home.png)
+
+L’accueil affiche dix couvertures officielles d’outils et la nouvelle couverture de la carte des relations réservée à Desktop, avec de courtes descriptions. La barre latérale affiche les onze outils **sans défilement de navigation** aux tailles de fenêtre prises en charge. **Conseil et formation** se trouve sous **À propos du développement**, avec les logos de propriété en dessous. Les drapeaux de langue restent sur deux lignes.
+
+![La barre latérale repliée garde les icônes d’outils, les drapeaux, À propos et le conseil accessibles](../images/fr/collapsed-sidebar.png)
+
+Repliez la barre latérale pour disposer de plus d’espace de travail ; la préférence persiste. Les icônes conservent leurs noms accessibles et leurs infobulles. La zone de travail principale et les formulaires de chaque outil peuvent toujours défiler ; le changement sans défilement concerne le catalogue de la barre latérale.
+
+<a name="connect-to-a-file-already-open-in-power-bi"></a>
+## Se connecter à un fichier déjà ouvert dans Power BI
+
+![Avis de démarrage et sélection explicite du fichier ouvert](../images/fr/connect-open-model.png)
+
+Au lancement depuis un raccourci Windows, l’application détecte les modèles Power BI locaux disponibles et explique que vous pouvez vous connecter directement à un fichier ouvert. Choisissez **Rechercher les modèles ouverts**, vérifiez le nom du fichier et cliquez sur **Se connecter au modèle sélectionné**. Si plusieurs fichiers sont ouverts, choisissez explicitement celui voulu.
+
+Un lancement depuis le ruban Outils externes transmet automatiquement la connexion de cette instance Desktop et lit ses métadonnées. **La connexion n’écrit aucune modification.**
+
+<a name="new-version-notification"></a>
+## Notification d’une nouvelle version
+
+![Nouvelle version disponible avec Mettre à jour maintenant et avertissement d’autorisation/de modifications non envoyées](../images/fr/update-available.png)
+
+La capture utilise un **résultat synthétique d’une future version 1.7.1** pour montrer la notification dans la version 1.7.0. Elle ne prétend pas que 1.7.1 a été publié. Les utilisateurs de 1.6.2 ou d’une version ultérieure peuvent désormais recevoir la véritable notification de 1.7.0.
+
+En 1.6.4, la bannière ambrée reste visible pendant le défilement et s’anime doucement, sauf si la réduction des animations est activée. Aucune bannière « à jour » permanente n’occupe de l’espace.
+
+L’application installée recherche la dernière version stable officielle au démarrage. Cliquez sur **Mettre à jour maintenant** pour télécharger et vérifier le programme d’installation, puis acceptez la demande administrateur de Windows. Il met à jour le dossier d’installation existant et ferme uniquement Power Portal. **La simple connexion ou vérification n’installe jamais rien.** Enregistrez/exportez d’abord les modifications d’outils non envoyées et rouvrez l’application une fois l’installation terminée.
+
+**Rechercher des mises à jour** relance la vérification à tout moment. Les échecs hors ligne/limite de requêtes/somme de contrôle/UAC sont affichés explicitement sans désactiver les outils locaux. [Guide complet des mises à jour](UPDATES.md).
+
+<a name="direct-interactions-with-the-open-power-bi-file"></a>
+## Interactions directes avec le fichier Power BI ouvert
+
+Ces actions ne se limitent pas au téléchargement de texte ou de JSON :
+
+| Écran/action | Lit ou modifie Power BI ? | Protection |
+|---|---|---|
+| Actualiser le modèle Power BI | Lit les tables, colonnes, mesures et relations du modèle sémantique du fichier sélectionné. | Aucune écriture dans le modèle. |
+| Interroger les données en direct/plages de dates/échantillons | Lit les valeurs réelles du modèle via le moteur local. | Requêtes structurées et bornées ; pas les filtres de la page active. |
+| Envoyer le thème directement à Power BI | Applique le JSON généré à la fenêtre de rapport sélectionnée. | Confirmation, import visible dans l’interface et vérification du thème exporté. |
+| Créer un calendrier dans Power BI | Crée une nouvelle table de dates calculée dans le modèle sémantique. | Confirmation et sauvegarde des métadonnées ; actualisez ensuite dans Desktop. |
+| Créer une mesure HTML dans Power BI | Crée une nouvelle mesure dans la table du modèle choisie. | Confirmation et sauvegarde des métadonnées ; ajoutez le visuel HTML manuellement. |
+| Mettre à jour la mesure dans Power BI | Écrit le DAX formaté dans la mesure existante sélectionnée. | Confirmation, sauvegarde des métadonnées et protection contre les modifications concurrentes. |
+| Appliquer/supprimer une relation dans Power BI | Crée, modifie, active/désactive ou supprime la relation entre colonnes sélectionnée. | Confirmation native, sauvegarde des métadonnées, contrôles d’état périmé et validation du moteur ; paramètres RLS/d’intégrité préservés. |
+
+**Enregistrez une copie distincte du PBIX avant d’appliquer des modifications.** Confirmez le fichier et l’expression cibles, puis enregistrez le PBIX dans Desktop. L’application n’enregistre jamais le PBIX silencieusement.
+
+<a name="live-model-data"></a>
+### Données du modèle en direct
+
+![Sélecteurs de table, colonne et mesure avec un résultat de requête de démonstration](../images/fr/live-model-data.png)
+
+Sélectionnez une table/colonne/mesure et interrogez une valeur, un nombre de lignes, un échantillon de colonne ou une plage de dates. L’état connecté est résumé dans le texte vert de l’en-tête ; son infobulle rappelle d’enregistrer une copie du PBIX. Ce panneau de données apparaît là où il est pertinent, par exemple dans les calendriers et les composants.
+
+<a name="theme-generator"></a>
+### Générateur de thèmes
+
+![Import JSON mis en évidence et aperçu du thème en direct](../images/fr/theme-generator.png)
+
+Utilisez la zone mise en évidence **Charger le thème du rapport (JSON)**, modifiez les couleurs/polices et observez l’aperçu en direct. Exportez le JSON, ou faites défiler jusqu’en fin de page, sous le formulaire et l’aperçu, pour utiliser **Envoyer le thème directement à Power BI**.
+
+![Envoyer le thème directement à Power BI en fin de page du générateur](../images/fr/theme-send.png)
+
+Pour partir du thème de rapport existant, enregistrez son JSON dans Desktop et chargez-le ici. Une connexion au modèle sémantique ne lit pas les thèmes de rapport. L’envoi direct utilise toujours la **boîte de dialogue d’import visible** : aucune API Desktop générique de thème prise en charge ne la supprime. N’interagissez pas avec Power BI pendant l’automatisation.
+
+<a name="calendar-generator"></a>
+### Générateur de calendriers
+
+![Sélection d’un calendrier existant, export d’échantillon et Créer un calendrier dans Power BI](../images/fr/calendar-generator.png)
+
+Lisez l’expression/la plage de dates/l’échantillon d’un calendrier existant, exportez le DAX ou le JSON échantillonné et générez un nouveau calendrier. **Créer un calendrier dans Power BI** crée une nouvelle table calculée avec sauvegarde et confirmation, au lieu de remplacer le calendrier existant sélectionné.
+
+Actualisez dans Desktop après la création. L’annulation protégée du calendrier est disponible uniquement si la table créée correspond toujours et ne possède aucune dépendance.
+
+<a name="component-library"></a>
+### Bibliothèque de composants
+
+![Catalogue de composants avec barre de création directe de mesures HTML](../images/fr/components.png)
+
+Choisissez la table de destination et un nouveau nom de mesure. Le générateur utilise les noms des champs/mesures du modèle et prend en charge **Créer une mesure HTML dans Power BI**. La mesure est écrite dans le modèle après confirmation.
+
+Un visuel HTML compatible doit être ajouté au rapport manuellement et recevoir cette mesure ; ce bouton ne place pas de visuel sur la page.
+
+<a name="dax-formatter"></a>
+### Formateur DAX
+
+![Sélectionner une mesure du modèle, la formater et la mettre à jour directement dans Power BI](../images/fr/dax-formatter.png)
+
+Sélectionnez la mesure existante du modèle, formatez son expression, puis choisissez **Mettre à jour la mesure dans Power BI** pour renvoyer le DAX à cette mesure. Les actions de copie/export sont distinctes. La mise à jour refuse les modifications concurrentes de l’expression et nécessite une confirmation.
+
+<a name="remaining-tools"></a>
+## Autres outils
+
+<a name="relationship-map"></a>
+### Carte des relations
+
+![Blocs de tables librement déplaçables, groupes de faits/dimensions et indicateurs de relations](../images/fr/relationship-map.png)
+
+Le nouvel outil réservé à Desktop affiche les liens réels entre les tables, les cardinalités, les flèches de filtre et les lignes inactives en pointillés. Déplacez librement les blocs/groupes, zoomez/déplacez la vue, affectez des noms/icônes conviviaux et personnalisez les couleurs des groupes et des lignes. Les dispositions visuelles sont enregistrées automatiquement par modèle et peuvent être exportées/importées en JSON sans envoyer d’écritures au modèle.
+
+![Champs de relation avec actions Appliquer et Supprimer](../images/fr/relationship-editor.png)
+
+Sélectionnez une ligne pour examiner ses colonnes exactes, sa cardinalité, le sens du filtre et l’état actif. **Appliquer la relation à Power BI** ou **Supprimer la relation dans Power BI** valide chaque modification après confirmation native et sauvegarde. Les projets importés restent en lecture seule. Le style ne renomme pas les tables et ne change pas le diagramme natif de Power BI. [Parcours complet et limites de sécurité](RELATIONSHIPS.md).
+
+<a name="power-bi-tv-tool"></a>
+### Power BI TV Tool
+
+![Exemple TV Tool en action mis en évidence en haut de l’outil](../images/fr/tv-tool.png)
+
+La bannière supérieure **TV Tool en action** ouvre un [exemple officiel fonctionnel](https://www.powerportal.com.br/tv_tool/painel_exemplo_power_bi_tv_tool.html) dans votre navigateur par défaut, nécessitant internet mais n’envoyant aucune donnée du modèle local. La présentation illustrative locale du formulaire reste disponible.
+
+Faites défiler des pages de rapports publiés ou des images locales, définissez les durées/transitions, prévisualisez et exportez en HTML. TV ne fait **pas** défiler les pages du PBIX local ouvert. Les rapports privés publiés nécessitent une connexion/licence/des autorisations Microsoft appropriées.
+
+<a name="performance-checklist"></a>
+### Liste de contrôle des performances
+
+![Configuration de la liste de performances et évaluation renseignée par le modèle](../images/fr/performance-checklist.png)
+
+Examinez les éléments de la liste renseignés par le modèle et les caractéristiques manuelles du rapport. Les scores sont des indications heuristiques, et non des mesures de durée des visuels.
+
+<a name="contrast-calculator"></a>
+### Calculateur de contraste
+
+![Calculateur de contraste des couleurs](../images/fr/contrast-calculator.png)
+
+Vérifiez la lisibilité/le contraste par rapport aux seuils WCAG. Cet outil d’analyse locale ne modifie pas automatiquement la mise en forme du rapport.
+
+<a name="pbippbir-analyzer"></a>
+### Analyseur PBIP/PBIR
+
+![Structure du modèle/projet et résultats heuristiques de l’analyseur](../images/fr/project-analyzer.png)
+
+Analysez la structure disponible du projet chargé. Une connexion au modèle sémantique en direct ne fournit pas les métadonnées de pages/visuels du rapport ; les dimensions indisponibles sont donc signalées comme partielles. Les métadonnées de projets PBIR importés peuvent fournir des nombres supplémentaires.
+
+<a name="semantic-model-documenter"></a>
+### Documentation du modèle sémantique
+
+![Documentation des tables/colonnes/mesures depuis les métadonnées synthétiques du modèle](../images/fr/model-documenter.png)
+
+Lisez et exportez la documentation des tables/colonnes/mesures/relations en Markdown ou JSON. Cet outil ne modifie pas le modèle. Les exports peuvent contenir des noms confidentiels et du DAX ; stockez-les de manière appropriée.
+
+<a name="measure-auditor"></a>
+### Audit des mesures
+
+![Résultats d’audit des mesures pour le modèle de démonstration](../images/fr/measure-auditor.png)
+
+Auditez les mesures du modèle ou le DAX fourni avec des contrôles heuristiques de nommage/taille/délimiteurs. L’outil ne valide pas la sémantique DAX et ne mesure pas les performances réelles du rapport.
+
+<a name="consulting-and-training"></a>
+## Conseil et formation
+
+![Espace de conseil, formation et contact d’Excelência](../images/fr/consulting-training.png)
+
+Découvrez le conseil Power BI, Microsoft Fabric, l’ingénierie des données et les solutions complètes. Les formations In Company, vidéos mises en avant et actions de contact sont incluses. WhatsApp/e-mail ouvrent un brouillon ou une page du navigateur ; aucun message ni demande de rendez-vous n’est envoyé automatiquement.
+
+[Notes de version](../../CHANGELOG.fr.md) · [Dépannage](TROUBLESHOOTING.md)

@@ -1,5 +1,9 @@
 # Installation guide
 
+<!-- language-selector -->
+[🇺🇸 English](INSTALLATION.md) · [🇧🇷 Português](pt-BR/INSTALLATION.md) · [🇪🇸 Español](es/INSTALLATION.md) · [🇨🇳 简体中文](zh-CN/INSTALLATION.md) · [🇫🇷 Français](fr/INSTALLATION.md) · [🇯🇵 日本語](ja/INSTALLATION.md) · [🇮🇳 हिन्दी](hi/INSTALLATION.md) · [🇸🇦 العربية](ar/INSTALLATION.md)
+<!-- /language-selector -->
+
 [Back to home](../README.md)
 
 ## Requirements

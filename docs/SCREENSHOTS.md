@@ -1,5 +1,9 @@
 # Screenshots and Power BI interactions
 
+<!-- language-selector -->
+[🇺🇸 English](SCREENSHOTS.md) · [🇧🇷 Português](pt-BR/SCREENSHOTS.md) · [🇪🇸 Español](es/SCREENSHOTS.md) · [🇨🇳 简体中文](zh-CN/SCREENSHOTS.md) · [🇫🇷 Français](fr/SCREENSHOTS.md) · [🇯🇵 日本語](ja/SCREENSHOTS.md) · [🇮🇳 हिन्दी](hi/SCREENSHOTS.md) · [🇸🇦 العربية](ar/SCREENSHOTS.md)
+<!-- /language-selector -->
+
 [Back to home](../README.md) · [Install](INSTALLATION.md) · [Safety guide](USAGE.md)
 
 **Application screenshots: Power Portal Desktop 1.7.0, English interface.**
@@ -15,7 +19,7 @@ The Portuguese tab **Ferramentas externas** corresponds to **External Tools** in
 
 ## Home and navigation
 
-![Home gallery, all ten tool buttons and the startup notice](images/home.png)
+![Home gallery, all eleven tool buttons and the startup notice](images/home.png)
 
 Home shows ten official tool covers and the new Desktop-only relationship-map cover, with short descriptions. The sidebar fits all eleven tools **without navigation scrolling** at supported window sizes. **Consulting and training** sits below **About the development**, with the ownership logos below. Language flags stay in two rows.
 

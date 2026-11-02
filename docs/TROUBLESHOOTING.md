@@ -1,5 +1,9 @@
 # Troubleshooting and support
 
+<!-- language-selector -->
+[🇺🇸 English](TROUBLESHOOTING.md) · [🇧🇷 Português](pt-BR/TROUBLESHOOTING.md) · [🇪🇸 Español](es/TROUBLESHOOTING.md) · [🇨🇳 简体中文](zh-CN/TROUBLESHOOTING.md) · [🇫🇷 Français](fr/TROUBLESHOOTING.md) · [🇯🇵 日本語](ja/TROUBLESHOOTING.md) · [🇮🇳 हिन्दी](hi/TROUBLESHOOTING.md) · [🇸🇦 العربية](ar/TROUBLESHOOTING.md)
+<!-- /language-selector -->
+
 [Back to home](../README.md)
 
 | Problem | Recommended action |

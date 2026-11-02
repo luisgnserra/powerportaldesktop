@@ -31,6 +31,14 @@ jobs:
             'docs/images/consulting-training.png', 'docs/images/collapsed-sidebar.png',
             'docs/images/update-available.png', 'docs/images/relationship-map.png', 'docs/images/relationship-editor.png'
           )
+          $locales = @('pt-BR', 'es', 'zh-CN', 'fr', 'ja', 'hi', 'ar')
+          $guides = @('INSTALLATION', 'CONFIGURATION', 'USAGE', 'TROUBLESHOOTING', 'SCREENSHOTS', 'RELEASING', 'UPDATES', 'RELATIONSHIPS')
+          $applicationImages = @($allowed | Where-Object { $_ -like 'docs/images/*.png' -and $_ -ne 'docs/images/powerbi-external-tools.png' })
+          foreach ($locale in $locales) {
+            foreach ($name in @('README', 'CHANGELOG', 'DISTRIBUTION')) { $allowed += "$name.$locale.md" }
+            foreach ($guide in $guides) { $allowed += "docs/$locale/$guide.md" }
+            foreach ($image in $applicationImages) { $allowed += "docs/images/$locale/$([IO.Path]::GetFileName($image))" }
+          }
           $tracked = @(git ls-files)
           if ($LASTEXITCODE -ne 0) { throw 'Unable to inspect tracked files.' }
           foreach ($file in $tracked) {
@@ -66,4 +74,65 @@ jobs:
               throw "Invalid screenshot PNG: $file"
             }
           }
-          Write-Host 'Distribution-only files, PowerShell syntax and release metadata validated. No installer was run.'
+          function Get-DocumentText($file) {
+            return [IO.File]::ReadAllText((Join-Path $PWD ($file -replace '/', '\')))
+          }
+          function Get-Prose($text) {
+            return [regex]::Replace($text, '(?ms)^```[^\r\n]*\r?\n.*?^```[ \t]*\r?$', '')
+          }
+          foreach ($file in $allowed | Where-Object { $_ -like '*.md' }) {
+            $text = Get-DocumentText $file
+            $selector = [regex]::Match($text, '(?s)<!-- language-selector -->(.*?)<!-- /language-selector -->')
+            if (-not $selector.Success -or [regex]::Matches($selector.Groups[1].Value, '\]\(').Count -ne 8) {
+              throw "Missing eight-language selector: $file"
+            }
+            $prose = Get-Prose $text
+            foreach ($match in [regex]::Matches($prose, '\]\(([^)]+)\)')) {
+              $link = $match.Groups[1].Value
+              if ($link -match '^[a-zA-Z][a-zA-Z0-9+.-]*:') { continue }
+              $parts = $link -split '#', 2
+              $source = Join-Path $PWD ($file -replace '/', '\')
+              $target = $source
+              if ($parts[0]) { $target = Join-Path (Split-Path $source) ($parts[0] -replace '/', '\') }
+              if (-not (Test-Path -LiteralPath $target -PathType Leaf)) { throw "Broken link in ${file}: $link" }
+              if ($parts.Count -gt 1 -and $parts[1] -and $target -like '*.md') {
+                $targetText = Get-Prose ([IO.File]::ReadAllText($target))
+                $anchors = @([regex]::Matches($targetText, '(?m)^#{1,6}\s+(.+?)\r?$') | ForEach-Object {
+                  $_.Groups[1].Value.ToLowerInvariant() -replace '[^\p{L}\p{N}_\s-]', '' -replace '\s', '-'
+                })
+                $anchors += @([regex]::Matches($targetText, '<a\s+(?:name|id)="([^"]+)"') | ForEach-Object { $_.Groups[1].Value })
+                if ([Uri]::UnescapeDataString($parts[1]) -notin $anchors) { throw "Broken heading link in ${file}: $link" }
+              }
+            }
+          }
+          foreach ($locale in $locales) {
+            foreach ($name in @('README', 'CHANGELOG', 'DISTRIBUTION') + $guides) {
+              $english = "$name.md"
+              $localized = "$name.$locale.md"
+              if ($name -in $guides) { $english = "docs/$name.md"; $localized = "docs/$locale/$name.md" }
+              $source = Get-DocumentText $english
+              $translation = Get-DocumentText $localized
+              $sourceCode = @([regex]::Matches($source, '(?ms)^```[^\r\n]*\r?\n.*?^```[ \t]*\r?$') | ForEach-Object { $_.Value -replace "`r", '' })
+              $translatedCode = @([regex]::Matches($translation, '(?ms)^```[^\r\n]*\r?\n.*?^```[ \t]*\r?$') | ForEach-Object { $_.Value -replace "`r", '' })
+              if (($sourceCode -join "`n") -cne ($translatedCode -join "`n")) { throw "Translated executable example differs: $localized" }
+              $sourceHeadings = [regex]::Matches((Get-Prose $source), '(?m)^#{1,6}\s+').Count
+              $translatedHeadings = [regex]::Matches((Get-Prose $translation), '(?m)^#{1,6}\s+').Count
+              if ($sourceHeadings -ne $translatedHeadings) { throw "Missing translated sections: $localized" }
+              foreach ($pattern in @('(?m)^\s*(?:[-*]|\d+\.)\s+', '(?m)^\|.*\|\s*$', '!\[[^\]]*\]\([^)]+\)')) {
+                if ([regex]::Matches((Get-Prose $source), $pattern).Count -ne [regex]::Matches((Get-Prose $translation), $pattern).Count) {
+                  throw "Missing translated lists, table rows or illustrations: $localized"
+                }
+              }
+              foreach ($imageMatch in [regex]::Matches($translation, '!\[[^\]]*\]\(([^)]+)\)')) {
+                $imageLink = $imageMatch.Groups[1].Value
+                $imageName = [IO.Path]::GetFileName($imageLink)
+                $expectedImage = "docs\images\$locale\$imageName"
+                if ($imageName -eq 'powerbi-external-tools.png') { $expectedImage = "docs\images\$imageName" }
+                $documentPath = Join-Path $PWD ($localized -replace '/', '\')
+                $imagePath = [IO.Path]::GetFullPath((Join-Path (Split-Path $documentPath) ($imageLink -replace '/', '\')))
+                if ($imagePath -ne (Join-Path $PWD $expectedImage)) { throw "Wrong screenshot language: $localized -> $imageLink" }
+              }
+              if ($name -eq 'SCREENSHOTS' -and -not $translation.Contains("Power Portal Desktop $($release.version)")) { throw "Outdated localized screenshots: $localized" }
+            }
+          }
+          Write-Host 'Distribution-only files, eight-language documentation, links, executable examples, PNGs and release metadata validated. No installer was run.'

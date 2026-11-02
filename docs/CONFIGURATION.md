@@ -1,5 +1,9 @@
 # Configuration
 
+<!-- language-selector -->
+[🇺🇸 English](CONFIGURATION.md) · [🇧🇷 Português](pt-BR/CONFIGURATION.md) · [🇪🇸 Español](es/CONFIGURATION.md) · [🇨🇳 简体中文](zh-CN/CONFIGURATION.md) · [🇫🇷 Français](fr/CONFIGURATION.md) · [🇯🇵 日本語](ja/CONFIGURATION.md) · [🇮🇳 हिन्दी](hi/CONFIGURATION.md) · [🇸🇦 العربية](ar/CONFIGURATION.md)
+<!-- /language-selector -->
+
 [Back to home](../README.md)
 
 ## Language and sidebar preferences

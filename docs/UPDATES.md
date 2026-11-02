@@ -1,5 +1,9 @@
 # Update checks and automatic installation
 
+<!-- language-selector -->
+[🇺🇸 English](UPDATES.md) · [🇧🇷 Português](pt-BR/UPDATES.md) · [🇪🇸 Español](es/UPDATES.md) · [🇨🇳 简体中文](zh-CN/UPDATES.md) · [🇫🇷 Français](fr/UPDATES.md) · [🇯🇵 日本語](ja/UPDATES.md) · [🇮🇳 हिन्दी](hi/UPDATES.md) · [🇸🇦 العربية](ar/UPDATES.md)
+<!-- /language-selector -->
+
 [Back to home](../README.md) · [Installation](INSTALLATION.md)
 
 ## Available from version 1.6.2

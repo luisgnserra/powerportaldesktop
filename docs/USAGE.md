@@ -1,10 +1,14 @@
 # Usage and model safety
 
+<!-- language-selector -->
+[🇺🇸 English](USAGE.md) · [🇧🇷 Português](pt-BR/USAGE.md) · [🇪🇸 Español](es/USAGE.md) · [🇨🇳 简体中文](zh-CN/USAGE.md) · [🇫🇷 Français](fr/USAGE.md) · [🇯🇵 日本語](ja/USAGE.md) · [🇮🇳 हिन्दी](hi/USAGE.md) · [🇸🇦 العربية](ar/USAGE.md)
+<!-- /language-selector -->
+
 [Back to home](../README.md)
 
 ## First run
 
-Start from Power BI's External Tools ribbon for an automatic local model connection, or open the Windows shortcut to use offline tools/import a project. The home page displays all ten tools. **Home** returns to the gallery without discarding the loaded model.
+Start from Power BI's External Tools ribbon for an automatic local model connection, or open the Windows shortcut to use offline tools/import a project. The home page displays all eleven tools. **Home** returns to the gallery without discarding the loaded model.
 
 Use the sidebar collapse button and flags as needed. The connection header shows the file name when available, rather than the internal database GUID.
 

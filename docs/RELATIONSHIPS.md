@@ -1,5 +1,9 @@
 # Relationship map
 
+<!-- language-selector -->
+[🇺🇸 English](RELATIONSHIPS.md) · [🇧🇷 Português](pt-BR/RELATIONSHIPS.md) · [🇪🇸 Español](es/RELATIONSHIPS.md) · [🇨🇳 简体中文](zh-CN/RELATIONSHIPS.md) · [🇫🇷 Français](fr/RELATIONSHIPS.md) · [🇯🇵 日本語](ja/RELATIONSHIPS.md) · [🇮🇳 हिन्दी](hi/RELATIONSHIPS.md) · [🇸🇦 العربية](ar/RELATIONSHIPS.md)
+<!-- /language-selector -->
+
 [Back to home](../README.md) · [Screenshots](SCREENSHOTS.md) · [Model safety](USAGE.md)
 
 Available in **Power Portal Desktop 1.7.0**. This is a new Desktop-only tool, separate from Power BI's own Model view. It reads real table/column relationships and can apply confirmed changes to the connected local semantic model.

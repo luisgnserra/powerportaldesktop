@@ -1,5 +1,9 @@
 # Power Portal Desktop
 
+<!-- language-selector -->
+[🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md) · [🇨🇳 简体中文](README.zh-CN.md) · [🇫🇷 Français](README.fr.md) · [🇯🇵 日本語](README.ja.md) · [🇮🇳 हिन्दी](README.hi.md) · [🇸🇦 العربية](README.ar.md)
+<!-- /language-selector -->
+
 **Eleven tools for Power BI Desktop, in one Windows application.**
 
 Power Portal Desktop is owned by **Excelência Consultoria e Educação**. It installs into Power BI Desktop's **External Tools** ribbon and opens a separate application window, similar to other external modeling tools.
@@ -129,6 +133,8 @@ Also includes a home gallery, a collapsible sidebar with all eleven tools visibl
 ## Eight languages
 
 Portuguese, English, Spanish, Simplified Mandarin Chinese, French, Japanese, Hindi and Arabic. Flags occupy no more than two rows; Arabic uses a right-to-left layout.
+
+Use the flags at the top of this page to select the documentation language. All guides and application screenshots are available in those eight languages. Screenshots are captured from the actual application in the selected language; model object names and DAX remain unchanged. The genuine Power BI ribbon image remains in Portuguese in every guide, with an explanation in the selected language.
 
 The installer suggests the Windows UI language. A user's later language selection is saved locally and takes precedence over the installation default. Model names, data and DAX are not translated.
 

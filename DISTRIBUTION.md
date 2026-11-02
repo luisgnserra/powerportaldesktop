@@ -1,5 +1,9 @@
 # Distribution notice
 
+<!-- language-selector -->
+[🇺🇸 English](DISTRIBUTION.md) · [🇧🇷 Português](DISTRIBUTION.pt-BR.md) · [🇪🇸 Español](DISTRIBUTION.es.md) · [🇨🇳 简体中文](DISTRIBUTION.zh-CN.md) · [🇫🇷 Français](DISTRIBUTION.fr.md) · [🇯🇵 日本語](DISTRIBUTION.ja.md) · [🇮🇳 हिन्दी](DISTRIBUTION.hi.md) · [🇸🇦 العربية](DISTRIBUTION.ar.md)
+<!-- /language-selector -->
+
 Power Portal Desktop is owned by **Excelência Consultoria e Educação**.
 
 This repository distributes the official compiled Windows installer and related installation documentation/helpers. It does not publish the Power Portal application's source code, and availability on GitHub does **not** make the application open source or grant an open-source license.

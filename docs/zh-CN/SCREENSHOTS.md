@@ -1,0 +1,179 @@
+# 截图与 Power BI 交互
+
+<!-- language-selector -->
+[🇺🇸 English](../SCREENSHOTS.md) · [🇧🇷 Português](../pt-BR/SCREENSHOTS.md) · [🇪🇸 Español](../es/SCREENSHOTS.md) · [🇨🇳 简体中文](SCREENSHOTS.md) · [🇫🇷 Français](../fr/SCREENSHOTS.md) · [🇯🇵 日本語](../ja/SCREENSHOTS.md) · [🇮🇳 हिन्दी](../hi/SCREENSHOTS.md) · [🇸🇦 العربية](../ar/SCREENSHOTS.md)
+<!-- /language-selector -->
+
+[返回主页](../../README.zh-CN.md) · [安装](INSTALLATION.md) · [安全指南](USAGE.md)
+
+**应用截图：Power Portal Desktop 1.7.0，所选界面语言为简体中文。**
+截图使用**合成演示元数据及查询值**，而非客户 PBIX。连接状态演示受支持的界面操作；制作这些图片时未更改任何客户模型。原生文件选择器标签可能遵循 Windows 语言。真实的 Power BI 功能区截图由所有者提供，保留葡萄牙语原始界面，并已裁去私有文件标题。
+
+<a name="open-power-portal-from-external-tools"></a>
+## 从外部工具打开 Power Portal
+
+安装后，重启 Power BI Desktop，打开 PBIX，然后点击**外部工具 > Power Portal**。
+
+![真实 Power BI 外部工具功能区中的 Power Portal](../images/powerbi-external-tools.png)
+
+葡萄牙语选项卡 **Ferramentas externas** 对应英语的 **External Tools**（外部工具）。安装程序在此功能区注册图标。点击后会启动**连接到已打开文件模型的独立 Power Portal 窗口**。它是外部配套应用，不是报表视觉对象、嵌入式窗格或 Microsoft 内部扩展。
+
+<a name="home-and-navigation"></a>
+## 主页与导航
+
+![主页图库、全部十一款工具按钮及启动提示](../images/zh-CN/home.png)
+
+主页显示十款官方工具封面及新的 Desktop 专用关系图封面，并附简短说明。在支持的窗口尺寸下，侧栏容纳全部十一款工具，**无需导航滚动**。**咨询与培训**位于**关于开发**下方，所有权徽标再位于其下。语言旗帜保持两行。
+
+![折叠侧栏仍可访问工具图标、旗帜、关于及咨询](../images/zh-CN/collapsed-sidebar.png)
+
+折叠侧栏可获得更多工作空间，偏好会保存。图标保留无障碍名称及工具提示。主工作区和各工具表单仍可滚动；无需滚动的变化仅适用于侧栏目录。
+
+<a name="connect-to-a-file-already-open-in-power-bi"></a>
+## 连接到已在 Power BI 中打开的文件
+
+![启动提示及明确的已打开文件选择](../images/zh-CN/connect-open-model.png)
+
+从 Windows 快捷方式启动时，应用检测可用的本地 Power BI 模型，并说明可直接连接到已打开文件。选择**查找已打开的模型**，核对文件名，再点击**连接到所选模型**。多个文件打开时，请明确选择目标。
+
+从外部工具功能区启动则自动传递对应 Desktop 实例的连接，并读取元数据。**连接不会写入更改。**
+
+<a name="new-version-notification"></a>
+## 新版本通知
+
+![可用新版本、立即更新及授权/未发送编辑警告](../images/zh-CN/update-available.png)
+
+截图使用**合成的未来 1.7.1 结果**，展示 1.7.0 中的通知，并非声称 1.7.1 已发布。使用 1.6.2 或更新版本的用户现在可以收到真实的 1.7.0 通知。
+
+在 1.6.4 中，琥珀色横幅在滚动时仍可见，并会轻柔地动画显示，除非启用了减少动态效果。不再持续显示占用空间的“已是最新版本”横幅。
+
+已安装应用启动时检查最新稳定官方 Release。点击**立即更新**下载并验证安装程序，然后批准 Windows 管理员请求。它更新现有安装文件夹，且只关闭 Power Portal。**仅连接或检查绝不会安装任何内容。**请先保存/导出未发送的工具编辑，安装完成后重新打开应用。
+
+**检查更新**可随时重试检查。离线/速率限制/校验和/UAC 失败会明确显示，不会禁用本地工具。[完整更新指南](UPDATES.md)。
+
+<a name="direct-interactions-with-the-open-power-bi-file"></a>
+## 与已打开 Power BI 文件直接交互
+
+这些功能不仅限于下载文本或 JSON：
+
+| 界面/操作 | 读取或更改 Power BI？ | 保护措施 |
+|---|---|---|
+| 刷新 Power BI 模型 | 读取所选文件语义模型中的表、列、度量值及关系。 | 不写入模型。 |
+| 查询实时数据/日期范围/样本 | 通过本地引擎读取真实模型值。 | 结构化、有边界限制的查询；不是当前页面筛选。 |
+| 将主题直接发送到 Power BI | 将生成的 JSON 应用到所选报表窗口。 | 确认、可见界面导入及导出主题验证。 |
+| 在 Power BI 中创建日历 | 在语义模型中创建新的计算日期表。 | 确认及元数据备份；之后在 Desktop 中刷新。 |
+| 在 Power BI 中创建 HTML 度量值 | 在所选模型表中创建新度量值。 | 确认及元数据备份；手动添加 HTML 视觉对象。 |
+| 在 Power BI 中更新度量值 | 将格式化的 DAX 写入选中的现有度量值。 | 确认、元数据备份及并发更改保护。 |
+| 在 Power BI 中应用/删除关系 | 创建、编辑、激活/停用或删除所选列关系。 | 原生确认、元数据备份、过期状态检查及引擎验证；保留 RLS/完整性设置。 |
+
+**应用更改前请保存独立 PBIX 副本。**确认目标文件及表达式，然后在 Desktop 中保存 PBIX。应用绝不会悄悄保存 PBIX。
+
+<a name="live-model-data"></a>
+### 实时模型数据
+
+![表、列及度量值选择器和演示查询结果](../images/zh-CN/live-model-data.png)
+
+选择表/列/度量值，查询值、行数、列样本或日期范围。连接状态汇总在绿色页眉文字中，其工具提示提醒保存 PBIX 副本。数据面板出现在日历和组件等相关位置。
+
+<a name="theme-generator"></a>
+### 主题生成器
+
+![醒目的 JSON 导入和实时主题预览](../images/zh-CN/theme-generator.png)
+
+使用醒目的**加载报表主题（JSON）**区域，编辑颜色/字体并观察实时预览。导出 JSON，或滚动到页面末尾、表单和预览下方，使用**将主题直接发送到 Power BI**。
+
+![生成器页面末尾的将主题直接发送到 Power BI](../images/zh-CN/theme-send.png)
+
+若要以现有报表主题为起点，请在 Desktop 中保存 JSON 并在此加载。语义模型连接不读取报表主题。直接发送仍使用**可见导入对话框**：没有受支持的通用 Desktop 主题 API 能消除它。自动化期间不要与 Power BI 交互。
+
+<a name="calendar-generator"></a>
+### 日历生成器
+
+![现有日历选择、样本导出及在 Power BI 中创建日历](../images/zh-CN/calendar-generator.png)
+
+读取现有日历的表达式/日期范围/样本，导出 DAX 或样本 JSON，并生成新日历。**在 Power BI 中创建日历**会在备份和确认后创建新的计算表，而非替换选中的现有日历。
+
+创建后在 Desktop 中刷新。只有创建的表仍匹配且无依赖项时，才能使用带保护的日历撤销。
+
+<a name="component-library"></a>
+### 组件库
+
+![组件目录及直接创建 HTML 度量值的工具栏](../images/zh-CN/components.png)
+
+选择目标表和新度量值名称。构建器使用模型字段/度量值名称，并支持**在 Power BI 中创建 HTML 度量值**。确认后，度量值写入模型。
+
+必须手动在报表中添加兼容的 HTML 视觉对象并分配该度量值；此按钮不会在页面上放置视觉对象。
+
+<a name="dax-formatter"></a>
+### DAX 格式化器
+
+![选择模型度量值、格式化并直接在 Power BI 中更新](../images/zh-CN/dax-formatter.png)
+
+选择现有模型度量值，格式化表达式，然后选择**在 Power BI 中更新度量值**，将 DAX 提交回该度量值。复制/导出是独立操作。更新会拒绝并发的表达式更改，且需要确认。
+
+<a name="remaining-tools"></a>
+## 其他工具
+
+<a name="relationship-map"></a>
+### 关系图
+
+![可自由拖动的表框、Facts/Dimensions 分组及关系指示器](../images/zh-CN/relationship-map.png)
+
+新的 Desktop 专用工具显示真实表关系、基数、筛选箭头及非活动虚线。可自由拖动表框/分组、缩放/平移、指定友好名称/图标，并自定义分组和线条颜色。视觉布局按模型自动保存，可导出/导入 JSON，不提交模型写入。
+
+![带应用及删除操作的关系字段](../images/zh-CN/relationship-editor.png)
+
+选择关系线，检查准确的列、基数、筛选方向及活动状态。**将关系应用到 Power BI**或**在 Power BI 中删除关系**会在原生确认和备份后提交每次编辑。导入项目仍为只读。样式不会重命名表或更改 Power BI 原生关系图。[完整操作指南及安全限制](RELATIONSHIPS.md)。
+
+<a name="power-bi-tv-tool"></a>
+### Power BI TV Tool
+
+![工具顶部醒目的 TV Tool 实际演示示例](../images/zh-CN/tv-tool.png)
+
+顶部 **TV Tool 实际演示**横幅在默认浏览器中打开[可用的官方示例](https://www.powerportal.com.br/tv_tool/painel_exemplo_power_bi_tv_tool.html)，需要互联网，但不发送本地模型数据。表单中的本地演示仍然可用。
+
+轮播已发布的报表页面或本地图片，设置时长/切换效果、预览并导出 HTML。TV **不会**轮播本地已打开 PBIX 的页面。私有已发布报表需要相应的 Microsoft 登录/许可证/权限。
+
+<a name="performance-checklist"></a>
+### 性能检查清单
+
+![性能检查清单配置及参考模型的评估](../images/zh-CN/performance-checklist.png)
+
+审查参考模型的检查项及手动填写的报表特征。评分是启发式指导，不是实测视觉对象耗时。
+
+<a name="contrast-calculator"></a>
+### 对比度计算器
+
+![颜色对比度计算器](../images/zh-CN/contrast-calculator.png)
+
+根据 WCAG 阈值检查可读性/对比度。这是本地分析工具，不会自动修改报表格式。
+
+<a name="pbippbir-analyzer"></a>
+### PBIP/PBIR 分析器
+
+![模型/项目结构及启发式分析结果](../images/zh-CN/project-analyzer.png)
+
+分析已加载项目的可用结构。实时语义模型连接不提供报表页面/视觉对象元数据，因此不可用维度会报告为不完整。导入的 PBIR 项目元数据可提供更多计数。
+
+<a name="semantic-model-documenter"></a>
+### 语义模型文档生成器
+
+![根据合成模型元数据生成的表/列/度量值文档](../images/zh-CN/model-documenter.png)
+
+读取并以 Markdown 或 JSON 导出表/列/度量值/关系文档。此工具不修改模型。导出可能包含机密名称及 DAX，请妥善存储。
+
+<a name="measure-auditor"></a>
+### 度量值审计器
+
+![演示模型的度量值审计结果](../images/zh-CN/measure-auditor.png)
+
+使用启发式命名/长度/分隔符检查审计模型度量值或提供的 DAX。它不验证 DAX 语义，也不测量实际报表性能。
+
+<a name="consulting-and-training"></a>
+## 咨询与培训
+
+![Excelência 咨询、培训及联系区域](../images/zh-CN/consulting-training.png)
+
+了解 Power BI 咨询、Microsoft Fabric、数据工程及完整解决方案。包含企业内训、精选视频及联系操作。WhatsApp/电子邮件会打开草稿或浏览器页面，不会自动发送消息或预约。
+
+[版本说明](../../CHANGELOG.zh-CN.md) · [故障排除](TROUBLESHOOTING.md)
