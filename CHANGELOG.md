@@ -4,6 +4,22 @@
 [🇺🇸 English](CHANGELOG.md) · [🇧🇷 Português](CHANGELOG.pt-BR.md) · [🇪🇸 Español](CHANGELOG.es.md) · [🇨🇳 简体中文](CHANGELOG.zh-CN.md) · [🇫🇷 Français](CHANGELOG.fr.md) · [🇯🇵 日本語](CHANGELOG.ja.md) · [🇮🇳 हिन्दी](CHANGELOG.hi.md) · [🇸🇦 العربية](CHANGELOG.ar.md)
 <!-- /language-selector -->
 
+## 1.7.1
+
+- Prepare relationships by clicking or dragging exact column endpoints; review an orange dashed draft and apply with confirmation/backup. Existing pairs open for editing instead of creating duplicates.
+- Right-click line menu for editing, local colors and confirmed deletion.
+- More than 30 table/group icons, local PNG/JPEG group images and group-background dragging. Images are normalized and embedded in saved/exported diagrams.
+- Automatic Power BI date/time tables are hidden by default with a saved visibility toggle; ordinary hidden business tables remain visible. Expand any table to select all columns.
+- Refresh the diagram from Power BI after external edits while preserving surviving visual customization.
+- Native Desktop autodetection with prior confirmation/BIM backup and an explicit finish/review flow; concurrent model writes, switching and updates remain blocked until completion.
+- Eight-language documentation and all 19 application screenshots per language refreshed for 1.7.1. Genuine Power BI ribbon image remains shared in Portuguese.
+
+### Assets
+
+- `PowerPortal-Setup-1.7.1-x64.exe`
+- `SHA256SUMS.txt`
+- `install.ps1`
+
 ## 1.7.0
 
 - New Desktop-only **Relationship map**, the eleventh tool: draggable table boxes, pan/zoom, cardinality/filter-direction indicators and inactive dashed links.

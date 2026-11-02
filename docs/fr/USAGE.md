@@ -118,3 +118,5 @@ Les scores d’audit/d’analyse sont heuristiques. Une connexion active au mod�
 L’application n’envoie pas au portail les fichiers du modèle, métadonnées, lignes ou identifiants des sources. Les exports, sauvegardes et journaux locaux peuvent néanmoins contenir des informations confidentielles. Ne partagez avec l’assistance que des informations d’erreur expurgées des données sensibles.
 
 [Configuration](CONFIGURATION.md) · [Dépannage](TROUBLESHOOTING.md)
+
+Dans la version 1.7.1, le dessin de relations ne fait que préparer un brouillon : cliquez ou faites glisser entre des paires de colonnes exactes et vérifiez-le avant de l’appliquer. La suppression par clic droit utilise la même confirmation et la même sauvegarde. La détection automatique native est distincte et peut créer plusieurs liens : examinez-les dans Power BI, fermez ses dialogues, puis terminez dans Power Portal avant toute autre écriture ou mise à jour. Les images locales de groupe et les préférences de visibilité sont enregistrées uniquement dans le diagramme. [Nouveau parcours des relations](RELATIONSHIPS.md#native-automatic-relationship-detection).

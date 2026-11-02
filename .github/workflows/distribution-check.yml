@@ -54,6 +54,7 @@ jobs:
           if ($errors.Count) { throw ($errors | Out-String) }
           $release = Get-Content release.json -Raw | ConvertFrom-Json
           if ($release.version -notmatch '^\d+\.\d+\.\d+$') { throw 'Invalid version.' }
+          if ($release.tag -ne "v$($release.version)") { throw 'Release tag/version mismatch.' }
           if ($release.sha256 -notmatch '^[a-f0-9]{64}$') { throw 'Invalid checksum.' }
           if ($release.installer -ne "PowerPortal-Setup-$($release.version)-x64.exe") { throw 'Invalid asset filename.' }
           $expectedUrl = "https://github.com/luisgnserra/powerportaldesktop/releases/download/v$($release.version)/$($release.installer)"

@@ -1,15 +1,24 @@
 {
   "product": "Power Portal Desktop",
-  "version": "1.7.0",
-  "tag": "v1.7.0",
+  "version": "1.7.1",
+  "tag": "v1.7.1",
   "platform": "windows-x64",
-  "installer": "PowerPortal-Setup-1.7.0-x64.exe",
-  "downloadUrl": "https://github.com/luisgnserra/powerportaldesktop/releases/download/v1.7.0/PowerPortal-Setup-1.7.0-x64.exe",
-  "sha256": "dc94cfb7b4a17a683470d1ae9af5169d6b27427750a5b4ae25ad4106dac1067f",
-  "sizeBytes": 302450298,
-  "screenshotsVersion": "1.7.0",
+  "installer": "PowerPortal-Setup-1.7.1-x64.exe",
+  "downloadUrl": "https://github.com/luisgnserra/powerportaldesktop/releases/download/v1.7.1/PowerPortal-Setup-1.7.1-x64.exe",
+  "sha256": "282765494fbe155e3fb3229b9e8443f371218da3cc9390b5eaa0933078be5e13",
+  "sizeBytes": 302458501,
+  "screenshotsVersion": "1.7.1",
   "updates": "notify-and-install-after-user-click",
   "digitallySigned": false,
   "silentSwitch": "/S",
-  "languages": ["pt", "en", "es", "zh", "fr", "ja", "hi", "ar"]
+  "languages": [
+    "pt",
+    "en",
+    "es",
+    "zh",
+    "fr",
+    "ja",
+    "hi",
+    "ar"
+  ]
 }

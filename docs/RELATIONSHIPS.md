@@ -6,7 +6,7 @@
 
 [Back to home](../README.md) · [Screenshots](SCREENSHOTS.md) · [Model safety](USAGE.md)
 
-Available in **Power Portal Desktop 1.7.0**. This is a new Desktop-only tool, separate from Power BI's own Model view. It reads real table/column relationships and can apply confirmed changes to the connected local semantic model.
+Available in **Power Portal Desktop 1.7.1**. This is a new Desktop-only tool, separate from Power BI's own Model view. It reads real table/column relationships and can apply confirmed changes to the connected local semantic model.
 
 ![Relationship canvas with Facts and Dimensions groups, cardinalities and colored links](images/relationship-map.png)
 
@@ -21,7 +21,7 @@ Imported BIM/PBIP/TMDL projects support the diagram and visual customization, bu
 ## Understand the links
 
 - Each box represents an actual table. The original table name remains visible below its friendly heading.
-- Columns involved in relationships are prioritized in the box. Up to eight columns are displayed, with their data types; all columns remain available in the relationship editor.
+- Columns involved in relationships are prioritized in the box. Eight columns are shown initially; **Show all columns** expands a scrollable list. All columns also remain available in the editor.
 - **1** identifies the unique side; **\*** identifies the many side.
 - Solid lines are active relationships; dashed lines are inactive.
 - Arrows indicate filter propagation: a single TOM direction filters **from the destination table to the source table**, not the order in which you selected columns. Bidirectional links display both directions. **?** denotes Automatic, where the engine decides.
@@ -109,3 +109,37 @@ Updates/themes/model writes cannot run concurrently with a relationship write. S
 - Live Desktop writes can be restricted by model mode, Desktop version, permissions or enterprise policy. Do not bypass those restrictions.
 
 [Configuration and retained data](CONFIGURATION.md#data-locations) · [Troubleshooting](TROUBLESHOOTING.md)
+
+## Column-to-column editing and line menu
+
+Click a source column and then a column in another table, or drag between the column rows. Both must have the same data type. The editor selects the exact endpoints and shows an orange dashed draft; review cardinality, filter direction and active state, then **Apply relationship to Power BI**. Drawing alone never writes to the model. Press Esc to cancel. Selecting an already-related column pair opens that relationship instead of duplicating it.
+
+Right-click a relationship line for **Edit relationship**, its visual color and **Delete relationship in Power BI**. Deletion still requires native confirmation and a successful metadata backup; canceling or an error leaves the relationship unchanged. Colors save locally, not to Power BI's native diagram.
+
+## Group images and more icons
+
+Select a table assigned to a group, then use **Insert group image** in the group settings. Choose a local PNG/JPEG up to 10 MB and 8192 pixels per dimension. It is decoded and normalized to a PNG thumbnail up to 384 pixels and 256 KB. **Remove group image** clears it without deleting the group. More than 30 icon choices are available for tables and groups.
+
+Images are embedded in the saved/exported visual layout, not linked to a remote website. SVG and remote URLs are not accepted. The total embedded base64 image allowance is 2.8 million characters per diagram; the existing 5 MB import limit remains. Share only non-confidential images. Drag the group heading or its unobstructed background to move its member tables together.
+
+## Automatic date tables and refreshing
+
+**Show automatic date/time tables** is unchecked by default and saved per model. Power BI-generated `LocalDateTable_` and `DateTableTemplate_` tables are identified using Power BI annotations, with an internal-name/hidden/calculated-table fallback. Their links are hidden too. Ordinary business tables remain visible even if marked hidden in the model, as in Desktop's model diagram.
+
+**Refresh diagram from Power BI** re-reads the selected model's tables, columns and relationships, removes deleted objects, adds new ones and fits the canvas. Use it after editing in Power BI. It preserves your surviving custom groups/colors/positions. It does not copy Desktop's native coordinates, custom model-view tabs or layout: TOM does not provide those report-side layouts. Unsupported relationship types remain explicitly excluded.
+
+## Native automatic relationship detection
+
+**Autodetect relationships** invokes Power BI Desktop's own detection, not Power Portal name-matching suggestions. Save a PBIX copy first: native detection may create multiple links and affect filters or RLS.
+
+1. Connect to the intended local model and click the detection button.
+2. Review the native Power Portal confirmation. Cancel is the default.
+3. A BIM metadata backup and attempt log must be saved before automation.
+4. Power Portal opens Desktop's relationship manager and invokes its native autodetect button using verified UI Automation IDs.
+5. Review results and any additional confirmations directly in Power BI; Power Portal does not dismiss them automatically.
+6. Close the Power BI relationship dialogs and click **Finish detection and refresh diagram** in Power Portal.
+7. Inspect the refreshed diagram and save the PBIX in Desktop.
+
+The initial result means **detection was launched**, not that it succeeded or created relationships. Model writes, project/model switching and installer updates stay blocked until you finish; an open native dialog prevents completion. Unsupported Desktop versions/states produce explicit errors with the backup path. Close dialogs and use the finish action to recover after an automation failure. If Power BI was closed, finish its work before restarting Power Portal and reconnecting. There is no automatic full-model rollback.
+
+The native control IDs were inspected in a real Desktop window without invoking autodetection or modifying the owner's PBIX. Automated tests used synthetic models and simulated detection outcomes.

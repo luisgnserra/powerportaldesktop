@@ -18,13 +18,13 @@
 <a name="option-1-install-with-a-few-clicks"></a>
 ### الخيار 1: التثبيت ببضع نقرات
 
-1. [نزّل Power Portal Desktop 1.7.0 لنظام Windows x64](https://github.com/luisgnserra/powerportaldesktop/releases/download/v1.7.0/PowerPortal-Setup-1.7.0-x64.exe).
+1. [نزّل Power Portal Desktop 1.7.1 لنظام Windows x64](https://github.com/luisgnserra/powerportaldesktop/releases/download/v1.7.1/PowerPortal-Setup-1.7.1-x64.exe).
 2. شغّل المثبّت ووافق على طلب صلاحية مسؤول Windows.
 3. اختر مجلد التثبيت واللغة الافتراضية.
 4. أكمل التثبيت، ثم أغلق Power BI Desktop وأعد فتحه.
 5. افتح ملف PBIX واختر **External Tools > Power Portal**.
 
-**قد يعرض Windows تحذيراً بأن الناشر غير معروف:** الإصدار 1.7.0 غير موقّع رقمياً. لا تتابع إلا إذا كنت تثق بهذا التوزيع. إذا كان مؤسستك يحظر البرامج غير الموقّعة، فاتصل بفريق تقنية المعلومات بدلاً من تجاوز سياسته.
+**قد يعرض Windows تحذيراً بأن الناشر غير معروف:** الإصدار 1.7.1 غير موقّع رقمياً. لا تتابع إلا إذا كنت تثق بهذا التوزيع. إذا كان مؤسستك يحظر البرامج غير الموقّعة، فاتصل بفريق تقنية المعلومات بدلاً من تجاوز سياسته.
 
 [أحدث إصدار](https://github.com/luisgnserra/powerportaldesktop/releases/latest) · [دليل التثبيت](docs/ar/INSTALLATION.md) · [الإعداد](docs/ar/CONFIGURATION.md) · [استكشاف الأخطاء وإصلاحها](docs/ar/TROUBLESHOOTING.md)
 
@@ -37,7 +37,7 @@
 
 لقطة الشريط المرفقة باللغة البرتغالية: تعني **Ferramentas externas** عبارة **External Tools**. يفتح Power Portal **نافذة مستقلة متصلة بـ Power BI**، وليس مرئياً مضمنًا في تقرير أو لوحة داخلية جديدة في Power BI.
 
-![الصفحة الرئيسية لـ Power Portal 1.7.0 والشريط الجانبي الكامل وإشعار الاتصال عند بدء التشغيل](docs/images/ar/home.png)
+![الصفحة الرئيسية لـ Power Portal 1.7.1 والشريط الجانبي الكامل وإشعار الاتصال عند بدء التشغيل](docs/images/ar/home.png)
 
 **هل Power BI مفتوح لديك بالفعل؟** عند التشغيل من اختصار، يكتشف Power Portal النماذج المحلية المفتوحة ويعرض إشعار اتصال. اختر **Find open models**، وحدد ملفك، ثم اتصل. يمكنك بعدها الاستعلام عن بياناته وإرسال التغييرات المدعومة إليه بعد التأكيد.
 
@@ -54,6 +54,8 @@
 
 أنشئ العلاقات وعدّلها ونشّطها/عطّلها واحذفها في نموذج Power BI المتصل **بعد التأكيد والنسخ الاحتياطي للبيانات الوصفية**. يبقى التنسيق المرئي داخل Power Portal؛ ولا يعيد تسمية الجداول أو يغيّر التخطيط الأصلي في Power BI. [دليل العلاقات الكامل](docs/ar/RELATIONSHIPS.md).
 
+في 1.7.1، انقر الأعمدة الدقيقة أو اسحب بينها لإعداد العلاقة؛ وانقر بزر الفأرة الأيمن على الخط لضبط اللون أو التحرير أو الحذف بعد التأكيد. تدعم المجموعات الصور المحلية وأكثر من 30 أيقونة. تُخفى جداول التاريخ/الوقت التلقائية افتراضياً مع مفتاح لإظهارها. حدّث المخطط بعد التحرير خارج Power BI، أو شغّل الكشف التلقائي الأصلي في Desktop بعد النسخ الاحتياطي المسبق، ثم أكمل المراجعة/الإنهاء المنفصلين.
+
 <a name="built-in-update-checks"></a>
 ### التحقق المدمج من التحديثات
 
@@ -63,7 +65,7 @@
 
 ![إشعار إصدار جديد وزر Update now](docs/images/ar/update-available.png)
 
-تستخدم لقطة الشاشة **محاكاة إشعار مستقبلي للإصدار 1.7.1** لعرض الواجهة، وليست إعلاناً عن إصدار منشور. **الإصدار 1.7.0 منشور الآن:** يمكن للمستخدمين الذين لديهم 1.6.2 أو أحدث إعادة فتح التطبيق أو النقر على **Check for updates** لتلقي التحديث. [دليل التحديث](docs/ar/UPDATES.md).
+تستخدم لقطة الشاشة **محاكاة إشعار مستقبلي للإصدار 1.7.2** لعرض الواجهة، وليست إعلاناً عن إصدار منشور. **الإصدار 1.7.1 منشور الآن:** يمكن للمستخدمين الذين لديهم 1.6.2 أو أحدث إعادة فتح التطبيق أو النقر على **Check for updates** لتلقي التحديث. [دليل التحديث](docs/ar/UPDATES.md).
 
 **هل تستخدم 1.6.1 أو إصداراً أقدم؟ ثبّت 1.6.2 يدوياً مرة واحدة لتفعيل هذه الميزة.** ويمكنك أيضاً استخدام **Check for updates** لإعادة محاولة التحقق بعد فشل أو انقطاع الاتصال. لا يثبّت المحدّث أي شيء لمجرد فتح التطبيق.
 
@@ -77,7 +79,7 @@
 ```powershell
 $script = Join-Path $env:TEMP 'Install-PowerPortal.ps1'
 [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
-Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/luisgnserra/powerportaldesktop/v1.7.0/install.ps1' -OutFile $script
+Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/luisgnserra/powerportaldesktop/v1.7.1/install.ps1' -OutFile $script
 # Review the downloaded script before running it.
 Get-Content -LiteralPath $script
 & $script
@@ -85,7 +87,7 @@ Get-Content -LiteralPath $script
 
 </div>
 
-ينزّل المساعد **الإصدار 1.7.0**، ويتحقق من قيمة SHA-256 المثبتة فيه، ثم يفتح المثبّت نفسه. ولا يثبّت Node.js أو PHP أو .NET SDK، ولا ينشئ أي شيء.
+ينزّل المساعد **الإصدار 1.7.1**، ويتحقق من قيمة SHA-256 المثبتة فيه، ثم يفتح المثبّت نفسه. ولا يثبّت Node.js أو PHP أو .NET SDK، ولا ينشئ أي شيء.
 
 للتثبيت دون تدخل، شغّل المساعد نفسه من **نافذة PowerShell بصلاحية المسؤول**:
 

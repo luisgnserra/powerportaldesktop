@@ -6,7 +6,7 @@
 
 [Retour à l’accueil](../../README.fr.md) · [Installer](INSTALLATION.md) · [Guide de sécurité](USAGE.md)
 
-**Captures de l’application : Power Portal Desktop 1.7.0, interface dans la langue sélectionnée (français).**
+**Captures de l’application : Power Portal Desktop 1.7.1, interface dans la langue sélectionnée (français).**
 Les captures utilisent des **métadonnées et valeurs de requêtes synthétiques de démonstration**, et non un PBIX client. Les états connectés illustrent les actions prises en charge par l’interface ; aucun modèle client n’a été modifié pour créer ces images. Les libellés du sélecteur de fichiers natif peuvent suivre la langue de Windows. La capture réelle du ruban Power BI a été fournie par le propriétaire et recadrée pour supprimer le titre privé du fichier ; elle conserve son portugais d’origine.
 
 <a name="open-power-portal-from-external-tools"></a>
@@ -43,7 +43,7 @@ Un lancement depuis le ruban Outils externes transmet automatiquement la connexi
 
 ![Nouvelle version disponible avec Mettre à jour maintenant et avertissement d’autorisation/de modifications non envoyées](../images/fr/update-available.png)
 
-La capture utilise un **résultat synthétique d’une future version 1.7.1** pour montrer la notification dans la version 1.7.0. Elle ne prétend pas que 1.7.1 a été publié. Les utilisateurs de 1.6.2 ou d’une version ultérieure peuvent désormais recevoir la véritable notification de 1.7.0.
+La capture utilise un **résultat synthétique d’une future version 1.7.2** pour montrer la notification dans la version 1.7.1. Elle ne prétend pas que 1.7.2 a été publié. Les utilisateurs de 1.6.2 ou d’une version ultérieure peuvent désormais recevoir la véritable notification de 1.7.1.
 
 En 1.6.4, la bannière ambrée reste visible pendant le défilement et s’anime doucement, sauf si la réduction des animations est activée. Aucune bannière « à jour » permanente n’occupe de l’espace.
 
@@ -124,6 +124,8 @@ Le nouvel outil réservé à Desktop affiche les liens réels entre les tables, 
 ![Champs de relation avec actions Appliquer et Supprimer](../images/fr/relationship-editor.png)
 
 Sélectionnez une ligne pour examiner ses colonnes exactes, sa cardinalité, le sens du filtre et l’état actif. **Appliquer la relation à Power BI** ou **Supprimer la relation dans Power BI** valide chaque modification après confirmation native et sauvegarde. Les projets importés restent en lecture seule. Le style ne renomme pas les tables et ne change pas le diagramme natif de Power BI. [Parcours complet et limites de sécurité](RELATIONSHIPS.md).
+
+Dans la version 1.7.1, cliquez ou faites glisser entre des colonnes pour préparer un brouillon en pointillés, puis vérifiez-le/appliquez-le. Faites un clic droit sur une ligne pour choisir sa couleur, la modifier ou la supprimer. Les paramètres de groupe proposent des images PNG/JPEG locales et davantage d’icônes ; faites glisser l’arrière-plan ou l’en-tête du groupe. Les tables de date/heure automatiques sont masquées par défaut. **Actualiser le diagramme depuis Power BI** relit les modifications externes sans copier les coordonnées de la disposition native. **Détecter automatiquement les relations** lance la détection native de Desktop après confirmation et sauvegarde ; examinez et fermez ses dialogues avant de choisir **Terminer la détection et actualiser le diagramme**.
 
 <a name="power-bi-tv-tool"></a>
 ### Power BI TV Tool

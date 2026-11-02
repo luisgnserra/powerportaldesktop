@@ -4,6 +4,24 @@
 [🇺🇸 English](CHANGELOG.md) · [🇧🇷 Português](CHANGELOG.pt-BR.md) · [🇪🇸 Español](CHANGELOG.es.md) · [🇨🇳 简体中文](CHANGELOG.zh-CN.md) · [🇫🇷 Français](CHANGELOG.fr.md) · [🇯🇵 日本語](CHANGELOG.ja.md) · [🇮🇳 हिन्दी](CHANGELOG.hi.md) · [🇸🇦 العربية](CHANGELOG.ar.md)
 <!-- /language-selector -->
 
+<a name="171"></a>
+## 1.7.1
+
+- Prepare relaciones haciendo clic o arrastrando entre extremos de columnas exactos; revise un borrador naranja discontinuo y aplíquelo con confirmación y copia de seguridad. Los pares existentes se abren para editarlos en lugar de crear duplicados.
+- Menú de línea con el botón derecho para editar, elegir colores locales y eliminar con confirmación.
+- Más de 30 iconos de tablas/grupos, imágenes PNG/JPEG locales de grupo y arrastre del fondo del grupo. Las imágenes se normalizan e incrustan en los diagramas guardados/exportados.
+- Las tablas automáticas de fecha/hora de Power BI se ocultan de forma predeterminada con un control de visibilidad guardado; las tablas de negocio normales ocultas siguen visibles. Expanda cualquier tabla para seleccionar todas sus columnas.
+- Actualice el diagrama desde Power BI después de ediciones externas conservando la personalización visual que sigue existiendo.
+- Detección automática nativa de Desktop con confirmación previa, copia de seguridad BIM y un flujo explícito de finalización/revisión; las escrituras simultáneas del modelo, los cambios de modelo/proyecto y las actualizaciones siguen bloqueados hasta finalizar.
+- Documentación en ocho idiomas y las 19 capturas de la aplicación por idioma actualizadas para 1.7.1. La imagen auténtica de la cinta de Power BI sigue compartida en portugués.
+
+<a name="assets"></a>
+### Recursos
+
+- `PowerPortal-Setup-1.7.1-x64.exe`
+- `SHA256SUMS.txt`
+- `install.ps1`
+
 <a name="170"></a>
 ## 1.7.0
 
@@ -14,7 +32,7 @@
 - Los proyectos importados siguen siendo de solo lectura; las relaciones no compatibles y los fallos de validación del motor se indican explícitamente.
 - Interfaz en ocho idiomas, barra lateral compacta de once elementos sin desplazamiento, instalador actualizado y guías en inglés con 20 capturas.
 
-<a name="assets"></a>
+<a name="assets-1"></a>
 ### Recursos
 
 - `PowerPortal-Setup-1.7.0-x64.exe`
@@ -30,7 +48,7 @@
 - La importación de temas JSON está destacada; **Enviar tema directamente a Power BI** está ahora al final de la página. Se eliminaron párrafos explicativos redundantes de la herramienta, conservando la confirmación nativa y las limitaciones documentadas de la automatización.
 - Todo el texto nuevo es compatible con ocho idiomas. Se actualizaron el instalador, el asistente, la suma de comprobación y 18 capturas, incluida la acción de temas al final de la página.
 
-<a name="assets-1"></a>
+<a name="assets-2"></a>
 ### Recursos
 
 - `PowerPortal-Setup-1.6.4-x64.exe`
@@ -46,7 +64,7 @@
 
 Mantenga 1.6.2 instalado para probarlo: vuelva a abrir la aplicación o haga clic en **Buscar actualizaciones**. Elija **Actualizar ahora** solo cuando esté listo para instalar. El responsable de mantenimiento no actualizó la instalación local del usuario durante la publicación.
 
-<a name="assets-2"></a>
+<a name="assets-3"></a>
 ### Recursos
 
 - `PowerPortal-Setup-1.6.3-x64.exe`
@@ -64,7 +82,7 @@ Mantenga 1.6.2 instalado para probarlo: vuelva a abrir la aplicación o haga cli
 
 La aplicación sigue sin firma. Instale 1.6.2 manualmente una vez si tiene 1.6.1 o anterior. Vuelva a abrir Power Portal cuando termine una actualización.
 
-<a name="assets-3"></a>
+<a name="assets-4"></a>
 ### Recursos
 
 - `PowerPortal-Setup-1.6.2-x64.exe`
@@ -85,7 +103,7 @@ Se validaron las comparaciones de versiones, la validación de versiones oficial
 
 Se validó la barra lateral a alturas de ventana de 680, 768 y 900 píxeles en ocho idiomas, el inicio/selección/actualización sin escrituras en el modelo y el registro empaquetado/cierre mediante el instalador. Las capturas de documentación usan datos sintéticos; no se cambió ningún archivo de cliente.
 
-<a name="assets-4"></a>
+<a name="assets-5"></a>
 ### Recursos
 
 - `PowerPortal-Setup-1.6.1-x64.exe`

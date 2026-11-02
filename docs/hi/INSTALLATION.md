@@ -17,7 +17,7 @@ Windows 10/11 x64, व्यवस्थापक स्थापना अन�
 ## सरल स्थापना
 
 1. [नवीनतम Release](https://github.com/luisgnserra/powerportaldesktop/releases/latest) खोलें।
-2. **Assets** में इस रिलीज़ का `PowerPortal-Setup-1.7.0-x64.exe` डाउनलोड करें। अपने-आप बने source archive को इंस्टॉलर के रूप में डाउनलोड न करें।
+2. **Assets** में इस रिलीज़ का `PowerPortal-Setup-1.7.1-x64.exe` डाउनलोड करें। अपने-आप बने source archive को इंस्टॉलर के रूप में डाउनलोड न करें।
 3. वैकल्पिक रूप से [SHA-256 सत्यापित करें](#verify-the-installer)।
 4. निष्पादन योग्य चलाएँ और User Account Control की अनुमति दें।
 5. दिखाई गई निर्भरता शर्तें स्वीकार करें, फ़ोल्डर चुनें और झंडों से डिफ़ॉल्ट भाषा चुनें। Windows UI भाषा सुझाई जाती है; असमर्थित भाषा पर अंग्रेज़ी चुनी जाती है।
@@ -45,12 +45,12 @@ Windows शॉर्टकट लॉन्च करने पर खुले �
 ```powershell
 $script = Join-Path $env:TEMP 'Install-PowerPortal.ps1'
 [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
-Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/luisgnserra/powerportaldesktop/v1.7.0/install.ps1' -OutFile $script
+Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/luisgnserra/powerportaldesktop/v1.7.1/install.ps1' -OutFile $script
 Get-Content -LiteralPath $script
 & $script
 ```
 
-यह संस्करणयुक्त URL सहायक को 1.7.0 रिलीज़ पर पिन करता है; यह भविष्य की रिलीज़ों को चुपचाप नहीं अपनाता। सहायक इंस्टॉलर फ़ाइल नाम और SHA-256 चेकसम भी पिन करता है, HTTPS से डाउनलोड करता है, चलाने से पहले निष्पादन योग्य सत्यापित करता है और इंस्टॉलर सफलतापूर्वक पूरा होने पर पंजीकरण जाँचता है।
+यह संस्करणयुक्त URL सहायक को 1.7.1 रिलीज़ पर पिन करता है; यह भविष्य की रिलीज़ों को चुपचाप नहीं अपनाता। सहायक इंस्टॉलर फ़ाइल नाम और SHA-256 चेकसम भी पिन करता है, HTTPS से डाउनलोड करता है, चलाने से पहले निष्पादन योग्य सत्यापित करता है और इंस्टॉलर सफलतापूर्वक पूरा होने पर पंजीकरण जाँचता है।
 
 TLS पंक्ति पुराने Windows PowerShell डिफ़ॉल्ट के लिए इस PowerShell प्रक्रिया में HTTPS TLS 1.2 सक्षम करती है। इससे Windows सुरक्षा या निष्पादन नीतियाँ नहीं बदलतीं।
 
@@ -92,7 +92,7 @@ PowerShell को **Administrator के रूप में** खोलें, 
 चेकसम सत्यापन के बाद व्यवस्थापक यह चला सकता है:
 
 ```powershell
-$setup = "$env:USERPROFILE\Downloads\PowerPortal-Setup-1.7.0-x64.exe"
+$setup = "$env:USERPROFILE\Downloads\PowerPortal-Setup-1.7.1-x64.exe"
 $process = Start-Process -FilePath $setup -ArgumentList '/S' -Wait -PassThru
 if ($process.ExitCode -ne 0) { throw "Installer failed: $($process.ExitCode)" }
 ```
@@ -102,15 +102,15 @@ PowerShell सहायक अनुशंसित है क्योंकि
 <a name="verify-the-installer"></a>
 ## इंस्टॉलर सत्यापित करें
 
-**1.7.0 x64** का अपेक्षित SHA-256:
+**1.7.1 x64** का अपेक्षित SHA-256:
 
 ```text
-DC94CFB7B4A17A683470D1AE9AF5169D6B27427750A5B4AE25AD4106DAC1067F
+282765494FBE155E3FB3229B9E8443F371218DA3CC9390B5EAA0933078BE5E13
 ```
 
 ```powershell
-$file = "$env:USERPROFILE\Downloads\PowerPortal-Setup-1.7.0-x64.exe"
-$expected = 'DC94CFB7B4A17A683470D1AE9AF5169D6B27427750A5B4AE25AD4106DAC1067F'
+$file = "$env:USERPROFILE\Downloads\PowerPortal-Setup-1.7.1-x64.exe"
+$expected = '282765494FBE155E3FB3229B9E8443F371218DA3CC9390B5EAA0933078BE5E13'
 if ((Get-FileHash -LiteralPath $file -Algorithm SHA256).Hash -ne $expected) {
     throw 'Checksum mismatch. Do not run this installer.'
 }

@@ -6,7 +6,7 @@
 
 [Voltar ao início](../../README.pt-BR.md) · [Prints](SCREENSHOTS.md) · [Segurança do modelo](USAGE.md)
 
-Disponível no **Power Portal Desktop 1.7.0**. É uma ferramenta nova exclusiva do Desktop, separada da exibição Modelo do Power BI. Lê os relacionamentos reais entre tabelas/colunas e aplica alterações confirmadas no modelo semântico local conectado.
+Disponível no **Power Portal Desktop 1.7.1**. É uma ferramenta nova exclusiva do Desktop, separada da exibição Modelo do Power BI. Lê os relacionamentos reais entre tabelas/colunas e aplica alterações confirmadas no modelo semântico local conectado.
 
 ![Canvas com grupos Fatos e Dimensões, cardinalidades e ligações coloridas](../images/pt-BR/relationship-map.png)
 
@@ -23,7 +23,7 @@ Projetos BIM/PBIP/TMDL importados permitem o diagrama e a personalização visua
 ## Entender as ligações
 
 - Cada caixa representa uma tabela real. O nome original permanece visível abaixo do título amigável.
-- Colunas usadas em relacionamentos são priorizadas na caixa. Até oito aparecem, com seus tipos; todas continuam disponíveis no editor.
+- Colunas usadas em relacionamentos são priorizadas na caixa. Oito aparecem inicialmente; **Mostrar todas as colunas** expande uma lista rolável. Todas continuam disponíveis no editor.
 - **1** identifica o lado único; **\*** identifica o lado muitos.
 - Linhas contínuas são relacionamentos ativos; tracejadas são inativos.
 - Setas indicam propagação de filtros: uma direção única TOM filtra **da tabela de destino para a tabela de origem**, não na ordem em que você escolheu as colunas. Ligações bidirecionais mostram ambas as direções. **?** representa Automatic, quando o mecanismo decide.
@@ -118,3 +118,41 @@ Atualizações/temas/gravações não podem ocorrer simultaneamente com a grava�
 - Gravações no Desktop ao vivo podem ser restritas pelo modo do modelo, versão do Desktop, permissões ou política empresarial. Não contorne essas restrições.
 
 [Configuração e dados mantidos](CONFIGURATION.md#data-locations) · [Solução de problemas](TROUBLESHOOTING.md)
+
+<a name="column-to-column-editing-and-line-menu"></a>
+## Edição entre colunas e menu da linha
+
+Clique na coluna de origem e depois em uma coluna de outra tabela ou arraste entre as linhas das colunas. As duas precisam ter o mesmo tipo de dados. O editor seleciona as pontas exatas e mostra um rascunho laranja tracejado; revise cardinalidade, direção dos filtros e estado ativo e escolha **Aplicar relacionamento no Power BI**. Desenhar sozinho nunca grava no modelo. Esc cancela. Selecionar um par já relacionado abre sua edição em vez de duplicar.
+
+Clique com o botão direito na linha para **Editar relacionamento**, mudar a cor visual ou **Excluir relacionamento no Power BI**. A exclusão ainda exige confirmação nativa e backup bem-sucedido dos metadados; cancelar ou ocorrer erro mantém o relacionamento. As cores são salvas localmente, não no diagrama nativo do Power BI.
+
+<a name="group-images-and-more-icons"></a>
+## Imagens nos grupos e mais ícones
+
+Selecione uma tabela atribuída a um grupo e use **Inserir imagem no grupo** nas configurações dele. Escolha PNG/JPEG local de até 10 MB e 8192 pixels por dimensão. A imagem é decodificada e normalizada em miniatura PNG de até 384 pixels e 256 KB. **Remover imagem do grupo** limpa sem excluir o grupo. Há mais de 30 ícones para tabelas e grupos.
+
+As imagens são embutidas no layout salvo/exportado, sem links remotos. SVG e URLs remotas não são aceitos. O limite total de imagens base64 é 2,8 milhões de caracteres por diagrama; permanece o limite de importação de 5 MB. Compartilhe somente imagens não confidenciais. Arraste o título ou o fundo livre do grupo para mover suas tabelas juntas.
+
+<a name="automatic-date-tables-and-refreshing"></a>
+## Tabelas automáticas de datas e atualização
+
+**Mostrar tabelas automáticas de data/hora** fica desmarcado por padrão e é salvo por modelo. Tabelas `LocalDateTable_` e `DateTableTemplate_` geradas pelo Power BI são identificadas pelas anotações do Power BI, com alternativa pelo nome interno/tabela oculta/calculada. Suas ligações também ficam ocultas. Tabelas comuns de negócio continuam visíveis mesmo se marcadas ocultas, como no diagrama do Desktop.
+
+**Atualizar diagrama do Power BI** relê tabelas, colunas e relacionamentos do modelo selecionado, remove objetos excluídos, adiciona novos e enquadra o canvas. Use após editar no Power BI. Preserva grupos/cores/posições personalizados que permanecem. Não copia coordenadas nativas, abas personalizadas da exibição Modelo nem layout do Desktop: o TOM não fornece esses layouts do relatório. Tipos não suportados continuam explicitamente excluídos.
+
+<a name="native-automatic-relationship-detection"></a>
+## Detecção automática nativa de relacionamentos
+
+**Detectar relacionamentos automaticamente** aciona a detecção do próprio Power BI Desktop, não sugestões do Power Portal por nomes. Salve uma cópia do PBIX primeiro: a detecção pode criar várias ligações e afetar filtros ou RLS.
+
+1. Conecte ao modelo local desejado e clique no botão de detecção.
+2. Revise a confirmação nativa do Power Portal. Cancelar é o padrão.
+3. Backup BIM dos metadados e log da tentativa precisam ser salvos antes da automação.
+4. O Power Portal abre o gerenciador do Desktop e aciona sua detecção nativa por IDs verificados de Automação de Interface.
+5. Revise resultados e confirmações adicionais diretamente no Power BI; o Power Portal não os fecha automaticamente.
+6. Feche os diálogos de relacionamentos e clique em **Concluir detecção e atualizar diagrama** no Power Portal.
+7. Inspecione o diagrama atualizado e salve o PBIX no Desktop.
+
+O resultado inicial significa **detecção iniciada**, não que tenha funcionado ou criado relacionamentos. Gravações, troca de modelo/projeto e atualizações do instalador ficam bloqueadas até concluir; um diálogo nativo aberto impede a conclusão. Versões/estados não suportados geram erros explícitos com o caminho do backup. Feche os diálogos e use a ação de concluir para recuperar após falha da automação. Se o Power BI foi fechado, termine o trabalho dele antes de reiniciar o Power Portal e reconectar. Não há reversão automática do modelo completo.
+
+Os IDs nativos foram inspecionados em uma janela real do Desktop sem acionar a detecção nem modificar o PBIX do proprietário. Testes automatizados usaram modelos sintéticos e resultados de detecção simulados.

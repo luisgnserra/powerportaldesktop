@@ -4,6 +4,24 @@
 [🇺🇸 English](CHANGELOG.md) · [🇧🇷 Português](CHANGELOG.pt-BR.md) · [🇪🇸 Español](CHANGELOG.es.md) · [🇨🇳 简体中文](CHANGELOG.zh-CN.md) · [🇫🇷 Français](CHANGELOG.fr.md) · [🇯🇵 日本語](CHANGELOG.ja.md) · [🇮🇳 हिन्दी](CHANGELOG.hi.md) · [🇸🇦 العربية](CHANGELOG.ar.md)
 <!-- /language-selector -->
 
+<a name="171"></a>
+## 1.7.1
+
+- Préparez des relations en cliquant ou en faisant glisser entre des extrémités de colonnes exactes ; vérifiez un brouillon orange en pointillés et appliquez-le avec confirmation et sauvegarde. Les paires existantes s’ouvrent pour modification au lieu de créer des doublons.
+- Menu de ligne par clic droit pour modifier, choisir des couleurs locales et supprimer avec confirmation.
+- Plus de 30 icônes de tables/groupes, images PNG/JPEG locales de groupe et déplacement par l’arrière-plan du groupe. Les images sont normalisées et incorporées aux diagrammes enregistrés/exportés.
+- Les tables de date/heure automatiques de Power BI sont masquées par défaut avec une option de visibilité enregistrée ; les tables métier ordinaires masquées restent visibles. Déployez n’importe quelle table pour sélectionner toutes ses colonnes.
+- Actualisez le diagramme depuis Power BI après des modifications externes tout en conservant la personnalisation visuelle encore présente.
+- Détection automatique native de Desktop avec confirmation préalable, sauvegarde BIM et parcours explicite de finalisation/vérification ; les écritures simultanées du modèle, les changements de modèle/projet et les mises à jour restent bloqués jusqu’à la finalisation.
+- Documentation en huit langues et les 19 captures de l’application par langue actualisées pour 1.7.1. L’image authentique du ruban Power BI reste partagée en portugais.
+
+<a name="assets"></a>
+### Fichiers
+
+- `PowerPortal-Setup-1.7.1-x64.exe`
+- `SHA256SUMS.txt`
+- `install.ps1`
+
 <a name="170"></a>
 ## 1.7.0
 
@@ -14,7 +32,7 @@
 - Les projets importés restent en lecture seule ; les relations non prises en charge et les échecs de validation du moteur sont signalés explicitement.
 - Interface en huit langues, barre latérale compacte de onze éléments sans défilement, programme d’installation actualisé et guides en anglais avec 20 captures.
 
-<a name="assets"></a>
+<a name="assets-1"></a>
 ### Fichiers
 
 - `PowerPortal-Setup-1.7.0-x64.exe`
@@ -30,7 +48,7 @@
 - L’import JSON du thème est mis en évidence ; **Envoyer le thème directement à Power BI** se trouve désormais en fin de page. Suppression des paragraphes explicatifs redondants de l’outil, tout en conservant la confirmation native et les limites documentées de l’automatisation.
 - Tous les nouveaux textes prennent en charge huit langues. Programme d’installation, assistant, somme de contrôle et 18 captures actualisés, dont l’action de thème en fin de page.
 
-<a name="assets-1"></a>
+<a name="assets-2"></a>
 ### Fichiers
 
 - `PowerPortal-Setup-1.6.4-x64.exe`
@@ -46,7 +64,7 @@
 
 Conservez 1.6.2 installé pour le test : rouvrez l’application ou cliquez sur **Rechercher des mises à jour**. Choisissez **Mettre à jour maintenant** uniquement lorsque vous êtes prêt à installer. Le responsable de maintenance n’a pas mis à jour l’installation locale de l’utilisateur pendant la publication.
 
-<a name="assets-2"></a>
+<a name="assets-3"></a>
 ### Fichiers
 
 - `PowerPortal-Setup-1.6.3-x64.exe`
@@ -64,7 +82,7 @@ Conservez 1.6.2 installé pour le test : rouvrez l’application ou cliquez sur 
 
 L’application reste non signée. Installez manuellement 1.6.2 une fois si vous utilisez 1.6.1 ou une version antérieure. Rouvrez Power Portal lorsqu’une mise à jour est terminée.
 
-<a name="assets-3"></a>
+<a name="assets-4"></a>
 ### Fichiers
 
 - `PowerPortal-Setup-1.6.2-x64.exe`
@@ -85,7 +103,7 @@ Validation des comparaisons de versions, de la vérification des versions offici
 
 Validation de la barre latérale à des hauteurs de fenêtre de 680, 768 et 900 pixels dans huit langues, du démarrage/de la sélection/de l’actualisation sans écriture dans le modèle, ainsi que de l’enregistrement empaqueté/de la fermeture par le programme d’installation. Les captures de documentation utilisent des données synthétiques ; aucun fichier client n’a été modifié.
 
-<a name="assets-4"></a>
+<a name="assets-5"></a>
 ### Fichiers
 
 - `PowerPortal-Setup-1.6.1-x64.exe`

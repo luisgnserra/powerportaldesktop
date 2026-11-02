@@ -108,3 +108,5 @@ Audit/analyzer scores are heuristics. An active model connection does not supply
 The app does not send model files, metadata, rows or source credentials to the portal. Exports, backups and local logs can nevertheless contain confidential information. Only share sanitized error information with support.
 
 [Configuration](CONFIGURATION.md) · [Troubleshooting](TROUBLESHOOTING.md)
+
+In 1.7.1, relationship drawing only prepares a draft: click/drag exact column pairs and review before applying. Right-click deletion uses the same confirmation and backup. Native autodetection is separate and may create multiple links: review in Power BI, close its dialogs, then finish in Power Portal before other writes or updates. Local group images and visibility preferences are saved only in the diagram. [New relationship workflow](RELATIONSHIPS.md#native-automatic-relationship-detection).

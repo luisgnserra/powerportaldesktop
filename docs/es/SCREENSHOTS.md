@@ -6,7 +6,7 @@
 
 [Volver al inicio](../../README.es.md) · [Instalar](INSTALLATION.md) · [Guía de seguridad](USAGE.md)
 
-**Capturas de la aplicación: Power Portal Desktop 1.7.0, interfaz en el idioma seleccionado (español).**
+**Capturas de la aplicación: Power Portal Desktop 1.7.1, interfaz en el idioma seleccionado (español).**
 Las capturas usan **metadatos y valores de consulta sintéticos de demostración**, no un PBIX de cliente. Los estados conectados ilustran las acciones compatibles de la interfaz; no se cambió ningún modelo de cliente para crear estas imágenes. Las etiquetas del selector de archivos nativo pueden seguir el idioma de Windows. La captura real de la cinta de Power BI fue proporcionada por el propietario y recortada para eliminar el título privado del archivo; conserva su portugués original.
 
 <a name="open-power-portal-from-external-tools"></a>
@@ -43,7 +43,7 @@ El inicio desde la cinta Herramientas externas pasa automáticamente la conexió
 
 ![Nueva versión disponible con Actualizar ahora y advertencia de autorización/ediciones no enviadas](../images/es/update-available.png)
 
-La captura usa un **resultado sintético de una futura versión 1.7.1** para mostrar el aviso en la versión 1.7.0. No afirma que 1.7.1 se haya publicado. Los usuarios de 1.6.2 o posterior ya pueden recibir el aviso real de 1.7.0.
+La captura usa un **resultado sintético de una futura versión 1.7.2** para mostrar el aviso en la versión 1.7.1. No afirma que 1.7.2 se haya publicado. Los usuarios de 1.6.2 o posterior ya pueden recibir el aviso real de 1.7.1.
 
 En 1.6.4, el aviso ámbar permanece visible al desplazarse y se anima suavemente salvo que esté activado el movimiento reducido. No hay un aviso permanente de «actualizado» ocupando espacio.
 
@@ -124,6 +124,8 @@ La nueva herramienta exclusiva de Desktop muestra vínculos reales entre tablas,
 ![Campos de relación con acciones Aplicar y Eliminar](../images/es/relationship-editor.png)
 
 Seleccione una línea para inspeccionar sus columnas exactas, cardinalidad, dirección del filtro y estado activo. **Aplicar relación a Power BI** o **Eliminar relación en Power BI** confirma cada edición después de la confirmación nativa y la copia de seguridad. Los proyectos importados siguen siendo de solo lectura. El estilo no cambia los nombres de las tablas ni el diagrama nativo de Power BI. [Recorrido completo y límites de seguridad](RELATIONSHIPS.md).
+
+En 1.7.1, haga clic o arrastre entre columnas para preparar un borrador discontinuo y después revíselo/aplíquelo. Haga clic con el botón derecho en una línea para cambiar su color, editarla o eliminarla. Los ajustes de grupo ofrecen imágenes PNG/JPEG locales y más iconos; arrastre el fondo o el encabezado del grupo. Las tablas automáticas de fecha/hora se ocultan de forma predeterminada. **Actualizar diagrama desde Power BI** vuelve a leer los cambios externos sin copiar las coordenadas de la disposición nativa. **Detectar relaciones automáticamente** inicia la detección nativa de Desktop después de la confirmación y la copia de seguridad; revise y cierre sus diálogos antes de **Finalizar detección y actualizar diagrama**.
 
 <a name="power-bi-tv-tool"></a>
 ### Power BI TV Tool
