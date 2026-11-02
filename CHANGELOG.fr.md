@@ -4,6 +4,15 @@
 [🇺🇸 English](CHANGELOG.md) · [🇧🇷 Português](CHANGELOG.pt-BR.md) · [🇪🇸 Español](CHANGELOG.es.md) · [🇨🇳 简体中文](CHANGELOG.zh-CN.md) · [🇫🇷 Français](CHANGELOG.fr.md) · [🇯🇵 日本語](CHANGELOG.ja.md) · [🇮🇳 हिन्दी](CHANGELOG.hi.md) · [🇸🇦 العربية](CHANGELOG.ar.md)
 <!-- /language-selector -->
 
+<a name="1811"></a>
+## 1.8.11
+
+**Envoyez des idées sans encombrer le menu**
+
+Envoyer des idées apparaît juste au-dessus de À propos du développement. Le formulaire accessible accepte un titre (120 caractères maximum) et une description (1000). Ouvrir l’e-mail avec l’idée demande l’ouverture de la messagerie par défaut avec le destinataire fixe contato@consultoriaexcelencia.com.br, l’objet et le message remplis. Vérifiez et envoyez depuis cette application : Power Portal n’envoie rien automatiquement et ne confirme pas la livraison. Configurez un client par défaut si nécessaire ou envoyez manuellement. Aucune donnée du modèle, aucun fichier ni identifiant n’est joint ; aucun brouillon n’est enregistré sur disque. Ne saisissez pas d’informations confidentielles. Les erreurs sont explicites et conservent le texte pour réessayer ou copier. Le formulaire fonctionne hors ligne ; l’envoi dépend du compte et du réseau.
+
+Les boutons et espacements sont plus compacts dans les fenêtres basses, sans masquer les commandes ni ajouter de défilement au menu. Les tests du paquet vérifient les menus déployés/repliés à 680/768/900 pixels dans huit langues, des boutons d’au moins 24 pixels, le clavier, les champs requis, le destinataire fixe et l’encodage, les erreurs de messagerie et le contenu préservé. Les tests ont intercepté l’ouverture : aucun e-mail n’a été envoyé. Les captures utilisent des données synthétiques.
+
 <a name="1810"></a>
 ## 1.8.10
 

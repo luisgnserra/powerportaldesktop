@@ -32,6 +32,7 @@ jobs:
             'docs/images/update-available.png', 'docs/images/relationship-map.png', 'docs/images/relationship-editor.png',
             'docs/images/relationship-groups.png', 'docs/images/relationship-create.png', 'docs/images/refresh-analysis.png',
             'docs/images/refresh-progress.png'
+            'docs/images/improvement-ideas.png'
           )
           $locales = @('pt-BR', 'es', 'zh-CN', 'fr', 'ja', 'hi', 'ar')
           $guides = @('INSTALLATION', 'CONFIGURATION', 'USAGE', 'TROUBLESHOOTING', 'SCREENSHOTS', 'RELEASING', 'UPDATES', 'RELATIONSHIPS', 'REFRESH-ANALYSIS')

@@ -4,6 +4,12 @@
 [🇺🇸 English](../USAGE.md) · [🇧🇷 Português](USAGE.md) · [🇪🇸 Español](../es/USAGE.md) · [🇨🇳 简体中文](../zh-CN/USAGE.md) · [🇫🇷 Français](../fr/USAGE.md) · [🇯🇵 日本語](../ja/USAGE.md) · [🇮🇳 हिन्दी](../hi/USAGE.md) · [🇸🇦 العربية](../ar/USAGE.md)
 <!-- /language-selector -->
 
+**1.8.11 — Envie ideias de melhorias sem apertar o menu**
+
+Enviar ideias agora fica imediatamente acima de Sobre o desenvolvimento. O formulário acessível aceita título (até 120 caracteres) e descrição (até 1000). Abrir e-mail com a ideia solicita a abertura do aplicativo de e-mail padrão com destinatário fixo contato@consultoriaexcelencia.com.br, assunto e mensagem preenchidos. Revise e envie nesse aplicativo: o Power Portal não envia automaticamente nem confirma entrega. Se não abrir, configure um cliente padrão ou envie manualmente. Não são anexados dados do modelo, arquivos ou credenciais, e o formulário não salva rascunhos em disco. Não inclua informações confidenciais. Erros são explícitos e preservam o texto para tentar novamente ou copiar. O formulário funciona offline até abrir o aplicativo de e-mail; a entrega depende da sua conta e conexão.
+
+Os botões das ferramentas e os espaçamentos em janelas baixas ficaram mais compactos, sem ocultar controles nem adicionar rolagem ao menu. Testes no pacote verificam menu expandido/recolhido nas alturas suportadas de 680/768/900 pixels e nos oito idiomas, botões com ao menos 24 pixels de altura, foco pelo teclado, campos obrigatórios, destinatário fixo/texto codificado, falha do cliente de e-mail e preservação do conteúdo. Os testes interceptaram a abertura do e-mail: nenhuma mensagem foi enviada. Os prints usam dados sintéticos.
+
 **1.8.10 — Ilustrações de primeiro plano animadas e hover mais rico**
 
 As doze capas da tela inicial agora animam a ilustração principal de cada ferramenta, não apenas o fundo: flutuação e rotação suaves, com um selo de verificação pulsante no primeiro plano. Ao passar o mouse ou focar pelo teclado aparecem painéis de barras, indicador hexagonal, órbita tracejada e partículas animados. As animações extras ficam pausadas fora do hover/foco. As camadas decorativas não interceptam cliques nem entram na árvore de acessibilidade. A preferência de reduzir movimentos do Windows/navegador desliga as animações de primeiro plano e extras, mantendo detalhes estáticos, contraste e foco. As artes locais originais sem texto, os oito idiomas e a navegação foram preservados. Testes no pacote mediram a mudança real das transformações do primeiro plano e dos painéis, foco pelo teclado, movimento reduzido, doze capas distintas e layout nos oito idiomas. Os prints são capturas estáticas dos estados normal/hover, não vídeos; os dados são sintéticos.
@@ -155,7 +161,7 @@ O aplicativo não envia arquivos, metadados, linhas ou credenciais das fontes ao
 
 [Configuração](CONFIGURATION.md) · [Solução de problemas](TROUBLESHOOTING.md)
 
-Na 1.8.10, desenhar só prepara um rascunho: clique/arraste pares exatos de colunas e revise antes de aplicar. Exclusão pelo botão direito usa a mesma confirmação e backup. A detecção nativa é separada e pode criar várias ligações: revise no Power BI, feche os diálogos e conclua no Power Portal antes de gravar ou atualizar. Imagens de grupos e preferência de exibição ficam somente no diagrama. [Novo fluxo de relacionamentos](RELATIONSHIPS.md#native-automatic-relationship-detection).
+Na 1.8.11, desenhar só prepara um rascunho: clique/arraste pares exatos de colunas e revise antes de aplicar. Exclusão pelo botão direito usa a mesma confirmação e backup. A detecção nativa é separada e pode criar várias ligações: revise no Power BI, feche os diálogos e conclua no Power Portal antes de gravar ou atualizar. Imagens de grupos e preferência de exibição ficam somente no diagrama. [Novo fluxo de relacionamentos](RELATIONSHIPS.md#native-automatic-relationship-detection).
 
 <a name="refresh-performance"></a>
 ## Desempenho de Atualização

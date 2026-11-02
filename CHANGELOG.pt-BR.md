@@ -4,6 +4,15 @@
 [🇺🇸 English](CHANGELOG.md) · [🇧🇷 Português](CHANGELOG.pt-BR.md) · [🇪🇸 Español](CHANGELOG.es.md) · [🇨🇳 简体中文](CHANGELOG.zh-CN.md) · [🇫🇷 Français](CHANGELOG.fr.md) · [🇯🇵 日本語](CHANGELOG.ja.md) · [🇮🇳 हिन्दी](CHANGELOG.hi.md) · [🇸🇦 العربية](CHANGELOG.ar.md)
 <!-- /language-selector -->
 
+<a name="1811"></a>
+## 1.8.11
+
+**Envie ideias de melhorias sem apertar o menu**
+
+Enviar ideias agora fica imediatamente acima de Sobre o desenvolvimento. O formulário acessível aceita título (até 120 caracteres) e descrição (até 1000). Abrir e-mail com a ideia solicita a abertura do aplicativo de e-mail padrão com destinatário fixo contato@consultoriaexcelencia.com.br, assunto e mensagem preenchidos. Revise e envie nesse aplicativo: o Power Portal não envia automaticamente nem confirma entrega. Se não abrir, configure um cliente padrão ou envie manualmente. Não são anexados dados do modelo, arquivos ou credenciais, e o formulário não salva rascunhos em disco. Não inclua informações confidenciais. Erros são explícitos e preservam o texto para tentar novamente ou copiar. O formulário funciona offline até abrir o aplicativo de e-mail; a entrega depende da sua conta e conexão.
+
+Os botões das ferramentas e os espaçamentos em janelas baixas ficaram mais compactos, sem ocultar controles nem adicionar rolagem ao menu. Testes no pacote verificam menu expandido/recolhido nas alturas suportadas de 680/768/900 pixels e nos oito idiomas, botões com ao menos 24 pixels de altura, foco pelo teclado, campos obrigatórios, destinatário fixo/texto codificado, falha do cliente de e-mail e preservação do conteúdo. Os testes interceptaram a abertura do e-mail: nenhuma mensagem foi enviada. Os prints usam dados sintéticos.
+
 <a name="1810"></a>
 ## 1.8.10
 

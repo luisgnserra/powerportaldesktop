@@ -12,6 +12,6 @@ Power Portal Desktop は **Excelência Consultoria e Educação** が所有し�
 
 インストーラーは Microsoft AMO/TOM 依存コンポーネントの条件を表示します。第三者のライセンス告知は、インストールされたランタイムコンポーネントに含まれます。Microsoft、Power BI、Microsoft Fabric は Microsoft の商標です。MVP の表記は Microsoft による所有、スポンサーシップ、推奨を意味しません。
 
-バージョン 1.8.10 にはデジタル署名がありません。公式 Release の添付ファイルから入手し、公開された SHA-256 チェックサムを検証して、組織のソフトウェア承認ポリシーに従ってください。
+バージョン 1.8.11 にはデジタル署名がありません。公式 Release の添付ファイルから入手し、公開された SHA-256 チェックサムを検証して、組織のソフトウェア承認ポリシーに従ってください。
 
 GitHub の自動生成 ZIP/TAR「Source code」ダウンロードには、この配布リポジトリのファイルしか含まれません。Power Portal アプリ、インストーラー、アプリのソースコードリリースではありません。

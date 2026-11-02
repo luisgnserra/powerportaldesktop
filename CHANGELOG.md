@@ -4,6 +4,14 @@
 [🇺🇸 English](CHANGELOG.md) · [🇧🇷 Português](CHANGELOG.pt-BR.md) · [🇪🇸 Español](CHANGELOG.es.md) · [🇨🇳 简体中文](CHANGELOG.zh-CN.md) · [🇫🇷 Français](CHANGELOG.fr.md) · [🇯🇵 日本語](CHANGELOG.ja.md) · [🇮🇳 हिन्दी](CHANGELOG.hi.md) · [🇸🇦 العربية](CHANGELOG.ar.md)
 <!-- /language-selector -->
 
+## 1.8.11
+
+**Send improvement ideas without crowding the menu**
+
+Send ideas now appears immediately above About development. The accessible dialog accepts an idea title (up to 120 characters) and description (up to 1000). Open email with idea requests your default email app with the fixed recipient contato@consultoriaexcelencia.com.br, subject and message filled in. Review and send in that app: Power Portal does not send automatically or confirm delivery. If no app opens, configure a default email client or send manually. No model data, files or credentials are attached, and the form does not save drafts to disk. Do not enter confidential information. Errors are explicit and preserve your text for retrying or copying. The form works offline up to handing off to the email app; actual delivery depends on your mail account/network.
+
+Tool buttons and low-height sidebar spacing are more compact, without hiding controls or adding menu scrolling. Packaged-app tests verify expanded/collapsed menus at supported 680/768/900-pixel window heights in all eight languages, minimum 24-pixel button heights, keyboard focus, required fields, fixed recipient/encoded text, email-app failure and preserved form content. Tests intercepted the mail handoff: no email was sent. Documentation screenshots use synthetic data.
+
 ## 1.8.10
 
 **Animated foreground illustrations and richer hover**
