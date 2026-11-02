@@ -1,7 +1,17 @@
 # Power Portal Desktop
 
 <!-- language-selector -->
-[🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md) · [🇨🇳 简体中文](README.zh-CN.md) · [🇫🇷 Français](README.fr.md) · [🇯🇵 日本語](README.ja.md) · [🇮🇳 हिन्दी](README.hi.md) · [🇸🇦 العربية](README.ar.md)
+
+| Idioma / Language | Link |
+| :--- | :--- |
+| 🇺🇸 English | [README.md](README.md) |
+| 🇧🇷  Brasil  Português | [README.pt-BR.md](README.pt-BR.md) |
+| 🇪🇸 Español | [README.es.md](README.es.md) |
+| 🇨🇳 简体中文 | [README.zh-CN.md](README.zh-CN.md) |
+| 🇫🇷 Français | [README.fr.md](README.fr.md) |
+| 🇯🇵 日本語 | [README.ja.md](README.ja.md) |
+| 🇮🇳 हिन्दी | [README.hi.md](README.hi.md) |
+| 🇸🇦 العربية | [README.ar.md](README.ar.md) |
 <!-- /language-selector -->
 
 **1.8.8 — Linhas dinâmicas e envio de temas verificado**

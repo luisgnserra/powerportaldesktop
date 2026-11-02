@@ -1,7 +1,17 @@
 # Power Portal Desktop
 
 <!-- language-selector -->
-[🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md) · [🇨🇳 简体中文](README.zh-CN.md) · [🇫🇷 Français](README.fr.md) · [🇯🇵 日本語](README.ja.md) · [🇮🇳 हिन्दी](README.hi.md) · [🇸🇦 العربية](README.ar.md)
+
+| Idioma / Language | Link |
+| :--- | :--- |
+| 🇺🇸 English | [README.md](README.md) |
+| 🇧🇷  Brasil  Português | [README.pt-BR.md](README.pt-BR.md) |
+| 🇪🇸 Español | [README.es.md](README.es.md) |
+| 🇨🇳 简体中文 | [README.zh-CN.md](README.zh-CN.md) |
+| 🇫🇷 Français | [README.fr.md](README.fr.md) |
+| 🇯🇵 日本語 | [README.ja.md](README.ja.md) |
+| 🇮🇳 हिन्दी | [README.hi.md](README.hi.md) |
+| 🇸🇦 العربية | [README.ar.md](README.ar.md) |
 <!-- /language-selector -->
 
 **1.8.8 — Dynamic relationship lines and verified theme delivery**
@@ -236,4 +246,3 @@ The twelve home cards now use the same navy-blue base as the sidebar (#041e43), 
 Hover or focus a card with the keyboard to reveal a golden frame and glow, a light sweep, a brighter scene, a circular launch arrow and a gold action. Pressing gives immediate visual feedback without delaying navigation. Enter/Space still activate the same tool. Windows/browser reduced-motion preferences stop movement while keeping static highlights and visible focus. Titles and actions remain outside the artwork and follow the selected language. These screenshots show static normal/hover states, not video.
 
 ![Hover / keyboard focus](docs/images/home-hover.png)
-
