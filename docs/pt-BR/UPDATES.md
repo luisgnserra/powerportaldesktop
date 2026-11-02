@@ -4,6 +4,10 @@
 [🇺🇸 English](../UPDATES.md) · [🇧🇷 Português](UPDATES.md) · [🇪🇸 Español](../es/UPDATES.md) · [🇨🇳 简体中文](../zh-CN/UPDATES.md) · [🇫🇷 Français](../fr/UPDATES.md) · [🇯🇵 日本語](../ja/UPDATES.md) · [🇮🇳 हिन्दी](../hi/UPDATES.md) · [🇸🇦 العربية](../ar/UPDATES.md)
 <!-- /language-selector -->
 
+**1.8.9 — Amostra do calendário e atalho para atualização nativa**
+
+No Gerador de Tabela Calendário, a amostra real (até 50 linhas) agora fica abaixo de Gerar script. Atualizar no Power BI fica ao lado desse botão e, com conexão ativa, abre Desempenho de Atualização e inicia o mesmo fluxo nativo de atualização dos dados com confirmação. Acompanhe ali estados das tabelas, tempos e contagens de linhas. Isso atualiza o modelo inteiro; não aplica o script gerado, não cria nem substitui a tabela calendário e não salva o PBIX. Criar calendário no Power BI continua sendo uma ação separada. O botão fica desabilitado sem conexão, funciona pelo teclado e está traduzido nos oito idiomas. Cancelamento e erros usam o fluxo de atualização existente. A amostra continua sendo a última leitura solicitada: use Ler calendário selecionado para consultá-la novamente após atualizar. Testes no aplicativo empacotado verificaram posição, oito traduções, bloqueio offline, conexão exata, cancelamento, erros visíveis, nova tentativa e criação de calendário preservada. Nenhuma atualização real foi iniciada nesses testes; os prints usam dados sintéticos.
+
 **1.8.8 — Linhas dinâmicas e envio de temas verificado**
 
 No Mapa de relacionamentos, Estilo das linhas alterna entre Curvas e Retas com ângulos de 90 graus. As extremidades usam dinamicamente as bordas superior/inferior ou esquerda/direita voltadas uma para a outra, considerando o tamanho real das caixas. Nas laterais, mantém a altura da coluna relacionada. Setas pretas com borda branca acompanham trechos retos sem ficar inclinadas nos cantos. O estilo é salvo automaticamente e acompanha o JSON exportado; layouts antigos continuam com curvas. Isso não altera o layout nativo do Power BI nem calcula desvios globais de obstáculos.
@@ -45,12 +49,12 @@ A execução de desenvolvimento/código-fonte não baixa nem instala atualizaç�
 
 ![Aviso de atualização e botão Atualizar agora controlado pelo usuário](../images/pt-BR/update-available.png)
 
-O print mostra um **aviso futuro simulado da 1.8.9** dentro da 1.8.8, apenas para demonstrar a interface. Não anuncia a 1.8.9.
+O print mostra um **aviso futuro simulado da 1.8.10** dentro da 1.8.9, apenas para demonstrar a interface. Não anuncia a 1.8.10.
 
-<a name="receive-version-188-from-an-earlier-updater-enabled-version"></a>
-### Receber a versão 1.8.8 de uma versão anterior com atualizador
+<a name="receive-version-189-from-an-earlier-updater-enabled-version"></a>
+### Receber a versão 1.8.9 de uma versão anterior com atualizador
 
-Com **1.6.2, 1.6.3 ou 1.6.4** instalada, reabra ou clique em **Verificar atualizações**. A versão estável publicada **1.8.8** deve aparecer com **Atualizar agora**. Não instale manualmente a 1.8.8 primeiro se quiser observar o aviso. Versões anteriores à 1.6.4 usam o aviso original; o destaque visual é mantido na 1.8.8. Clique quando estiver pronto e aprove a autorização do Windows.
+Com **1.6.2, 1.6.3 ou 1.6.4** instalada, reabra ou clique em **Verificar atualizações**. A versão estável publicada **1.8.9** deve aparecer com **Atualizar agora**. Não instale manualmente a 1.8.9 primeiro se quiser observar o aviso. Versões anteriores à 1.6.4 usam o aviso original; o destaque visual é mantido na 1.8.9. Clique quando estiver pronto e aprove a autorização do Windows.
 
 O aplicativo informa o início do instalador, não uma instalação concluída e verificada: ela termina após o aplicativo antigo fechar. Confira a versão ao reabrir. O Windows ainda pode bloquear o instalador sem assinatura ou exigir aprovação da TI.
 

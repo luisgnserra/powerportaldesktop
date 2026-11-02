@@ -4,6 +4,10 @@
 [🇺🇸 English](../UPDATES.md) · [🇧🇷 Português](../pt-BR/UPDATES.md) · [🇪🇸 Español](UPDATES.md) · [🇨🇳 简体中文](../zh-CN/UPDATES.md) · [🇫🇷 Français](../fr/UPDATES.md) · [🇯🇵 日本語](../ja/UPDATES.md) · [🇮🇳 हिन्दी](../hi/UPDATES.md) · [🇸🇦 العربية](../ar/UPDATES.md)
 <!-- /language-selector -->
 
+**1.8.9 — Muestra del calendario y acceso a la actualización nativa**
+
+En Generador de tabla calendario, la muestra real (hasta 50 filas) aparece debajo de Generar script. Actualizar en Power BI está al lado y, con conexión activa, abre Rendimiento de actualización e inicia el mismo flujo nativo de actualización de datos con confirmación. Allí se muestran estados, tiempos y recuentos de filas. Actualiza todo el modelo: no aplica el script generado, no crea ni sustituye una tabla calendario y no guarda el PBIX. Crear calendario en Power BI sigue siendo una acción separada. El botón se deshabilita sin conexión, admite teclado y está traducido a los ocho idiomas. Cancelación y errores usan el flujo existente. La muestra conserva la última lectura: usa Leer calendario seleccionado para consultarla de nuevo tras actualizar. Las pruebas de la aplicación empaquetada verificaron posición, ocho traducciones, bloqueo sin conexión, conexión exacta, cancelación, errores visibles, reintento y creación de calendario intacta. No se inició ninguna actualización real; las capturas usan datos sintéticos.
+
 **1.8.8 — Líneas dinámicas y envío de temas verificado**
 
 En Mapa de relaciones, Estilo de líneas alterna entre Curvas y Líneas rectas con ángulos de 90 grados. Los extremos usan dinámicamente los bordes superior/inferior o izquierdo/derecho enfrentados, considerando el tamaño real de las tarjetas. Las conexiones laterales conservan la altura de la columna relacionada. Las flechas negras con borde blanco siguen los tramos rectos sin inclinarse en las esquinas. El estilo se guarda automáticamente y viaja con el JSON exportado; los diseños anteriores conservan las curvas. No cambia el diseño nativo de Power BI ni calcula rutas globales para evitar obstáculos.
@@ -45,12 +49,12 @@ La ejecución de desarrollo/desde el código fuente no descarga ni instala actua
 
 ![Aviso de actualización y botón Actualizar ahora controlado por el usuario](../images/es/update-available.png)
 
-La captura es un **aviso simulado de una futura versión 1.8.9** dentro de 1.8.8, únicamente para mostrar la interfaz. No es un anuncio de 1.8.9.
+La captura es un **aviso simulado de una futura versión 1.8.10** dentro de 1.8.9, únicamente para mostrar la interfaz. No es un anuncio de 1.8.10.
 
-<a name="receive-version-188-from-an-earlier-updater-enabled-version"></a>
-### Recibir la versión 1.8.8 desde una versión anterior con actualizador
+<a name="receive-version-189-from-an-earlier-updater-enabled-version"></a>
+### Recibir la versión 1.8.9 desde una versión anterior con actualizador
 
-Con **1.6.2, 1.6.3 o 1.6.4** instalado, vuelva a abrir la aplicación o haga clic en **Buscar actualizaciones**. La versión estable publicada **1.8.8** debería aparecer con **Actualizar ahora**. No instale 1.8.8 manualmente primero si desea observar este aviso. Las versiones anteriores a 1.6.4 usan su aviso original; el estilo visual destacado se conserva en 1.8.8. Haga clic en el botón de actualización cuando esté listo y apruebe la autorización de Windows.
+Con **1.6.2, 1.6.3 o 1.6.4** instalado, vuelva a abrir la aplicación o haga clic en **Buscar actualizaciones**. La versión estable publicada **1.8.9** debería aparecer con **Actualizar ahora**. No instale 1.8.9 manualmente primero si desea observar este aviso. Las versiones anteriores a 1.6.4 usan su aviso original; el estilo visual destacado se conserva en 1.8.9. Haga clic en el botón de actualización cuando esté listo y apruebe la autorización de Windows.
 
 La aplicación informa del inicio del instalador, no de una instalación completada y verificada: la instalación termina después de que se cierre la aplicación antigua. Compruebe la versión mostrada de la aplicación al volver a abrirla. Windows aún puede bloquear el instalador sin firma o requerir aprobación de TI.
 

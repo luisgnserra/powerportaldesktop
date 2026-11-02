@@ -4,6 +4,10 @@
 [🇺🇸 English](REFRESH-ANALYSIS.md) · [🇧🇷 Português](pt-BR/REFRESH-ANALYSIS.md) · [🇪🇸 Español](es/REFRESH-ANALYSIS.md) · [🇨🇳 简体中文](zh-CN/REFRESH-ANALYSIS.md) · [🇫🇷 Français](fr/REFRESH-ANALYSIS.md) · [🇯🇵 日本語](ja/REFRESH-ANALYSIS.md) · [🇮🇳 हिन्दी](hi/REFRESH-ANALYSIS.md) · [🇸🇦 العربية](ar/REFRESH-ANALYSIS.md)
 <!-- /language-selector -->
 
+**1.8.9 — Calendar sample and native refresh shortcut**
+
+In Calendar generator, the real sample (up to 50 rows) now appears below Generate script. Refresh in Power BI sits beside that button and, with a live connection, opens Refresh Performance and starts the same confirmed native model-data refresh. Follow table statuses, timings and row counts there. This refreshes the entire model; it does not apply the generated script, create or replace a calendar table, or save the PBIX. Create calendar in Power BI remains a separate action. The button is disabled offline, supports keyboard activation and is translated into all eight languages. Cancellation and errors use the existing refresh flow. The sample remains the last requested read: use Read selected calendar to read it again after refreshing. Packaged-app tests verified layout, all eight labels, offline gating, exact selected connection, cancellation, visible errors, retry and unchanged calendar creation. No real model refresh was started for these tests; documentation images use synthetic data.
+
 **1.8.7 — Reliable theme color selection**
 
 All eleven theme colors now have a visible native swatch and a Choose color button beside the editable HEX field. Click the swatch or button, or focus the button and press Enter/Space. The native picker no longer depends on an invisible zero-size input or double-clicking the HEX field. Manual HEX editing, imported themes, live preview and JSON export remain available. Picker failures are shown explicitly. Native opening was verified repeatedly in the Windows application, alongside mouse/keyboard activation of all eleven buttons and eight-language labels.

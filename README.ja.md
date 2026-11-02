@@ -14,6 +14,10 @@
 | 🇸🇦 العربية | [README.ar.md](README.ar.md) |
 <!-- /language-selector -->
 
+**1.8.9 — カレンダーサンプルとネイティブ更新のショートカット**
+
+カレンダーテーブル生成では、実データサンプル（最大 50 行）をスクリプト生成ボタンの下に移動しました。隣の「Power BI で更新」は、接続中に更新パフォーマンスを開き、既存の確認付きネイティブ更新フローを開始します。表の状態、所要時間、行数を確認できます。モデル全体のデータを更新する操作であり、生成スクリプトの適用、カレンダーの作成・置換、PBIX の保存は行いません。Power BI にカレンダーを作成する操作は別のままです。オフラインでは無効になり、キーボード操作と全 8 言語に対応しています。キャンセルとエラーは既存フローを使用します。サンプルは最後に読み取った値のままなので、更新後は選択したカレンダーを再度読み取ってください。パッケージ版テストでは配置、8 言語、オフライン制御、対象接続、キャンセル、エラー表示、再試行、既存の作成機能を確認しました。実モデルの更新は開始しておらず、文書の画面には合成データを使用しています。
+
 **1.8.8 — 動的なリレーションシップ線と検証付きテーマ送信**
 
 リレーションシップマップの「線のスタイル」で、曲線と 90 度の角で曲がる直線を切り替えられます。表の位置と実際のカードサイズに応じて、端点は向かい合う上下または左右の辺に動的に接続されます。左右の接続は関連列の高さを維持します。白い縁取りの黒い矢印は直線部分に配置され、角で斜めになりません。スタイルは自動保存され、エクスポートする JSON にも含まれます。既存のレイアウトは曲線のままです。Power BI のネイティブ配置の変更や全体的な障害物回避は行いません。
@@ -72,13 +76,13 @@ Power Portal のアニメーション付きヘッダーに、ファイル名、�
 <a name="option-1-install-with-a-few-clicks"></a>
 ### 方法 1：数回のクリックでインストール
 
-1. [Windows x64 用 Power Portal Desktop 1.8.8 をダウンロード](https://github.com/luisgnserra/powerportaldesktop/releases/download/v1.8.8/PowerPortal-Setup-1.8.8-x64.exe)します。
+1. [Windows x64 用 Power Portal Desktop 1.8.9 をダウンロード](https://github.com/luisgnserra/powerportaldesktop/releases/download/v1.8.9/PowerPortal-Setup-1.8.9-x64.exe)します。
 2. インストーラーを実行し、Windows の管理者権限の確認を承認します。
 3. インストール先フォルダーと既定の言語を選びます。
 4. インストール完了後、Power BI Desktop を閉じて開き直します。
 5. PBIX を開き、**外部ツール > Power Portal** を選びます。
 
-**Windows が発行元不明の警告を表示する場合があります：**バージョン 1.8.8 にはデジタル署名がありません。この配布元を信頼できる場合にのみ続行してください。組織が未署名のソフトウェアを禁止している場合は、ポリシーを回避せず IT 部門に連絡してください。
+**Windows が発行元不明の警告を表示する場合があります：**バージョン 1.8.9 にはデジタル署名がありません。この配布元を信頼できる場合にのみ続行してください。組織が未署名のソフトウェアを禁止している場合は、ポリシーを回避せず IT 部門に連絡してください。
 
 [最新リリース](https://github.com/luisgnserra/powerportaldesktop/releases/latest) · [インストールガイド](docs/ja/INSTALLATION.md) · [設定](docs/ja/CONFIGURATION.md) · [トラブルシューティング](docs/ja/TROUBLESHOOTING.md)
 
@@ -91,7 +95,7 @@ Power Portal のアニメーション付きヘッダーに、ファイル名、�
 
 提供されたリボンのスクリーンショットはポルトガル語の原版です。**Ferramentas externas** は**外部ツール**を意味します。Power Portal は **Power BI に接続した独立ウィンドウ**を開きます。埋め込みのレポートビジュアルや、Power BI 内部の新しいペインではありません。
 
-![Power Portal 1.8.8 のホーム、展開されたサイドバー、起動時の接続通知](docs/images/ja/home.png)
+![Power Portal 1.8.9 のホーム、展開されたサイドバー、起動時の接続通知](docs/images/ja/home.png)
 
 **すでに Power BI を開いていますか？**ショートカットから起動すると、Power Portal は開いているローカルモデルを検出し、接続通知を表示します。**開いているモデルを検索**を選び、ファイルを選択して接続してください。その後、データをクエリし、対応する変更を確認付きでモデルに送信できます。
 
@@ -108,7 +112,7 @@ Power Portal のアニメーション付きヘッダーに、ファイル名、�
 
 接続中の Power BI モデルで、**確認とメタデータのバックアップ後に**リレーションシップを作成、編集、有効化/無効化、削除できます。表示スタイルは Power Portal 内にとどまり、テーブル名や Power BI の標準レイアウトは変更しません。[リレーションシップの詳細チュートリアル](docs/ja/RELATIONSHIPS.md)。
 
-1.8.8 では、正確な列をクリックまたはドラッグしてリレーションシップを準備し、線を右クリックして色の設定、編集、確認後の削除を行えます。グループにはローカル画像と 30 種類を超えるアイコンを設定できます。自動日付/時刻テーブルは既定で非表示になり、表示切替が可能です。Power BI 外で編集した後に図を更新するか、事前にバックアップして Desktop のネイティブ自動検出を呼び出し、別途確認して完了します。
+1.8.9 では、正確な列をクリックまたはドラッグしてリレーションシップを準備し、線を右クリックして色の設定、編集、確認後の削除を行えます。グループにはローカル画像と 30 種類を超えるアイコンを設定できます。自動日付/時刻テーブルは既定で非表示になり、表示切替が可能です。Power BI 外で編集した後に図を更新するか、事前にバックアップして Desktop のネイティブ自動検出を呼び出し、別途確認して完了します。
 
 <a name="built-in-update-checks"></a>
 ### 組み込みの更新チェック
@@ -119,7 +123,7 @@ Windows が管理者の承認を求めます。閉じるのは Power Portal の�
 
 ![新バージョンの通知と今すぐ更新ボタン](docs/images/ja/update-available.png)
 
-この画像は UI を説明するための**将来の 1.8.8 通知のシミュレーション**であり、公開済みバージョンの発表ではありません。**バージョン 1.8.8 は公開済みです：**1.6.2 以降のユーザーはアプリを開き直すか、**更新を確認**をクリックして更新を受け取れます。[更新ガイド](docs/ja/UPDATES.md)。
+この画像は UI を説明するための**将来の 1.8.9 通知のシミュレーション**であり、公開済みバージョンの発表ではありません。**バージョン 1.8.9 は公開済みです：**1.6.2 以降のユーザーはアプリを開き直すか、**更新を確認**をクリックして更新を受け取れます。[更新ガイド](docs/ja/UPDATES.md)。
 
 **1.6.1 以前を使用していますか？この機能を有効にするには、最初に 1.6.2 を一度手動でインストールしてください。**失敗したチェックやオフライン時のチェックは、**更新を確認**で再試行できます。アプリを開いただけでインストールされることはありません。
 
@@ -131,13 +135,13 @@ Windows 上で **Windows PowerShell 5.1 または PowerShell 7** を開きます
 ```powershell
 $script = Join-Path $env:TEMP 'Install-PowerPortal.ps1'
 [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
-Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/luisgnserra/powerportaldesktop/v1.8.8/install.ps1' -OutFile $script
+Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/luisgnserra/powerportaldesktop/v1.8.9/install.ps1' -OutFile $script
 # Review the downloaded script before running it.
 Get-Content -LiteralPath $script
 & $script
 ```
 
-補助スクリプトは**バージョン 1.8.8** をダウンロードし、固定された SHA-256 チェックサムを検証して、同じインストーラーを開きます。Node.js、PHP、.NET SDK のインストールやビルドは行いません。
+補助スクリプトは**バージョン 1.8.9** をダウンロードし、固定された SHA-256 チェックサムを検証して、同じインストーラーを開きます。Node.js、PHP、.NET SDK のインストールやビルドは行いません。
 
 無人インストールでは、**管理者の PowerShell ウィンドウ**から同じ補助スクリプトを実行します。
 

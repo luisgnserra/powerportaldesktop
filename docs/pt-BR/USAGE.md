@@ -4,6 +4,10 @@
 [🇺🇸 English](../USAGE.md) · [🇧🇷 Português](USAGE.md) · [🇪🇸 Español](../es/USAGE.md) · [🇨🇳 简体中文](../zh-CN/USAGE.md) · [🇫🇷 Français](../fr/USAGE.md) · [🇯🇵 日本語](../ja/USAGE.md) · [🇮🇳 हिन्दी](../hi/USAGE.md) · [🇸🇦 العربية](../ar/USAGE.md)
 <!-- /language-selector -->
 
+**1.8.9 — Amostra do calendário e atalho para atualização nativa**
+
+No Gerador de Tabela Calendário, a amostra real (até 50 linhas) agora fica abaixo de Gerar script. Atualizar no Power BI fica ao lado desse botão e, com conexão ativa, abre Desempenho de Atualização e inicia o mesmo fluxo nativo de atualização dos dados com confirmação. Acompanhe ali estados das tabelas, tempos e contagens de linhas. Isso atualiza o modelo inteiro; não aplica o script gerado, não cria nem substitui a tabela calendário e não salva o PBIX. Criar calendário no Power BI continua sendo uma ação separada. O botão fica desabilitado sem conexão, funciona pelo teclado e está traduzido nos oito idiomas. Cancelamento e erros usam o fluxo de atualização existente. A amostra continua sendo a última leitura solicitada: use Ler calendário selecionado para consultá-la novamente após atualizar. Testes no aplicativo empacotado verificaram posição, oito traduções, bloqueio offline, conexão exata, cancelamento, erros visíveis, nova tentativa e criação de calendário preservada. Nenhuma atualização real foi iniciada nesses testes; os prints usam dados sintéticos.
+
 **1.8.8 — Linhas dinâmicas e envio de temas verificado**
 
 No Mapa de relacionamentos, Estilo das linhas alterna entre Curvas e Retas com ângulos de 90 graus. As extremidades usam dinamicamente as bordas superior/inferior ou esquerda/direita voltadas uma para a outra, considerando o tamanho real das caixas. Nas laterais, mantém a altura da coluna relacionada. Setas pretas com borda branca acompanham trechos retos sem ficar inclinadas nos cantos. O estilo é salvo automaticamente e acompanha o JSON exportado; layouts antigos continuam com curvas. Isso não altera o layout nativo do Power BI nem calcula desvios globais de obstáculos.
@@ -147,7 +151,7 @@ O aplicativo não envia arquivos, metadados, linhas ou credenciais das fontes ao
 
 [Configuração](CONFIGURATION.md) · [Solução de problemas](TROUBLESHOOTING.md)
 
-Na 1.8.8, desenhar só prepara um rascunho: clique/arraste pares exatos de colunas e revise antes de aplicar. Exclusão pelo botão direito usa a mesma confirmação e backup. A detecção nativa é separada e pode criar várias ligações: revise no Power BI, feche os diálogos e conclua no Power Portal antes de gravar ou atualizar. Imagens de grupos e preferência de exibição ficam somente no diagrama. [Novo fluxo de relacionamentos](RELATIONSHIPS.md#native-automatic-relationship-detection).
+Na 1.8.9, desenhar só prepara um rascunho: clique/arraste pares exatos de colunas e revise antes de aplicar. Exclusão pelo botão direito usa a mesma confirmação e backup. A detecção nativa é separada e pode criar várias ligações: revise no Power BI, feche os diálogos e conclua no Power Portal antes de gravar ou atualizar. Imagens de grupos e preferência de exibição ficam somente no diagrama. [Novo fluxo de relacionamentos](RELATIONSHIPS.md#native-automatic-relationship-detection).
 
 <a name="refresh-performance"></a>
 ## Desempenho de Atualização

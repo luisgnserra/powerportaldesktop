@@ -12,6 +12,6 @@ Este repositorio no establece nuevas condiciones de licencia para la aplicación
 
 El instalador presenta las condiciones de las dependencias Microsoft AMO/TOM. Los avisos de licencia de terceros se incluyen con los componentes de ejecución instalados. Microsoft, Power BI y Microsoft Fabric son marcas comerciales de Microsoft; la identificación MVP no implica propiedad, patrocinio ni respaldo de Microsoft.
 
-La versión 1.8.8 no está firmada digitalmente. Obténgala de los recursos oficiales de la versión, verifique la suma SHA-256 publicada y cumpla las políticas de aprobación de software de su organización.
+La versión 1.8.9 no está firmada digitalmente. Obténgala de los recursos oficiales de la versión, verifique la suma SHA-256 publicada y cumpla las políticas de aprobación de software de su organización.
 
 Las descargas automáticas ZIP/TAR de «Source code» de GitHub contienen únicamente los archivos de este repositorio de distribución. No son la aplicación Power Portal, un instalador ni una publicación del código fuente de la aplicación.

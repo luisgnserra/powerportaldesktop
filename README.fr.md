@@ -14,6 +14,10 @@
 | 🇸🇦 العربية | [README.ar.md](README.ar.md) |
 <!-- /language-selector -->
 
+**1.8.9 — Échantillon du calendrier et raccourci d’actualisation native**
+
+Dans le générateur de calendrier, l’échantillon réel (50 lignes maximum) apparaît désormais sous Générer le script. Actualiser dans Power BI se trouve à côté et, avec une connexion active, ouvre Performances d’actualisation puis démarre le même flux natif confirmé. Suivez les états, durées et nombres de lignes. Cela actualise le modèle entier, sans appliquer le script, créer ou remplacer le calendrier, ni enregistrer le PBIX. Créer le calendrier dans Power BI reste une action distincte. Le bouton est désactivé hors connexion, accessible au clavier et traduit dans les huit langues. Annulation et erreurs utilisent le flux existant. L’échantillon reste la dernière lecture : utilisez Lire le calendrier sélectionné après actualisation. Les tests de l’application empaquetée ont vérifié disposition, huit traductions, blocage hors connexion, connexion exacte, annulation, erreurs visibles, nouvelle tentative et création du calendrier préservée. Aucune actualisation réelle n’a été lancée ; les captures utilisent des données synthétiques.
+
 **1.8.8 — Lignes dynamiques et envoi de thèmes vérifié**
 
 Dans la carte des relations, Style des lignes permet de choisir des courbes ou des lignes droites avec angles à 90 degrés. Les extrémités utilisent dynamiquement les bords haut/bas ou gauche/droite qui se font face, selon la taille réelle des cartes. Les connexions latérales conservent la hauteur de la colonne liée. Les flèches noires à contour blanc suivent les segments droits sans couper les angles en diagonale. Le style est enregistré automatiquement et inclus dans le JSON exporté ; les anciens schémas restent courbes. Cela ne modifie pas la disposition native de Power BI et ne réalise pas un évitement global des obstacles.
@@ -72,13 +76,13 @@ Performances de l’actualisation se trouve directement sous Carte des relations
 <a name="option-1-install-with-a-few-clicks"></a>
 ### Option 1 : installer en quelques clics
 
-1. [Téléchargez Power Portal Desktop 1.8.8 pour Windows x64](https://github.com/luisgnserra/powerportaldesktop/releases/download/v1.8.8/PowerPortal-Setup-1.8.8-x64.exe).
+1. [Téléchargez Power Portal Desktop 1.8.9 pour Windows x64](https://github.com/luisgnserra/powerportaldesktop/releases/download/v1.8.9/PowerPortal-Setup-1.8.9-x64.exe).
 2. Exécutez le programme d’installation et acceptez la demande d’autorisation administrateur de Windows.
 3. Choisissez le dossier d’installation et la langue par défaut.
 4. Terminez l’installation, puis fermez et rouvrez Power BI Desktop.
 5. Ouvrez un PBIX et sélectionnez **Outils externes > Power Portal**.
 
-**Windows peut signaler un éditeur inconnu :** la version 1.8.8 n’est pas signée numériquement. Ne continuez que si vous faites confiance à cette distribution. Si votre organisation bloque les logiciels non signés, contactez le service informatique au lieu de contourner sa politique.
+**Windows peut signaler un éditeur inconnu :** la version 1.8.9 n’est pas signée numériquement. Ne continuez que si vous faites confiance à cette distribution. Si votre organisation bloque les logiciels non signés, contactez le service informatique au lieu de contourner sa politique.
 
 [Dernière version](https://github.com/luisgnserra/powerportaldesktop/releases/latest) · [Guide d’installation](docs/fr/INSTALLATION.md) · [Configuration](docs/fr/CONFIGURATION.md) · [Dépannage](docs/fr/TROUBLESHOOTING.md)
 
@@ -91,7 +95,7 @@ Le programme d’installation ajoute **Power Portal** aux **Outils externes** de
 
 La capture du ruban fournie est en portugais : **Ferramentas externas** signifie **Outils externes**. Power Portal ouvre une **fenêtre distincte connectée à Power BI**, et non un visuel intégré au rapport ou un nouveau volet interne de Power BI.
 
-![Accueil de Power Portal 1.8.8, barre latérale complète et avis de connexion au démarrage](docs/images/fr/home.png)
+![Accueil de Power Portal 1.8.9, barre latérale complète et avis de connexion au démarrage](docs/images/fr/home.png)
 
 **Power BI est déjà ouvert ?** Lorsqu’il est lancé depuis un raccourci, Power Portal détecte les modèles locaux ouverts et affiche un avis de connexion. Choisissez **Rechercher les modèles ouverts**, sélectionnez votre fichier et connectez-vous. Vous pourrez ensuite interroger ses données et lui renvoyer les modifications prises en charge, après confirmation.
 
@@ -108,7 +112,7 @@ Comprenez les liens réels entre les tables sur un canevas où vous pouvez les d
 
 Créez, modifiez, activez/désactivez et supprimez des relations dans le modèle Power BI connecté **après confirmation et sauvegarde des métadonnées**. Le style visuel reste dans Power Portal ; il ne renomme pas les tables et ne modifie pas la disposition native de Power BI. [Tutoriel complet sur les relations](docs/fr/RELATIONSHIPS.md).
 
-Dans la version 1.8.8, cliquez ou faites glisser entre des colonnes exactes pour préparer un lien ; faites un clic droit sur les lignes pour choisir leur couleur, les modifier et les supprimer avec confirmation. Les groupes prennent en charge des images locales et plus de 30 icônes. Les tables de date/heure automatiques sont masquées par défaut avec une option de visibilité. Actualisez depuis Power BI après des modifications externes, ou invoquez la détection automatique native de Desktop avec une sauvegarde préalable et une étape distincte de vérification/finalisation.
+Dans la version 1.8.9, cliquez ou faites glisser entre des colonnes exactes pour préparer un lien ; faites un clic droit sur les lignes pour choisir leur couleur, les modifier et les supprimer avec confirmation. Les groupes prennent en charge des images locales et plus de 30 icônes. Les tables de date/heure automatiques sont masquées par défaut avec une option de visibilité. Actualisez depuis Power BI après des modifications externes, ou invoquez la détection automatique native de Desktop avec une sauvegarde préalable et une étape distincte de vérification/finalisation.
 
 <a name="built-in-update-checks"></a>
 ### Recherche de mises à jour intégrée
@@ -119,7 +123,7 @@ Windows demande l’autorisation administrateur. Seul Power Portal se ferme ; Po
 
 ![Notification d’une nouvelle version et bouton Mettre à jour maintenant](docs/images/fr/update-available.png)
 
-La capture utilise une **notification simulée d’une future version 1.8.8** pour illustrer l’interface, et non pour annoncer une version publiée. **La version 1.8.8 est désormais publiée :** les utilisateurs de 1.6.2 ou d’une version ultérieure peuvent rouvrir l’application ou cliquer sur **Rechercher des mises à jour** pour la recevoir. [Guide des mises à jour](docs/fr/UPDATES.md).
+La capture utilise une **notification simulée d’une future version 1.8.9** pour illustrer l’interface, et non pour annoncer une version publiée. **La version 1.8.9 est désormais publiée :** les utilisateurs de 1.6.2 ou d’une version ultérieure peuvent rouvrir l’application ou cliquer sur **Rechercher des mises à jour** pour la recevoir. [Guide des mises à jour](docs/fr/UPDATES.md).
 
 **Vous utilisez 1.6.1 ou une version antérieure ? Installez manuellement 1.6.2 une fois** pour activer cette fonction. Vous pouvez aussi utiliser **Rechercher des mises à jour** pour réessayer après une vérification échouée ou hors ligne. L’outil de mise à jour n’installe jamais quoi que ce soit simplement parce que vous ouvrez l’application.
 
@@ -131,13 +135,13 @@ Ouvrez **Windows PowerShell 5.1 ou PowerShell 7 sous Windows** :
 ```powershell
 $script = Join-Path $env:TEMP 'Install-PowerPortal.ps1'
 [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
-Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/luisgnserra/powerportaldesktop/v1.8.8/install.ps1' -OutFile $script
+Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/luisgnserra/powerportaldesktop/v1.8.9/install.ps1' -OutFile $script
 # Review the downloaded script before running it.
 Get-Content -LiteralPath $script
 & $script
 ```
 
-L’assistant télécharge la **version 1.8.8**, vérifie sa somme SHA-256 figée et ouvre le même programme d’installation. Il n’installe ni Node.js, ni PHP, ni SDK .NET et ne compile rien.
+L’assistant télécharge la **version 1.8.9**, vérifie sa somme SHA-256 figée et ouvre le même programme d’installation. Il n’installe ni Node.js, ni PHP, ni SDK .NET et ne compile rien.
 
 Pour une installation sans assistance, exécutez le même assistant depuis une **fenêtre PowerShell administrateur** :
 

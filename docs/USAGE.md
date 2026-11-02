@@ -4,6 +4,10 @@
 [🇺🇸 English](USAGE.md) · [🇧🇷 Português](pt-BR/USAGE.md) · [🇪🇸 Español](es/USAGE.md) · [🇨🇳 简体中文](zh-CN/USAGE.md) · [🇫🇷 Français](fr/USAGE.md) · [🇯🇵 日本語](ja/USAGE.md) · [🇮🇳 हिन्दी](hi/USAGE.md) · [🇸🇦 العربية](ar/USAGE.md)
 <!-- /language-selector -->
 
+**1.8.9 — Calendar sample and native refresh shortcut**
+
+In Calendar generator, the real sample (up to 50 rows) now appears below Generate script. Refresh in Power BI sits beside that button and, with a live connection, opens Refresh Performance and starts the same confirmed native model-data refresh. Follow table statuses, timings and row counts there. This refreshes the entire model; it does not apply the generated script, create or replace a calendar table, or save the PBIX. Create calendar in Power BI remains a separate action. The button is disabled offline, supports keyboard activation and is translated into all eight languages. Cancellation and errors use the existing refresh flow. The sample remains the last requested read: use Read selected calendar to read it again after refreshing. Packaged-app tests verified layout, all eight labels, offline gating, exact selected connection, cancellation, visible errors, retry and unchanged calendar creation. No real model refresh was started for these tests; documentation images use synthetic data.
+
 **1.8.8 — Dynamic relationship lines and verified theme delivery**
 
 In Relationship map, Line style switches between Curves and Straight lines with 90-degree angles. Endpoints dynamically use facing top/bottom or left/right table borders, taking the rendered card size into account. Side connections retain the linked column height. Black arrows with white outlines follow straight segments rather than bisecting corners. The style saves automatically and travels with exported diagram JSON; older layouts remain curved. This does not change the native Power BI layout or perform global obstacle avoidance.
@@ -137,7 +141,7 @@ The app does not send model files, metadata, rows or source credentials to the p
 
 [Configuration](CONFIGURATION.md) · [Troubleshooting](TROUBLESHOOTING.md)
 
-In 1.8.8, relationship drawing only prepares a draft: click/drag exact column pairs and review before applying. Right-click deletion uses the same confirmation and backup. Native autodetection is separate and may create multiple links: review in Power BI, close its dialogs, then finish in Power Portal before other writes or updates. Local group images and visibility preferences are saved only in the diagram. [New relationship workflow](RELATIONSHIPS.md#native-automatic-relationship-detection).
+In 1.8.9, relationship drawing only prepares a draft: click/drag exact column pairs and review before applying. Right-click deletion uses the same confirmation and backup. Native autodetection is separate and may create multiple links: review in Power BI, close its dialogs, then finish in Power Portal before other writes or updates. Local group images and visibility preferences are saved only in the diagram. [New relationship workflow](RELATIONSHIPS.md#native-automatic-relationship-detection).
 
 ## Refresh Performance
 

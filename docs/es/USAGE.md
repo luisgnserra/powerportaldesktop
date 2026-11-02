@@ -4,6 +4,10 @@
 [🇺🇸 English](../USAGE.md) · [🇧🇷 Português](../pt-BR/USAGE.md) · [🇪🇸 Español](USAGE.md) · [🇨🇳 简体中文](../zh-CN/USAGE.md) · [🇫🇷 Français](../fr/USAGE.md) · [🇯🇵 日本語](../ja/USAGE.md) · [🇮🇳 हिन्दी](../hi/USAGE.md) · [🇸🇦 العربية](../ar/USAGE.md)
 <!-- /language-selector -->
 
+**1.8.9 — Muestra del calendario y acceso a la actualización nativa**
+
+En Generador de tabla calendario, la muestra real (hasta 50 filas) aparece debajo de Generar script. Actualizar en Power BI está al lado y, con conexión activa, abre Rendimiento de actualización e inicia el mismo flujo nativo de actualización de datos con confirmación. Allí se muestran estados, tiempos y recuentos de filas. Actualiza todo el modelo: no aplica el script generado, no crea ni sustituye una tabla calendario y no guarda el PBIX. Crear calendario en Power BI sigue siendo una acción separada. El botón se deshabilita sin conexión, admite teclado y está traducido a los ocho idiomas. Cancelación y errores usan el flujo existente. La muestra conserva la última lectura: usa Leer calendario seleccionado para consultarla de nuevo tras actualizar. Las pruebas de la aplicación empaquetada verificaron posición, ocho traducciones, bloqueo sin conexión, conexión exacta, cancelación, errores visibles, reintento y creación de calendario intacta. No se inició ninguna actualización real; las capturas usan datos sintéticos.
+
 **1.8.8 — Líneas dinámicas y envío de temas verificado**
 
 En Mapa de relaciones, Estilo de líneas alterna entre Curvas y Líneas rectas con ángulos de 90 grados. Los extremos usan dinámicamente los bordes superior/inferior o izquierdo/derecho enfrentados, considerando el tamaño real de las tarjetas. Las conexiones laterales conservan la altura de la columna relacionada. Las flechas negras con borde blanco siguen los tramos rectos sin inclinarse en las esquinas. El estilo se guarda automáticamente y viaja con el JSON exportado; los diseños anteriores conservan las curvas. No cambia el diseño nativo de Power BI ni calcula rutas globales para evitar obstáculos.
@@ -147,7 +151,7 @@ La aplicación no envía al portal archivos del modelo, metadatos, filas ni cred
 
 [Configuración](CONFIGURATION.md) · [Solución de problemas](TROUBLESHOOTING.md)
 
-En 1.8.8, dibujar relaciones solo prepara un borrador: haga clic o arrastre entre pares de columnas exactos y revíselo antes de aplicarlo. La eliminación con el botón derecho usa la misma confirmación y copia de seguridad. La detección automática nativa es independiente y puede crear varios vínculos: revíselos en Power BI, cierre sus diálogos y después finalice en Power Portal antes de otras escrituras o actualizaciones. Las imágenes locales de grupo y las preferencias de visibilidad se guardan solo en el diagrama. [Nuevo flujo de relaciones](RELATIONSHIPS.md#native-automatic-relationship-detection).
+En 1.8.9, dibujar relaciones solo prepara un borrador: haga clic o arrastre entre pares de columnas exactos y revíselo antes de aplicarlo. La eliminación con el botón derecho usa la misma confirmación y copia de seguridad. La detección automática nativa es independiente y puede crear varios vínculos: revíselos en Power BI, cierre sus diálogos y después finalice en Power Portal antes de otras escrituras o actualizaciones. Las imágenes locales de grupo y las preferencias de visibilidad se guardan solo en el diagrama. [Nuevo flujo de relaciones](RELATIONSHIPS.md#native-automatic-relationship-detection).
 
 <a name="refresh-performance"></a>
 ## Rendimiento de actualización

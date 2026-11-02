@@ -4,6 +4,10 @@
 [🇺🇸 English](../USAGE.md) · [🇧🇷 Português](../pt-BR/USAGE.md) · [🇪🇸 Español](../es/USAGE.md) · [🇨🇳 简体中文](../zh-CN/USAGE.md) · [🇫🇷 Français](USAGE.md) · [🇯🇵 日本語](../ja/USAGE.md) · [🇮🇳 हिन्दी](../hi/USAGE.md) · [🇸🇦 العربية](../ar/USAGE.md)
 <!-- /language-selector -->
 
+**1.8.9 — Échantillon du calendrier et raccourci d’actualisation native**
+
+Dans le générateur de calendrier, l’échantillon réel (50 lignes maximum) apparaît désormais sous Générer le script. Actualiser dans Power BI se trouve à côté et, avec une connexion active, ouvre Performances d’actualisation puis démarre le même flux natif confirmé. Suivez les états, durées et nombres de lignes. Cela actualise le modèle entier, sans appliquer le script, créer ou remplacer le calendrier, ni enregistrer le PBIX. Créer le calendrier dans Power BI reste une action distincte. Le bouton est désactivé hors connexion, accessible au clavier et traduit dans les huit langues. Annulation et erreurs utilisent le flux existant. L’échantillon reste la dernière lecture : utilisez Lire le calendrier sélectionné après actualisation. Les tests de l’application empaquetée ont vérifié disposition, huit traductions, blocage hors connexion, connexion exacte, annulation, erreurs visibles, nouvelle tentative et création du calendrier préservée. Aucune actualisation réelle n’a été lancée ; les captures utilisent des données synthétiques.
+
 **1.8.8 — Lignes dynamiques et envoi de thèmes vérifié**
 
 Dans la carte des relations, Style des lignes permet de choisir des courbes ou des lignes droites avec angles à 90 degrés. Les extrémités utilisent dynamiquement les bords haut/bas ou gauche/droite qui se font face, selon la taille réelle des cartes. Les connexions latérales conservent la hauteur de la colonne liée. Les flèches noires à contour blanc suivent les segments droits sans couper les angles en diagonale. Le style est enregistré automatiquement et inclus dans le JSON exporté ; les anciens schémas restent courbes. Cela ne modifie pas la disposition native de Power BI et ne réalise pas un évitement global des obstacles.
@@ -147,7 +151,7 @@ L’application n’envoie pas au portail les fichiers du modèle, métadonnées
 
 [Configuration](CONFIGURATION.md) · [Dépannage](TROUBLESHOOTING.md)
 
-Dans la version 1.8.8, le dessin de relations ne fait que préparer un brouillon : cliquez ou faites glisser entre des paires de colonnes exactes et vérifiez-le avant de l’appliquer. La suppression par clic droit utilise la même confirmation et la même sauvegarde. La détection automatique native est distincte et peut créer plusieurs liens : examinez-les dans Power BI, fermez ses dialogues, puis terminez dans Power Portal avant toute autre écriture ou mise à jour. Les images locales de groupe et les préférences de visibilité sont enregistrées uniquement dans le diagramme. [Nouveau parcours des relations](RELATIONSHIPS.md#native-automatic-relationship-detection).
+Dans la version 1.8.9, le dessin de relations ne fait que préparer un brouillon : cliquez ou faites glisser entre des paires de colonnes exactes et vérifiez-le avant de l’appliquer. La suppression par clic droit utilise la même confirmation et la même sauvegarde. La détection automatique native est distincte et peut créer plusieurs liens : examinez-les dans Power BI, fermez ses dialogues, puis terminez dans Power Portal avant toute autre écriture ou mise à jour. Les images locales de groupe et les préférences de visibilité sont enregistrées uniquement dans le diagramme. [Nouveau parcours des relations](RELATIONSHIPS.md#native-automatic-relationship-detection).
 
 <a name="refresh-performance"></a>
 ## Performances de l’actualisation
