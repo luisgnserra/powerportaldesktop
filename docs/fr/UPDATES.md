@@ -4,6 +4,12 @@
 [🇺🇸 English](../UPDATES.md) · [🇧🇷 Português](../pt-BR/UPDATES.md) · [🇪🇸 Español](../es/UPDATES.md) · [🇨🇳 简体中文](../zh-CN/UPDATES.md) · [🇫🇷 Français](UPDATES.md) · [🇯🇵 日本語](../ja/UPDATES.md) · [🇮🇳 हिन्दी](../hi/UPDATES.md) · [🇸🇦 العربية](../ar/UPDATES.md)
 <!-- /language-selector -->
 
+**1.8.6 — Suivez l’actualisation dans Power Portal**
+
+Lancez Actualiser et analyser dans Power Portal et suivez les cartes en direct : table, état observé, phase du moteur, durée d’activité et dernier texte natif disponible de Power BI. Power Portal reprend le focus après le lancement et, si Power BI revient au premier plan, après la fin native. Il ne reprend pas constamment le focus aux autres applications. Voir dans Power BI ouvre le fichier sélectionné sans relancer l’actualisation ; ce choix désactive le retour automatique pour cette capture.
+
+Power BI reste le moteur. Sa fenêtre peut apparaître brièvement : ce n’est pas une API prise en charge pour traiter un PBIX sans fenêtre. Identifiants, erreurs et annulation restent dans Power BI ; aucun dialogue n’est masqué ou fermé automatiquement. Le texte natif conserve la langue de Power BI et l’heure de dernière lecture. Son absence est explicite et le suivi du moteur continue si le lecteur échoue. Une phase terminée ne prouve pas la fin de la table, aucun pourcentage n’est inventé et les lignes finales sont comptées après la capture. L’historique et JSON contiennent les états natifs : vérifiez les exports avant partage. L’application empaquetée a été testée avec une actualisation réelle autorisée : 4/4 tables mesurées, 4/4 comptages, états natifs en direct, focus restauré, bouton fonctionnel et historique conservé après rechargement. Aucun PBIX n’a été enregistré automatiquement ; les images utilisent des données synthétiques.
+
 **1.8.5 — Télécharger les mises à jour dans le navigateur**
 
 Lorsqu’une nouvelle version est disponible, l’avis propose Télécharger dans le navigateur à côté de Mettre à jour. Le bouton ouvre l’adresse officielle de l’installateur GitHub détecté dans le navigateur par défaut, sans fermer Power Portal ni lancer l’installation. Exécutez manuellement l’installateur téléchargé lorsque vous le souhaitez. Cette option reste disponible après une erreur de mise à jour automatique. Les échecs d’ouverture du navigateur sont affichés. Mettre à jour continue de télécharger dans l’application, de vérifier SHA-256 et taille, puis de demander l’autorisation Windows. Le téléchargement par navigateur ne bénéficie pas de la vérification automatique de l’application : comparez le SHA-256 publié avant d’exécuter l’installateur. Les boutons et l’explication sont traduits dans les huit langues.
@@ -33,12 +39,12 @@ L’exécution de développement/depuis les sources ne télécharge et n’insta
 
 ![Notification de mise à jour et bouton Mettre à jour maintenant contrôlé par l’utilisateur](../images/fr/update-available.png)
 
-La capture est une **notification simulée d’une future version 1.8.5** dans 1.8.5, montrant uniquement l’interface. Ce n’est pas une annonce de 1.8.5.
+La capture est une **notification simulée d’une future version 1.8.6** dans 1.8.6, montrant uniquement l’interface. Ce n’est pas une annonce de 1.8.6.
 
-<a name="receive-version-185-from-an-earlier-updater-enabled-version"></a>
-### Recevoir la version 1.8.5 depuis une version antérieure disposant de l’outil de mise à jour
+<a name="receive-version-186-from-an-earlier-updater-enabled-version"></a>
+### Recevoir la version 1.8.6 depuis une version antérieure disposant de l’outil de mise à jour
 
-Avec **1.6.2, 1.6.3 ou 1.6.4** installé, rouvrez l’application ou cliquez sur **Rechercher des mises à jour**. La version stable publiée **1.8.5** devrait apparaître avec **Mettre à jour maintenant**. N’installez pas d’abord 1.8.5 manuellement si vous souhaitez observer cette notification. Les versions antérieures à 1.6.4 utilisent leur bannière d’origine ; le style visuel bien visible est conservé en 1.8.5. Cliquez sur le bouton de mise à jour lorsque vous êtes prêt et acceptez l’autorisation Windows.
+Avec **1.6.2, 1.6.3 ou 1.6.4** installé, rouvrez l’application ou cliquez sur **Rechercher des mises à jour**. La version stable publiée **1.8.6** devrait apparaître avec **Mettre à jour maintenant**. N’installez pas d’abord 1.8.6 manuellement si vous souhaitez observer cette notification. Les versions antérieures à 1.6.4 utilisent leur bannière d’origine ; le style visuel bien visible est conservé en 1.8.6. Cliquez sur le bouton de mise à jour lorsque vous êtes prêt et acceptez l’autorisation Windows.
 
 L’application signale le lancement du programme d’installation, pas une installation terminée et vérifiée : l’installation se termine après la fermeture de l’ancienne application. Vérifiez la version affichée après réouverture. Windows peut encore bloquer le programme d’installation non signé ou exiger une approbation du service informatique.
 

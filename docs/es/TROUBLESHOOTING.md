@@ -4,6 +4,12 @@
 [🇺🇸 English](../TROUBLESHOOTING.md) · [🇧🇷 Português](../pt-BR/TROUBLESHOOTING.md) · [🇪🇸 Español](TROUBLESHOOTING.md) · [🇨🇳 简体中文](../zh-CN/TROUBLESHOOTING.md) · [🇫🇷 Français](../fr/TROUBLESHOOTING.md) · [🇯🇵 日本語](../ja/TROUBLESHOOTING.md) · [🇮🇳 हिन्दी](../hi/TROUBLESHOOTING.md) · [🇸🇦 العربية](../ar/TROUBLESHOOTING.md)
 <!-- /language-selector -->
 
+**1.8.6 — Siga la actualización dentro de Power Portal**
+
+Inicie Actualizar y analizar en Power Portal y vea tarjetas en vivo con cada tabla, estado observado, fase del motor, tiempo de actividad y el último texto de progreso nativo disponible de Power BI. Power Portal recupera el foco al iniciar y, si Power BI vuelve al primer plano, al finalizar. No roba repetidamente el foco de otras aplicaciones. Ver en Power BI abre el archivo seleccionado sin iniciar otra actualización; esta elección desactiva el retorno automático del foco durante esa captura.
+
+Power BI sigue siendo el motor. Su ventana puede aparecer brevemente: no es una API compatible de procesamiento de PBIX sin ventana. Credenciales, errores y cancelación permanecen en Power BI; los diálogos nunca se ocultan ni cierran automáticamente. El texto nativo conserva el idioma de Power BI e indica la hora de la última lectura. La ausencia de texto se muestra explícitamente; el seguimiento del motor continúa si falla el lector. Una fase terminada no demuestra que la tabla esté completa, no se inventan porcentajes y las filas finales se cuentan después de la captura. El historial y JSON incluyen los estados nativos: revise las exportaciones antes de compartirlas. La aplicación empaquetada se probó con una actualización real autorizada: 4/4 tablas medidas, 4/4 recuentos, estados en vivo, foco recuperado, Ver en Power BI funcional e historial conservado al recargar. No se guardó automáticamente el PBIX; las imágenes usan datos sintéticos.
+
 **1.8.5 — Corrección de las mediciones de actualización nativa**
 
 Análisis de actualización ahora reconoce el comando XML Refresh nativo de Power BI Desktop, incluso dentro de Batch, además de XMLA Process y TMSL refresh. Antes, la actualización podía ejecutarse pero su progreso se descartaba, dejando 0 tablas medidas, recuentos no disponibles y refreshCompletionNotProven. Ahora se acepta el éxito explícito del motor cuando falta el campo opcional Error; los códigos de error no nulos y los errores XMLA siguen prevaleciendo. El progreso exige correlación exacta de solicitud/actividad para excluir consultas visuales ajenas.
@@ -37,7 +43,7 @@ Cuando hay una versión nueva, el aviso ofrece Descargar en el navegador junto a
 | SHA-256 no coincide | **No ejecute el archivo.** Elimine/mueva la descarga no válida, obtenga de nuevo el recurso oficial y compárelo con la suma de comprobación publicada. |
 | Falla la descarga de GitHub | Compruebe la conectividad, las restricciones de proxy/firewall y la URL de la versión. TI puede distribuir el EXE verificado por un canal aprobado. |
 | PowerShell indica un error de conexión subyacente/envío TLS | Use la línea TLS 1.2 documentada antes de obtener el asistente en Windows PowerShell y reintente. El actualizador de la aplicación nativa ya usa HTTPS/TLS de forma independiente. |
-| SmartScreen/editor desconocido | 1.8.5 no está firmado. Verifique la suma de comprobación y el origen del editor; consulte a TI si su dispositivo bloquea programas sin firma. |
+| SmartScreen/editor desconocido | 1.8.6 no está firmado. Verifique la suma de comprobación y el origen del editor; consulte a TI si su dispositivo bloquea programas sin firma. |
 | El editor de relaciones es de solo lectura | Importar un proyecto permite únicamente la organización visual. Conéctese a un modelo local de Power BI en vivo para crear/editar/eliminar relaciones. |
 | La relación cambió desde la lectura | Vuelva a leer el modelo de Power BI y revise el vínculo actualizado. Se rechazan las ediciones obsoletas para no sobrescribir otro cambio. |
 | Relación duplicada o segunda relación activa | Use pares de columnas distintos o desactive la relación activa actual entre esas tablas antes de activar otra. |
@@ -61,7 +67,7 @@ Envíe un correo a **[contato@consultoriaexcelencia.com.br](mailto:contato@consu
 
 Incluya:
 
-- Versión de Power Portal (1.8.5 para esta publicación).
+- Versión de Power Portal (1.8.6 para esta publicación).
 - Versión de Windows y versión/edición de Power BI Desktop.
 - Método de instalación (asistente o PowerShell).
 - Pasos para reproducir el problema y el error visible exacto.

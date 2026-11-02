@@ -4,6 +4,12 @@
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md) · [🇨🇳 简体中文](README.zh-CN.md) · [🇫🇷 Français](README.fr.md) · [🇯🇵 日本語](README.ja.md) · [🇮🇳 हिन्दी](README.hi.md) · [🇸🇦 العربية](README.ar.md)
 <!-- /language-selector -->
 
+**1.8.6 — Power Portal 内で更新の進行状況を確認**
+
+Power Portal で更新分析を開始すると、各テーブル、観測状態、エンジンのフェーズ、活動時間、最後に取得した Power BI の進行状況をライブカードで確認できます。開始後に Power Portal へフォーカスが戻り、Power BI が再び前面に出た場合は更新完了後にもう一度戻ります。他のアプリから繰り返しフォーカスを奪いません。「Power BI で表示」は再更新せず選択したファイルを開き、このキャプチャの自動フォーカス復帰を無効にします。
+
+更新処理は引き続き Power BI が実行します。ウィンドウが一時的に表示される場合があり、サポートされたヘッドレス PBIX 処理 API ではありません。資格情報、エラー、キャンセルは Power BI 側で扱い、ダイアログを自動的に隠したり閉じたりしません。ネイティブ文字列は Power BI の言語のまま、最終取得時刻付きで表示します。取得不能は明示し、エンジントレースは継続します。フェーズ終了はテーブル完了を証明せず、割合を推測せず、最終行数はキャプチャ後に数えます。履歴と JSON にネイティブ状態が含まれるため共有前に確認してください。許可された実際の更新でパッケージ版を検証済み：4/4 テーブルの時間、4/4 行数、ライブ状態、フォーカス復帰、表示ボタン、再読み込み後の履歴保存。PBIX は自動保存せず、文書画像は合成データを使用しています。
+
 **1.8.5 — ネイティブ更新の計測を修正**
 
 更新分析は、Power BI Desktop のネイティブ XML Refresh コマンドと Batch 内の Refresh を認識し、XMLA Process と TMSL refresh にも引き続き対応します。従来は更新が実行されても進行イベントが除外され、計測テーブル数が 0、行数が利用不可、refreshCompletionNotProven となる場合がありました。任意の Error フィールドがなくても明示的な成功結果を受け付けます。非ゼロのエラーコードと XMLA エラーは引き続き優先されます。無関係なビジュアルクエリを除くため、進行イベントは要求またはアクティビティとの厳密な関連付けが必要です。
@@ -44,13 +50,13 @@ Power Portal のアニメーション付きヘッダーに、ファイル名、�
 <a name="option-1-install-with-a-few-clicks"></a>
 ### 方法 1：数回のクリックでインストール
 
-1. [Windows x64 用 Power Portal Desktop 1.8.5 をダウンロード](https://github.com/luisgnserra/powerportaldesktop/releases/download/v1.8.5/PowerPortal-Setup-1.8.5-x64.exe)します。
+1. [Windows x64 用 Power Portal Desktop 1.8.6 をダウンロード](https://github.com/luisgnserra/powerportaldesktop/releases/download/v1.8.6/PowerPortal-Setup-1.8.6-x64.exe)します。
 2. インストーラーを実行し、Windows の管理者権限の確認を承認します。
 3. インストール先フォルダーと既定の言語を選びます。
 4. インストール完了後、Power BI Desktop を閉じて開き直します。
 5. PBIX を開き、**外部ツール > Power Portal** を選びます。
 
-**Windows が発行元不明の警告を表示する場合があります：**バージョン 1.8.5 にはデジタル署名がありません。この配布元を信頼できる場合にのみ続行してください。組織が未署名のソフトウェアを禁止している場合は、ポリシーを回避せず IT 部門に連絡してください。
+**Windows が発行元不明の警告を表示する場合があります：**バージョン 1.8.6 にはデジタル署名がありません。この配布元を信頼できる場合にのみ続行してください。組織が未署名のソフトウェアを禁止している場合は、ポリシーを回避せず IT 部門に連絡してください。
 
 [最新リリース](https://github.com/luisgnserra/powerportaldesktop/releases/latest) · [インストールガイド](docs/ja/INSTALLATION.md) · [設定](docs/ja/CONFIGURATION.md) · [トラブルシューティング](docs/ja/TROUBLESHOOTING.md)
 
@@ -63,7 +69,7 @@ Power Portal のアニメーション付きヘッダーに、ファイル名、�
 
 提供されたリボンのスクリーンショットはポルトガル語の原版です。**Ferramentas externas** は**外部ツール**を意味します。Power Portal は **Power BI に接続した独立ウィンドウ**を開きます。埋め込みのレポートビジュアルや、Power BI 内部の新しいペインではありません。
 
-![Power Portal 1.8.5 のホーム、展開されたサイドバー、起動時の接続通知](docs/images/ja/home.png)
+![Power Portal 1.8.6 のホーム、展開されたサイドバー、起動時の接続通知](docs/images/ja/home.png)
 
 **すでに Power BI を開いていますか？**ショートカットから起動すると、Power Portal は開いているローカルモデルを検出し、接続通知を表示します。**開いているモデルを検索**を選び、ファイルを選択して接続してください。その後、データをクエリし、対応する変更を確認付きでモデルに送信できます。
 
@@ -80,7 +86,7 @@ Power Portal のアニメーション付きヘッダーに、ファイル名、�
 
 接続中の Power BI モデルで、**確認とメタデータのバックアップ後に**リレーションシップを作成、編集、有効化/無効化、削除できます。表示スタイルは Power Portal 内にとどまり、テーブル名や Power BI の標準レイアウトは変更しません。[リレーションシップの詳細チュートリアル](docs/ja/RELATIONSHIPS.md)。
 
-1.8.5 では、正確な列をクリックまたはドラッグしてリレーションシップを準備し、線を右クリックして色の設定、編集、確認後の削除を行えます。グループにはローカル画像と 30 種類を超えるアイコンを設定できます。自動日付/時刻テーブルは既定で非表示になり、表示切替が可能です。Power BI 外で編集した後に図を更新するか、事前にバックアップして Desktop のネイティブ自動検出を呼び出し、別途確認して完了します。
+1.8.6 では、正確な列をクリックまたはドラッグしてリレーションシップを準備し、線を右クリックして色の設定、編集、確認後の削除を行えます。グループにはローカル画像と 30 種類を超えるアイコンを設定できます。自動日付/時刻テーブルは既定で非表示になり、表示切替が可能です。Power BI 外で編集した後に図を更新するか、事前にバックアップして Desktop のネイティブ自動検出を呼び出し、別途確認して完了します。
 
 <a name="built-in-update-checks"></a>
 ### 組み込みの更新チェック
@@ -91,7 +97,7 @@ Windows が管理者の承認を求めます。閉じるのは Power Portal の�
 
 ![新バージョンの通知と今すぐ更新ボタン](docs/images/ja/update-available.png)
 
-この画像は UI を説明するための**将来の 1.8.5 通知のシミュレーション**であり、公開済みバージョンの発表ではありません。**バージョン 1.8.5 は公開済みです：**1.6.2 以降のユーザーはアプリを開き直すか、**更新を確認**をクリックして更新を受け取れます。[更新ガイド](docs/ja/UPDATES.md)。
+この画像は UI を説明するための**将来の 1.8.6 通知のシミュレーション**であり、公開済みバージョンの発表ではありません。**バージョン 1.8.6 は公開済みです：**1.6.2 以降のユーザーはアプリを開き直すか、**更新を確認**をクリックして更新を受け取れます。[更新ガイド](docs/ja/UPDATES.md)。
 
 **1.6.1 以前を使用していますか？この機能を有効にするには、最初に 1.6.2 を一度手動でインストールしてください。**失敗したチェックやオフライン時のチェックは、**更新を確認**で再試行できます。アプリを開いただけでインストールされることはありません。
 
@@ -103,13 +109,13 @@ Windows 上で **Windows PowerShell 5.1 または PowerShell 7** を開きます
 ```powershell
 $script = Join-Path $env:TEMP 'Install-PowerPortal.ps1'
 [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
-Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/luisgnserra/powerportaldesktop/v1.8.5/install.ps1' -OutFile $script
+Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/luisgnserra/powerportaldesktop/v1.8.6/install.ps1' -OutFile $script
 # Review the downloaded script before running it.
 Get-Content -LiteralPath $script
 & $script
 ```
 
-補助スクリプトは**バージョン 1.8.5** をダウンロードし、固定された SHA-256 チェックサムを検証して、同じインストーラーを開きます。Node.js、PHP、.NET SDK のインストールやビルドは行いません。
+補助スクリプトは**バージョン 1.8.6** をダウンロードし、固定された SHA-256 チェックサムを検証して、同じインストーラーを開きます。Node.js、PHP、.NET SDK のインストールやビルドは行いません。
 
 無人インストールでは、**管理者の PowerShell ウィンドウ**から同じ補助スクリプトを実行します。
 

@@ -6,7 +6,7 @@
 
 [होम पर लौटें](../../README.hi.md) · [स्क्रीनशॉट](SCREENSHOTS.md) · [मॉडल सुरक्षा](USAGE.md)
 
-**Power Portal Desktop 1.8.5** में उपलब्ध। यह नया केवल-Desktop टूल है, Power BI के अपने Model view से अलग। यह तालिका/कॉलम संबंध पढ़ता है और कनेक्टेड स्थानीय semantic model में पुष्टि किए गए बदलाव लागू कर सकता है।
+**Power Portal Desktop 1.8.6** में उपलब्ध। यह नया केवल-Desktop टूल है, Power BI के अपने Model view से अलग। यह तालिका/कॉलम संबंध पढ़ता है और कनेक्टेड स्थानीय semantic model में पुष्टि किए गए बदलाव लागू कर सकता है।
 
 ![Facts और Dimensions समूह, कार्डिनैलिटी और रंगीन लिंक वाला Relationship कैनवास](../images/hi/relationship-map.png)
 

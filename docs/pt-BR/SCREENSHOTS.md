@@ -4,6 +4,14 @@
 [🇺🇸 English](../SCREENSHOTS.md) · [🇧🇷 Português](SCREENSHOTS.md) · [🇪🇸 Español](../es/SCREENSHOTS.md) · [🇨🇳 简体中文](../zh-CN/SCREENSHOTS.md) · [🇫🇷 Français](../fr/SCREENSHOTS.md) · [🇯🇵 日本語](../ja/SCREENSHOTS.md) · [🇮🇳 हिन्दी](../hi/SCREENSHOTS.md) · [🇸🇦 العربية](../ar/SCREENSHOTS.md)
 <!-- /language-selector -->
 
+**1.8.6 — Acompanhe a atualização dentro do Power Portal**
+
+Inicie Atualizar e analisar no Power Portal e acompanhe cartões ao vivo com cada tabela, estado observado, fase do mecanismo, tempo de atividade e o último texto de progresso nativo disponível do Power BI. O Power Portal recupera o foco após iniciar e, se o Power BI reaparecer em primeiro plano, após a conclusão nativa. Não toma repetidamente o foco de outros aplicativos. Ver no Power BI abre o arquivo selecionado sem iniciar outra atualização; essa escolha desativa o retorno automático do foco nessa captura.
+
+O Power BI continua sendo o mecanismo de atualização. Sua janela pode aparecer brevemente: não se trata de uma API suportada de processamento de PBIX sem janela. Credenciais, erros e cancelamento permanecem no Power BI; nenhum diálogo é ocultado ou dispensado automaticamente. O texto nativo mantém o idioma do Power BI e informa o horário da última leitura. A ausência de texto é explícita; o rastreamento do mecanismo continua se a leitura da janela falhar. Fases encerradas não comprovam a conclusão da tabela, não há percentuais inventados e as linhas finais são contadas apenas após a captura. Histórico e JSON incluem os estados nativos observados; revise as exportações antes de compartilhar. O aplicativo empacotado foi testado com atualização real autorizada: 4/4 tabelas medidas, 4/4 contagens de linhas, estados nativos ao vivo, foco devolvido ao Portal, botão Ver no Power BI funcional e histórico preservado após recarregar. Nenhum PBIX foi salvo automaticamente; as imagens usam dados sintéticos.
+
+![Acompanhe a atualização dentro do Power Portal](../images/pt-BR/refresh-progress.png)
+
 **1.8.5 — Correção das medições da atualização nativa**
 
 Análise Atualização agora reconhece o comando XML Refresh nativo usado pelo Power BI Desktop, inclusive dentro de Batch, além de XMLA Process e TMSL refresh. Antes, a atualização podia executar, mas seu progresso era descartado como não relacionado, deixando 0 tabelas medidas, contagens indisponíveis e refreshCompletionNotProven. Um resultado explícito de sucesso do mecanismo agora é aceito quando o campo opcional Error está ausente; códigos de erro diferentes de zero e erros XMLA continuam prevalecendo. O progresso ainda exige correlação exata de requisição/atividade, excluindo consultas dos visuais não relacionadas.
@@ -24,7 +32,7 @@ Análise Atualização fica imediatamente abaixo de Mapa de relacionamentos no m
 
 [Voltar ao início](../../README.pt-BR.md) · [Instalar](INSTALLATION.md) · [Guia de segurança](USAGE.md)
 
-**Prints do aplicativo: Power Portal Desktop 1.8.5, interface em português.**
+**Prints do aplicativo: Power Portal Desktop 1.8.6, interface em português.**
 Os prints usam **metadados e valores de consulta sintéticos de demonstração**, não um PBIX de cliente. Estados conectados ilustram ações suportadas; nenhum modelo de cliente foi alterado para produzir as imagens. Rótulos nativos do seletor de arquivos podem seguir o idioma do Windows. O print verdadeiro da guia do Power BI foi fornecido pelo proprietário e recortado para remover o título privado do arquivo.
 
 As setas dos relacionamentos agora ficam sobre a curva e giram conforme sua direcao local, inclusive em ligacoes diagonais ou invertidas. Setas SVG maiores, de 36 × 26 unidades, sempre pretas com contorno branco de 3 unidades, independentemente da cor da linha. O filtro unidirecional continua do destino para a origem; o bidirecional mostra duas setas opostas. O filtro automatico conserva o indicador de interrogacao. Esta alteracao e apenas visual.
@@ -87,7 +95,7 @@ Iniciar pela guia Ferramentas externas transmite automaticamente a conexão daqu
 
 ![Nova versão disponível com Atualizar agora e aviso de autorização/edições não enviadas](../images/pt-BR/update-available.png)
 
-O print usa um **resultado futuro sintético da 1.8.5** para mostrar o aviso na 1.8.5. Não afirma que a 1.8.5 foi publicada. Usuários da 1.6.2 ou superior podem receber agora o aviso real da 1.8.5.
+O print usa um **resultado futuro sintético da 1.8.6** para mostrar o aviso na 1.8.6. Não afirma que a 1.8.6 foi publicada. Usuários da 1.6.2 ou superior podem receber agora o aviso real da 1.8.6.
 
 Na 1.6.4, a faixa âmbar fica visível durante a rolagem e anima suavemente, exceto quando movimento reduzido está habilitado. Não há faixa permanente “aplicativo atualizado” ocupando espaço.
 
@@ -169,7 +177,7 @@ A nova ferramenta exclusiva do Desktop mostra ligações reais, cardinalidades, 
 
 Selecione uma linha para inspecionar colunas, cardinalidade, filtros e estado ativo. **Aplicar relacionamento no Power BI** ou **Excluir relacionamento no Power BI** grava cada edição após confirmação nativa e backup. Projetos importados são somente leitura. Estilos não renomeiam tabelas nem mudam o diagrama nativo. [Passo a passo completo e limites de segurança](RELATIONSHIPS.md).
 
-Na 1.8.5, clique ou arraste entre colunas para preparar um rascunho tracejado e revise/aplique. Botão direito na linha abre cor/editar/excluir. Grupos oferecem PNG/JPEG local e mais ícones; arraste pelo fundo ou título. Tabelas automáticas de data/hora ficam ocultas por padrão. **Atualizar diagrama do Power BI** relê mudanças externas sem copiar coordenadas nativas. **Detectar relacionamentos automaticamente** inicia a detecção nativa após confirmação/backup; revise e feche seus diálogos antes de **Concluir detecção e atualizar diagrama**.
+Na 1.8.6, clique ou arraste entre colunas para preparar um rascunho tracejado e revise/aplique. Botão direito na linha abre cor/editar/excluir. Grupos oferecem PNG/JPEG local e mais ícones; arraste pelo fundo ou título. Tabelas automáticas de data/hora ficam ocultas por padrão. **Atualizar diagrama do Power BI** relê mudanças externas sem copiar coordenadas nativas. **Detectar relacionamentos automaticamente** inicia a detecção nativa após confirmação/backup; revise e feche seus diálogos antes de **Concluir detecção e atualizar diagrama**.
 
 <a name="power-bi-tv-tool"></a>
 ### Power BI TV Tool

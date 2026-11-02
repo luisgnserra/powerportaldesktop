@@ -4,6 +4,12 @@
 [🇺🇸 English](../UPDATES.md) · [🇧🇷 Português](UPDATES.md) · [🇪🇸 Español](../es/UPDATES.md) · [🇨🇳 简体中文](../zh-CN/UPDATES.md) · [🇫🇷 Français](../fr/UPDATES.md) · [🇯🇵 日本語](../ja/UPDATES.md) · [🇮🇳 हिन्दी](../hi/UPDATES.md) · [🇸🇦 العربية](../ar/UPDATES.md)
 <!-- /language-selector -->
 
+**1.8.6 — Acompanhe a atualização dentro do Power Portal**
+
+Inicie Atualizar e analisar no Power Portal e acompanhe cartões ao vivo com cada tabela, estado observado, fase do mecanismo, tempo de atividade e o último texto de progresso nativo disponível do Power BI. O Power Portal recupera o foco após iniciar e, se o Power BI reaparecer em primeiro plano, após a conclusão nativa. Não toma repetidamente o foco de outros aplicativos. Ver no Power BI abre o arquivo selecionado sem iniciar outra atualização; essa escolha desativa o retorno automático do foco nessa captura.
+
+O Power BI continua sendo o mecanismo de atualização. Sua janela pode aparecer brevemente: não se trata de uma API suportada de processamento de PBIX sem janela. Credenciais, erros e cancelamento permanecem no Power BI; nenhum diálogo é ocultado ou dispensado automaticamente. O texto nativo mantém o idioma do Power BI e informa o horário da última leitura. A ausência de texto é explícita; o rastreamento do mecanismo continua se a leitura da janela falhar. Fases encerradas não comprovam a conclusão da tabela, não há percentuais inventados e as linhas finais são contadas apenas após a captura. Histórico e JSON incluem os estados nativos observados; revise as exportações antes de compartilhar. O aplicativo empacotado foi testado com atualização real autorizada: 4/4 tabelas medidas, 4/4 contagens de linhas, estados nativos ao vivo, foco devolvido ao Portal, botão Ver no Power BI funcional e histórico preservado após recarregar. Nenhum PBIX foi salvo automaticamente; as imagens usam dados sintéticos.
+
 **1.8.5 — Baixar atualizações pelo navegador**
 
 Quando houver uma versão nova, o aviso de atualização agora oferece Baixar pelo navegador ao lado de Atualizar agora. O botão abre no navegador padrão o endereço oficial do instalador detectado no GitHub, sem fechar o Power Portal nem iniciar a instalação. Execute o instalador baixado manualmente quando desejar. A opção continua disponível após um erro na atualização automática. Falhas ao abrir o navegador são exibidas. Atualizar agora continua baixando pelo app, verificando SHA-256 e tamanho e solicitando autorização do Windows. Downloads pelo navegador não passam pela verificação automática do app: compare o SHA-256 publicado antes de executar o instalador. Os dois botões e a orientação estão traduzidos nos oito idiomas.
@@ -33,12 +39,12 @@ A execução de desenvolvimento/código-fonte não baixa nem instala atualizaç�
 
 ![Aviso de atualização e botão Atualizar agora controlado pelo usuário](../images/pt-BR/update-available.png)
 
-O print mostra um **aviso futuro simulado da 1.8.5** dentro da 1.8.5, apenas para demonstrar a interface. Não anuncia a 1.8.5.
+O print mostra um **aviso futuro simulado da 1.8.6** dentro da 1.8.6, apenas para demonstrar a interface. Não anuncia a 1.8.6.
 
-<a name="receive-version-185-from-an-earlier-updater-enabled-version"></a>
-### Receber a versão 1.8.5 de uma versão anterior com atualizador
+<a name="receive-version-186-from-an-earlier-updater-enabled-version"></a>
+### Receber a versão 1.8.6 de uma versão anterior com atualizador
 
-Com **1.6.2, 1.6.3 ou 1.6.4** instalada, reabra ou clique em **Verificar atualizações**. A versão estável publicada **1.8.5** deve aparecer com **Atualizar agora**. Não instale manualmente a 1.8.5 primeiro se quiser observar o aviso. Versões anteriores à 1.6.4 usam o aviso original; o destaque visual é mantido na 1.8.5. Clique quando estiver pronto e aprove a autorização do Windows.
+Com **1.6.2, 1.6.3 ou 1.6.4** instalada, reabra ou clique em **Verificar atualizações**. A versão estável publicada **1.8.6** deve aparecer com **Atualizar agora**. Não instale manualmente a 1.8.6 primeiro se quiser observar o aviso. Versões anteriores à 1.6.4 usam o aviso original; o destaque visual é mantido na 1.8.6. Clique quando estiver pronto e aprove a autorização do Windows.
 
 O aplicativo informa o início do instalador, não uma instalação concluída e verificada: ela termina após o aplicativo antigo fechar. Confira a versão ao reabrir. O Windows ainda pode bloquear o instalador sem assinatura ou exigir aprovação da TI.
 

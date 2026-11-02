@@ -4,6 +4,12 @@
 [🇺🇸 English](TROUBLESHOOTING.md) · [🇧🇷 Português](pt-BR/TROUBLESHOOTING.md) · [🇪🇸 Español](es/TROUBLESHOOTING.md) · [🇨🇳 简体中文](zh-CN/TROUBLESHOOTING.md) · [🇫🇷 Français](fr/TROUBLESHOOTING.md) · [🇯🇵 日本語](ja/TROUBLESHOOTING.md) · [🇮🇳 हिन्दी](hi/TROUBLESHOOTING.md) · [🇸🇦 العربية](ar/TROUBLESHOOTING.md)
 <!-- /language-selector -->
 
+**1.8.6 — Follow native refresh inside Power Portal**
+
+Start Refresh and analyze in Power Portal and follow live cards with each table, observed status, engine phase, activity time and the latest available native Power BI progress text. Power Portal regains focus after launch and, if Power BI brings itself forward again, after native completion. It does not repeatedly take focus from other applications. View in Power BI opens the selected file without starting another refresh; choosing it disables automatic focus return for that capture.
+
+Power BI remains the refresh engine. Its window may appear briefly; this is not a supported headless PBIX processing API. Credentials, errors and cancellation remain in Power BI, and native dialogs are never hidden or dismissed automatically. Native text keeps the Power BI language and shows its last-read time. Missing native text is explicit; engine tracing continues if the UI reader fails. Ended phases do not prove table completion, percentages are not invented, and final row counts are calculated only after capture. History and JSON include the observed native statuses; review exports before sharing. The packaged application was tested with an authorized real refresh: 4/4 tables measured, 4/4 row counts, live native statuses, restored Portal focus, working View in Power BI and history surviving reload. No PBIX was automatically saved; all documentation images use synthetic data.
+
 **1.8.5 — Native refresh measurements fixed**
 
 Refresh Analysis now recognizes the native XML Refresh command used by Power BI Desktop, including Refresh inside Batch, as well as XMLA Process and TMSL refresh. Previously the native refresh could execute while its progress was discarded as unrelated, leaving 0 measured tables, unavailable row counts and refreshCompletionNotProven. An explicit successful engine result is now accepted when the optional Error field is absent; nonzero error codes and XMLA errors still override success. Progress still requires exact request/activity correlation, excluding unrelated visual queries.
@@ -37,7 +43,7 @@ When a newer version is available, the update notice now offers Download in brow
 | SHA-256 mismatch | **Do not run the file.** Remove/move the invalid download, get the official asset again, and compare against the published checksum. |
 | GitHub download fails | Check connectivity, proxy/firewall restrictions and the Release URL. IT can distribute the verified EXE through an approved channel. |
 | PowerShell reports an underlying connection/TLS send error | Use the documented TLS 1.2 line before fetching the helper in Windows PowerShell, then retry. The native application updater already uses HTTPS/TLS independently. |
-| SmartScreen/unknown publisher | 1.8.5 is unsigned. Verify the checksum and publisher source; ask IT if your device blocks unsigned programs. |
+| SmartScreen/unknown publisher | 1.8.6 is unsigned. Verify the checksum and publisher source; ask IT if your device blocks unsigned programs. |
 | Relationship editor is read-only | Importing a project allows visual organization only. Connect to a live local Power BI model to create/edit/delete relationships. |
 | Relationship changed since reading | Re-read the Power BI model and review the updated link. Stale edits are rejected to avoid overwriting another change. |
 | Duplicate or second active relationship | Use distinct column pairs, or deactivate the current active relationship between those tables before activating another. |
@@ -60,7 +66,7 @@ Email **[contato@consultoriaexcelencia.com.br](mailto:contato@consultoriaexcelen
 
 Include:
 
-- Power Portal version (1.8.5 for this release).
+- Power Portal version (1.8.6 for this release).
 - Windows version and Power BI Desktop version/edition.
 - Installation method (wizard or PowerShell).
 - Steps to reproduce and the exact visible error.

@@ -4,6 +4,12 @@
 [🇺🇸 English](../TROUBLESHOOTING.md) · [🇧🇷 Português](../pt-BR/TROUBLESHOOTING.md) · [🇪🇸 Español](../es/TROUBLESHOOTING.md) · [🇨🇳 简体中文](TROUBLESHOOTING.md) · [🇫🇷 Français](../fr/TROUBLESHOOTING.md) · [🇯🇵 日本語](../ja/TROUBLESHOOTING.md) · [🇮🇳 हिन्दी](../hi/TROUBLESHOOTING.md) · [🇸🇦 العربية](../ar/TROUBLESHOOTING.md)
 <!-- /language-selector -->
 
+**1.8.6 — 在 Power Portal 中查看刷新进度**
+
+在 Power Portal 中启动刷新分析，通过实时卡片查看每个表、观测状态、引擎阶段、活动时间以及最近可用的 Power BI 原生进度文字。启动后 Power Portal 会恢复焦点；如果 Power BI 再次进入前台，原生刷新完成后会再返回一次。不会反复抢占其他应用的焦点。“在 Power BI 中查看”打开选定文件而不重复刷新；选择后将禁用本次捕获的自动返回。
+
+刷新仍由 Power BI 执行。其窗口可能短暂出现；这不是受支持的无界面 PBIX 处理 API。凭据、错误和取消操作仍在 Power BI 中处理，不会自动隐藏或关闭对话框。原生文字保持 Power BI 的语言，并显示最近读取时间。无法读取时明确提示，引擎跟踪仍可继续。阶段结束不代表表已完成，不虚构百分比，最终行数在捕获后统计。历史记录和 JSON 包含观测到的原生状态，分享前请检查导出文件。已使用授权的真实刷新验证打包应用：4/4 个表有计时、4/4 个行数、实时原生状态、焦点返回、查看按钮及重新加载后保留的历史记录。不会自动保存 PBIX，文档图片均使用合成数据。
+
 **1.8.5 — 修复原生刷新测量**
 
 刷新分析现可识别 Power BI Desktop 使用的原生 XML Refresh 命令，包括 Batch 内的 Refresh，并继续支持 XMLA Process 和 TMSL refresh。此前刷新可能已执行，但进度被当作无关事件丢弃，导致测量表数为 0、行数不可用及 refreshCompletionNotProven。可选 Error 字段缺失时，现接受引擎明确的成功结果；非零错误码和 XMLA 错误仍优先。进度仍须精确关联请求或活动，以排除无关视觉查询。
@@ -37,7 +43,7 @@
 | SHA-256 不匹配 | **不要运行该文件。**删除/移走无效下载，重新获取官方附件，并与已发布校验和比较。 |
 | GitHub 下载失败 | 检查网络、代理/防火墙限制及 Release URL。IT 可通过获准渠道分发已验证的 EXE。 |
 | PowerShell 报告底层连接/TLS 发送错误 | 在 Windows PowerShell 中获取辅助脚本前，先使用文档中的 TLS 1.2 命令行，再重试。原生应用更新程序已独立使用 HTTPS/TLS。 |
-| SmartScreen/未知发布者 | 1.8.5 未签名。验证校验和及发布者来源；设备禁止未签名程序时请咨询 IT。 |
+| SmartScreen/未知发布者 | 1.8.6 未签名。验证校验和及发布者来源；设备禁止未签名程序时请咨询 IT。 |
 | 关系编辑器为只读 | 导入项目仅允许视觉组织。连接到实时本地 Power BI 模型后才能创建/编辑/删除关系。 |
 | 关系在读取后发生改变 | 重新读取 Power BI 模型并审查更新后的关系。为避免覆盖其他更改，过期编辑会被拒绝。 |
 | 重复关系或第二条活动关系 | 使用不同的列对，或在激活另一条关系前，停用这些表之间当前的活动关系。 |
@@ -61,7 +67,7 @@
 
 请提供：
 
-- Power Portal 版本（本次发布为 1.8.5）。
+- Power Portal 版本（本次发布为 1.8.6）。
 - Windows 版本及 Power BI Desktop 版本/版本类型。
 - 安装方式（向导或 PowerShell）。
 - 重现步骤和界面显示的确切错误。

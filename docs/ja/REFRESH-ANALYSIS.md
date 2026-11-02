@@ -4,6 +4,14 @@
 [🇺🇸 English](../REFRESH-ANALYSIS.md) · [🇧🇷 Português](../pt-BR/REFRESH-ANALYSIS.md) · [🇪🇸 Español](../es/REFRESH-ANALYSIS.md) · [🇨🇳 简体中文](../zh-CN/REFRESH-ANALYSIS.md) · [🇫🇷 Français](../fr/REFRESH-ANALYSIS.md) · [🇯🇵 日本語](REFRESH-ANALYSIS.md) · [🇮🇳 हिन्दी](../hi/REFRESH-ANALYSIS.md) · [🇸🇦 العربية](../ar/REFRESH-ANALYSIS.md)
 <!-- /language-selector -->
 
+**1.8.6 — Power Portal 内で更新の進行状況を確認**
+
+Power Portal で更新分析を開始すると、各テーブル、観測状態、エンジンのフェーズ、活動時間、最後に取得した Power BI の進行状況をライブカードで確認できます。開始後に Power Portal へフォーカスが戻り、Power BI が再び前面に出た場合は更新完了後にもう一度戻ります。他のアプリから繰り返しフォーカスを奪いません。「Power BI で表示」は再更新せず選択したファイルを開き、このキャプチャの自動フォーカス復帰を無効にします。
+
+更新処理は引き続き Power BI が実行します。ウィンドウが一時的に表示される場合があり、サポートされたヘッドレス PBIX 処理 API ではありません。資格情報、エラー、キャンセルは Power BI 側で扱い、ダイアログを自動的に隠したり閉じたりしません。ネイティブ文字列は Power BI の言語のまま、最終取得時刻付きで表示します。取得不能は明示し、エンジントレースは継続します。フェーズ終了はテーブル完了を証明せず、割合を推測せず、最終行数はキャプチャ後に数えます。履歴と JSON にネイティブ状態が含まれるため共有前に確認してください。許可された実際の更新でパッケージ版を検証済み：4/4 テーブルの時間、4/4 行数、ライブ状態、フォーカス復帰、表示ボタン、再読み込み後の履歴保存。PBIX は自動保存せず、文書画像は合成データを使用しています。
+
+![Power Portal 内で更新の進行状況を確認](../images/ja/refresh-progress.png)
+
 **1.8.5 — ネイティブ更新の計測を修正**
 
 更新分析は、Power BI Desktop のネイティブ XML Refresh コマンドと Batch 内の Refresh を認識し、XMLA Process と TMSL refresh にも引き続き対応します。従来は更新が実行されても進行イベントが除外され、計測テーブル数が 0、行数が利用不可、refreshCompletionNotProven となる場合がありました。任意の Error フィールドがなくても明示的な成功結果を受け付けます。非ゼロのエラーコードと XMLA エラーは引き続き優先されます。無関係なビジュアルクエリを除くため、進行イベントは要求またはアクティビティとの厳密な関連付けが必要です。

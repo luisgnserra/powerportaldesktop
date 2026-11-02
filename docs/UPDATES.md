@@ -4,6 +4,12 @@
 [🇺🇸 English](UPDATES.md) · [🇧🇷 Português](pt-BR/UPDATES.md) · [🇪🇸 Español](es/UPDATES.md) · [🇨🇳 简体中文](zh-CN/UPDATES.md) · [🇫🇷 Français](fr/UPDATES.md) · [🇯🇵 日本語](ja/UPDATES.md) · [🇮🇳 हिन्दी](hi/UPDATES.md) · [🇸🇦 العربية](ar/UPDATES.md)
 <!-- /language-selector -->
 
+**1.8.6 — Follow native refresh inside Power Portal**
+
+Start Refresh and analyze in Power Portal and follow live cards with each table, observed status, engine phase, activity time and the latest available native Power BI progress text. Power Portal regains focus after launch and, if Power BI brings itself forward again, after native completion. It does not repeatedly take focus from other applications. View in Power BI opens the selected file without starting another refresh; choosing it disables automatic focus return for that capture.
+
+Power BI remains the refresh engine. Its window may appear briefly; this is not a supported headless PBIX processing API. Credentials, errors and cancellation remain in Power BI, and native dialogs are never hidden or dismissed automatically. Native text keeps the Power BI language and shows its last-read time. Missing native text is explicit; engine tracing continues if the UI reader fails. Ended phases do not prove table completion, percentages are not invented, and final row counts are calculated only after capture. History and JSON include the observed native statuses; review exports before sharing. The packaged application was tested with an authorized real refresh: 4/4 tables measured, 4/4 row counts, live native statuses, restored Portal focus, working View in Power BI and history surviving reload. No PBIX was automatically saved; all documentation images use synthetic data.
+
 **1.8.5 — Download updates in your browser**
 
 When a newer version is available, the update notice now offers Download in browser alongside Update now. It opens the detected official GitHub installer URL in your default browser without closing Power Portal or starting installation. Run the downloaded installer manually when ready. The option remains available after an automatic update error. Browser launch failures are shown explicitly. Update now still downloads in the app, verifies SHA-256 and size, then requests Windows authorization. Browser downloads do not receive the app’s automatic checksum verification: compare the published SHA-256 before running the installer. Both buttons and the hint are translated into all eight languages.
@@ -31,11 +37,11 @@ The development/source run does not download or install updates.
 
 ![Update notification and user-controlled Update now button](images/update-available.png)
 
-The screenshot is a **simulated future 1.8.5 notification** inside 1.8.5, demonstrating the UI only. It is not an announcement of 1.8.5.
+The screenshot is a **simulated future 1.8.6 notification** inside 1.8.6, demonstrating the UI only. It is not an announcement of 1.8.6.
 
-### Receive version 1.8.5 from an earlier updater-enabled version
+### Receive version 1.8.6 from an earlier updater-enabled version
 
-With **1.6.2, 1.6.3 or 1.6.4** installed, reopen the app or click **Check for updates**. The published stable **1.8.5** should appear with **Update now**. Do not install 1.8.5 manually first if you want to observe this notification. Versions before 1.6.4 use their original banner; the prominent visual styling is retained in 1.8.5. Click the update button when ready and approve Windows authorization.
+With **1.6.2, 1.6.3 or 1.6.4** installed, reopen the app or click **Check for updates**. The published stable **1.8.6** should appear with **Update now**. Do not install 1.8.6 manually first if you want to observe this notification. Versions before 1.6.4 use their original banner; the prominent visual styling is retained in 1.8.6. Click the update button when ready and approve Windows authorization.
 
 The app reports installer launch, not a verified completed installation: installation completes after the old app closes. Check the displayed application version after reopening. Windows can still block the unsigned installer or require IT approval.
 

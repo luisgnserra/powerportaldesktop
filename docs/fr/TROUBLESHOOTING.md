@@ -4,6 +4,12 @@
 [🇺🇸 English](../TROUBLESHOOTING.md) · [🇧🇷 Português](../pt-BR/TROUBLESHOOTING.md) · [🇪🇸 Español](../es/TROUBLESHOOTING.md) · [🇨🇳 简体中文](../zh-CN/TROUBLESHOOTING.md) · [🇫🇷 Français](TROUBLESHOOTING.md) · [🇯🇵 日本語](../ja/TROUBLESHOOTING.md) · [🇮🇳 हिन्दी](../hi/TROUBLESHOOTING.md) · [🇸🇦 العربية](../ar/TROUBLESHOOTING.md)
 <!-- /language-selector -->
 
+**1.8.6 — Suivez l’actualisation dans Power Portal**
+
+Lancez Actualiser et analyser dans Power Portal et suivez les cartes en direct : table, état observé, phase du moteur, durée d’activité et dernier texte natif disponible de Power BI. Power Portal reprend le focus après le lancement et, si Power BI revient au premier plan, après la fin native. Il ne reprend pas constamment le focus aux autres applications. Voir dans Power BI ouvre le fichier sélectionné sans relancer l’actualisation ; ce choix désactive le retour automatique pour cette capture.
+
+Power BI reste le moteur. Sa fenêtre peut apparaître brièvement : ce n’est pas une API prise en charge pour traiter un PBIX sans fenêtre. Identifiants, erreurs et annulation restent dans Power BI ; aucun dialogue n’est masqué ou fermé automatiquement. Le texte natif conserve la langue de Power BI et l’heure de dernière lecture. Son absence est explicite et le suivi du moteur continue si le lecteur échoue. Une phase terminée ne prouve pas la fin de la table, aucun pourcentage n’est inventé et les lignes finales sont comptées après la capture. L’historique et JSON contiennent les états natifs : vérifiez les exports avant partage. L’application empaquetée a été testée avec une actualisation réelle autorisée : 4/4 tables mesurées, 4/4 comptages, états natifs en direct, focus restauré, bouton fonctionnel et historique conservé après rechargement. Aucun PBIX n’a été enregistré automatiquement ; les images utilisent des données synthétiques.
+
 **1.8.5 — Correction des mesures de l’actualisation native**
 
 Analyse de l’actualisation reconnaît désormais la commande XML Refresh native de Power BI Desktop, y compris dans Batch, ainsi que XMLA Process et TMSL refresh. Auparavant, l’actualisation pouvait s’exécuter mais son progrès était écarté, laissant 0 table mesurée, des comptages indisponibles et refreshCompletionNotProven. Le succès explicite du moteur est accepté en l’absence du champ Error facultatif ; les codes d’erreur non nuls et les erreurs XMLA restent prioritaires. Le progrès exige toujours une corrélation exacte de requête/activité pour exclure les requêtes visuelles sans rapport.
@@ -37,7 +43,7 @@ Lorsqu’une nouvelle version est disponible, l’avis propose Télécharger dan
 | Le SHA-256 ne correspond pas | **N’exécutez pas le fichier.** Supprimez/déplacez le téléchargement invalide, récupérez à nouveau le fichier officiel et comparez-le à la somme de contrôle publiée. |
 | Échec de téléchargement GitHub | Vérifiez la connectivité, les restrictions de proxy/pare-feu et l’URL de la version. Le service informatique peut distribuer l’EXE vérifié par un canal approuvé. |
 | PowerShell signale une erreur de connexion sous-jacente/d’envoi TLS | Utilisez la ligne TLS 1.2 documentée avant de récupérer l’assistant dans Windows PowerShell, puis réessayez. L’outil de mise à jour de l’application native utilise déjà HTTPS/TLS indépendamment. |
-| SmartScreen/éditeur inconnu | 1.8.5 n’est pas signé. Vérifiez la somme de contrôle et la provenance de l’éditeur ; consultez le service informatique si votre appareil bloque les programmes non signés. |
+| SmartScreen/éditeur inconnu | 1.8.6 n’est pas signé. Vérifiez la somme de contrôle et la provenance de l’éditeur ; consultez le service informatique si votre appareil bloque les programmes non signés. |
 | L’éditeur de relations est en lecture seule | L’import d’un projet permet uniquement l’organisation visuelle. Connectez-vous à un modèle Power BI local en direct pour créer/modifier/supprimer des relations. |
 | La relation a changé depuis sa lecture | Relisez le modèle Power BI et examinez le lien actualisé. Les modifications périmées sont rejetées pour éviter d’écraser une autre modification. |
 | Relation en double ou deuxième relation active | Utilisez des paires de colonnes distinctes, ou désactivez la relation active actuelle entre ces tables avant d’en activer une autre. |
@@ -61,7 +67,7 @@ Lorsqu’une nouvelle version est disponible, l’avis propose Télécharger dan
 
 Indiquez :
 
-- La version de Power Portal (1.8.5 pour cette publication).
+- La version de Power Portal (1.8.6 pour cette publication).
 - La version de Windows et la version/édition de Power BI Desktop.
 - La méthode d’installation (assistant ou PowerShell).
 - Les étapes de reproduction et l’erreur visible exacte.
