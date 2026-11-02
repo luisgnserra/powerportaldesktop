@@ -26,13 +26,13 @@ La carte des relations se trouve désormais juste après TV Tool dans le menu la
 <a name="option-1-install-with-a-few-clicks"></a>
 ### Option 1 : installer en quelques clics
 
-1. [Téléchargez Power Portal Desktop 1.8.0 pour Windows x64](https://github.com/luisgnserra/powerportaldesktop/releases/download/v1.8.0/PowerPortal-Setup-1.8.0-x64.exe).
+1. [Téléchargez Power Portal Desktop 1.8.1 pour Windows x64](https://github.com/luisgnserra/powerportaldesktop/releases/download/v1.8.1/PowerPortal-Setup-1.8.1-x64.exe).
 2. Exécutez le programme d’installation et acceptez la demande d’autorisation administrateur de Windows.
 3. Choisissez le dossier d’installation et la langue par défaut.
 4. Terminez l’installation, puis fermez et rouvrez Power BI Desktop.
 5. Ouvrez un PBIX et sélectionnez **Outils externes > Power Portal**.
 
-**Windows peut signaler un éditeur inconnu :** la version 1.8.0 n’est pas signée numériquement. Ne continuez que si vous faites confiance à cette distribution. Si votre organisation bloque les logiciels non signés, contactez le service informatique au lieu de contourner sa politique.
+**Windows peut signaler un éditeur inconnu :** la version 1.8.1 n’est pas signée numériquement. Ne continuez que si vous faites confiance à cette distribution. Si votre organisation bloque les logiciels non signés, contactez le service informatique au lieu de contourner sa politique.
 
 [Dernière version](https://github.com/luisgnserra/powerportaldesktop/releases/latest) · [Guide d’installation](docs/fr/INSTALLATION.md) · [Configuration](docs/fr/CONFIGURATION.md) · [Dépannage](docs/fr/TROUBLESHOOTING.md)
 
@@ -45,7 +45,7 @@ Le programme d’installation ajoute **Power Portal** aux **Outils externes** de
 
 La capture du ruban fournie est en portugais : **Ferramentas externas** signifie **Outils externes**. Power Portal ouvre une **fenêtre distincte connectée à Power BI**, et non un visuel intégré au rapport ou un nouveau volet interne de Power BI.
 
-![Accueil de Power Portal 1.8.0, barre latérale complète et avis de connexion au démarrage](docs/images/fr/home.png)
+![Accueil de Power Portal 1.8.1, barre latérale complète et avis de connexion au démarrage](docs/images/fr/home.png)
 
 **Power BI est déjà ouvert ?** Lorsqu’il est lancé depuis un raccourci, Power Portal détecte les modèles locaux ouverts et affiche un avis de connexion. Choisissez **Rechercher les modèles ouverts**, sélectionnez votre fichier et connectez-vous. Vous pourrez ensuite interroger ses données et lui renvoyer les modifications prises en charge, après confirmation.
 
@@ -62,7 +62,7 @@ Comprenez les liens réels entre les tables sur un canevas où vous pouvez les d
 
 Créez, modifiez, activez/désactivez et supprimez des relations dans le modèle Power BI connecté **après confirmation et sauvegarde des métadonnées**. Le style visuel reste dans Power Portal ; il ne renomme pas les tables et ne modifie pas la disposition native de Power BI. [Tutoriel complet sur les relations](docs/fr/RELATIONSHIPS.md).
 
-Dans la version 1.8.0, cliquez ou faites glisser entre des colonnes exactes pour préparer un lien ; faites un clic droit sur les lignes pour choisir leur couleur, les modifier et les supprimer avec confirmation. Les groupes prennent en charge des images locales et plus de 30 icônes. Les tables de date/heure automatiques sont masquées par défaut avec une option de visibilité. Actualisez depuis Power BI après des modifications externes, ou invoquez la détection automatique native de Desktop avec une sauvegarde préalable et une étape distincte de vérification/finalisation.
+Dans la version 1.8.1, cliquez ou faites glisser entre des colonnes exactes pour préparer un lien ; faites un clic droit sur les lignes pour choisir leur couleur, les modifier et les supprimer avec confirmation. Les groupes prennent en charge des images locales et plus de 30 icônes. Les tables de date/heure automatiques sont masquées par défaut avec une option de visibilité. Actualisez depuis Power BI après des modifications externes, ou invoquez la détection automatique native de Desktop avec une sauvegarde préalable et une étape distincte de vérification/finalisation.
 
 <a name="built-in-update-checks"></a>
 ### Recherche de mises à jour intégrée
@@ -73,7 +73,7 @@ Windows demande l’autorisation administrateur. Seul Power Portal se ferme ; Po
 
 ![Notification d’une nouvelle version et bouton Mettre à jour maintenant](docs/images/fr/update-available.png)
 
-La capture utilise une **notification simulée d’une future version 1.8.1** pour illustrer l’interface, et non pour annoncer une version publiée. **La version 1.8.0 est désormais publiée :** les utilisateurs de 1.6.2 ou d’une version ultérieure peuvent rouvrir l’application ou cliquer sur **Rechercher des mises à jour** pour la recevoir. [Guide des mises à jour](docs/fr/UPDATES.md).
+La capture utilise une **notification simulée d’une future version 1.8.2** pour illustrer l’interface, et non pour annoncer une version publiée. **La version 1.8.1 est désormais publiée :** les utilisateurs de 1.6.2 ou d’une version ultérieure peuvent rouvrir l’application ou cliquer sur **Rechercher des mises à jour** pour la recevoir. [Guide des mises à jour](docs/fr/UPDATES.md).
 
 **Vous utilisez 1.6.1 ou une version antérieure ? Installez manuellement 1.6.2 une fois** pour activer cette fonction. Vous pouvez aussi utiliser **Rechercher des mises à jour** pour réessayer après une vérification échouée ou hors ligne. L’outil de mise à jour n’installe jamais quoi que ce soit simplement parce que vous ouvrez l’application.
 
@@ -85,13 +85,13 @@ Ouvrez **Windows PowerShell 5.1 ou PowerShell 7 sous Windows** :
 ```powershell
 $script = Join-Path $env:TEMP 'Install-PowerPortal.ps1'
 [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
-Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/luisgnserra/powerportaldesktop/v1.8.0/install.ps1' -OutFile $script
+Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/luisgnserra/powerportaldesktop/v1.8.1/install.ps1' -OutFile $script
 # Review the downloaded script before running it.
 Get-Content -LiteralPath $script
 & $script
 ```
 
-L’assistant télécharge la **version 1.8.0**, vérifie sa somme SHA-256 figée et ouvre le même programme d’installation. Il n’installe ni Node.js, ni PHP, ni SDK .NET et ne compile rien.
+L’assistant télécharge la **version 1.8.1**, vérifie sa somme SHA-256 figée et ouvre le même programme d’installation. Il n’installe ni Node.js, ni PHP, ni SDK .NET et ne compile rien.
 
 Pour une installation sans assistance, exécutez le même assistant depuis une **fenêtre PowerShell administrateur** :
 
@@ -206,3 +206,13 @@ Mesurez l’actualisation native. Comparez les durées et les lignes. [Analyse d
 Connectez le bon PBIX, ouvrez Analyse de l’actualisation et choisissez Actualiser et analyser. Confirmez le nom du fichier. Le suivi démarre avant Accueil > Actualiser natif ; les tables ne sont pas actualisées séquentiellement via TOM. Gardez Power BI ouvert et traitez les identifiants, erreurs ou annulations dedans. Une sauvegarde BIM ne restaure pas les données actualisées.
 
 La fin automatique exige la fin observée des commandes d’actualisation et une fenêtre Power BI prête. Fermez les dialogues de résultat. Terminer manuellement la capture signifie toujours analyse incomplète, ne prouve pas la réussite et n’annule pas l’actualisation. Les erreurs moteur/suivi sont explicites. Une capture interrompue n’est pas déclarée terminée.
+
+<a name="animated-home-cards"></a>
+## Cartes animées sur l’accueil
+
+Les douze cartes d’accueil utilisent le même bleu marine que le menu (#041e43), avec des scènes vectorielles originales sans texte. Chaque outil conserve son illustration centrale, enrichie de panneaux de données, graphiques, base de données, orbites, grille et satellites flottants. Les lignes de signal se déplacent doucement. Les couvertures ne chargent aucune image, aucun script ni service externe.
+
+Survolez une carte ou sélectionnez-la au clavier pour afficher cadre et halo dorés, reflet lumineux, scène éclaircie, flèche circulaire et action dorée. La pression donne un retour immédiat sans retarder la navigation. Entrée/Espace ouvrent toujours le même outil. La préférence de mouvement réduit arrête les animations en conservant le surlignage statique et le focus visible. Titres et actions restent hors de l’image et suivent la langue choisie. Les captures montrent des états statiques normal/survol, pas des vidéos.
+
+![Survol / focus clavier](docs/images/fr/home-hover.png)
+

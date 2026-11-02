@@ -125,7 +125,7 @@ L’application n’envoie pas au portail les fichiers du modèle, métadonnées
 
 [Configuration](CONFIGURATION.md) · [Dépannage](TROUBLESHOOTING.md)
 
-Dans la version 1.8.0, le dessin de relations ne fait que préparer un brouillon : cliquez ou faites glisser entre des paires de colonnes exactes et vérifiez-le avant de l’appliquer. La suppression par clic droit utilise la même confirmation et la même sauvegarde. La détection automatique native est distincte et peut créer plusieurs liens : examinez-les dans Power BI, fermez ses dialogues, puis terminez dans Power Portal avant toute autre écriture ou mise à jour. Les images locales de groupe et les préférences de visibilité sont enregistrées uniquement dans le diagramme. [Nouveau parcours des relations](RELATIONSHIPS.md#native-automatic-relationship-detection).
+Dans la version 1.8.1, le dessin de relations ne fait que préparer un brouillon : cliquez ou faites glisser entre des paires de colonnes exactes et vérifiez-le avant de l’appliquer. La suppression par clic droit utilise la même confirmation et la même sauvegarde. La détection automatique native est distincte et peut créer plusieurs liens : examinez-les dans Power BI, fermez ses dialogues, puis terminez dans Power Portal avant toute autre écriture ou mise à jour. Les images locales de groupe et les préférences de visibilité sont enregistrées uniquement dans le diagramme. [Nouveau parcours des relations](RELATIONSHIPS.md#native-automatic-relationship-detection).
 
 <a name="refresh-analysis"></a>
 ## Analyse de l’actualisation

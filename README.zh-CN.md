@@ -26,13 +26,13 @@ Power Portal 动画页眉现已包含文件名、连接状态以及五个读取�
 <a name="option-1-install-with-a-few-clicks"></a>
 ### 方式一：点击几次即可安装
 
-1. [下载适用于 Windows x64 的 Power Portal Desktop 1.8.0](https://github.com/luisgnserra/powerportaldesktop/releases/download/v1.8.0/PowerPortal-Setup-1.8.0-x64.exe)。
+1. [下载适用于 Windows x64 的 Power Portal Desktop 1.8.1](https://github.com/luisgnserra/powerportaldesktop/releases/download/v1.8.1/PowerPortal-Setup-1.8.1-x64.exe)。
 2. 运行安装程序，并批准 Windows 管理员权限提示。
 3. 选择安装文件夹和默认语言。
 4. 完成安装后，关闭并重新打开 Power BI Desktop。
 5. 打开一个 PBIX，选择**外部工具 > Power Portal**。
 
-**Windows 可能提示发布者未知：**1.8.0 版本尚未进行数字签名。只有在信任此分发来源时才继续。如果组织禁止未签名的软件，请联系 IT 部门，不要绕过其政策。
+**Windows 可能提示发布者未知：**1.8.1 版本尚未进行数字签名。只有在信任此分发来源时才继续。如果组织禁止未签名的软件，请联系 IT 部门，不要绕过其政策。
 
 [最新版本](https://github.com/luisgnserra/powerportaldesktop/releases/latest) · [安装指南](docs/zh-CN/INSTALLATION.md) · [配置](docs/zh-CN/CONFIGURATION.md) · [故障排除](docs/zh-CN/TROUBLESHOOTING.md)
 
@@ -45,7 +45,7 @@ Power Portal 动画页眉现已包含文件名、连接状态以及五个读取�
 
 此功能区截图的原始界面为葡萄牙语：**Ferramentas externas** 表示**外部工具**。Power Portal 打开的是**连接到 Power BI 的独立窗口**，不是嵌入式报表视觉对象，也不是 Power BI 内部的新窗格。
 
-![Power Portal 1.8.0 主页、完整侧栏及启动连接提示](docs/images/zh-CN/home.png)
+![Power Portal 1.8.1 主页、完整侧栏及启动连接提示](docs/images/zh-CN/home.png)
 
 **Power BI 已经打开？**从快捷方式启动时，Power Portal 会检测已打开的本地模型并显示连接提示。选择**查找已打开的模型**，选中您的文件并连接。之后即可查询数据，并在确认后将支持的更改发送回模型。
 
@@ -62,7 +62,7 @@ Power Portal 动画页眉现已包含文件名、连接状态以及五个读取�
 
 在**确认并备份元数据后**，可在连接的 Power BI 模型中创建、编辑、激活/停用及删除关系。视觉样式仅保存在 Power Portal 中，不会重命名表，也不会修改 Power BI 的原生布局。[完整关系教程](docs/zh-CN/RELATIONSHIPS.md)。
 
-在 1.8.0 中，可点击或拖动准确的列来准备关系；右键单击关系线可设置颜色、编辑或在确认后删除。分组支持本地图片和 30 多种图标。自动日期/时间表默认隐藏，并可切换可见性。在 Power BI 外部编辑后刷新关系图，或在事先备份后调用 Desktop 原生自动检测，并通过单独的复查/完成步骤结束。
+在 1.8.1 中，可点击或拖动准确的列来准备关系；右键单击关系线可设置颜色、编辑或在确认后删除。分组支持本地图片和 30 多种图标。自动日期/时间表默认隐藏，并可切换可见性。在 Power BI 外部编辑后刷新关系图，或在事先备份后调用 Desktop 原生自动检测，并通过单独的复查/完成步骤结束。
 
 <a name="built-in-update-checks"></a>
 ### 内置更新检查
@@ -73,7 +73,7 @@ Windows 会请求管理员授权。只有 Power Portal 会关闭，Power BI 仍�
 
 ![新版本通知和立即更新按钮](docs/images/zh-CN/update-available.png)
 
-截图使用**模拟的未来 1.8.1 通知**来展示界面，并非宣布该版本已发布。**1.8.0 现已发布：**使用 1.6.2 或更新版本的用户可以重新打开应用，或点击**检查更新**来获取更新。[更新指南](docs/zh-CN/UPDATES.md)。
+截图使用**模拟的未来 1.8.2 通知**来展示界面，并非宣布该版本已发布。**1.8.1 现已发布：**使用 1.6.2 或更新版本的用户可以重新打开应用，或点击**检查更新**来获取更新。[更新指南](docs/zh-CN/UPDATES.md)。
 
 **仍在使用 1.6.1 或更早版本？请先手动安装一次 1.6.2**，以启用此功能。检查失败或离线后，也可使用**检查更新**重试。更新程序绝不会仅因您打开应用就执行安装。
 
@@ -85,13 +85,13 @@ Windows 会请求管理员授权。只有 Power Portal 会关闭，Power BI 仍�
 ```powershell
 $script = Join-Path $env:TEMP 'Install-PowerPortal.ps1'
 [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
-Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/luisgnserra/powerportaldesktop/v1.8.0/install.ps1' -OutFile $script
+Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/luisgnserra/powerportaldesktop/v1.8.1/install.ps1' -OutFile $script
 # Review the downloaded script before running it.
 Get-Content -LiteralPath $script
 & $script
 ```
 
-此辅助脚本下载 **1.8.0 版本**，验证其固定的 SHA-256 校验和，然后打开同一个安装程序。它不会安装 Node.js、PHP 或 .NET SDK，也不会进行任何构建。
+此辅助脚本下载 **1.8.1 版本**，验证其固定的 SHA-256 校验和，然后打开同一个安装程序。它不会安装 Node.js、PHP 或 .NET SDK，也不会进行任何构建。
 
 如需无人值守安装，请在**管理员 PowerShell 窗口**中运行同一个辅助脚本：
 
@@ -206,3 +206,13 @@ Microsoft、Power BI 和 Microsoft Fabric 是 Microsoft 的商标。MVP 身份�
 连接正确的 PBIX，打开刷新分析并选择刷新并分析，确认文件名。跟踪先于调用原生“主页 > 刷新”按钮启动，不会通过 TOM 逐表刷新。保持 Power BI 打开，并在其中处理凭据、错误或取消操作。BIM 备份无法还原已刷新的数据。
 
 自动完成需要观测到刷新命令结束且 Power BI 窗口就绪。请关闭原生结果对话框。手动结束捕获始终标记为不完整，不能证明成功，也不会取消刷新。引擎和跟踪错误会明确显示。中断的捕获不会被标记为已完成。
+
+<a name="animated-home-cards"></a>
+## 动态主页卡片
+
+十二张主页卡片采用与侧栏相同的海军蓝底色（#041e43），配以原创无文字矢量场景。每个工具保留专属中心插图，并增加数据面板、图表、数据库、轨道、网格和漂浮元素。信号线缓慢流动。封面不加载外部图片、脚本或服务。
+
+鼠标悬停或键盘聚焦时，会显示金色边框和光晕、扫光、更明亮的插图、圆形打开箭头及金色操作按钮。按下时立即反馈，不延迟导航。Enter/空格仍打开同一工具。系统或浏览器的减少动态效果设置会停止动画，同时保留静态高亮和可见焦点。标题和操作文字位于图像外，随所选语言切换。截图展示普通和悬停静态状态，并非视频。
+
+![鼠标悬停 / 键盘焦点](docs/images/zh-CN/home-hover.png)
+

@@ -26,13 +26,13 @@ El Mapa de relaciones aparece ahora inmediatamente después de TV Tool en el men
 <a name="option-1-install-with-a-few-clicks"></a>
 ### Opción 1: instalar con unos pocos clics
 
-1. [Descargue Power Portal Desktop 1.8.0 para Windows x64](https://github.com/luisgnserra/powerportaldesktop/releases/download/v1.8.0/PowerPortal-Setup-1.8.0-x64.exe).
+1. [Descargue Power Portal Desktop 1.8.1 para Windows x64](https://github.com/luisgnserra/powerportaldesktop/releases/download/v1.8.1/PowerPortal-Setup-1.8.1-x64.exe).
 2. Ejecute el instalador y apruebe la solicitud de administrador de Windows.
 3. Elija la carpeta de instalación y el idioma predeterminado.
 4. Complete la instalación y, después, cierre y vuelva a abrir Power BI Desktop.
 5. Abra un PBIX y seleccione **Herramientas externas > Power Portal**.
 
-**Windows puede advertir que el editor es desconocido:** la versión 1.8.0 no está firmada digitalmente. Continúe únicamente si confía en esta distribución. Si su organización bloquea el software sin firma, contacte con TI en lugar de eludir su política.
+**Windows puede advertir que el editor es desconocido:** la versión 1.8.1 no está firmada digitalmente. Continúe únicamente si confía en esta distribución. Si su organización bloquea el software sin firma, contacte con TI en lugar de eludir su política.
 
 [Última versión](https://github.com/luisgnserra/powerportaldesktop/releases/latest) · [Guía de instalación](docs/es/INSTALLATION.md) · [Configuración](docs/es/CONFIGURATION.md) · [Solución de problemas](docs/es/TROUBLESHOOTING.md)
 
@@ -45,7 +45,7 @@ El instalador añade **Power Portal** a **Herramientas externas** de Power BI De
 
 La captura proporcionada de la cinta está en portugués: **Ferramentas externas** significa **Herramientas externas**. Power Portal abre una **ventana independiente conectada a Power BI**, no un objeto visual incrustado en el informe ni un nuevo panel interno de Power BI.
 
-![Inicio de Power Portal 1.8.0, barra lateral completa y aviso de conexión al iniciar](docs/images/es/home.png)
+![Inicio de Power Portal 1.8.1, barra lateral completa y aviso de conexión al iniciar](docs/images/es/home.png)
 
 **¿Ya tiene Power BI abierto?** Al iniciarse desde un acceso directo, Power Portal detecta los modelos locales abiertos y muestra un aviso de conexión. Elija **Buscar modelos abiertos**, seleccione su archivo y conéctese. Después podrá consultar sus datos y enviar los cambios compatibles de vuelta con confirmación.
 
@@ -62,7 +62,7 @@ Comprenda los vínculos reales entre tablas en un lienzo que permite arrastrarla
 
 Cree, edite, active/desactive y elimine relaciones en el modelo de Power BI conectado **tras confirmar y realizar una copia de seguridad de los metadatos**. El estilo visual permanece en Power Portal; no cambia los nombres de las tablas ni modifica la disposición nativa de Power BI. [Tutorial completo de relaciones](docs/es/RELATIONSHIPS.md).
 
-En 1.8.0, haga clic o arrastre entre columnas exactas para preparar un vínculo; haga clic con el botón derecho en las líneas para cambiar su color, editarlas y eliminarlas con confirmación. Los grupos admiten imágenes locales y más de 30 iconos. Las tablas automáticas de fecha/hora se ocultan de forma predeterminada con un control de visibilidad. Actualice desde Power BI después de ediciones externas o invoque la detección automática nativa de Desktop con una copia de seguridad previa y un paso independiente de revisión/finalización.
+En 1.8.1, haga clic o arrastre entre columnas exactas para preparar un vínculo; haga clic con el botón derecho en las líneas para cambiar su color, editarlas y eliminarlas con confirmación. Los grupos admiten imágenes locales y más de 30 iconos. Las tablas automáticas de fecha/hora se ocultan de forma predeterminada con un control de visibilidad. Actualice desde Power BI después de ediciones externas o invoque la detección automática nativa de Desktop con una copia de seguridad previa y un paso independiente de revisión/finalización.
 
 <a name="built-in-update-checks"></a>
 ### Comprobación de actualizaciones integrada
@@ -73,7 +73,7 @@ Windows solicita autorización de administrador. Solo se cierra Power Portal; Po
 
 ![Aviso de nueva versión y botón Actualizar ahora](docs/images/es/update-available.png)
 
-La captura utiliza un **aviso simulado de una futura versión 1.8.1** para ilustrar la interfaz, no para anunciar una versión publicada. **La versión 1.8.0 ya está publicada:** quienes tengan 1.6.2 o posterior pueden volver a abrir la aplicación o hacer clic en **Buscar actualizaciones** para recibirla. [Guía de actualizaciones](docs/es/UPDATES.md).
+La captura utiliza un **aviso simulado de una futura versión 1.8.2** para ilustrar la interfaz, no para anunciar una versión publicada. **La versión 1.8.1 ya está publicada:** quienes tengan 1.6.2 o posterior pueden volver a abrir la aplicación o hacer clic en **Buscar actualizaciones** para recibirla. [Guía de actualizaciones](docs/es/UPDATES.md).
 
 **¿Tiene 1.6.1 o anterior? Instale 1.6.2 manualmente una vez** para habilitar esta función. También puede usar **Buscar actualizaciones** para reintentar una comprobación fallida o sin conexión. El actualizador nunca instala nada por el mero hecho de abrir la aplicación.
 
@@ -85,13 +85,13 @@ Abra **Windows PowerShell 5.1 o PowerShell 7 en Windows**:
 ```powershell
 $script = Join-Path $env:TEMP 'Install-PowerPortal.ps1'
 [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
-Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/luisgnserra/powerportaldesktop/v1.8.0/install.ps1' -OutFile $script
+Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/luisgnserra/powerportaldesktop/v1.8.1/install.ps1' -OutFile $script
 # Review the downloaded script before running it.
 Get-Content -LiteralPath $script
 & $script
 ```
 
-El asistente descarga la **versión 1.8.0**, verifica su suma SHA-256 fijada y abre el mismo instalador. No instala Node.js, PHP ni un SDK de .NET, ni compila nada.
+El asistente descarga la **versión 1.8.1**, verifica su suma SHA-256 fijada y abre el mismo instalador. No instala Node.js, PHP ni un SDK de .NET, ni compila nada.
 
 Para una instalación desatendida, ejecute el mismo asistente desde una **ventana de PowerShell como administrador**:
 
@@ -206,3 +206,13 @@ Mide la actualización nativa. Compara tiempos y filas. [Análisis de actualizac
 Conecta el PBIX correcto, abre Análisis de actualización y pulsa Actualizar y analizar. Confirma el nombre del archivo. El rastreo empieza antes de invocar Inicio > Actualizar nativo; no actualiza tablas secuencialmente mediante TOM. Mantén Power BI abierto y resuelve allí credenciales, errores o cancelación. Una copia BIM no restaura los datos actualizados.
 
 La finalización automática requiere observar el fin de los comandos de actualización y una ventana de Power BI lista. Cierra los diálogos de resultado. Finalizar captura manualmente siempre indica análisis incompleto, no demuestra éxito ni cancela la actualización. Los errores del motor/rastreo son explícitos. Una captura interrumpida no se presenta como completada.
+
+<a name="animated-home-cards"></a>
+## Tarjetas animadas en el inicio
+
+Las doce tarjetas iniciales usan el mismo azul marino del menú (#041e43), con escenas vectoriales originales sin texto. Cada herramienta conserva su ilustración central, enriquecida con paneles, gráficos, base de datos, órbitas, cuadrícula y satélites flotantes. Las líneas de señal se mueven suavemente. Las portadas no cargan imágenes, scripts ni servicios externos.
+
+Pasa el ratón o enfoca con el teclado para mostrar marco y brillo dorados, reflejo de luz, escena resaltada, flecha circular y acción dorada. Pulsar ofrece respuesta inmediata sin retrasar la navegación. Intro/Espacio siguen abriendo la misma herramienta. La preferencia de movimiento reducido detiene las animaciones conservando el realce estático y el foco visible. Los títulos y acciones quedan fuera de la imagen y siguen el idioma elegido. Las capturas muestran estados estáticos normal/hover, no vídeos.
+
+![Ratón / foco de teclado](docs/images/es/home-hover.png)
+

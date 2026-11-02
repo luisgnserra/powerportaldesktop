@@ -4,6 +4,15 @@
 [🇺🇸 English](CHANGELOG.md) · [🇧🇷 Português](CHANGELOG.pt-BR.md) · [🇪🇸 Español](CHANGELOG.es.md) · [🇨🇳 简体中文](CHANGELOG.zh-CN.md) · [🇫🇷 Français](CHANGELOG.fr.md) · [🇯🇵 日本語](CHANGELOG.ja.md) · [🇮🇳 हिन्दी](CHANGELOG.hi.md) · [🇸🇦 العربية](CHANGELOG.ar.md)
 <!-- /language-selector -->
 
+<a name="181"></a>
+## 1.8.1
+
+**Cards animados na pagina inicial**
+
+Os doze cards iniciais agora usam o mesmo azul-marinho do menu (#041e43), com cenas vetoriais originais sem texto. Cada ferramenta mantem sua ilustracao central, enriquecida com paineis de dados, graficos, banco de dados, orbitas, grade e satelites flutuantes. Linhas de sinal se movem suavemente. As capas nao carregam imagens, scripts ou servicos externos.
+
+Passe o mouse ou foque um card pelo teclado para ver moldura e brilho dourados, reflexo de luz, cena realcada, seta circular de abertura e acao dourada. Pressionar gera feedback imediato sem atrasar a navegacao. Enter/Espaco continuam abrindo a mesma ferramenta. A preferencia de reduzir movimentos do Windows/navegador interrompe animacoes, preservando realce estatico e foco visivel. Titulos e acoes ficam fora da imagem e seguem o idioma selecionado. Os prints mostram estados estaticos normal/hover, nao videos.
+
 <a name="180"></a>
 ## 1.8.0
 

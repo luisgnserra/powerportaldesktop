@@ -6,7 +6,7 @@
 
 [返回主页](../../README.zh-CN.md) · [截图](SCREENSHOTS.md) · [模型安全](USAGE.md)
 
-适用于 **Power Portal Desktop 1.8.0**。这是仅适用于 Desktop 的新工具，独立于 Power BI 自身的模型视图。它读取真实的表/列关系，并可在确认后将更改应用到已连接的本地语义模型。
+适用于 **Power Portal Desktop 1.8.1**。这是仅适用于 Desktop 的新工具，独立于 Power BI 自身的模型视图。它读取真实的表/列关系，并可在确认后将更改应用到已连接的本地语义模型。
 
 ![包含 Facts 和 Dimensions 分组、基数及彩色关系线的关系画布](../images/zh-CN/relationship-map.png)
 

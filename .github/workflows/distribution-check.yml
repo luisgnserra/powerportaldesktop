@@ -21,7 +21,7 @@ jobs:
             'docs/TROUBLESHOOTING.md', '.github/ISSUE_TEMPLATE/config.yml',
             '.github/ISSUE_TEMPLATE/installation.yml', '.github/workflows/distribution-check.yml',
             'docs/SCREENSHOTS.md', 'docs/RELEASING.md', 'docs/UPDATES.md', 'docs/RELATIONSHIPS.md', 'docs/REFRESH-ANALYSIS.md',
-            'docs/images/powerbi-external-tools.png', 'docs/images/home.png',
+            'docs/images/powerbi-external-tools.png', 'docs/images/home.png', 'docs/images/home-hover.png',
             'docs/images/connect-open-model.png', 'docs/images/live-model-data.png',
             'docs/images/theme-generator.png', 'docs/images/theme-send.png', 'docs/images/calendar-generator.png',
             'docs/images/components.png', 'docs/images/dax-formatter.png',
