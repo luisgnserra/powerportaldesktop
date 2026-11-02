@@ -1,8 +1,9 @@
 # Power Portal Desktop
 
 <!-- language-selector -->
-[![English](https://jsdelivr.net) English](README.md) · [![Português](https://jsdelivr.net) Português](README.pt-BR.md) · [![Español](https://jsdelivr.net) Español](README.es.md) · [![简体中文](https://jsdelivr.net) 简体中文](README.zh-CN.md) · [![Français](https://jsdelivr.net) Français](README.fr.md) · [![日本語](https://jsdelivr.net) 日本語](README.ja.md) · [![हिन्दी](https://jsdelivr.net) हिन्दी](README.hi.md) · [![العربية](https://jsdelivr.net) العربية](README.ar.md)
+[<img src="https://shields.io" height="18">](README.md) · [<img src="https://shields.io" height="18">](README.pt-BR.md) · [<img src="https://shields.io" height="18">](README.es.md) · [<img src="https://shields.io" height="18">](README.zh-CN.md) · [<img src="https://shields.io" height="18">](README.fr.md) · [<img src="https://shields.io" height="18">](README.ja.md) · [<img src="https://shields.ioिन्दी-orange?style=flat-square" height="18">](README.hi.md) · [<img src="https://shields.io" height="18">](README.ar.md)
 <!-- /language-selector -->
+
 
 
 <!-- /language-selector -->
