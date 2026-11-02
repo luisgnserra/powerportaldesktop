@@ -4,6 +4,10 @@
 [🇺🇸 English](UPDATES.md) · [🇧🇷 Português](pt-BR/UPDATES.md) · [🇪🇸 Español](es/UPDATES.md) · [🇨🇳 简体中文](zh-CN/UPDATES.md) · [🇫🇷 Français](fr/UPDATES.md) · [🇯🇵 日本語](ja/UPDATES.md) · [🇮🇳 हिन्दी](hi/UPDATES.md) · [🇸🇦 العربية](ar/UPDATES.md)
 <!-- /language-selector -->
 
+**1.8.4 — Download updates in your browser**
+
+When a newer version is available, the update notice now offers Download in browser alongside Update now. It opens the detected official GitHub installer URL in your default browser without closing Power Portal or starting installation. Run the downloaded installer manually when ready. The option remains available after an automatic update error. Browser launch failures are shown explicitly. Update now still downloads in the app, verifies SHA-256 and size, then requests Windows authorization. Browser downloads do not receive the app’s automatic checksum verification: compare the published SHA-256 before running the installer. Both buttons and the hint are translated into all eight languages.
+
 [Back to home](../README.md) · [Installation](INSTALLATION.md)
 
 ## Available from version 1.6.2
@@ -27,11 +31,11 @@ The development/source run does not download or install updates.
 
 ![Update notification and user-controlled Update now button](images/update-available.png)
 
-The screenshot is a **simulated future 1.8.3 notification** inside 1.8.3, demonstrating the UI only. It is not an announcement of 1.8.3.
+The screenshot is a **simulated future 1.8.4 notification** inside 1.8.4, demonstrating the UI only. It is not an announcement of 1.8.4.
 
-### Receive version 1.8.3 from an earlier updater-enabled version
+### Receive version 1.8.4 from an earlier updater-enabled version
 
-With **1.6.2, 1.6.3 or 1.6.4** installed, reopen the app or click **Check for updates**. The published stable **1.8.3** should appear with **Update now**. Do not install 1.8.3 manually first if you want to observe this notification. Versions before 1.6.4 use their original banner; the prominent visual styling is retained in 1.8.3. Click the update button when ready and approve Windows authorization.
+With **1.6.2, 1.6.3 or 1.6.4** installed, reopen the app or click **Check for updates**. The published stable **1.8.4** should appear with **Update now**. Do not install 1.8.4 manually first if you want to observe this notification. Versions before 1.6.4 use their original banner; the prominent visual styling is retained in 1.8.4. Click the update button when ready and approve Windows authorization.
 
 The app reports installer launch, not a verified completed installation: installation completes after the old app closes. Check the displayed application version after reopening. Windows can still block the unsigned installer or require IT approval.
 

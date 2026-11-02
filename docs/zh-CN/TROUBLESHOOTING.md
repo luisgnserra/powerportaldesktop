@@ -4,6 +4,10 @@
 [🇺🇸 English](../TROUBLESHOOTING.md) · [🇧🇷 Português](../pt-BR/TROUBLESHOOTING.md) · [🇪🇸 Español](../es/TROUBLESHOOTING.md) · [🇨🇳 简体中文](TROUBLESHOOTING.md) · [🇫🇷 Français](../fr/TROUBLESHOOTING.md) · [🇯🇵 日本語](../ja/TROUBLESHOOTING.md) · [🇮🇳 हिन्दी](../hi/TROUBLESHOOTING.md) · [🇸🇦 العربية](../ar/TROUBLESHOOTING.md)
 <!-- /language-selector -->
 
+**1.8.4 — 通过浏览器下载更新**
+
+发现新版本时，更新通知现在会在立即更新旁提供在浏览器中下载。它使用默认浏览器打开检测到的官方 GitHub 安装程序地址，不会关闭 Power Portal 或开始安装。准备好后请手动运行下载的安装程序。自动更新出错后此选项仍然可用，浏览器启动失败会明确显示。立即更新仍会在应用内下载、验证 SHA-256 和大小，然后请求 Windows 授权。浏览器下载不会经过应用的自动校验：运行安装程序前请比较已发布的 SHA-256。两个按钮和提示均已翻译为八种语言。
+
 [返回主页](../../README.zh-CN.md)
 
 | 问题 | 建议操作 |
@@ -27,7 +31,7 @@
 | SHA-256 不匹配 | **不要运行该文件。**删除/移走无效下载，重新获取官方附件，并与已发布校验和比较。 |
 | GitHub 下载失败 | 检查网络、代理/防火墙限制及 Release URL。IT 可通过获准渠道分发已验证的 EXE。 |
 | PowerShell 报告底层连接/TLS 发送错误 | 在 Windows PowerShell 中获取辅助脚本前，先使用文档中的 TLS 1.2 命令行，再重试。原生应用更新程序已独立使用 HTTPS/TLS。 |
-| SmartScreen/未知发布者 | 1.8.3 未签名。验证校验和及发布者来源；设备禁止未签名程序时请咨询 IT。 |
+| SmartScreen/未知发布者 | 1.8.4 未签名。验证校验和及发布者来源；设备禁止未签名程序时请咨询 IT。 |
 | 关系编辑器为只读 | 导入项目仅允许视觉组织。连接到实时本地 Power BI 模型后才能创建/编辑/删除关系。 |
 | 关系在读取后发生改变 | 重新读取 Power BI 模型并审查更新后的关系。为避免覆盖其他更改，过期编辑会被拒绝。 |
 | 重复关系或第二条活动关系 | 使用不同的列对，或在激活另一条关系前，停用这些表之间当前的活动关系。 |
@@ -51,7 +55,7 @@
 
 请提供：
 
-- Power Portal 版本（本次发布为 1.8.3）。
+- Power Portal 版本（本次发布为 1.8.4）。
 - Windows 版本及 Power BI Desktop 版本/版本类型。
 - 安装方式（向导或 PowerShell）。
 - 重现步骤和界面显示的确切错误。

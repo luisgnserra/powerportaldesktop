@@ -4,6 +4,10 @@
 [🇺🇸 English](../UPDATES.md) · [🇧🇷 Português](../pt-BR/UPDATES.md) · [🇪🇸 Español](UPDATES.md) · [🇨🇳 简体中文](../zh-CN/UPDATES.md) · [🇫🇷 Français](../fr/UPDATES.md) · [🇯🇵 日本語](../ja/UPDATES.md) · [🇮🇳 हिन्दी](../hi/UPDATES.md) · [🇸🇦 العربية](../ar/UPDATES.md)
 <!-- /language-selector -->
 
+**1.8.4 — Descargar actualizaciones en el navegador**
+
+Cuando hay una versión nueva, el aviso ofrece Descargar en el navegador junto a Actualizar ahora. Abre en el navegador predeterminado la dirección oficial del instalador detectado en GitHub sin cerrar Power Portal ni iniciar la instalación. Ejecuta el instalador descargado manualmente cuando quieras. La opción sigue disponible tras un error de actualización automática. Los errores al abrir el navegador se muestran explícitamente. Actualizar ahora sigue descargando en la aplicación, verificando SHA-256 y tamaño y solicitando autorización de Windows. Las descargas del navegador no pasan por la verificación automática de la aplicación: compara el SHA-256 publicado antes de ejecutar el instalador. Ambos botones y la explicación están traducidos a los ocho idiomas.
+
 [Volver al inicio](../../README.es.md) · [Instalación](INSTALLATION.md)
 
 <a name="available-from-version-162"></a>
@@ -29,12 +33,12 @@ La ejecución de desarrollo/desde el código fuente no descarga ni instala actua
 
 ![Aviso de actualización y botón Actualizar ahora controlado por el usuario](../images/es/update-available.png)
 
-La captura es un **aviso simulado de una futura versión 1.8.3** dentro de 1.8.3, únicamente para mostrar la interfaz. No es un anuncio de 1.8.3.
+La captura es un **aviso simulado de una futura versión 1.8.4** dentro de 1.8.4, únicamente para mostrar la interfaz. No es un anuncio de 1.8.4.
 
-<a name="receive-version-183-from-an-earlier-updater-enabled-version"></a>
-### Recibir la versión 1.8.3 desde una versión anterior con actualizador
+<a name="receive-version-184-from-an-earlier-updater-enabled-version"></a>
+### Recibir la versión 1.8.4 desde una versión anterior con actualizador
 
-Con **1.6.2, 1.6.3 o 1.6.4** instalado, vuelva a abrir la aplicación o haga clic en **Buscar actualizaciones**. La versión estable publicada **1.8.3** debería aparecer con **Actualizar ahora**. No instale 1.8.3 manualmente primero si desea observar este aviso. Las versiones anteriores a 1.6.4 usan su aviso original; el estilo visual destacado se conserva en 1.8.3. Haga clic en el botón de actualización cuando esté listo y apruebe la autorización de Windows.
+Con **1.6.2, 1.6.3 o 1.6.4** instalado, vuelva a abrir la aplicación o haga clic en **Buscar actualizaciones**. La versión estable publicada **1.8.4** debería aparecer con **Actualizar ahora**. No instale 1.8.4 manualmente primero si desea observar este aviso. Las versiones anteriores a 1.6.4 usan su aviso original; el estilo visual destacado se conserva en 1.8.4. Haga clic en el botón de actualización cuando esté listo y apruebe la autorización de Windows.
 
 La aplicación informa del inicio del instalador, no de una instalación completada y verificada: la instalación termina después de que se cierre la aplicación antigua. Compruebe la versión mostrada de la aplicación al volver a abrirla. Windows aún puede bloquear el instalador sin firma o requerir aprobación de TI.
 

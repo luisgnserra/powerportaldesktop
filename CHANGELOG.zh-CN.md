@@ -4,6 +4,13 @@
 [🇺🇸 English](CHANGELOG.md) · [🇧🇷 Português](CHANGELOG.pt-BR.md) · [🇪🇸 Español](CHANGELOG.es.md) · [🇨🇳 简体中文](CHANGELOG.zh-CN.md) · [🇫🇷 Français](CHANGELOG.fr.md) · [🇯🇵 日本語](CHANGELOG.ja.md) · [🇮🇳 हिन्दी](CHANGELOG.hi.md) · [🇸🇦 العربية](CHANGELOG.ar.md)
 <!-- /language-selector -->
 
+<a name="184"></a>
+## 1.8.4
+
+**通过浏览器下载更新**
+
+发现新版本时，更新通知现在会在立即更新旁提供在浏览器中下载。它使用默认浏览器打开检测到的官方 GitHub 安装程序地址，不会关闭 Power Portal 或开始安装。准备好后请手动运行下载的安装程序。自动更新出错后此选项仍然可用，浏览器启动失败会明确显示。立即更新仍会在应用内下载、验证 SHA-256 和大小，然后请求 Windows 授权。浏览器下载不会经过应用的自动校验：运行安装程序前请比较已发布的 SHA-256。两个按钮和提示均已翻译为八种语言。
+
 <a name="183"></a>
 ## 1.8.3
 

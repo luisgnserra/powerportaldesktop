@@ -4,17 +4,21 @@
 [🇺🇸 English](../SCREENSHOTS.md) · [🇧🇷 Português](../pt-BR/SCREENSHOTS.md) · [🇪🇸 Español](SCREENSHOTS.md) · [🇨🇳 简体中文](../zh-CN/SCREENSHOTS.md) · [🇫🇷 Français](../fr/SCREENSHOTS.md) · [🇯🇵 日本語](../ja/SCREENSHOTS.md) · [🇮🇳 हिन्दी](../hi/SCREENSHOTS.md) · [🇸🇦 العربية](../ar/SCREENSHOTS.md)
 <!-- /language-selector -->
 
-**1.8.3 — Vista previa del tema con líneas suaves**
+**1.8.4 — Descargar actualizaciones en el navegador**
+
+Cuando hay una versión nueva, el aviso ofrece Descargar en el navegador junto a Actualizar ahora. Abre en el navegador predeterminado la dirección oficial del instalador detectado en GitHub sin cerrar Power Portal ni iniciar la instalación. Ejecuta el instalador descargado manualmente cuando quieras. La opción sigue disponible tras un error de actualización automática. Los errores al abrir el navegador se muestran explícitamente. Actualizar ahora sigue descargando en la aplicación, verificando SHA-256 y tamaño y solicitando autorización de Windows. Las descargas del navegador no pasan por la verificación automática de la aplicación: compara el SHA-256 publicado antes de ejecutar el instalador. Ambos botones y la explicación están traducidos a los ocho idiomas.
+
+**1.8.4 — Vista previa del tema con líneas suaves**
 
 El gráfico de líneas del generador de temas ahora usa curvas cúbicas suaves en lugar de segmentos rectos, tanto con datos de ejemplo como del modelo conectado. Las curvas pasan por los puntos originales sin crear picos entre los valores; se conservan colores, marcadores e información emergente. El cambio afecta solo a la vista previa: no modifica el JSON exportado ni el formato de líneas de los objetos visuales existentes en Power BI.
 
-**1.8.3 — Correcciones al iniciar la actualización**
+**1.8.4 — Correcciones al iniciar la actualización**
 
 Análisis de actualización aparece inmediatamente debajo de Mapa de relaciones en el menú lateral y la galería. La búsqueda del botón nativo ignora las pestañas Home duplicadas de las vistas de consultas DAX y TMDL, evitando “Ambiguous Power BI control: home”. Si el control no está disponible, selecciona Informe, Datos o Modelo en Power BI.
 
 [Volver al inicio](../../README.es.md) · [Instalar](INSTALLATION.md) · [Guía de seguridad](USAGE.md)
 
-**Capturas de la aplicación: Power Portal Desktop 1.8.3, interfaz en el idioma seleccionado (español).**
+**Capturas de la aplicación: Power Portal Desktop 1.8.4, interfaz en el idioma seleccionado (español).**
 Las capturas usan **metadatos y valores de consulta sintéticos de demostración**, no un PBIX de cliente. Los estados conectados ilustran las acciones compatibles de la interfaz; no se cambió ningún modelo de cliente para crear estas imágenes. Las etiquetas del selector de archivos nativo pueden seguir el idioma de Windows. La captura real de la cinta de Power BI fue proporcionada por el propietario y recortada para eliminar el título privado del archivo; conserva su portugués original.
 
 Las flechas de relaciones ahora se sitúan sobre la curva y giran según su dirección local, incluso en enlaces diagonales o invertidos. Flechas SVG más grandes, de 36 × 26 unidades, siempre negras con un contorno blanco de 3 unidades, independientemente del color de la línea. El filtro unidireccional sigue del destino al origen; el bidireccional muestra dos flechas opuestas. El filtro automático conserva el signo de interrogación. Este cambio es solo visual.
@@ -77,7 +81,7 @@ El inicio desde la cinta Herramientas externas pasa automáticamente la conexió
 
 ![Nueva versión disponible con Actualizar ahora y advertencia de autorización/ediciones no enviadas](../images/es/update-available.png)
 
-La captura usa un **resultado sintético de una futura versión 1.8.3** para mostrar el aviso en la versión 1.8.3. No afirma que 1.8.3 se haya publicado. Los usuarios de 1.6.2 o posterior ya pueden recibir el aviso real de 1.8.3.
+La captura usa un **resultado sintético de una futura versión 1.8.4** para mostrar el aviso en la versión 1.8.4. No afirma que 1.8.4 se haya publicado. Los usuarios de 1.6.2 o posterior ya pueden recibir el aviso real de 1.8.4.
 
 En 1.6.4, el aviso ámbar permanece visible al desplazarse y se anima suavemente salvo que esté activado el movimiento reducido. No hay un aviso permanente de «actualizado» ocupando espacio.
 
@@ -159,7 +163,7 @@ La nueva herramienta exclusiva de Desktop muestra vínculos reales entre tablas,
 
 Seleccione una línea para inspeccionar sus columnas exactas, cardinalidad, dirección del filtro y estado activo. **Aplicar relación a Power BI** o **Eliminar relación en Power BI** confirma cada edición después de la confirmación nativa y la copia de seguridad. Los proyectos importados siguen siendo de solo lectura. El estilo no cambia los nombres de las tablas ni el diagrama nativo de Power BI. [Recorrido completo y límites de seguridad](RELATIONSHIPS.md).
 
-En 1.8.3, haga clic o arrastre entre columnas para preparar un borrador discontinuo y después revíselo/aplíquelo. Haga clic con el botón derecho en una línea para cambiar su color, editarla o eliminarla. Los ajustes de grupo ofrecen imágenes PNG/JPEG locales y más iconos; arrastre el fondo o el encabezado del grupo. Las tablas automáticas de fecha/hora se ocultan de forma predeterminada. **Actualizar diagrama desde Power BI** vuelve a leer los cambios externos sin copiar las coordenadas de la disposición nativa. **Detectar relaciones automáticamente** inicia la detección nativa de Desktop después de la confirmación y la copia de seguridad; revise y cierre sus diálogos antes de **Finalizar detección y actualizar diagrama**.
+En 1.8.4, haga clic o arrastre entre columnas para preparar un borrador discontinuo y después revíselo/aplíquelo. Haga clic con el botón derecho en una línea para cambiar su color, editarla o eliminarla. Los ajustes de grupo ofrecen imágenes PNG/JPEG locales y más iconos; arrastre el fondo o el encabezado del grupo. Las tablas automáticas de fecha/hora se ocultan de forma predeterminada. **Actualizar diagrama desde Power BI** vuelve a leer los cambios externos sin copiar las coordenadas de la disposición nativa. **Detectar relaciones automáticamente** inicia la detección nativa de Desktop después de la confirmación y la copia de seguridad; revise y cierre sus diálogos antes de **Finalizar detección y actualizar diagrama**.
 
 <a name="power-bi-tv-tool"></a>
 ### Power BI TV Tool

@@ -4,7 +4,11 @@
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md) · [🇨🇳 简体中文](README.zh-CN.md) · [🇫🇷 Français](README.fr.md) · [🇯🇵 日本語](README.ja.md) · [🇮🇳 हिन्दी](README.hi.md) · [🇸🇦 العربية](README.ar.md)
 <!-- /language-selector -->
 
-**1.8.3 — Prévia do tema com linhas suaves**
+**1.8.4 — Baixar atualizações pelo navegador**
+
+Quando houver uma versão nova, o aviso de atualização agora oferece Baixar pelo navegador ao lado de Atualizar agora. O botão abre no navegador padrão o endereço oficial do instalador detectado no GitHub, sem fechar o Power Portal nem iniciar a instalação. Execute o instalador baixado manualmente quando desejar. A opção continua disponível após um erro na atualização automática. Falhas ao abrir o navegador são exibidas. Atualizar agora continua baixando pelo app, verificando SHA-256 e tamanho e solicitando autorização do Windows. Downloads pelo navegador não passam pela verificação automática do app: compare o SHA-256 publicado antes de executar o instalador. Os dois botões e a orientação estão traduzidos nos oito idiomas.
+
+**1.8.4 — Prévia do tema com linhas suaves**
 
 O gráfico de linhas do gerador de temas agora usa curvas cúbicas suaves em vez de segmentos retos, tanto com dados de exemplo como com dados do modelo conectado. As curvas passam pelos pontos originais sem criar picos entre os valores; cores, marcadores e dicas são preservados. A mudança afeta somente a prévia: o JSON exportado e a formatação das linhas dos visuais existentes no Power BI não são alterados.
 
@@ -24,7 +28,7 @@ O cabecalho animado do Power Portal agora incorpora o nome do arquivo, o status 
 
 O Mapa de relacionamentos agora fica imediatamente depois do TV Tool no menu lateral e na galeria inicial. O bloco generico Dados reais do modelo foi removido do Gerador de Tabela Calendario e da Biblioteca de Componentes. Os controles proprios de leitura e envio continuam; o botao de periodo real usa o calendario selecionado dentro da ferramenta. As capas da pagina inicial foram redesenhadas como ilustracoes vetoriais locais sem texto embutido. Titulos, descricoes e acoes ficam fora das imagens e acompanham o idioma selecionado. Arraste uma coluna de origem para outra tabela para abrir o dialogo de relacionamento real e escolher a coluna de destino. Soltar em uma coluna ja a preseleciona. Revise cardinalidade, filtro e estado ativo; depois valide e aplique com confirmacao nativa e backup BIM.
 
-**1.8.3 — Correções no início da atualização**
+**1.8.4 — Correções no início da atualização**
 
 Análise Atualização fica imediatamente abaixo de Mapa de relacionamentos no menu lateral e na galeria inicial. A identificação do botão nativo ignora as abas Home duplicadas das visualizações de consultas DAX e TMDL, evitando “Ambiguous Power BI control: home”. Se o controle não estiver disponível, selecione Relatório, Dados ou Modelo no Power BI.
 
@@ -34,13 +38,13 @@ Análise Atualização fica imediatamente abaixo de Mapa de relacionamentos no m
 <a name="option-1-install-with-a-few-clicks"></a>
 ### Opção 1: instalar com poucos cliques
 
-1. [Baixe o Power Portal Desktop 1.8.3 para Windows x64](https://github.com/luisgnserra/powerportaldesktop/releases/download/v1.8.3/PowerPortal-Setup-1.8.3-x64.exe).
+1. [Baixe o Power Portal Desktop 1.8.4 para Windows x64](https://github.com/luisgnserra/powerportaldesktop/releases/download/v1.8.4/PowerPortal-Setup-1.8.4-x64.exe).
 2. Execute o instalador e aprove a solicitação de administrador do Windows.
 3. Escolha a pasta de instalação e o idioma padrão.
 4. Conclua a instalação, feche e abra novamente o Power BI Desktop.
 5. Abra um PBIX e selecione **Ferramentas externas > Power Portal**.
 
-**O Windows pode avisar que o editor é desconhecido:** a versão 1.8.3 não possui assinatura digital. Prossiga somente se confiar nesta distribuição. Se sua organização bloquear programas sem assinatura, procure a TI em vez de contornar a política.
+**O Windows pode avisar que o editor é desconhecido:** a versão 1.8.4 não possui assinatura digital. Prossiga somente se confiar nesta distribuição. Se sua organização bloquear programas sem assinatura, procure a TI em vez de contornar a política.
 
 [Versão mais recente](https://github.com/luisgnserra/powerportaldesktop/releases/latest) · [Guia de instalação](docs/pt-BR/INSTALLATION.md) · [Configuração](docs/pt-BR/CONFIGURATION.md) · [Solução de problemas](docs/pt-BR/TROUBLESHOOTING.md)
 
@@ -53,7 +57,7 @@ O instalador adiciona **Power Portal** à guia **Ferramentas externas** do Power
 
 O print original da guia está em português: **Ferramentas externas** corresponde a **External Tools** em inglês. O Power Portal abre em uma **janela separada conectada ao Power BI**, não como um visual do relatório ou um novo painel interno do Power BI.
 
-![Início do Power Portal 1.8.3, menu completo e aviso de conexão ao iniciar](docs/images/pt-BR/home.png)
+![Início do Power Portal 1.8.4, menu completo e aviso de conexão ao iniciar](docs/images/pt-BR/home.png)
 
 **Já está com o Power BI aberto?** Ao iniciar por um atalho, o Power Portal detecta modelos locais abertos e mostra um aviso de conexão. Escolha **Localizar modelos abertos**, selecione seu arquivo e conecte. Assim você poderá consultar os dados e enviar as alterações compatíveis, com confirmação.
 
@@ -70,7 +74,7 @@ Entenda as ligações reais entre tabelas em um canvas com movimentação livre.
 
 Crie, edite, ative/desative e exclua relacionamentos no modelo conectado do Power BI **após confirmação e backup dos metadados**. A personalização visual fica no Power Portal; ela não renomeia tabelas nem modifica o layout nativo do Power BI. [Tutorial completo de relacionamentos](docs/pt-BR/RELATIONSHIPS.md).
 
-Na 1.8.3, clique ou arraste entre colunas exatas para preparar uma ligação; use botão direito nas linhas para cor, edição e exclusão confirmada. Grupos aceitam imagens locais e mais de 30 ícones. Tabelas automáticas de data/hora ficam ocultas por padrão com opção de exibição. Atualize a partir do Power BI após edições externas ou acione a detecção nativa com backup prévio e etapa separada de revisão/conclusão.
+Na 1.8.4, clique ou arraste entre colunas exatas para preparar uma ligação; use botão direito nas linhas para cor, edição e exclusão confirmada. Grupos aceitam imagens locais e mais de 30 ícones. Tabelas automáticas de data/hora ficam ocultas por padrão com opção de exibição. Atualize a partir do Power BI após edições externas ou acione a detecção nativa com backup prévio e etapa separada de revisão/conclusão.
 
 <a name="built-in-update-checks"></a>
 ### Verificação de atualizações integrada
@@ -81,7 +85,7 @@ O Windows solicita autorização de administrador. Somente o Power Portal fecha;
 
 ![Aviso de nova versão e botão Atualizar agora](docs/images/pt-BR/update-available.png)
 
-O print usa um **aviso futuro simulado da 1.8.3** para ilustrar a interface, não para anunciar uma versão publicada. **A versão 1.8.3 já está publicada:** usuários da 1.6.2 ou superior podem reabrir o aplicativo ou clicar em **Verificar atualizações** para recebê-la. [Guia de atualização](docs/pt-BR/UPDATES.md).
+O print usa um **aviso futuro simulado da 1.8.4** para ilustrar a interface, não para anunciar uma versão publicada. **A versão 1.8.4 já está publicada:** usuários da 1.6.2 ou superior podem reabrir o aplicativo ou clicar em **Verificar atualizações** para recebê-la. [Guia de atualização](docs/pt-BR/UPDATES.md).
 
 **Está na 1.6.1 ou anterior? Instale a 1.6.2 manualmente uma vez** para habilitar o recurso. Você também pode usar **Verificar atualizações** para repetir uma verificação que falhou ou foi feita sem internet. O atualizador nunca instala apenas porque você abriu o aplicativo.
 
@@ -93,13 +97,13 @@ Abra o **Windows PowerShell 5.1 ou PowerShell 7 no Windows**:
 ```powershell
 $script = Join-Path $env:TEMP 'Install-PowerPortal.ps1'
 [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
-Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/luisgnserra/powerportaldesktop/v1.8.3/install.ps1' -OutFile $script
+Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/luisgnserra/powerportaldesktop/v1.8.4/install.ps1' -OutFile $script
 # Review the downloaded script before running it.
 Get-Content -LiteralPath $script
 & $script
 ```
 
-O auxiliar baixa a **versão 1.8.3**, verifica o SHA-256 fixado e abre o mesmo instalador. Não instala Node.js, PHP, SDK do .NET nem compila nada.
+O auxiliar baixa a **versão 1.8.4**, verifica o SHA-256 fixado e abre o mesmo instalador. Não instala Node.js, PHP, SDK do .NET nem compila nada.
 
 Para instalação sem interação, execute o mesmo auxiliar em uma **janela do PowerShell como administrador**:
 

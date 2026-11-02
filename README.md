@@ -4,7 +4,11 @@
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md) · [🇨🇳 简体中文](README.zh-CN.md) · [🇫🇷 Français](README.fr.md) · [🇯🇵 日本語](README.ja.md) · [🇮🇳 हिन्दी](README.hi.md) · [🇸🇦 العربية](README.ar.md)
 <!-- /language-selector -->
 
-**1.8.3 — Smooth theme preview**
+**1.8.4 — Download updates in your browser**
+
+When a newer version is available, the update notice now offers Download in browser alongside Update now. It opens the detected official GitHub installer URL in your default browser without closing Power Portal or starting installation. Run the downloaded installer manually when ready. The option remains available after an automatic update error. Browser launch failures are shown explicitly. Update now still downloads in the app, verifies SHA-256 and size, then requests Windows authorization. Browser downloads do not receive the app’s automatic checksum verification: compare the published SHA-256 before running the installer. Both buttons and the hint are translated into all eight languages.
+
+**1.8.4 — Smooth theme preview**
 
 The theme generator line chart now uses smooth cubic curves instead of straight segments, with both sample and connected-model data. Curves pass through the original points without overshooting between values; colors, markers and tooltips are preserved. This change affects the preview only: exported theme JSON and the line formatting of existing Power BI visuals are unchanged.
 
@@ -24,7 +28,7 @@ The animated Power Portal header now contains the file name, connection status a
 
 Relationship map is now immediately after TV Tool in the sidebar and home gallery. The generic Real model data block is removed from Calendar generator and Component library. Their own read/write controls remain; the real-period button uses the calendar selected inside the tool. Home covers are redrawn as local vector illustrations without embedded text. Titles, descriptions and actions remain outside the artwork and follow the selected language. Drag a source column onto another table to open a real-relationship dialog and choose its destination column. Dropping on a column preselects it. Review cardinality, filter direction and active state, then Validate and Apply with native confirmation and BIM backup.
 
-**1.8.3 — Refresh launch fixes**
+**1.8.4 — Refresh launch fixes**
 
 Refresh Analysis is now immediately below Relationship map in the sidebar and home gallery. Native button discovery ignores the duplicate Home tabs belonging to DAX Query View and TMDL View, avoiding “Ambiguous Power BI control: home”. Select Report, Data or Model view in Power BI if native controls are unavailable.
 
@@ -32,13 +36,13 @@ Refresh Analysis is now immediately below Relationship map in the sidebar and ho
 
 ### Option 1: Install with a few clicks
 
-1. [Download Power Portal Desktop 1.8.3 for Windows x64](https://github.com/luisgnserra/powerportaldesktop/releases/download/v1.8.3/PowerPortal-Setup-1.8.3-x64.exe).
+1. [Download Power Portal Desktop 1.8.4 for Windows x64](https://github.com/luisgnserra/powerportaldesktop/releases/download/v1.8.4/PowerPortal-Setup-1.8.4-x64.exe).
 2. Run the installer and approve the Windows administrator prompt.
 3. Choose the installation folder and default language.
 4. Finish installation, then close and reopen Power BI Desktop.
 5. Open a PBIX and select **External Tools > Power Portal**.
 
-**Windows may warn that the publisher is unknown:** version 1.8.3 is not digitally signed. Only proceed if you trust this distribution. If your organization blocks unsigned software, contact IT rather than bypassing its policy.
+**Windows may warn that the publisher is unknown:** version 1.8.4 is not digitally signed. Only proceed if you trust this distribution. If your organization blocks unsigned software, contact IT rather than bypassing its policy.
 
 [Latest release](https://github.com/luisgnserra/powerportaldesktop/releases/latest) · [Installation guide](docs/INSTALLATION.md) · [Configuration](docs/CONFIGURATION.md) · [Troubleshooting](docs/TROUBLESHOOTING.md)
 
@@ -50,7 +54,7 @@ The installer adds **Power Portal** to **External Tools** in Power BI Desktop. C
 
 The supplied ribbon screenshot uses Portuguese: **Ferramentas externas** means **External Tools**. Power Portal opens a **separate window connected to Power BI**, not an embedded report visual or a new internal Power BI pane.
 
-![Power Portal 1.8.3 home, full sidebar and startup connection notice](docs/images/home.png)
+![Power Portal 1.8.4 home, full sidebar and startup connection notice](docs/images/home.png)
 
 **Already have Power BI open?** When launched from a shortcut, Power Portal detects open local models and displays a connection notice. Choose **Find open models**, select your file, and connect. You can then query its data and send supported changes back with confirmation.
 
@@ -66,7 +70,7 @@ Understand real table links in a freely draggable canvas. Organize Facts, Dimens
 
 Create, edit, activate/deactivate and delete relationships in the connected Power BI model **after confirmation and a metadata backup**. Visual styling stays in Power Portal; it does not rename tables or modify Power BI's native layout. [Full relationship tutorial](docs/RELATIONSHIPS.md).
 
-In 1.8.3, click or drag between exact columns to prepare a link; right-click lines for color, editing and confirmed deletion. Groups support local images and more than 30 icons. Automatic date/time tables are hidden by default with a visibility toggle. Refresh from Power BI after external edits, or invoke native Desktop autodetection with prior backup and a separate review/finish step.
+In 1.8.4, click or drag between exact columns to prepare a link; right-click lines for color, editing and confirmed deletion. Groups support local images and more than 30 icons. Automatic date/time tables are hidden by default with a visibility toggle. Refresh from Power BI after external edits, or invoke native Desktop autodetection with prior backup and a separate review/finish step.
 
 ### Built-in update checks
 
@@ -76,7 +80,7 @@ Windows asks for administrator authorization. Only Power Portal closes; Power BI
 
 ![New-version notification and Update now button](docs/images/update-available.png)
 
-The screenshot uses a **simulated future 1.8.3 notification** to illustrate the UI, not an announcement of a published version. **Version 1.8.3 is now published:** users on 1.6.2 or newer can reopen the app or click **Check for updates** to receive the update. [Update guide](docs/UPDATES.md).
+The screenshot uses a **simulated future 1.8.4 notification** to illustrate the UI, not an announcement of a published version. **Version 1.8.4 is now published:** users on 1.6.2 or newer can reopen the app or click **Check for updates** to receive the update. [Update guide](docs/UPDATES.md).
 
 **On 1.6.1 or older? Install 1.6.2 manually once** to enable this feature. You can also use **Check for updates** to retry a failed/offline check. The updater never installs merely because you opened the application.
 
@@ -87,13 +91,13 @@ Open **Windows PowerShell 5.1 or PowerShell 7 on Windows**:
 ```powershell
 $script = Join-Path $env:TEMP 'Install-PowerPortal.ps1'
 [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
-Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/luisgnserra/powerportaldesktop/v1.8.3/install.ps1' -OutFile $script
+Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/luisgnserra/powerportaldesktop/v1.8.4/install.ps1' -OutFile $script
 # Review the downloaded script before running it.
 Get-Content -LiteralPath $script
 & $script
 ```
 
-The helper downloads **version 1.8.3**, verifies its pinned SHA-256 checksum, and opens the same installer. It does not install Node.js, PHP, a .NET SDK, or build anything.
+The helper downloads **version 1.8.4**, verifies its pinned SHA-256 checksum, and opens the same installer. It does not install Node.js, PHP, a .NET SDK, or build anything.
 
 For unattended installation, run the same helper from an **administrator PowerShell window**:
 

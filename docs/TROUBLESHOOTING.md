@@ -4,6 +4,10 @@
 [🇺🇸 English](TROUBLESHOOTING.md) · [🇧🇷 Português](pt-BR/TROUBLESHOOTING.md) · [🇪🇸 Español](es/TROUBLESHOOTING.md) · [🇨🇳 简体中文](zh-CN/TROUBLESHOOTING.md) · [🇫🇷 Français](fr/TROUBLESHOOTING.md) · [🇯🇵 日本語](ja/TROUBLESHOOTING.md) · [🇮🇳 हिन्दी](hi/TROUBLESHOOTING.md) · [🇸🇦 العربية](ar/TROUBLESHOOTING.md)
 <!-- /language-selector -->
 
+**1.8.4 — Download updates in your browser**
+
+When a newer version is available, the update notice now offers Download in browser alongside Update now. It opens the detected official GitHub installer URL in your default browser without closing Power Portal or starting installation. Run the downloaded installer manually when ready. The option remains available after an automatic update error. Browser launch failures are shown explicitly. Update now still downloads in the app, verifies SHA-256 and size, then requests Windows authorization. Browser downloads do not receive the app’s automatic checksum verification: compare the published SHA-256 before running the installer. Both buttons and the hint are translated into all eight languages.
+
 [Back to home](../README.md)
 
 | Problem | Recommended action |
@@ -27,7 +31,7 @@
 | SHA-256 mismatch | **Do not run the file.** Remove/move the invalid download, get the official asset again, and compare against the published checksum. |
 | GitHub download fails | Check connectivity, proxy/firewall restrictions and the Release URL. IT can distribute the verified EXE through an approved channel. |
 | PowerShell reports an underlying connection/TLS send error | Use the documented TLS 1.2 line before fetching the helper in Windows PowerShell, then retry. The native application updater already uses HTTPS/TLS independently. |
-| SmartScreen/unknown publisher | 1.8.3 is unsigned. Verify the checksum and publisher source; ask IT if your device blocks unsigned programs. |
+| SmartScreen/unknown publisher | 1.8.4 is unsigned. Verify the checksum and publisher source; ask IT if your device blocks unsigned programs. |
 | Relationship editor is read-only | Importing a project allows visual organization only. Connect to a live local Power BI model to create/edit/delete relationships. |
 | Relationship changed since reading | Re-read the Power BI model and review the updated link. Stale edits are rejected to avoid overwriting another change. |
 | Duplicate or second active relationship | Use distinct column pairs, or deactivate the current active relationship between those tables before activating another. |
@@ -50,7 +54,7 @@ Email **[contato@consultoriaexcelencia.com.br](mailto:contato@consultoriaexcelen
 
 Include:
 
-- Power Portal version (1.8.3 for this release).
+- Power Portal version (1.8.4 for this release).
 - Windows version and Power BI Desktop version/edition.
 - Installation method (wizard or PowerShell).
 - Steps to reproduce and the exact visible error.

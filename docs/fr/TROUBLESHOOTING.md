@@ -4,6 +4,10 @@
 [🇺🇸 English](../TROUBLESHOOTING.md) · [🇧🇷 Português](../pt-BR/TROUBLESHOOTING.md) · [🇪🇸 Español](../es/TROUBLESHOOTING.md) · [🇨🇳 简体中文](../zh-CN/TROUBLESHOOTING.md) · [🇫🇷 Français](TROUBLESHOOTING.md) · [🇯🇵 日本語](../ja/TROUBLESHOOTING.md) · [🇮🇳 हिन्दी](../hi/TROUBLESHOOTING.md) · [🇸🇦 العربية](../ar/TROUBLESHOOTING.md)
 <!-- /language-selector -->
 
+**1.8.4 — Télécharger les mises à jour dans le navigateur**
+
+Lorsqu’une nouvelle version est disponible, l’avis propose Télécharger dans le navigateur à côté de Mettre à jour. Le bouton ouvre l’adresse officielle de l’installateur GitHub détecté dans le navigateur par défaut, sans fermer Power Portal ni lancer l’installation. Exécutez manuellement l’installateur téléchargé lorsque vous le souhaitez. Cette option reste disponible après une erreur de mise à jour automatique. Les échecs d’ouverture du navigateur sont affichés. Mettre à jour continue de télécharger dans l’application, de vérifier SHA-256 et taille, puis de demander l’autorisation Windows. Le téléchargement par navigateur ne bénéficie pas de la vérification automatique de l’application : comparez le SHA-256 publié avant d’exécuter l’installateur. Les boutons et l’explication sont traduits dans les huit langues.
+
 [Retour à l’accueil](../../README.fr.md)
 
 | Problème | Action recommandée |
@@ -27,7 +31,7 @@
 | Le SHA-256 ne correspond pas | **N’exécutez pas le fichier.** Supprimez/déplacez le téléchargement invalide, récupérez à nouveau le fichier officiel et comparez-le à la somme de contrôle publiée. |
 | Échec de téléchargement GitHub | Vérifiez la connectivité, les restrictions de proxy/pare-feu et l’URL de la version. Le service informatique peut distribuer l’EXE vérifié par un canal approuvé. |
 | PowerShell signale une erreur de connexion sous-jacente/d’envoi TLS | Utilisez la ligne TLS 1.2 documentée avant de récupérer l’assistant dans Windows PowerShell, puis réessayez. L’outil de mise à jour de l’application native utilise déjà HTTPS/TLS indépendamment. |
-| SmartScreen/éditeur inconnu | 1.8.3 n’est pas signé. Vérifiez la somme de contrôle et la provenance de l’éditeur ; consultez le service informatique si votre appareil bloque les programmes non signés. |
+| SmartScreen/éditeur inconnu | 1.8.4 n’est pas signé. Vérifiez la somme de contrôle et la provenance de l’éditeur ; consultez le service informatique si votre appareil bloque les programmes non signés. |
 | L’éditeur de relations est en lecture seule | L’import d’un projet permet uniquement l’organisation visuelle. Connectez-vous à un modèle Power BI local en direct pour créer/modifier/supprimer des relations. |
 | La relation a changé depuis sa lecture | Relisez le modèle Power BI et examinez le lien actualisé. Les modifications périmées sont rejetées pour éviter d’écraser une autre modification. |
 | Relation en double ou deuxième relation active | Utilisez des paires de colonnes distinctes, ou désactivez la relation active actuelle entre ces tables avant d’en activer une autre. |
@@ -51,7 +55,7 @@
 
 Indiquez :
 
-- La version de Power Portal (1.8.3 pour cette publication).
+- La version de Power Portal (1.8.4 pour cette publication).
 - La version de Windows et la version/édition de Power BI Desktop.
 - La méthode d’installation (assistant ou PowerShell).
 - Les étapes de reproduction et l’erreur visible exacte.
