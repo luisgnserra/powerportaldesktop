@@ -17,7 +17,7 @@ Windows 10/11 x64、インストール用の管理者権限、外部ツールに
 ## 簡単なインストール
 
 1. [最新 Release](https://github.com/luisgnserra/powerportaldesktop/releases/latest) を開きます。
-2. **Assets（添付ファイル）**から、このリリースの `PowerPortal-Setup-1.8.6-x64.exe` をダウンロードします。自動生成のソースアーカイブをインストーラーとしてダウンロードしないでください。
+2. **Assets（添付ファイル）**から、このリリースの `PowerPortal-Setup-1.8.7-x64.exe` をダウンロードします。自動生成のソースアーカイブをインストーラーとしてダウンロードしないでください。
 3. 必要に応じて [SHA-256 を検証](#verify-the-installer)します。
 4. 実行ファイルを起動し、ユーザーアカウント制御を承認します。
 5. 表示される依存コンポーネントの条件を承諾し、フォルダーを選び、国旗で既定の言語を選択します。Windows の UI 言語が提案され、未対応の言語は英語になります。
@@ -45,12 +45,12 @@ Windows ショートカットから起動した場合は、開いているモデ
 ```powershell
 $script = Join-Path $env:TEMP 'Install-PowerPortal.ps1'
 [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
-Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/luisgnserra/powerportaldesktop/v1.8.6/install.ps1' -OutFile $script
+Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/luisgnserra/powerportaldesktop/v1.8.7/install.ps1' -OutFile $script
 Get-Content -LiteralPath $script
 & $script
 ```
 
-このバージョン付き URL は補助スクリプトを 1.8.6 リリースに固定します。将来のリリースへ無断で追従しません。補助スクリプトはインストーラー名と SHA-256 チェックサムも固定し、HTTPS でダウンロードして実行前に検証し、インストーラーが正常終了した後にインストール登録を確認します。
+このバージョン付き URL は補助スクリプトを 1.8.7 リリースに固定します。将来のリリースへ無断で追従しません。補助スクリプトはインストーラー名と SHA-256 チェックサムも固定し、HTTPS でダウンロードして実行前に検証し、インストーラーが正常終了した後にインストール登録を確認します。
 
 TLS の行は、古い Windows PowerShell の既定設定に対し、この PowerShell プロセスで HTTPS TLS 1.2 を有効にします。Windows のセキュリティや実行ポリシーは変更しません。
 
@@ -92,7 +92,7 @@ PowerShell を**管理者として**開き、次を実行します。
 チェックサムの検証後、管理者は次を実行できます。
 
 ```powershell
-$setup = "$env:USERPROFILE\Downloads\PowerPortal-Setup-1.8.6-x64.exe"
+$setup = "$env:USERPROFILE\Downloads\PowerPortal-Setup-1.8.7-x64.exe"
 $process = Start-Process -FilePath $setup -ArgumentList '/S' -Wait -PassThru
 if ($process.ExitCode -ne 0) { throw "Installer failed: $($process.ExitCode)" }
 ```
@@ -105,12 +105,12 @@ if ($process.ExitCode -ne 0) { throw "Installer failed: $($process.ExitCode)" }
 **1.8.5 x64** の想定 SHA-256：
 
 ```text
-C83A032164169C183A115CF07B68C33159344D1837EBF370506F61AE944B63D3
+1137B13548FAC555A425CBF9D5E9E2FB94A829981EA3E5A4BF231F3AEF69F5AC
 ```
 
 ```powershell
-$file = "$env:USERPROFILE\Downloads\PowerPortal-Setup-1.8.6-x64.exe"
-$expected = 'C83A032164169C183A115CF07B68C33159344D1837EBF370506F61AE944B63D3'
+$file = "$env:USERPROFILE\Downloads\PowerPortal-Setup-1.8.7-x64.exe"
+$expected = '1137B13548FAC555A425CBF9D5E9E2FB94A829981EA3E5A4BF231F3AEF69F5AC'
 if ((Get-FileHash -LiteralPath $file -Algorithm SHA256).Hash -ne $expected) {
     throw 'Checksum mismatch. Do not run this installer.'
 }

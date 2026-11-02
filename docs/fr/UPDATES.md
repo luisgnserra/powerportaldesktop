@@ -39,12 +39,12 @@ L’exécution de développement/depuis les sources ne télécharge et n’insta
 
 ![Notification de mise à jour et bouton Mettre à jour maintenant contrôlé par l’utilisateur](../images/fr/update-available.png)
 
-La capture est une **notification simulée d’une future version 1.8.6** dans 1.8.6, montrant uniquement l’interface. Ce n’est pas une annonce de 1.8.6.
+La capture est une **notification simulée d’une future version 1.8.7** dans 1.8.7, montrant uniquement l’interface. Ce n’est pas une annonce de 1.8.7.
 
-<a name="receive-version-186-from-an-earlier-updater-enabled-version"></a>
-### Recevoir la version 1.8.6 depuis une version antérieure disposant de l’outil de mise à jour
+<a name="receive-version-187-from-an-earlier-updater-enabled-version"></a>
+### Recevoir la version 1.8.7 depuis une version antérieure disposant de l’outil de mise à jour
 
-Avec **1.6.2, 1.6.3 ou 1.6.4** installé, rouvrez l’application ou cliquez sur **Rechercher des mises à jour**. La version stable publiée **1.8.6** devrait apparaître avec **Mettre à jour maintenant**. N’installez pas d’abord 1.8.6 manuellement si vous souhaitez observer cette notification. Les versions antérieures à 1.6.4 utilisent leur bannière d’origine ; le style visuel bien visible est conservé en 1.8.6. Cliquez sur le bouton de mise à jour lorsque vous êtes prêt et acceptez l’autorisation Windows.
+Avec **1.6.2, 1.6.3 ou 1.6.4** installé, rouvrez l’application ou cliquez sur **Rechercher des mises à jour**. La version stable publiée **1.8.7** devrait apparaître avec **Mettre à jour maintenant**. N’installez pas d’abord 1.8.7 manuellement si vous souhaitez observer cette notification. Les versions antérieures à 1.6.4 utilisent leur bannière d’origine ; le style visuel bien visible est conservé en 1.8.7. Cliquez sur le bouton de mise à jour lorsque vous êtes prêt et acceptez l’autorisation Windows.
 
 L’application signale le lancement du programme d’installation, pas une installation terminée et vérifiée : l’installation se termine après la fermeture de l’ancienne application. Vérifiez la version affichée après réouverture. Windows peut encore bloquer le programme d’installation non signé ou exiger une approbation du service informatique.
 

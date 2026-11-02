@@ -12,7 +12,7 @@ Power BI remains the refresh engine. Its window may appear briefly; this is not 
 
 **1.8.5 — Native refresh measurements fixed**
 
-Refresh Analysis now recognizes the native XML Refresh command used by Power BI Desktop, including Refresh inside Batch, as well as XMLA Process and TMSL refresh. Previously the native refresh could execute while its progress was discarded as unrelated, leaving 0 measured tables, unavailable row counts and refreshCompletionNotProven. An explicit successful engine result is now accepted when the optional Error field is absent; nonzero error codes and XMLA errors still override success. Progress still requires exact request/activity correlation, excluding unrelated visual queries.
+Refresh Performance now recognizes the native XML Refresh command used by Power BI Desktop, including Refresh inside Batch, as well as XMLA Process and TMSL refresh. Previously the native refresh could execute while its progress was discarded as unrelated, leaving 0 measured tables, unavailable row counts and refreshCompletionNotProven. An explicit successful engine result is now accepted when the optional Error field is absent; nonzero error codes and XMLA errors still override success. Progress still requires exact request/activity correlation, excluding unrelated visual queries.
 
 Before the first recognized refresh command, the UI says it is waiting for Power BI refresh events. Unconfirmed completion now has translated guidance rather than only a technical code. Update the app, connect to the intended PBIX and run Refresh and analyze again; old incomplete reports are preserved and are not rewritten as successful. The packaged application was validated end to end on a user-authorized real refresh, with table activity, row counts, automatic completion and history surviving reload. No customer data or model names are included in these screenshots; documentation examples remain synthetic.
 
@@ -43,7 +43,7 @@ When a newer version is available, the update notice now offers Download in brow
 | SHA-256 mismatch | **Do not run the file.** Remove/move the invalid download, get the official asset again, and compare against the published checksum. |
 | GitHub download fails | Check connectivity, proxy/firewall restrictions and the Release URL. IT can distribute the verified EXE through an approved channel. |
 | PowerShell reports an underlying connection/TLS send error | Use the documented TLS 1.2 line before fetching the helper in Windows PowerShell, then retry. The native application updater already uses HTTPS/TLS independently. |
-| SmartScreen/unknown publisher | 1.8.6 is unsigned. Verify the checksum and publisher source; ask IT if your device blocks unsigned programs. |
+| SmartScreen/unknown publisher | 1.8.7 is unsigned. Verify the checksum and publisher source; ask IT if your device blocks unsigned programs. |
 | Relationship editor is read-only | Importing a project allows visual organization only. Connect to a live local Power BI model to create/edit/delete relationships. |
 | Relationship changed since reading | Re-read the Power BI model and review the updated link. Stale edits are rejected to avoid overwriting another change. |
 | Duplicate or second active relationship | Use distinct column pairs, or deactivate the current active relationship between those tables before activating another. |
@@ -66,7 +66,7 @@ Email **[contato@consultoriaexcelencia.com.br](mailto:contato@consultoriaexcelen
 
 Include:
 
-- Power Portal version (1.8.6 for this release).
+- Power Portal version (1.8.7 for this release).
 - Windows version and Power BI Desktop version/edition.
 - Installation method (wizard or PowerShell).
 - Steps to reproduce and the exact visible error.
@@ -78,6 +78,6 @@ For deployment and confidential matters, use the support email rather than a pub
 
 ## Native launch and recovery
 
-Refresh Analysis is now immediately below Relationship map in the sidebar and home gallery. Native button discovery ignores the duplicate Home tabs belonging to DAX Query View and TMDL View, avoiding “Ambiguous Power BI control: home”. Select Report, Data or Model view in Power BI if native controls are unavailable.
+Refresh Performance is now immediately below Relationship map in the sidebar and home gallery. Native button discovery ignores the duplicate Home tabs belonging to DAX Query View and TMDL View, avoiding “Ambiguous Power BI control: home”. Select Report, Data or Model view in Power BI if native controls are unavailable.
 
 Start stays disabled while confirmation, validation and trace startup are pending; Finish capture is hidden until capture is ready. This prevents a second launch from incorrectly reporting “Finish the active Power BI operation before refreshing”. A failure proven to occur before native invocation stops the trace, checks cleanup and permits retry. If invocation might already have occurred, the error remains visible and the capture stays pending: review Power BI, finish its refresh and close dialogs before Finish capture. Repeated requests resume the existing capture instead of starting another refresh. Legitimate active Power BI operations still need to finish first.

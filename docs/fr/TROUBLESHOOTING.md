@@ -12,7 +12,7 @@ Power BI reste le moteur. Sa fenêtre peut apparaître brièvement : ce n’est 
 
 **1.8.5 — Correction des mesures de l’actualisation native**
 
-Analyse de l’actualisation reconnaît désormais la commande XML Refresh native de Power BI Desktop, y compris dans Batch, ainsi que XMLA Process et TMSL refresh. Auparavant, l’actualisation pouvait s’exécuter mais son progrès était écarté, laissant 0 table mesurée, des comptages indisponibles et refreshCompletionNotProven. Le succès explicite du moteur est accepté en l’absence du champ Error facultatif ; les codes d’erreur non nuls et les erreurs XMLA restent prioritaires. Le progrès exige toujours une corrélation exacte de requête/activité pour exclure les requêtes visuelles sans rapport.
+Performances de l’actualisation reconnaît désormais la commande XML Refresh native de Power BI Desktop, y compris dans Batch, ainsi que XMLA Process et TMSL refresh. Auparavant, l’actualisation pouvait s’exécuter mais son progrès était écarté, laissant 0 table mesurée, des comptages indisponibles et refreshCompletionNotProven. Le succès explicite du moteur est accepté en l’absence du champ Error facultatif ; les codes d’erreur non nuls et les erreurs XMLA restent prioritaires. Le progrès exige toujours une corrélation exacte de requête/activité pour exclure les requêtes visuelles sans rapport.
 
 Avant la première commande reconnue, l’interface indique qu’elle attend les événements d’actualisation Power BI. Une fin non confirmée affiche une explication traduite au lieu d’un simple code technique. Mettez à jour l’application, connectez le bon PBIX et relancez Actualiser et analyser ; les anciens rapports incomplets sont conservés sans être déclarés réussis. L’application empaquetée a été validée de bout en bout sur une actualisation réelle autorisée, avec activité par table, lignes, fin automatique et historique conservé après rechargement. Les captures restent des exemples synthétiques sans données ni noms de modèles du client.
 
@@ -43,7 +43,7 @@ Lorsqu’une nouvelle version est disponible, l’avis propose Télécharger dan
 | Le SHA-256 ne correspond pas | **N’exécutez pas le fichier.** Supprimez/déplacez le téléchargement invalide, récupérez à nouveau le fichier officiel et comparez-le à la somme de contrôle publiée. |
 | Échec de téléchargement GitHub | Vérifiez la connectivité, les restrictions de proxy/pare-feu et l’URL de la version. Le service informatique peut distribuer l’EXE vérifié par un canal approuvé. |
 | PowerShell signale une erreur de connexion sous-jacente/d’envoi TLS | Utilisez la ligne TLS 1.2 documentée avant de récupérer l’assistant dans Windows PowerShell, puis réessayez. L’outil de mise à jour de l’application native utilise déjà HTTPS/TLS indépendamment. |
-| SmartScreen/éditeur inconnu | 1.8.6 n’est pas signé. Vérifiez la somme de contrôle et la provenance de l’éditeur ; consultez le service informatique si votre appareil bloque les programmes non signés. |
+| SmartScreen/éditeur inconnu | 1.8.7 n’est pas signé. Vérifiez la somme de contrôle et la provenance de l’éditeur ; consultez le service informatique si votre appareil bloque les programmes non signés. |
 | L’éditeur de relations est en lecture seule | L’import d’un projet permet uniquement l’organisation visuelle. Connectez-vous à un modèle Power BI local en direct pour créer/modifier/supprimer des relations. |
 | La relation a changé depuis sa lecture | Relisez le modèle Power BI et examinez le lien actualisé. Les modifications périmées sont rejetées pour éviter d’écraser une autre modification. |
 | Relation en double ou deuxième relation active | Utilisez des paires de colonnes distinctes, ou désactivez la relation active actuelle entre ces tables avant d’en activer une autre. |
@@ -67,7 +67,7 @@ Lorsqu’une nouvelle version est disponible, l’avis propose Télécharger dan
 
 Indiquez :
 
-- La version de Power Portal (1.8.6 pour cette publication).
+- La version de Power Portal (1.8.7 pour cette publication).
 - La version de Windows et la version/édition de Power BI Desktop.
 - La méthode d’installation (assistant ou PowerShell).
 - Les étapes de reproduction et l’erreur visible exacte.
@@ -80,6 +80,6 @@ Pour les questions de déploiement et les sujets confidentiels, utilisez l’adr
 <a name="native-launch-and-recovery"></a>
 ## Lancement natif et récupération
 
-Analyse de l’actualisation se trouve directement sous Carte des relations dans le menu et la galerie. La recherche du bouton natif ignore les onglets Home en double des vues de requêtes DAX et TMDL, évitant « Ambiguous Power BI control: home ». Si le contrôle est indisponible, sélectionnez la vue Rapport, Données ou Modèle dans Power BI.
+Performances de l’actualisation se trouve directement sous Carte des relations dans le menu et la galerie. La recherche du bouton natif ignore les onglets Home en double des vues de requêtes DAX et TMDL, évitant « Ambiguous Power BI control: home ». Si le contrôle est indisponible, sélectionnez la vue Rapport, Données ou Modèle dans Power BI.
 
 Actualiser reste désactivé pendant la confirmation, la validation et le démarrage du suivi ; Terminer la capture reste masqué jusqu’à ce que la capture soit prête. Cela empêche un second lancement de signaler à tort « Finish the active Power BI operation before refreshing ». Un échec avéré avant l’appel natif arrête le suivi, vérifie le nettoyage et permet de réessayer. Si l’appel a pu avoir lieu, l’erreur reste visible et la capture en attente : vérifiez Power BI, terminez l’actualisation et fermez les dialogues avant de terminer la capture. Les requêtes répétées reprennent la capture existante sans relancer l’actualisation. Les opérations réellement actives doivent d’abord se terminer.

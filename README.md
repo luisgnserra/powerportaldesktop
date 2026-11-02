@@ -4,6 +4,12 @@
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md) · [🇨🇳 简体中文](README.zh-CN.md) · [🇫🇷 Français](README.fr.md) · [🇯🇵 日本語](README.ja.md) · [🇮🇳 हिन्दी](README.hi.md) · [🇸🇦 العربية](README.ar.md)
 <!-- /language-selector -->
 
+**1.8.7 — Reliable theme color selection**
+
+All eleven theme colors now have a visible native swatch and a Choose color button beside the editable HEX field. Click the swatch or button, or focus the button and press Enter/Space. The native picker no longer depends on an invisible zero-size input or double-clicking the HEX field. Manual HEX editing, imported themes, live preview and JSON export remain available. Picker failures are shown explicitly. Native opening was verified repeatedly in the Windows application, alongside mouse/keyboard activation of all eleven buttons and eight-language labels.
+
+Refresh Analysis is now named Refresh Performance in the sidebar, home gallery, page heading and all eight interface languages. This is a label change only: native refresh, live progress, timings, row counts, local history and JSON/CSV compatibility are unchanged. Existing saved analyses remain available; no migration or refresh is required. Screenshots use synthetic data.
+
 **1.8.6 — Follow native refresh inside Power Portal**
 
 Start Refresh and analyze in Power Portal and follow live cards with each table, observed status, engine phase, activity time and the latest available native Power BI progress text. Power Portal regains focus after launch and, if Power BI brings itself forward again, after native completion. It does not repeatedly take focus from other applications. View in Power BI opens the selected file without starting another refresh; choosing it disables automatic focus return for that capture.
@@ -12,7 +18,7 @@ Power BI remains the refresh engine. Its window may appear briefly; this is not 
 
 **1.8.5 — Native refresh measurements fixed**
 
-Refresh Analysis now recognizes the native XML Refresh command used by Power BI Desktop, including Refresh inside Batch, as well as XMLA Process and TMSL refresh. Previously the native refresh could execute while its progress was discarded as unrelated, leaving 0 measured tables, unavailable row counts and refreshCompletionNotProven. An explicit successful engine result is now accepted when the optional Error field is absent; nonzero error codes and XMLA errors still override success. Progress still requires exact request/activity correlation, excluding unrelated visual queries.
+Refresh Performance now recognizes the native XML Refresh command used by Power BI Desktop, including Refresh inside Batch, as well as XMLA Process and TMSL refresh. Previously the native refresh could execute while its progress was discarded as unrelated, leaving 0 measured tables, unavailable row counts and refreshCompletionNotProven. An explicit successful engine result is now accepted when the optional Error field is absent; nonzero error codes and XMLA errors still override success. Progress still requires exact request/activity correlation, excluding unrelated visual queries.
 
 Before the first recognized refresh command, the UI says it is waiting for Power BI refresh events. Unconfirmed completion now has translated guidance rather than only a technical code. Update the app, connect to the intended PBIX and run Refresh and analyze again; old incomplete reports are preserved and are not rewritten as successful. The packaged application was validated end to end on a user-authorized real refresh, with table activity, row counts, automatic completion and history surviving reload. No customer data or model names are included in these screenshots; documentation examples remain synthetic.
 
@@ -42,19 +48,19 @@ Relationship map is now immediately after TV Tool in the sidebar and home galler
 
 **1.8.5 — Refresh launch fixes**
 
-Refresh Analysis is now immediately below Relationship map in the sidebar and home gallery. Native button discovery ignores the duplicate Home tabs belonging to DAX Query View and TMDL View, avoiding “Ambiguous Power BI control: home”. Select Report, Data or Model view in Power BI if native controls are unavailable.
+Refresh Performance is now immediately below Relationship map in the sidebar and home gallery. Native button discovery ignores the duplicate Home tabs belonging to DAX Query View and TMDL View, avoiding “Ambiguous Power BI control: home”. Select Report, Data or Model view in Power BI if native controls are unavailable.
 
 ## Download and install
 
 ### Option 1: Install with a few clicks
 
-1. [Download Power Portal Desktop 1.8.6 for Windows x64](https://github.com/luisgnserra/powerportaldesktop/releases/download/v1.8.6/PowerPortal-Setup-1.8.6-x64.exe).
+1. [Download Power Portal Desktop 1.8.7 for Windows x64](https://github.com/luisgnserra/powerportaldesktop/releases/download/v1.8.7/PowerPortal-Setup-1.8.7-x64.exe).
 2. Run the installer and approve the Windows administrator prompt.
 3. Choose the installation folder and default language.
 4. Finish installation, then close and reopen Power BI Desktop.
 5. Open a PBIX and select **External Tools > Power Portal**.
 
-**Windows may warn that the publisher is unknown:** version 1.8.6 is not digitally signed. Only proceed if you trust this distribution. If your organization blocks unsigned software, contact IT rather than bypassing its policy.
+**Windows may warn that the publisher is unknown:** version 1.8.7 is not digitally signed. Only proceed if you trust this distribution. If your organization blocks unsigned software, contact IT rather than bypassing its policy.
 
 [Latest release](https://github.com/luisgnserra/powerportaldesktop/releases/latest) · [Installation guide](docs/INSTALLATION.md) · [Configuration](docs/CONFIGURATION.md) · [Troubleshooting](docs/TROUBLESHOOTING.md)
 
@@ -66,7 +72,7 @@ The installer adds **Power Portal** to **External Tools** in Power BI Desktop. C
 
 The supplied ribbon screenshot uses Portuguese: **Ferramentas externas** means **External Tools**. Power Portal opens a **separate window connected to Power BI**, not an embedded report visual or a new internal Power BI pane.
 
-![Power Portal 1.8.6 home, full sidebar and startup connection notice](docs/images/home.png)
+![Power Portal 1.8.7 home, full sidebar and startup connection notice](docs/images/home.png)
 
 **Already have Power BI open?** When launched from a shortcut, Power Portal detects open local models and displays a connection notice. Choose **Find open models**, select your file, and connect. You can then query its data and send supported changes back with confirmation.
 
@@ -82,7 +88,7 @@ Understand real table links in a freely draggable canvas. Organize Facts, Dimens
 
 Create, edit, activate/deactivate and delete relationships in the connected Power BI model **after confirmation and a metadata backup**. Visual styling stays in Power Portal; it does not rename tables or modify Power BI's native layout. [Full relationship tutorial](docs/RELATIONSHIPS.md).
 
-In 1.8.6, click or drag between exact columns to prepare a link; right-click lines for color, editing and confirmed deletion. Groups support local images and more than 30 icons. Automatic date/time tables are hidden by default with a visibility toggle. Refresh from Power BI after external edits, or invoke native Desktop autodetection with prior backup and a separate review/finish step.
+In 1.8.7, click or drag between exact columns to prepare a link; right-click lines for color, editing and confirmed deletion. Groups support local images and more than 30 icons. Automatic date/time tables are hidden by default with a visibility toggle. Refresh from Power BI after external edits, or invoke native Desktop autodetection with prior backup and a separate review/finish step.
 
 ### Built-in update checks
 
@@ -92,7 +98,7 @@ Windows asks for administrator authorization. Only Power Portal closes; Power BI
 
 ![New-version notification and Update now button](docs/images/update-available.png)
 
-The screenshot uses a **simulated future 1.8.6 notification** to illustrate the UI, not an announcement of a published version. **Version 1.8.6 is now published:** users on 1.6.2 or newer can reopen the app or click **Check for updates** to receive the update. [Update guide](docs/UPDATES.md).
+The screenshot uses a **simulated future 1.8.7 notification** to illustrate the UI, not an announcement of a published version. **Version 1.8.7 is now published:** users on 1.6.2 or newer can reopen the app or click **Check for updates** to receive the update. [Update guide](docs/UPDATES.md).
 
 **On 1.6.1 or older? Install 1.6.2 manually once** to enable this feature. You can also use **Check for updates** to retry a failed/offline check. The updater never installs merely because you opened the application.
 
@@ -103,13 +109,13 @@ Open **Windows PowerShell 5.1 or PowerShell 7 on Windows**:
 ```powershell
 $script = Join-Path $env:TEMP 'Install-PowerPortal.ps1'
 [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
-Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/luisgnserra/powerportaldesktop/v1.8.6/install.ps1' -OutFile $script
+Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/luisgnserra/powerportaldesktop/v1.8.7/install.ps1' -OutFile $script
 # Review the downloaded script before running it.
 Get-Content -LiteralPath $script
 & $script
 ```
 
-The helper downloads **version 1.8.6**, verifies its pinned SHA-256 checksum, and opens the same installer. It does not install Node.js, PHP, a .NET SDK, or build anything.
+The helper downloads **version 1.8.7**, verifies its pinned SHA-256 checksum, and opens the same installer. It does not install Node.js, PHP, a .NET SDK, or build anything.
 
 For unattended installation, run the same helper from an **administrator PowerShell window**:
 
@@ -150,7 +156,7 @@ The desktop application includes its required runtime components. You do not nee
 | Measure auditor | Review model measures or supplied DAX using heuristic checks. |
 | DAX formatter | Format locally, export/copy, or update a selected connected measure with confirmation. |
 | Relationship map | Drag table boxes, group/style links, save visual layouts, and apply confirmed relationship changes directly to Power BI. |
-| Refresh Analysis | Measure native refresh. Compare timings and rows. |
+| Refresh Performance | Measure native refresh. Compare timings and rows. |
 
 Also includes a home gallery, a collapsible sidebar with all twelve tools visible without sidebar scrolling at supported window sizes, ownership/development information, and a consulting and training area with the two featured videos. **Consulting and training** is below **About the development**.
 
@@ -164,7 +170,7 @@ Also includes a home gallery, a collapsible sidebar with all twelve tools visibl
 | Create HTML measure in Power BI | Creates a measure in the selected table, with backup and confirmation. Place a compatible HTML visual manually. |
 | Update measure in Power BI | Updates the selected measure's DAX, with backup, confirmation and concurrent-change checks. |
 | Create/edit/delete relationships in Power BI | Changes table-column relationships, cardinality, filter direction and active state, with backup, confirmation and stale-state checks. |
-| Refresh Analysis | Native refresh queries sources and replaces imported data. Save a PBIX copy. Resolve credentials and errors in Power BI; tracing does not cancel refresh or include every Power Query helper query. |
+| Refresh Performance | Native refresh queries sources and replaces imported data. Save a PBIX copy. Resolve credentials and errors in Power BI; tracing does not cancel refresh or include every Power Query helper query. |
 
 **Connecting alone never writes changes. Save a PBIX copy first, review each confirmation, and save the PBIX yourself afterward.** [Screenshots and step-by-step examples](docs/SCREENSHOTS.md#direct-interactions-with-the-open-power-bi-file).
 
@@ -209,11 +215,11 @@ Microsoft, Power BI and Microsoft Fabric are trademarks of Microsoft. MVP identi
 
 Use **Release assets** to download the application. GitHub's automatic "Source code" ZIP/TAR archives contain only this distribution repository's documentation and installer helper, not the application or its source code.
 
-## Refresh Analysis
+## Refresh Performance
 
-Measure native refresh. Compare timings and rows. [Refresh Analysis](docs/REFRESH-ANALYSIS.md).
+Measure native refresh. Compare timings and rows. [Refresh Performance](docs/REFRESH-ANALYSIS.md).
 
-Connect to the intended open PBIX, open Refresh Analysis and select Refresh and analyze. Confirm the file name. The trace starts before the native Home > Refresh button is invoked; tables are not refreshed sequentially through TOM. Keep Power BI open and resolve source credentials, errors or cancellation there. A BIM backup cannot restore refreshed data.
+Connect to the intended open PBIX, open Refresh Performance and select Refresh and analyze. Confirm the file name. The trace starts before the native Home > Refresh button is invoked; tables are not refreshed sequentially through TOM. Keep Power BI open and resolve source credentials, errors or cancellation there. A BIM backup cannot restore refreshed data.
 
 Automatic completion requires observed refresh-command completion and a ready Power BI window. Close native result dialogs. Manual Finish capture is always incomplete, not evidence of success and not a cancellation of refresh. Engine/trace errors are explicit. If capture is interrupted, no completed analysis is claimed.
 

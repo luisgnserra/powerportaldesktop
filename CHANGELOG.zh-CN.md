@@ -4,6 +4,15 @@
 [🇺🇸 English](CHANGELOG.md) · [🇧🇷 Português](CHANGELOG.pt-BR.md) · [🇪🇸 Español](CHANGELOG.es.md) · [🇨🇳 简体中文](CHANGELOG.zh-CN.md) · [🇫🇷 Français](CHANGELOG.fr.md) · [🇯🇵 日本語](CHANGELOG.ja.md) · [🇮🇳 हिन्दी](CHANGELOG.hi.md) · [🇸🇦 العربية](CHANGELOG.ar.md)
 <!-- /language-selector -->
 
+<a name="187"></a>
+## 1.8.7
+
+**更清晰可靠的主题颜色选择**
+
+主题的全部十一种颜色现在都有可见的原生色块，以及位于可编辑 HEX 输入框旁的“选择颜色”按钮。点击色块或按钮，或聚焦按钮后按 Enter/空格即可打开。不再依赖不可见的零尺寸输入框或双击 HEX。手动输入、主题导入、实时预览和 JSON 导出保持可用，打开失败会明确提示。已在 Windows 应用中多次验证原生选择器，并测试十一按钮的鼠标和键盘操作及八种语言。
+
+菜单、首页、工具标题及八种语言中的“刷新分析”现更名为“刷新性能”。仅修改名称：原生刷新、实时进度、计时、行数、本地历史和 JSON/CSV 兼容性均不变。已保存的分析仍可使用，无需迁移或再次刷新。图片使用合成数据。
+
 <a name="186"></a>
 ## 1.8.6
 

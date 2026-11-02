@@ -4,6 +4,12 @@
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md) · [🇨🇳 简体中文](README.zh-CN.md) · [🇫🇷 Français](README.fr.md) · [🇯🇵 日本語](README.ja.md) · [🇮🇳 हिन्दी](README.hi.md) · [🇸🇦 العربية](README.ar.md)
 <!-- /language-selector -->
 
+**1.8.7 — Seleção de cores mais clara e confiável**
+
+As onze cores do tema agora possuem uma amostra nativa visível e um botão Selecionar cor ao lado do campo HEX editável. Clique na amostra ou no botão, ou use Enter/Espaço com o botão em foco. O seletor não depende mais de um campo invisível sem tamanho nem de clique duplo no HEX. A edição manual, importação de temas, prévia em tempo real e exportação JSON continuam disponíveis. Falhas ao abrir são mostradas explicitamente. A abertura nativa foi verificada repetidamente no aplicativo Windows, além dos onze botões por mouse/teclado e dos textos nos oito idiomas.
+
+Análise Atualização agora se chama Desempenho de Atualização no menu, na página inicial, no título da ferramenta e nos oito idiomas. A alteração é apenas de nome: atualização nativa, progresso ao vivo, tempos, linhas, histórico local e compatibilidade JSON/CSV permanecem iguais. As análises salvas continuam disponíveis, sem migração ou necessidade de atualizar os dados. As imagens usam dados sintéticos.
+
 **1.8.6 — Acompanhe a atualização dentro do Power Portal**
 
 Inicie Atualizar e analisar no Power Portal e acompanhe cartões ao vivo com cada tabela, estado observado, fase do mecanismo, tempo de atividade e o último texto de progresso nativo disponível do Power BI. O Power Portal recupera o foco após iniciar e, se o Power BI reaparecer em primeiro plano, após a conclusão nativa. Não toma repetidamente o foco de outros aplicativos. Ver no Power BI abre o arquivo selecionado sem iniciar outra atualização; essa escolha desativa o retorno automático do foco nessa captura.
@@ -12,7 +18,7 @@ O Power BI continua sendo o mecanismo de atualização. Sua janela pode aparecer
 
 **1.8.5 — Correção das medições da atualização nativa**
 
-Análise Atualização agora reconhece o comando XML Refresh nativo usado pelo Power BI Desktop, inclusive dentro de Batch, além de XMLA Process e TMSL refresh. Antes, a atualização podia executar, mas seu progresso era descartado como não relacionado, deixando 0 tabelas medidas, contagens indisponíveis e refreshCompletionNotProven. Um resultado explícito de sucesso do mecanismo agora é aceito quando o campo opcional Error está ausente; códigos de erro diferentes de zero e erros XMLA continuam prevalecendo. O progresso ainda exige correlação exata de requisição/atividade, excluindo consultas dos visuais não relacionadas.
+Desempenho de Atualização agora reconhece o comando XML Refresh nativo usado pelo Power BI Desktop, inclusive dentro de Batch, além de XMLA Process e TMSL refresh. Antes, a atualização podia executar, mas seu progresso era descartado como não relacionado, deixando 0 tabelas medidas, contagens indisponíveis e refreshCompletionNotProven. Um resultado explícito de sucesso do mecanismo agora é aceito quando o campo opcional Error está ausente; códigos de erro diferentes de zero e erros XMLA continuam prevalecendo. O progresso ainda exige correlação exata de requisição/atividade, excluindo consultas dos visuais não relacionadas.
 
 Antes do primeiro comando reconhecido, a interface informa que aguarda eventos de atualização do Power BI. Conclusão não confirmada agora mostra orientação traduzida em vez de somente um código técnico. Atualize o aplicativo, conecte ao PBIX correto e execute Atualizar e analisar novamente; relatórios antigos incompletos são preservados e não são reclassificados como sucesso. O aplicativo empacotado foi validado de ponta a ponta numa atualização real autorizada, com atividade por tabela, contagens, conclusão automática e histórico preservado após recarregar. Os prints não contêm dados nem nomes de modelos do usuário; os exemplos da documentação continuam sintéticos.
 
@@ -42,7 +48,7 @@ O Mapa de relacionamentos agora fica imediatamente depois do TV Tool no menu lat
 
 **1.8.5 — Correções no início da atualização**
 
-Análise Atualização fica imediatamente abaixo de Mapa de relacionamentos no menu lateral e na galeria inicial. A identificação do botão nativo ignora as abas Home duplicadas das visualizações de consultas DAX e TMDL, evitando “Ambiguous Power BI control: home”. Se o controle não estiver disponível, selecione Relatório, Dados ou Modelo no Power BI.
+Desempenho de Atualização fica imediatamente abaixo de Mapa de relacionamentos no menu lateral e na galeria inicial. A identificação do botão nativo ignora as abas Home duplicadas das visualizações de consultas DAX e TMDL, evitando “Ambiguous Power BI control: home”. Se o controle não estiver disponível, selecione Relatório, Dados ou Modelo no Power BI.
 
 <a name="download-and-install"></a>
 ## Download e instalação
@@ -50,13 +56,13 @@ Análise Atualização fica imediatamente abaixo de Mapa de relacionamentos no m
 <a name="option-1-install-with-a-few-clicks"></a>
 ### Opção 1: instalar com poucos cliques
 
-1. [Baixe o Power Portal Desktop 1.8.6 para Windows x64](https://github.com/luisgnserra/powerportaldesktop/releases/download/v1.8.6/PowerPortal-Setup-1.8.6-x64.exe).
+1. [Baixe o Power Portal Desktop 1.8.7 para Windows x64](https://github.com/luisgnserra/powerportaldesktop/releases/download/v1.8.7/PowerPortal-Setup-1.8.7-x64.exe).
 2. Execute o instalador e aprove a solicitação de administrador do Windows.
 3. Escolha a pasta de instalação e o idioma padrão.
 4. Conclua a instalação, feche e abra novamente o Power BI Desktop.
 5. Abra um PBIX e selecione **Ferramentas externas > Power Portal**.
 
-**O Windows pode avisar que o editor é desconhecido:** a versão 1.8.6 não possui assinatura digital. Prossiga somente se confiar nesta distribuição. Se sua organização bloquear programas sem assinatura, procure a TI em vez de contornar a política.
+**O Windows pode avisar que o editor é desconhecido:** a versão 1.8.7 não possui assinatura digital. Prossiga somente se confiar nesta distribuição. Se sua organização bloquear programas sem assinatura, procure a TI em vez de contornar a política.
 
 [Versão mais recente](https://github.com/luisgnserra/powerportaldesktop/releases/latest) · [Guia de instalação](docs/pt-BR/INSTALLATION.md) · [Configuração](docs/pt-BR/CONFIGURATION.md) · [Solução de problemas](docs/pt-BR/TROUBLESHOOTING.md)
 
@@ -69,7 +75,7 @@ O instalador adiciona **Power Portal** à guia **Ferramentas externas** do Power
 
 O print original da guia está em português: **Ferramentas externas** corresponde a **External Tools** em inglês. O Power Portal abre em uma **janela separada conectada ao Power BI**, não como um visual do relatório ou um novo painel interno do Power BI.
 
-![Início do Power Portal 1.8.6, menu completo e aviso de conexão ao iniciar](docs/images/pt-BR/home.png)
+![Início do Power Portal 1.8.7, menu completo e aviso de conexão ao iniciar](docs/images/pt-BR/home.png)
 
 **Já está com o Power BI aberto?** Ao iniciar por um atalho, o Power Portal detecta modelos locais abertos e mostra um aviso de conexão. Escolha **Localizar modelos abertos**, selecione seu arquivo e conecte. Assim você poderá consultar os dados e enviar as alterações compatíveis, com confirmação.
 
@@ -86,7 +92,7 @@ Entenda as ligações reais entre tabelas em um canvas com movimentação livre.
 
 Crie, edite, ative/desative e exclua relacionamentos no modelo conectado do Power BI **após confirmação e backup dos metadados**. A personalização visual fica no Power Portal; ela não renomeia tabelas nem modifica o layout nativo do Power BI. [Tutorial completo de relacionamentos](docs/pt-BR/RELATIONSHIPS.md).
 
-Na 1.8.6, clique ou arraste entre colunas exatas para preparar uma ligação; use botão direito nas linhas para cor, edição e exclusão confirmada. Grupos aceitam imagens locais e mais de 30 ícones. Tabelas automáticas de data/hora ficam ocultas por padrão com opção de exibição. Atualize a partir do Power BI após edições externas ou acione a detecção nativa com backup prévio e etapa separada de revisão/conclusão.
+Na 1.8.7, clique ou arraste entre colunas exatas para preparar uma ligação; use botão direito nas linhas para cor, edição e exclusão confirmada. Grupos aceitam imagens locais e mais de 30 ícones. Tabelas automáticas de data/hora ficam ocultas por padrão com opção de exibição. Atualize a partir do Power BI após edições externas ou acione a detecção nativa com backup prévio e etapa separada de revisão/conclusão.
 
 <a name="built-in-update-checks"></a>
 ### Verificação de atualizações integrada
@@ -97,7 +103,7 @@ O Windows solicita autorização de administrador. Somente o Power Portal fecha;
 
 ![Aviso de nova versão e botão Atualizar agora](docs/images/pt-BR/update-available.png)
 
-O print usa um **aviso futuro simulado da 1.8.6** para ilustrar a interface, não para anunciar uma versão publicada. **A versão 1.8.6 já está publicada:** usuários da 1.6.2 ou superior podem reabrir o aplicativo ou clicar em **Verificar atualizações** para recebê-la. [Guia de atualização](docs/pt-BR/UPDATES.md).
+O print usa um **aviso futuro simulado da 1.8.7** para ilustrar a interface, não para anunciar uma versão publicada. **A versão 1.8.7 já está publicada:** usuários da 1.6.2 ou superior podem reabrir o aplicativo ou clicar em **Verificar atualizações** para recebê-la. [Guia de atualização](docs/pt-BR/UPDATES.md).
 
 **Está na 1.6.1 ou anterior? Instale a 1.6.2 manualmente uma vez** para habilitar o recurso. Você também pode usar **Verificar atualizações** para repetir uma verificação que falhou ou foi feita sem internet. O atualizador nunca instala apenas porque você abriu o aplicativo.
 
@@ -109,13 +115,13 @@ Abra o **Windows PowerShell 5.1 ou PowerShell 7 no Windows**:
 ```powershell
 $script = Join-Path $env:TEMP 'Install-PowerPortal.ps1'
 [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
-Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/luisgnserra/powerportaldesktop/v1.8.6/install.ps1' -OutFile $script
+Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/luisgnserra/powerportaldesktop/v1.8.7/install.ps1' -OutFile $script
 # Review the downloaded script before running it.
 Get-Content -LiteralPath $script
 & $script
 ```
 
-O auxiliar baixa a **versão 1.8.6**, verifica o SHA-256 fixado e abre o mesmo instalador. Não instala Node.js, PHP, SDK do .NET nem compila nada.
+O auxiliar baixa a **versão 1.8.7**, verifica o SHA-256 fixado e abre o mesmo instalador. Não instala Node.js, PHP, SDK do .NET nem compila nada.
 
 Para instalação sem interação, execute o mesmo auxiliar em uma **janela do PowerShell como administrador**:
 
@@ -158,7 +164,7 @@ O aplicativo inclui os componentes de execução necessários. Você não precis
 | Auditor de medidas | Revisa medidas do modelo ou DAX fornecido com verificações heurísticas. |
 | Formatador DAX | Formata localmente, exporta/copia ou atualiza uma medida selecionada no modelo conectado, com confirmação. |
 | Mapa de relacionamentos | Arrasta caixas de tabelas, agrupa/personaliza ligações, salva layouts visuais e aplica alterações confirmadas de relacionamentos diretamente no Power BI. |
-| Análise Atualização | Meça a atualizacao nativa. Compare tempos e linhas. |
+| Desempenho de Atualização | Meça a atualizacao nativa. Compare tempos e linhas. |
 
 Também inclui uma galeria inicial, menu lateral retrátil com as doze ferramentas visíveis sem rolagem nos tamanhos suportados, informações de propriedade/desenvolvimento e uma área de consultoria e treinamentos com os dois vídeos em destaque. **Consultoria e Treinamentos** fica abaixo de **Sobre o desenvolvimento**.
 
@@ -173,7 +179,7 @@ Também inclui uma galeria inicial, menu lateral retrátil com as doze ferrament
 | Criar medida HTML no Power BI | Cria uma medida na tabela selecionada, com backup e confirmação. Adicione manualmente um visual HTML compatível. |
 | Atualizar medida no Power BI | Atualiza o DAX da medida selecionada, com backup, confirmação e verificação de alterações concorrentes. |
 | Criar/editar/excluir relacionamentos no Power BI | Altera ligações entre colunas de tabelas, cardinalidade, direção dos filtros e estado ativo, com backup, confirmação e verificação de estado desatualizado. |
-| Análise Atualização | A atualizacao nativa consulta as fontes e substitui os dados importados. Salve uma copia do PBIX. Resolva credenciais e erros no Power BI; o rastreamento nao cancela a atualizacao nem inclui todas as consultas auxiliares do Power Query. |
+| Desempenho de Atualização | A atualizacao nativa consulta as fontes e substitui os dados importados. Salve uma copia do PBIX. Resolva credenciais e erros no Power BI; o rastreamento nao cancela a atualizacao nem inclui todas as consultas auxiliares do Power Query. |
 
 **Conectar não grava alterações. Salve uma cópia do PBIX primeiro, revise cada confirmação e depois salve o PBIX você mesmo.** [Prints e exemplos passo a passo](docs/pt-BR/SCREENSHOTS.md#direct-interactions-with-the-open-power-bi-file).
 
@@ -222,12 +228,12 @@ Microsoft, Power BI e Microsoft Fabric são marcas da Microsoft. A identificaç�
 
 Use os **Assets das Releases** para baixar o aplicativo. Os arquivos ZIP/TAR automáticos “Source code” do GitHub contêm apenas a documentação e o auxiliar de instalação deste repositório de distribuição, não o aplicativo nem seu código-fonte.
 
-<a name="refresh-analysis"></a>
-## Análise Atualização
+<a name="refresh-performance"></a>
+## Desempenho de Atualização
 
-Meça a atualizacao nativa. Compare tempos e linhas. [Análise Atualização](docs/pt-BR/REFRESH-ANALYSIS.md).
+Meça a atualizacao nativa. Compare tempos e linhas. [Desempenho de Atualização](docs/pt-BR/REFRESH-ANALYSIS.md).
 
-Conecte ao PBIX correto, abra Análise Atualização e clique em Atualizar e analisar. Confira o nome do arquivo e confirme. O rastreamento inicia antes de acionar Página Inicial > Atualizar nativo; nao atualiza tabelas sequencialmente via TOM. Mantenha o Power BI aberto e resolva credenciais, erros ou cancelamento nele. Um backup BIM nao restaura dados atualizados.
+Conecte ao PBIX correto, abra Desempenho de Atualização e clique em Atualizar e analisar. Confira o nome do arquivo e confirme. O rastreamento inicia antes de acionar Página Inicial > Atualizar nativo; nao atualiza tabelas sequencialmente via TOM. Mantenha o Power BI aberto e resolva credenciais, erros ou cancelamento nele. Um backup BIM nao restaura dados atualizados.
 
 A conclusao automatica exige termino observado dos comandos de atualizacao e janela do Power BI pronta. Feche os dialogos nativos de resultado. Concluir captura manualmente sempre indica analise incompleta, nao comprova sucesso nem cancela a atualizacao. Erros do mecanismo/rastreamento sao explicitos. Uma captura interrompida nao e apresentada como concluida.
 

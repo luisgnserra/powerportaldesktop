@@ -15,7 +15,7 @@ Allow approximately 1 GB of free disk space for the download and installed runti
 ## Simple installation
 
 1. Open the [latest Release](https://github.com/luisgnserra/powerportaldesktop/releases/latest).
-2. Under **Assets**, download `PowerPortal-Setup-1.8.6-x64.exe` for this release. Do not download the automatically generated source archives as an installer.
+2. Under **Assets**, download `PowerPortal-Setup-1.8.7-x64.exe` for this release. Do not download the automatically generated source archives as an installer.
 3. Optionally [verify SHA-256](#verify-the-installer).
 4. Run the executable and approve User Account Control.
 5. Accept the displayed dependency terms, choose a folder, and select a default language using the flags. Windows UI language is suggested; unsupported languages default to English.
@@ -41,12 +41,12 @@ Launching the Windows shortcut instead displays a notice when open models are de
 ```powershell
 $script = Join-Path $env:TEMP 'Install-PowerPortal.ps1'
 [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
-Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/luisgnserra/powerportaldesktop/v1.8.6/install.ps1' -OutFile $script
+Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/luisgnserra/powerportaldesktop/v1.8.7/install.ps1' -OutFile $script
 Get-Content -LiteralPath $script
 & $script
 ```
 
-This versioned URL pins the helper to the 1.8.6 release. It does not silently track future releases. The helper also pins the installer filename and SHA-256 checksum, downloads over HTTPS, verifies the executable before running it, and checks installation registration after a successful installer exit.
+This versioned URL pins the helper to the 1.8.7 release. It does not silently track future releases. The helper also pins the installer filename and SHA-256 checksum, downloads over HTTPS, verifies the executable before running it, and checks installation registration after a successful installer exit.
 
 The TLS line enables HTTPS TLS 1.2 in this PowerShell process for older Windows PowerShell defaults. It does not change Windows security or execution policies.
 
@@ -85,7 +85,7 @@ Do not paste an unreviewed script into `Invoke-Expression`. If a downloaded scri
 After checksum verification, an administrator can run:
 
 ```powershell
-$setup = "$env:USERPROFILE\Downloads\PowerPortal-Setup-1.8.6-x64.exe"
+$setup = "$env:USERPROFILE\Downloads\PowerPortal-Setup-1.8.7-x64.exe"
 $process = Start-Process -FilePath $setup -ArgumentList '/S' -Wait -PassThru
 if ($process.ExitCode -ne 0) { throw "Installer failed: $($process.ExitCode)" }
 ```
@@ -94,15 +94,15 @@ The PowerShell helper is recommended because it checks both the download and the
 
 ## Verify the installer
 
-Expected SHA-256 for **1.8.6 x64**:
+Expected SHA-256 for **1.8.7 x64**:
 
 ```text
-C83A032164169C183A115CF07B68C33159344D1837EBF370506F61AE944B63D3
+1137B13548FAC555A425CBF9D5E9E2FB94A829981EA3E5A4BF231F3AEF69F5AC
 ```
 
 ```powershell
-$file = "$env:USERPROFILE\Downloads\PowerPortal-Setup-1.8.6-x64.exe"
-$expected = 'C83A032164169C183A115CF07B68C33159344D1837EBF370506F61AE944B63D3'
+$file = "$env:USERPROFILE\Downloads\PowerPortal-Setup-1.8.7-x64.exe"
+$expected = '1137B13548FAC555A425CBF9D5E9E2FB94A829981EA3E5A4BF231F3AEF69F5AC'
 if ((Get-FileHash -LiteralPath $file -Algorithm SHA256).Hash -ne $expected) {
     throw 'Checksum mismatch. Do not run this installer.'
 }

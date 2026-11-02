@@ -37,11 +37,11 @@ The development/source run does not download or install updates.
 
 ![Update notification and user-controlled Update now button](images/update-available.png)
 
-The screenshot is a **simulated future 1.8.6 notification** inside 1.8.6, demonstrating the UI only. It is not an announcement of 1.8.6.
+The screenshot is a **simulated future 1.8.7 notification** inside 1.8.7, demonstrating the UI only. It is not an announcement of 1.8.7.
 
-### Receive version 1.8.6 from an earlier updater-enabled version
+### Receive version 1.8.7 from an earlier updater-enabled version
 
-With **1.6.2, 1.6.3 or 1.6.4** installed, reopen the app or click **Check for updates**. The published stable **1.8.6** should appear with **Update now**. Do not install 1.8.6 manually first if you want to observe this notification. Versions before 1.6.4 use their original banner; the prominent visual styling is retained in 1.8.6. Click the update button when ready and approve Windows authorization.
+With **1.6.2, 1.6.3 or 1.6.4** installed, reopen the app or click **Check for updates**. The published stable **1.8.7** should appear with **Update now**. Do not install 1.8.7 manually first if you want to observe this notification. Versions before 1.6.4 use their original banner; the prominent visual styling is retained in 1.8.7. Click the update button when ready and approve Windows authorization.
 
 The app reports installer launch, not a verified completed installation: installation completes after the old app closes. Check the displayed application version after reopening. Windows can still block the unsigned installer or require IT approval.
 
