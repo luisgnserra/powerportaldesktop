@@ -1,8 +1,9 @@
 # Power Portal Desktop
 
 <!-- language-selector -->
-[![English](https://r2.dev) English](README.md) · [![Português](https://r2.dev) Português](README.pt-BR.md) · [![Español](https://r2.dev) Español](README.es.md) · [![简体中文](https://r2.dev) 简体中文](README.zh-CN.md) · [![Français](https://r2.dev) Français](README.fr.md) · [![日本語](https://r2.dev) 日本語](README.ja.md) · [![हिन्दी](https://r2.dev) हिन्दी](README.hi.md) · [![العربية](https://r2.dev) العربية](README.ar.md)
+[![English](https://jsdelivr.net) English](README.md) · [![Português](https://jsdelivr.net) Português](README.pt-BR.md) · [![Español](https://jsdelivr.net) Español](README.es.md) · [![简体中文](https://jsdelivr.net) 简体中文](README.zh-CN.md) · [![Français](https://jsdelivr.net) Français](README.fr.md) · [![日本語](https://jsdelivr.net) 日本語](README.ja.md) · [![हिन्दी](https://jsdelivr.net) हिन्दी](README.hi.md) · [![العربية](https://jsdelivr.net) العربية](README.ar.md)
 <!-- /language-selector -->
+
 
 <!-- /language-selector -->
 <!--[🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md) · [🇨🇳 简体中文](README.zh-CN.md) · [🇫🇷 Français](README.fr.md) · [🇯🇵 日本語](README.ja.md) · [🇮🇳 हिन्दी](README.hi.md) · [🇸🇦 العربية](README.ar.md) -->
