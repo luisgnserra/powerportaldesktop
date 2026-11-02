@@ -2,7 +2,13 @@
 # Power Portal Desktop
 
 <!-- language-selector -->
-[🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md) · [🇨🇳 简体中文](README.zh-CN.md) · [🇫🇷 Français](README.fr.md) · [🇯🇵 日本語](README.ja.md) · [🇮🇳 हिन्दी](README.hi.md) · [🇸🇦 العربية](README.ar.md)
+# Power Portal Desktop
+
+<!-- language-selector -->
+[<img src="https://githubusercontent.com" width="16" height="12"> English](README.md) · [<img src="https://githubusercontent.com" width="16" height="12"> Português](README.pt-BR.md) · [<img src="https://githubusercontent.com" width="16" height="12"> Español](README.es.md) · [<img src="https://githubusercontent.com" width="16" height="12"> 简体中文](README.zh-CN.md) · [<img src="https://githubusercontent.com" width="16" height="12"> Français](README.fr.md) · [<img src="https://githubusercontent.com" width="16" height="12"> 日本語](README.ja.md) · [<img src="https://githubusercontent.com" width="16" height="12"> हिन्दी](README.hi.md) · [<img src="https://githubusercontent.com" width="16" height="12"> العربية](README.ar.md)
+
+<!-- /language-selector -->
+<!--[🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md) · [🇨🇳 简体中文](README.zh-CN.md) · [🇫🇷 Français](README.fr.md) · [🇯🇵 日本語](README.ja.md) · [🇮🇳 हिन्दी](README.hi.md) · [🇸🇦 العربية](README.ar.md) -->
 <!-- /language-selector -->
 
 
