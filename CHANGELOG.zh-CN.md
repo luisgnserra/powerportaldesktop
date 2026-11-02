@@ -4,6 +4,15 @@
 [🇺🇸 English](CHANGELOG.md) · [🇧🇷 Português](CHANGELOG.pt-BR.md) · [🇪🇸 Español](CHANGELOG.es.md) · [🇨🇳 简体中文](CHANGELOG.zh-CN.md) · [🇫🇷 Français](CHANGELOG.fr.md) · [🇯🇵 日本語](CHANGELOG.ja.md) · [🇮🇳 हिन्दी](CHANGELOG.hi.md) · [🇸🇦 العربية](CHANGELOG.ar.md)
 <!-- /language-selector -->
 
+<a name="185"></a>
+## 1.8.5
+
+**修复原生刷新测量**
+
+刷新分析现可识别 Power BI Desktop 使用的原生 XML Refresh 命令，包括 Batch 内的 Refresh，并继续支持 XMLA Process 和 TMSL refresh。此前刷新可能已执行，但进度被当作无关事件丢弃，导致测量表数为 0、行数不可用及 refreshCompletionNotProven。可选 Error 字段缺失时，现接受引擎明确的成功结果；非零错误码和 XMLA 错误仍优先。进度仍须精确关联请求或活动，以排除无关视觉查询。
+
+识别到第一个刷新命令前，界面会提示正在等待 Power BI 刷新事件。无法确认完成时，显示翻译后的说明而非仅技术代码。请更新应用，连接正确的 PBIX，再次运行刷新并分析；旧的不完整报告将保留，不会被改为成功。打包应用已通过用户授权的真实刷新端到端验证，覆盖表活动、行数、自动完成和重载后保留的历史记录。文档截图仍为合成示例，不含用户数据或模型名称。
+
 <a name="184"></a>
 ## 1.8.4
 

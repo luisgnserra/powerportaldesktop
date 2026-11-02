@@ -4,6 +4,12 @@
 [🇺🇸 English](../REFRESH-ANALYSIS.md) · [🇧🇷 Português](../pt-BR/REFRESH-ANALYSIS.md) · [🇪🇸 Español](../es/REFRESH-ANALYSIS.md) · [🇨🇳 简体中文](../zh-CN/REFRESH-ANALYSIS.md) · [🇫🇷 Français](../fr/REFRESH-ANALYSIS.md) · [🇯🇵 日本語](REFRESH-ANALYSIS.md) · [🇮🇳 हिन्दी](../hi/REFRESH-ANALYSIS.md) · [🇸🇦 العربية](../ar/REFRESH-ANALYSIS.md)
 <!-- /language-selector -->
 
+**1.8.5 — ネイティブ更新の計測を修正**
+
+更新分析は、Power BI Desktop のネイティブ XML Refresh コマンドと Batch 内の Refresh を認識し、XMLA Process と TMSL refresh にも引き続き対応します。従来は更新が実行されても進行イベントが除外され、計測テーブル数が 0、行数が利用不可、refreshCompletionNotProven となる場合がありました。任意の Error フィールドがなくても明示的な成功結果を受け付けます。非ゼロのエラーコードと XMLA エラーは引き続き優先されます。無関係なビジュアルクエリを除くため、進行イベントは要求またはアクティビティとの厳密な関連付けが必要です。
+
+最初の更新コマンドを認識するまでは、Power BI の更新イベントを待機中と表示します。完了を確認できない場合は技術コードだけでなく翻訳された案内を表示します。アプリを更新し、正しい PBIX に接続して更新と分析を再実行してください。以前の不完全なレポートは成功に書き換えず保持します。ユーザーが許可した実際の更新で、テーブルの活動、行数、自動完了、再読み込み後の履歴を含むパッケージ版の一連の動作を確認しました。文書の画像は引き続き合成例であり、ユーザーのデータやモデル名は含みません。
+
 ![更新分析](../images/ja/refresh-analysis.png)
 
 <a name="start-and-safety"></a>

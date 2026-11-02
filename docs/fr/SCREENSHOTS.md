@@ -4,21 +4,27 @@
 [🇺🇸 English](../SCREENSHOTS.md) · [🇧🇷 Português](../pt-BR/SCREENSHOTS.md) · [🇪🇸 Español](../es/SCREENSHOTS.md) · [🇨🇳 简体中文](../zh-CN/SCREENSHOTS.md) · [🇫🇷 Français](SCREENSHOTS.md) · [🇯🇵 日本語](../ja/SCREENSHOTS.md) · [🇮🇳 हिन्दी](../hi/SCREENSHOTS.md) · [🇸🇦 العربية](../ar/SCREENSHOTS.md)
 <!-- /language-selector -->
 
-**1.8.4 — Télécharger les mises à jour dans le navigateur**
+**1.8.5 — Correction des mesures de l’actualisation native**
+
+Analyse de l’actualisation reconnaît désormais la commande XML Refresh native de Power BI Desktop, y compris dans Batch, ainsi que XMLA Process et TMSL refresh. Auparavant, l’actualisation pouvait s’exécuter mais son progrès était écarté, laissant 0 table mesurée, des comptages indisponibles et refreshCompletionNotProven. Le succès explicite du moteur est accepté en l’absence du champ Error facultatif ; les codes d’erreur non nuls et les erreurs XMLA restent prioritaires. Le progrès exige toujours une corrélation exacte de requête/activité pour exclure les requêtes visuelles sans rapport.
+
+Avant la première commande reconnue, l’interface indique qu’elle attend les événements d’actualisation Power BI. Une fin non confirmée affiche une explication traduite au lieu d’un simple code technique. Mettez à jour l’application, connectez le bon PBIX et relancez Actualiser et analyser ; les anciens rapports incomplets sont conservés sans être déclarés réussis. L’application empaquetée a été validée de bout en bout sur une actualisation réelle autorisée, avec activité par table, lignes, fin automatique et historique conservé après rechargement. Les captures restent des exemples synthétiques sans données ni noms de modèles du client.
+
+**1.8.5 — Télécharger les mises à jour dans le navigateur**
 
 Lorsqu’une nouvelle version est disponible, l’avis propose Télécharger dans le navigateur à côté de Mettre à jour. Le bouton ouvre l’adresse officielle de l’installateur GitHub détecté dans le navigateur par défaut, sans fermer Power Portal ni lancer l’installation. Exécutez manuellement l’installateur téléchargé lorsque vous le souhaitez. Cette option reste disponible après une erreur de mise à jour automatique. Les échecs d’ouverture du navigateur sont affichés. Mettre à jour continue de télécharger dans l’application, de vérifier SHA-256 et taille, puis de demander l’autorisation Windows. Le téléchargement par navigateur ne bénéficie pas de la vérification automatique de l’application : comparez le SHA-256 publié avant d’exécuter l’installateur. Les boutons et l’explication sont traduits dans les huit langues.
 
-**1.8.4 — Aperçu du thème avec courbes lissées**
+**1.8.5 — Aperçu du thème avec courbes lissées**
 
 Le graphique en courbes du générateur de thèmes utilise désormais des courbes cubiques lissées plutôt que des segments droits, avec les données d’exemple et du modèle connecté. Elles passent par les points d’origine sans dépassement entre les valeurs ; couleurs, marqueurs et infobulles sont conservés. Seul l’aperçu change : le JSON exporté et le format des lignes des visuels Power BI existants restent inchangés.
 
-**1.8.4 — Corrections du lancement de l’actualisation**
+**1.8.5 — Corrections du lancement de l’actualisation**
 
 Analyse de l’actualisation se trouve directement sous Carte des relations dans le menu et la galerie. La recherche du bouton natif ignore les onglets Home en double des vues de requêtes DAX et TMDL, évitant « Ambiguous Power BI control: home ». Si le contrôle est indisponible, sélectionnez la vue Rapport, Données ou Modèle dans Power BI.
 
 [Retour à l’accueil](../../README.fr.md) · [Installer](INSTALLATION.md) · [Guide de sécurité](USAGE.md)
 
-**Captures de l’application : Power Portal Desktop 1.8.4, interface dans la langue sélectionnée (français).**
+**Captures de l’application : Power Portal Desktop 1.8.5, interface dans la langue sélectionnée (français).**
 Les captures utilisent des **métadonnées et valeurs de requêtes synthétiques de démonstration**, et non un PBIX client. Les états connectés illustrent les actions prises en charge par l’interface ; aucun modèle client n’a été modifié pour créer ces images. Les libellés du sélecteur de fichiers natif peuvent suivre la langue de Windows. La capture réelle du ruban Power BI a été fournie par le propriétaire et recadrée pour supprimer le titre privé du fichier ; elle conserve son portugais d’origine.
 
 Les flèches de relation sont désormais placées sur la courbe et pivotent selon sa direction locale, y compris pour les liens diagonaux ou inversés. Les flèches SVG agrandies à 36 × 26 unités restent noires avec un contour blanc de 3 unités, indépendamment de la couleur du lien. Le filtrage unidirectionnel reste de la destination vers la source ; le bidirectionnel affiche deux flèches opposées. Le filtrage automatique conserve le point d’interrogation. Ce changement est uniquement visuel.
@@ -81,7 +87,7 @@ Un lancement depuis le ruban Outils externes transmet automatiquement la connexi
 
 ![Nouvelle version disponible avec Mettre à jour maintenant et avertissement d’autorisation/de modifications non envoyées](../images/fr/update-available.png)
 
-La capture utilise un **résultat synthétique d’une future version 1.8.4** pour montrer la notification dans la version 1.8.4. Elle ne prétend pas que 1.8.4 a été publié. Les utilisateurs de 1.6.2 ou d’une version ultérieure peuvent désormais recevoir la véritable notification de 1.8.4.
+La capture utilise un **résultat synthétique d’une future version 1.8.5** pour montrer la notification dans la version 1.8.5. Elle ne prétend pas que 1.8.5 a été publié. Les utilisateurs de 1.6.2 ou d’une version ultérieure peuvent désormais recevoir la véritable notification de 1.8.5.
 
 En 1.6.4, la bannière ambrée reste visible pendant le défilement et s’anime doucement, sauf si la réduction des animations est activée. Aucune bannière « à jour » permanente n’occupe de l’espace.
 
@@ -163,7 +169,7 @@ Le nouvel outil réservé à Desktop affiche les liens réels entre les tables, 
 
 Sélectionnez une ligne pour examiner ses colonnes exactes, sa cardinalité, le sens du filtre et l’état actif. **Appliquer la relation à Power BI** ou **Supprimer la relation dans Power BI** valide chaque modification après confirmation native et sauvegarde. Les projets importés restent en lecture seule. Le style ne renomme pas les tables et ne change pas le diagramme natif de Power BI. [Parcours complet et limites de sécurité](RELATIONSHIPS.md).
 
-Dans la version 1.8.4, cliquez ou faites glisser entre des colonnes pour préparer un brouillon en pointillés, puis vérifiez-le/appliquez-le. Faites un clic droit sur une ligne pour choisir sa couleur, la modifier ou la supprimer. Les paramètres de groupe proposent des images PNG/JPEG locales et davantage d’icônes ; faites glisser l’arrière-plan ou l’en-tête du groupe. Les tables de date/heure automatiques sont masquées par défaut. **Actualiser le diagramme depuis Power BI** relit les modifications externes sans copier les coordonnées de la disposition native. **Détecter automatiquement les relations** lance la détection native de Desktop après confirmation et sauvegarde ; examinez et fermez ses dialogues avant de choisir **Terminer la détection et actualiser le diagramme**.
+Dans la version 1.8.5, cliquez ou faites glisser entre des colonnes pour préparer un brouillon en pointillés, puis vérifiez-le/appliquez-le. Faites un clic droit sur une ligne pour choisir sa couleur, la modifier ou la supprimer. Les paramètres de groupe proposent des images PNG/JPEG locales et davantage d’icônes ; faites glisser l’arrière-plan ou l’en-tête du groupe. Les tables de date/heure automatiques sont masquées par défaut. **Actualiser le diagramme depuis Power BI** relit les modifications externes sans copier les coordonnées de la disposition native. **Détecter automatiquement les relations** lance la détection native de Desktop après confirmation et sauvegarde ; examinez et fermez ses dialogues avant de choisir **Terminer la détection et actualiser le diagramme**.
 
 <a name="power-bi-tv-tool"></a>
 ### Power BI TV Tool

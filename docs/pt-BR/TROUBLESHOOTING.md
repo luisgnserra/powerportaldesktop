@@ -4,7 +4,13 @@
 [🇺🇸 English](../TROUBLESHOOTING.md) · [🇧🇷 Português](TROUBLESHOOTING.md) · [🇪🇸 Español](../es/TROUBLESHOOTING.md) · [🇨🇳 简体中文](../zh-CN/TROUBLESHOOTING.md) · [🇫🇷 Français](../fr/TROUBLESHOOTING.md) · [🇯🇵 日本語](../ja/TROUBLESHOOTING.md) · [🇮🇳 हिन्दी](../hi/TROUBLESHOOTING.md) · [🇸🇦 العربية](../ar/TROUBLESHOOTING.md)
 <!-- /language-selector -->
 
-**1.8.4 — Baixar atualizações pelo navegador**
+**1.8.5 — Correção das medições da atualização nativa**
+
+Análise Atualização agora reconhece o comando XML Refresh nativo usado pelo Power BI Desktop, inclusive dentro de Batch, além de XMLA Process e TMSL refresh. Antes, a atualização podia executar, mas seu progresso era descartado como não relacionado, deixando 0 tabelas medidas, contagens indisponíveis e refreshCompletionNotProven. Um resultado explícito de sucesso do mecanismo agora é aceito quando o campo opcional Error está ausente; códigos de erro diferentes de zero e erros XMLA continuam prevalecendo. O progresso ainda exige correlação exata de requisição/atividade, excluindo consultas dos visuais não relacionadas.
+
+Antes do primeiro comando reconhecido, a interface informa que aguarda eventos de atualização do Power BI. Conclusão não confirmada agora mostra orientação traduzida em vez de somente um código técnico. Atualize o aplicativo, conecte ao PBIX correto e execute Atualizar e analisar novamente; relatórios antigos incompletos são preservados e não são reclassificados como sucesso. O aplicativo empacotado foi validado de ponta a ponta numa atualização real autorizada, com atividade por tabela, contagens, conclusão automática e histórico preservado após recarregar. Os prints não contêm dados nem nomes de modelos do usuário; os exemplos da documentação continuam sintéticos.
+
+**1.8.5 — Baixar atualizações pelo navegador**
 
 Quando houver uma versão nova, o aviso de atualização agora oferece Baixar pelo navegador ao lado de Atualizar agora. O botão abre no navegador padrão o endereço oficial do instalador detectado no GitHub, sem fechar o Power Portal nem iniciar a instalação. Execute o instalador baixado manualmente quando desejar. A opção continua disponível após um erro na atualização automática. Falhas ao abrir o navegador são exibidas. Atualizar agora continua baixando pelo app, verificando SHA-256 e tamanho e solicitando autorização do Windows. Downloads pelo navegador não passam pela verificação automática do app: compare o SHA-256 publicado antes de executar o instalador. Os dois botões e a orientação estão traduzidos nos oito idiomas.
 
@@ -31,7 +37,7 @@ Quando houver uma versão nova, o aviso de atualização agora oferece Baixar pe
 | SHA-256 não coincide | **Não execute o arquivo.** Remova/mova o download inválido, baixe o Asset oficial novamente e compare o checksum publicado. |
 | Download GitHub falha | Confira conexão, proxy/firewall e URL da Release. A TI pode distribuir o EXE verificado por canal aprovado. |
 | PowerShell informa erro de conexão/TLS no envio | Use a linha TLS 1.2 documentada antes de baixar o auxiliar no Windows PowerShell e tente novamente. O atualizador nativo já usa HTTPS/TLS de forma independente. |
-| SmartScreen/editor desconhecido | A 1.8.4 não é assinada. Confira checksum e origem; procure a TI se o dispositivo bloquear programas sem assinatura. |
+| SmartScreen/editor desconhecido | A 1.8.5 não é assinada. Confira checksum e origem; procure a TI se o dispositivo bloquear programas sem assinatura. |
 | Editor de relacionamentos somente leitura | Importar projeto permite apenas organização visual. Conecte a um modelo local ao vivo para criar/editar/excluir. |
 | Relacionamento mudou desde a leitura | Leia o modelo novamente e revise a ligação atualizada. Edições antigas são rejeitadas para não substituir outra alteração. |
 | Relacionamento duplicado ou segunda ligação ativa | Use pares diferentes de colunas ou desative a ligação ativa entre essas tabelas antes de ativar outra. |
@@ -55,7 +61,7 @@ Escreva para **[contato@consultoriaexcelencia.com.br](mailto:contato@consultoria
 
 Inclua:
 
-- Versão do Power Portal (1.8.4 para esta Release).
+- Versão do Power Portal (1.8.5 para esta Release).
 - Versão Windows e versão/edição Power BI Desktop.
 - Método de instalação (assistente ou PowerShell).
 - Passos para reproduzir e erro exato visível.

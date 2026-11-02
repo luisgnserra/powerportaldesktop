@@ -29,9 +29,9 @@ if ($Silent -and -not $DownloadOnly) {
     }
 }
 
-$version = '1.8.4'
+$version = '1.8.5'
 $asset = "PowerPortal-Setup-$version-x64.exe"
-$expectedHash = 'E720BB0DD6F29E0454DD5F9CE98D7BD17A359DC7761667EE4D66BA657C07712C'
+$expectedHash = '3FD7F0F0B708355BAFE8C11ACE0D382C9D4AFDE78759EB57BA3B33DA9E7AA372'
 $url = "https://github.com/luisgnserra/powerportaldesktop/releases/download/v$version/$asset"
 $directory = [System.IO.Path]::GetFullPath($DownloadDirectory)
 $null = New-Item -ItemType Directory -Path $directory -Force
