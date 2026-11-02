@@ -5,7 +5,8 @@
 | Idioma / Language | Link |
 | :--- | :--- |
 | 🇺🇸 English | [README.md](README.md) |
-| 🇧🇷 Português | [README.pt-BR.md](README.pt-BR.md) |
+| 🇧🇷 ![Brasil](https://githubusercontent.com) Brasil
+ Português | [README.pt-BR.md](README.pt-BR.md) |
 | 🇪🇸 Español | [README.es.md](README.es.md) |
 | 🇨🇳 简体中文 | [README.zh-CN.md](README.zh-CN.md) |
 | 🇫🇷 Français | [README.fr.md](README.fr.md) |
