@@ -4,6 +4,12 @@
 [🇺🇸 English](../USAGE.md) · [🇧🇷 Português](USAGE.md) · [🇪🇸 Español](../es/USAGE.md) · [🇨🇳 简体中文](../zh-CN/USAGE.md) · [🇫🇷 Français](../fr/USAGE.md) · [🇯🇵 日本語](../ja/USAGE.md) · [🇮🇳 हिन्दी](../hi/USAGE.md) · [🇸🇦 العربية](../ar/USAGE.md)
 <!-- /language-selector -->
 
+**1.8.8 — Linhas dinâmicas e envio de temas verificado**
+
+No Mapa de relacionamentos, Estilo das linhas alterna entre Curvas e Retas com ângulos de 90 graus. As extremidades usam dinamicamente as bordas superior/inferior ou esquerda/direita voltadas uma para a outra, considerando o tamanho real das caixas. Nas laterais, mantém a altura da coluna relacionada. Setas pretas com borda branca acompanham trechos retos sem ficar inclinadas nos cantos. O estilo é salvo automaticamente e acompanha o JSON exportado; layouts antigos continuam com curvas. Isso não altera o layout nativo do Power BI nem calcula desvios globais de obstáculos.
+
+Enviar tema diretamente para o Power BI devolve o foco ao Power Portal após a importação nativa e durante a verificação por exportação, somente quando o Power BI estiver em primeiro plano. Após verificar o tema aplicado, mostra o Power BI; erros também mostram a janela selecionada para revisão. Diálogos nativos podem aparecer brevemente e não são ocultados: o Desktop não oferece API suportada de temas sem diálogos. Trocas assíncronas de guia após a importação são tratadas antes da confirmação. Um teste real autorizado no aplicativo empacotado verificou importação/exportação, retorno ao Portal e ativação final do Power BI; depois restaurou o tema Padrão original, sem salvar o PBIX. Todos os prints da documentação usam dados sintéticos.
+
 **1.8.7 — Seleção de cores mais clara e confiável**
 
 As onze cores do tema agora possuem uma amostra nativa visível e um botão Selecionar cor ao lado do campo HEX editável. Clique na amostra ou no botão, ou use Enter/Espaço com o botão em foco. O seletor não depende mais de um campo invisível sem tamanho nem de clique duplo no HEX. A edição manual, importação de temas, prévia em tempo real e exportação JSON continuam disponíveis. Falhas ao abrir são mostradas explicitamente. A abertura nativa foi verificada repetidamente no aplicativo Windows, além dos onze botões por mouse/teclado e dos textos nos oito idiomas.
@@ -141,7 +147,7 @@ O aplicativo não envia arquivos, metadados, linhas ou credenciais das fontes ao
 
 [Configuração](CONFIGURATION.md) · [Solução de problemas](TROUBLESHOOTING.md)
 
-Na 1.8.7, desenhar só prepara um rascunho: clique/arraste pares exatos de colunas e revise antes de aplicar. Exclusão pelo botão direito usa a mesma confirmação e backup. A detecção nativa é separada e pode criar várias ligações: revise no Power BI, feche os diálogos e conclua no Power Portal antes de gravar ou atualizar. Imagens de grupos e preferência de exibição ficam somente no diagrama. [Novo fluxo de relacionamentos](RELATIONSHIPS.md#native-automatic-relationship-detection).
+Na 1.8.8, desenhar só prepara um rascunho: clique/arraste pares exatos de colunas e revise antes de aplicar. Exclusão pelo botão direito usa a mesma confirmação e backup. A detecção nativa é separada e pode criar várias ligações: revise no Power BI, feche os diálogos e conclua no Power Portal antes de gravar ou atualizar. Imagens de grupos e preferência de exibição ficam somente no diagrama. [Novo fluxo de relacionamentos](RELATIONSHIPS.md#native-automatic-relationship-detection).
 
 <a name="refresh-performance"></a>
 ## Desempenho de Atualização

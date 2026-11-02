@@ -43,7 +43,7 @@ Quando houver uma versão nova, o aviso de atualização agora oferece Baixar pe
 | SHA-256 não coincide | **Não execute o arquivo.** Remova/mova o download inválido, baixe o Asset oficial novamente e compare o checksum publicado. |
 | Download GitHub falha | Confira conexão, proxy/firewall e URL da Release. A TI pode distribuir o EXE verificado por canal aprovado. |
 | PowerShell informa erro de conexão/TLS no envio | Use a linha TLS 1.2 documentada antes de baixar o auxiliar no Windows PowerShell e tente novamente. O atualizador nativo já usa HTTPS/TLS de forma independente. |
-| SmartScreen/editor desconhecido | A 1.8.7 não é assinada. Confira checksum e origem; procure a TI se o dispositivo bloquear programas sem assinatura. |
+| SmartScreen/editor desconhecido | A 1.8.8 não é assinada. Confira checksum e origem; procure a TI se o dispositivo bloquear programas sem assinatura. |
 | Editor de relacionamentos somente leitura | Importar projeto permite apenas organização visual. Conecte a um modelo local ao vivo para criar/editar/excluir. |
 | Relacionamento mudou desde a leitura | Leia o modelo novamente e revise a ligação atualizada. Edições antigas são rejeitadas para não substituir outra alteração. |
 | Relacionamento duplicado ou segunda ligação ativa | Use pares diferentes de colunas ou desative a ligação ativa entre essas tabelas antes de ativar outra. |
@@ -67,7 +67,7 @@ Escreva para **[contato@consultoriaexcelencia.com.br](mailto:contato@consultoria
 
 Inclua:
 
-- Versão do Power Portal (1.8.7 para esta Release).
+- Versão do Power Portal (1.8.8 para esta Release).
 - Versão Windows e versão/edição Power BI Desktop.
 - Método de instalação (assistente ou PowerShell).
 - Passos para reproduzir e erro exato visível.

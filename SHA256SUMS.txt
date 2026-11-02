@@ -1,1 +1,1 @@
-1137b13548fac555a425cbf9d5e9e2fb94a829981ea3e5a4bf231f3aef69f5ac  PowerPortal-Setup-1.8.7-x64.exe
+5fb68b15823c21787782e6f6928d5f78e2730a52c3bc406ecb4b401d8bcbec7e  PowerPortal-Setup-1.8.8-x64.exe

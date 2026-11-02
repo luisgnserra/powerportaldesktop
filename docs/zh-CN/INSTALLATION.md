@@ -17,7 +17,7 @@ Windows 10/11 x64、管理员安装权限，以及支持外部工具的 Power BI
 ## 简单安装
 
 1. 打开[最新 Release](https://github.com/luisgnserra/powerportaldesktop/releases/latest)。
-2. 在 **Assets（发布附件）**中下载本版本的 `PowerPortal-Setup-1.8.7-x64.exe`。不要将自动生成的源代码归档当作安装程序下载。
+2. 在 **Assets（发布附件）**中下载本版本的 `PowerPortal-Setup-1.8.8-x64.exe`。不要将自动生成的源代码归档当作安装程序下载。
 3. 可选择[验证 SHA-256](#verify-the-installer)。
 4. 运行可执行文件并批准用户帐户控制提示。
 5. 接受显示的依赖项条款，选择文件夹，并使用旗帜选择默认语言。安装程序会建议 Windows 界面语言；不支持的语言默认使用英语。
@@ -45,12 +45,12 @@ Windows 10/11 x64、管理员安装权限，以及支持外部工具的 Power BI
 ```powershell
 $script = Join-Path $env:TEMP 'Install-PowerPortal.ps1'
 [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
-Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/luisgnserra/powerportaldesktop/v1.8.7/install.ps1' -OutFile $script
+Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/luisgnserra/powerportaldesktop/v1.8.8/install.ps1' -OutFile $script
 Get-Content -LiteralPath $script
 & $script
 ```
 
-此带版本的 URL 将辅助脚本固定到 1.8.7，不会悄悄跟随未来版本。脚本还固定了安装程序文件名及 SHA-256 校验和，通过 HTTPS 下载，在运行前验证可执行文件，并在安装程序成功退出后检查安装注册。
+此带版本的 URL 将辅助脚本固定到 1.8.8，不会悄悄跟随未来版本。脚本还固定了安装程序文件名及 SHA-256 校验和，通过 HTTPS 下载，在运行前验证可执行文件，并在安装程序成功退出后检查安装注册。
 
 TLS 这一行针对较旧的 Windows PowerShell 默认配置，在当前 PowerShell 进程中启用 HTTPS TLS 1.2。它不会更改 Windows 安全策略或执行策略。
 
@@ -92,7 +92,7 @@ TLS 这一行针对较旧的 Windows PowerShell 默认配置，在当前 PowerSh
 验证校验和后，管理员可以运行：
 
 ```powershell
-$setup = "$env:USERPROFILE\Downloads\PowerPortal-Setup-1.8.7-x64.exe"
+$setup = "$env:USERPROFILE\Downloads\PowerPortal-Setup-1.8.8-x64.exe"
 $process = Start-Process -FilePath $setup -ArgumentList '/S' -Wait -PassThru
 if ($process.ExitCode -ne 0) { throw "Installer failed: $($process.ExitCode)" }
 ```
@@ -105,12 +105,12 @@ if ($process.ExitCode -ne 0) { throw "Installer failed: $($process.ExitCode)" }
 **1.8.5 x64** 的预期 SHA-256：
 
 ```text
-1137B13548FAC555A425CBF9D5E9E2FB94A829981EA3E5A4BF231F3AEF69F5AC
+5FB68B15823C21787782E6F6928D5F78E2730A52C3BC406ECB4B401D8BCBEC7E
 ```
 
 ```powershell
-$file = "$env:USERPROFILE\Downloads\PowerPortal-Setup-1.8.7-x64.exe"
-$expected = '1137B13548FAC555A425CBF9D5E9E2FB94A829981EA3E5A4BF231F3AEF69F5AC'
+$file = "$env:USERPROFILE\Downloads\PowerPortal-Setup-1.8.8-x64.exe"
+$expected = '5FB68B15823C21787782E6F6928D5F78E2730A52C3BC406ECB4B401D8BCBEC7E'
 if ((Get-FileHash -LiteralPath $file -Algorithm SHA256).Hash -ne $expected) {
     throw 'Checksum mismatch. Do not run this installer.'
 }

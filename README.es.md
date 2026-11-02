@@ -4,6 +4,12 @@
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md) · [🇨🇳 简体中文](README.zh-CN.md) · [🇫🇷 Français](README.fr.md) · [🇯🇵 日本語](README.ja.md) · [🇮🇳 हिन्दी](README.hi.md) · [🇸🇦 العربية](README.ar.md)
 <!-- /language-selector -->
 
+**1.8.8 — Líneas dinámicas y envío de temas verificado**
+
+En Mapa de relaciones, Estilo de líneas alterna entre Curvas y Líneas rectas con ángulos de 90 grados. Los extremos usan dinámicamente los bordes superior/inferior o izquierdo/derecho enfrentados, considerando el tamaño real de las tarjetas. Las conexiones laterales conservan la altura de la columna relacionada. Las flechas negras con borde blanco siguen los tramos rectos sin inclinarse en las esquinas. El estilo se guarda automáticamente y viaja con el JSON exportado; los diseños anteriores conservan las curvas. No cambia el diseño nativo de Power BI ni calcula rutas globales para evitar obstáculos.
+
+Enviar tema directamente a Power BI devuelve el foco a Power Portal tras la importación nativa y durante la verificación por exportación, solo si Power BI está en primer plano. Una vez verificado el tema, muestra Power BI; los errores también muestran la ventana seleccionada. Los diálogos nativos pueden aparecer brevemente y no se ocultan: Desktop no tiene una API de temas compatible sin diálogos. Se gestionan los cambios asíncronos de pestaña antes de confirmar el tema. Una prueba real autorizada de la aplicación empaquetada verificó importación/exportación, retorno al Portal y activación final de Power BI; después restauró el tema Predeterminado original sin guardar el PBIX. Todas las capturas usan datos sintéticos.
+
 **1.8.7 — Selección de colores clara y fiable**
 
 Los once colores del tema tienen ahora una muestra nativa visible y un botón Seleccionar color junto al campo HEX editable. Pulse la muestra o el botón, o use Intro/Espacio con el botón enfocado. El selector ya no depende de un campo invisible sin tamaño ni de un doble clic en HEX. Se conservan la edición manual, importación, vista previa en vivo y exportación JSON. Los errores se muestran explícitamente. Se verificó varias veces la apertura nativa en Windows, además de los once botones por ratón/teclado y los textos en ocho idiomas.
@@ -56,13 +62,13 @@ Rendimiento de actualización aparece inmediatamente debajo de Mapa de relacione
 <a name="option-1-install-with-a-few-clicks"></a>
 ### Opción 1: instalar con unos pocos clics
 
-1. [Descargue Power Portal Desktop 1.8.7 para Windows x64](https://github.com/luisgnserra/powerportaldesktop/releases/download/v1.8.7/PowerPortal-Setup-1.8.7-x64.exe).
+1. [Descargue Power Portal Desktop 1.8.8 para Windows x64](https://github.com/luisgnserra/powerportaldesktop/releases/download/v1.8.8/PowerPortal-Setup-1.8.8-x64.exe).
 2. Ejecute el instalador y apruebe la solicitud de administrador de Windows.
 3. Elija la carpeta de instalación y el idioma predeterminado.
 4. Complete la instalación y, después, cierre y vuelva a abrir Power BI Desktop.
 5. Abra un PBIX y seleccione **Herramientas externas > Power Portal**.
 
-**Windows puede advertir que el editor es desconocido:** la versión 1.8.7 no está firmada digitalmente. Continúe únicamente si confía en esta distribución. Si su organización bloquea el software sin firma, contacte con TI en lugar de eludir su política.
+**Windows puede advertir que el editor es desconocido:** la versión 1.8.8 no está firmada digitalmente. Continúe únicamente si confía en esta distribución. Si su organización bloquea el software sin firma, contacte con TI en lugar de eludir su política.
 
 [Última versión](https://github.com/luisgnserra/powerportaldesktop/releases/latest) · [Guía de instalación](docs/es/INSTALLATION.md) · [Configuración](docs/es/CONFIGURATION.md) · [Solución de problemas](docs/es/TROUBLESHOOTING.md)
 
@@ -75,7 +81,7 @@ El instalador añade **Power Portal** a **Herramientas externas** de Power BI De
 
 La captura proporcionada de la cinta está en portugués: **Ferramentas externas** significa **Herramientas externas**. Power Portal abre una **ventana independiente conectada a Power BI**, no un objeto visual incrustado en el informe ni un nuevo panel interno de Power BI.
 
-![Inicio de Power Portal 1.8.7, barra lateral completa y aviso de conexión al iniciar](docs/images/es/home.png)
+![Inicio de Power Portal 1.8.8, barra lateral completa y aviso de conexión al iniciar](docs/images/es/home.png)
 
 **¿Ya tiene Power BI abierto?** Al iniciarse desde un acceso directo, Power Portal detecta los modelos locales abiertos y muestra un aviso de conexión. Elija **Buscar modelos abiertos**, seleccione su archivo y conéctese. Después podrá consultar sus datos y enviar los cambios compatibles de vuelta con confirmación.
 
@@ -92,7 +98,7 @@ Comprenda los vínculos reales entre tablas en un lienzo que permite arrastrarla
 
 Cree, edite, active/desactive y elimine relaciones en el modelo de Power BI conectado **tras confirmar y realizar una copia de seguridad de los metadatos**. El estilo visual permanece en Power Portal; no cambia los nombres de las tablas ni modifica la disposición nativa de Power BI. [Tutorial completo de relaciones](docs/es/RELATIONSHIPS.md).
 
-En 1.8.7, haga clic o arrastre entre columnas exactas para preparar un vínculo; haga clic con el botón derecho en las líneas para cambiar su color, editarlas y eliminarlas con confirmación. Los grupos admiten imágenes locales y más de 30 iconos. Las tablas automáticas de fecha/hora se ocultan de forma predeterminada con un control de visibilidad. Actualice desde Power BI después de ediciones externas o invoque la detección automática nativa de Desktop con una copia de seguridad previa y un paso independiente de revisión/finalización.
+En 1.8.8, haga clic o arrastre entre columnas exactas para preparar un vínculo; haga clic con el botón derecho en las líneas para cambiar su color, editarlas y eliminarlas con confirmación. Los grupos admiten imágenes locales y más de 30 iconos. Las tablas automáticas de fecha/hora se ocultan de forma predeterminada con un control de visibilidad. Actualice desde Power BI después de ediciones externas o invoque la detección automática nativa de Desktop con una copia de seguridad previa y un paso independiente de revisión/finalización.
 
 <a name="built-in-update-checks"></a>
 ### Comprobación de actualizaciones integrada
@@ -103,7 +109,7 @@ Windows solicita autorización de administrador. Solo se cierra Power Portal; Po
 
 ![Aviso de nueva versión y botón Actualizar ahora](docs/images/es/update-available.png)
 
-La captura utiliza un **aviso simulado de una futura versión 1.8.7** para ilustrar la interfaz, no para anunciar una versión publicada. **La versión 1.8.7 ya está publicada:** quienes tengan 1.6.2 o posterior pueden volver a abrir la aplicación o hacer clic en **Buscar actualizaciones** para recibirla. [Guía de actualizaciones](docs/es/UPDATES.md).
+La captura utiliza un **aviso simulado de una futura versión 1.8.8** para ilustrar la interfaz, no para anunciar una versión publicada. **La versión 1.8.8 ya está publicada:** quienes tengan 1.6.2 o posterior pueden volver a abrir la aplicación o hacer clic en **Buscar actualizaciones** para recibirla. [Guía de actualizaciones](docs/es/UPDATES.md).
 
 **¿Tiene 1.6.1 o anterior? Instale 1.6.2 manualmente una vez** para habilitar esta función. También puede usar **Buscar actualizaciones** para reintentar una comprobación fallida o sin conexión. El actualizador nunca instala nada por el mero hecho de abrir la aplicación.
 
@@ -115,13 +121,13 @@ Abra **Windows PowerShell 5.1 o PowerShell 7 en Windows**:
 ```powershell
 $script = Join-Path $env:TEMP 'Install-PowerPortal.ps1'
 [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
-Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/luisgnserra/powerportaldesktop/v1.8.7/install.ps1' -OutFile $script
+Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/luisgnserra/powerportaldesktop/v1.8.8/install.ps1' -OutFile $script
 # Review the downloaded script before running it.
 Get-Content -LiteralPath $script
 & $script
 ```
 
-El asistente descarga la **versión 1.8.7**, verifica su suma SHA-256 fijada y abre el mismo instalador. No instala Node.js, PHP ni un SDK de .NET, ni compila nada.
+El asistente descarga la **versión 1.8.8**, verifica su suma SHA-256 fijada y abre el mismo instalador. No instala Node.js, PHP ni un SDK de .NET, ni compila nada.
 
 Para una instalación desatendida, ejecute el mismo asistente desde una **ventana de PowerShell como administrador**:
 

@@ -4,6 +4,12 @@
 [🇺🇸 English](../SCREENSHOTS.md) · [🇧🇷 Português](SCREENSHOTS.md) · [🇪🇸 Español](../es/SCREENSHOTS.md) · [🇨🇳 简体中文](../zh-CN/SCREENSHOTS.md) · [🇫🇷 Français](../fr/SCREENSHOTS.md) · [🇯🇵 日本語](../ja/SCREENSHOTS.md) · [🇮🇳 हिन्दी](../hi/SCREENSHOTS.md) · [🇸🇦 العربية](../ar/SCREENSHOTS.md)
 <!-- /language-selector -->
 
+**1.8.8 — Linhas dinâmicas e envio de temas verificado**
+
+No Mapa de relacionamentos, Estilo das linhas alterna entre Curvas e Retas com ângulos de 90 graus. As extremidades usam dinamicamente as bordas superior/inferior ou esquerda/direita voltadas uma para a outra, considerando o tamanho real das caixas. Nas laterais, mantém a altura da coluna relacionada. Setas pretas com borda branca acompanham trechos retos sem ficar inclinadas nos cantos. O estilo é salvo automaticamente e acompanha o JSON exportado; layouts antigos continuam com curvas. Isso não altera o layout nativo do Power BI nem calcula desvios globais de obstáculos.
+
+Enviar tema diretamente para o Power BI devolve o foco ao Power Portal após a importação nativa e durante a verificação por exportação, somente quando o Power BI estiver em primeiro plano. Após verificar o tema aplicado, mostra o Power BI; erros também mostram a janela selecionada para revisão. Diálogos nativos podem aparecer brevemente e não são ocultados: o Desktop não oferece API suportada de temas sem diálogos. Trocas assíncronas de guia após a importação são tratadas antes da confirmação. Um teste real autorizado no aplicativo empacotado verificou importação/exportação, retorno ao Portal e ativação final do Power BI; depois restaurou o tema Padrão original, sem salvar o PBIX. Todos os prints da documentação usam dados sintéticos.
+
 **1.8.7 — Seleção de cores mais clara e confiável**
 
 As onze cores do tema agora possuem uma amostra nativa visível e um botão Selecionar cor ao lado do campo HEX editável. Clique na amostra ou no botão, ou use Enter/Espaço com o botão em foco. O seletor não depende mais de um campo invisível sem tamanho nem de clique duplo no HEX. A edição manual, importação de temas, prévia em tempo real e exportação JSON continuam disponíveis. Falhas ao abrir são mostradas explicitamente. A abertura nativa foi verificada repetidamente no aplicativo Windows, além dos onze botões por mouse/teclado e dos textos nos oito idiomas.
@@ -38,7 +44,7 @@ Desempenho de Atualização fica imediatamente abaixo de Mapa de relacionamentos
 
 [Voltar ao início](../../README.pt-BR.md) · [Instalar](INSTALLATION.md) · [Guia de segurança](USAGE.md)
 
-**Prints do aplicativo: Power Portal Desktop 1.8.7, interface em português.**
+**Prints do aplicativo: Power Portal Desktop 1.8.8, interface em português.**
 Os prints usam **metadados e valores de consulta sintéticos de demonstração**, não um PBIX de cliente. Estados conectados ilustram ações suportadas; nenhum modelo de cliente foi alterado para produzir as imagens. Rótulos nativos do seletor de arquivos podem seguir o idioma do Windows. O print verdadeiro da guia do Power BI foi fornecido pelo proprietário e recortado para remover o título privado do arquivo.
 
 As setas dos relacionamentos agora ficam sobre a curva e giram conforme sua direcao local, inclusive em ligacoes diagonais ou invertidas. Setas SVG maiores, de 36 × 26 unidades, sempre pretas com contorno branco de 3 unidades, independentemente da cor da linha. O filtro unidirecional continua do destino para a origem; o bidirecional mostra duas setas opostas. O filtro automatico conserva o indicador de interrogacao. Esta alteracao e apenas visual.
@@ -101,7 +107,7 @@ Iniciar pela guia Ferramentas externas transmite automaticamente a conexão daqu
 
 ![Nova versão disponível com Atualizar agora e aviso de autorização/edições não enviadas](../images/pt-BR/update-available.png)
 
-O print usa um **resultado futuro sintético da 1.8.7** para mostrar o aviso na 1.8.7. Não afirma que a 1.8.7 foi publicada. Usuários da 1.6.2 ou superior podem receber agora o aviso real da 1.8.7.
+O print usa um **resultado futuro sintético da 1.8.8** para mostrar o aviso na 1.8.8. Não afirma que a 1.8.8 foi publicada. Usuários da 1.6.2 ou superior podem receber agora o aviso real da 1.8.8.
 
 Na 1.6.4, a faixa âmbar fica visível durante a rolagem e anima suavemente, exceto quando movimento reduzido está habilitado. Não há faixa permanente “aplicativo atualizado” ocupando espaço.
 
@@ -183,7 +189,7 @@ A nova ferramenta exclusiva do Desktop mostra ligações reais, cardinalidades, 
 
 Selecione uma linha para inspecionar colunas, cardinalidade, filtros e estado ativo. **Aplicar relacionamento no Power BI** ou **Excluir relacionamento no Power BI** grava cada edição após confirmação nativa e backup. Projetos importados são somente leitura. Estilos não renomeiam tabelas nem mudam o diagrama nativo. [Passo a passo completo e limites de segurança](RELATIONSHIPS.md).
 
-Na 1.8.7, clique ou arraste entre colunas para preparar um rascunho tracejado e revise/aplique. Botão direito na linha abre cor/editar/excluir. Grupos oferecem PNG/JPEG local e mais ícones; arraste pelo fundo ou título. Tabelas automáticas de data/hora ficam ocultas por padrão. **Atualizar diagrama do Power BI** relê mudanças externas sem copiar coordenadas nativas. **Detectar relacionamentos automaticamente** inicia a detecção nativa após confirmação/backup; revise e feche seus diálogos antes de **Concluir detecção e atualizar diagrama**.
+Na 1.8.8, clique ou arraste entre colunas para preparar um rascunho tracejado e revise/aplique. Botão direito na linha abre cor/editar/excluir. Grupos oferecem PNG/JPEG local e mais ícones; arraste pelo fundo ou título. Tabelas automáticas de data/hora ficam ocultas por padrão. **Atualizar diagrama do Power BI** relê mudanças externas sem copiar coordenadas nativas. **Detectar relacionamentos automaticamente** inicia a detecção nativa após confirmação/backup; revise e feche seus diálogos antes de **Concluir detecção e atualizar diagrama**.
 
 <a name="power-bi-tv-tool"></a>
 ### Power BI TV Tool

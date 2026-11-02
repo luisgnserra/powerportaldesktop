@@ -4,6 +4,12 @@
 [🇺🇸 English](../UPDATES.md) · [🇧🇷 Português](../pt-BR/UPDATES.md) · [🇪🇸 Español](UPDATES.md) · [🇨🇳 简体中文](../zh-CN/UPDATES.md) · [🇫🇷 Français](../fr/UPDATES.md) · [🇯🇵 日本語](../ja/UPDATES.md) · [🇮🇳 हिन्दी](../hi/UPDATES.md) · [🇸🇦 العربية](../ar/UPDATES.md)
 <!-- /language-selector -->
 
+**1.8.8 — Líneas dinámicas y envío de temas verificado**
+
+En Mapa de relaciones, Estilo de líneas alterna entre Curvas y Líneas rectas con ángulos de 90 grados. Los extremos usan dinámicamente los bordes superior/inferior o izquierdo/derecho enfrentados, considerando el tamaño real de las tarjetas. Las conexiones laterales conservan la altura de la columna relacionada. Las flechas negras con borde blanco siguen los tramos rectos sin inclinarse en las esquinas. El estilo se guarda automáticamente y viaja con el JSON exportado; los diseños anteriores conservan las curvas. No cambia el diseño nativo de Power BI ni calcula rutas globales para evitar obstáculos.
+
+Enviar tema directamente a Power BI devuelve el foco a Power Portal tras la importación nativa y durante la verificación por exportación, solo si Power BI está en primer plano. Una vez verificado el tema, muestra Power BI; los errores también muestran la ventana seleccionada. Los diálogos nativos pueden aparecer brevemente y no se ocultan: Desktop no tiene una API de temas compatible sin diálogos. Se gestionan los cambios asíncronos de pestaña antes de confirmar el tema. Una prueba real autorizada de la aplicación empaquetada verificó importación/exportación, retorno al Portal y activación final de Power BI; después restauró el tema Predeterminado original sin guardar el PBIX. Todas las capturas usan datos sintéticos.
+
 **1.8.6 — Siga la actualización dentro de Power Portal**
 
 Inicie Actualizar y analizar en Power Portal y vea tarjetas en vivo con cada tabla, estado observado, fase del motor, tiempo de actividad y el último texto de progreso nativo disponible de Power BI. Power Portal recupera el foco al iniciar y, si Power BI vuelve al primer plano, al finalizar. No roba repetidamente el foco de otras aplicaciones. Ver en Power BI abre el archivo seleccionado sin iniciar otra actualización; esta elección desactiva el retorno automático del foco durante esa captura.
@@ -39,12 +45,12 @@ La ejecución de desarrollo/desde el código fuente no descarga ni instala actua
 
 ![Aviso de actualización y botón Actualizar ahora controlado por el usuario](../images/es/update-available.png)
 
-La captura es un **aviso simulado de una futura versión 1.8.7** dentro de 1.8.7, únicamente para mostrar la interfaz. No es un anuncio de 1.8.7.
+La captura es un **aviso simulado de una futura versión 1.8.9** dentro de 1.8.8, únicamente para mostrar la interfaz. No es un anuncio de 1.8.9.
 
-<a name="receive-version-187-from-an-earlier-updater-enabled-version"></a>
-### Recibir la versión 1.8.7 desde una versión anterior con actualizador
+<a name="receive-version-188-from-an-earlier-updater-enabled-version"></a>
+### Recibir la versión 1.8.8 desde una versión anterior con actualizador
 
-Con **1.6.2, 1.6.3 o 1.6.4** instalado, vuelva a abrir la aplicación o haga clic en **Buscar actualizaciones**. La versión estable publicada **1.8.7** debería aparecer con **Actualizar ahora**. No instale 1.8.7 manualmente primero si desea observar este aviso. Las versiones anteriores a 1.6.4 usan su aviso original; el estilo visual destacado se conserva en 1.8.7. Haga clic en el botón de actualización cuando esté listo y apruebe la autorización de Windows.
+Con **1.6.2, 1.6.3 o 1.6.4** instalado, vuelva a abrir la aplicación o haga clic en **Buscar actualizaciones**. La versión estable publicada **1.8.8** debería aparecer con **Actualizar ahora**. No instale 1.8.8 manualmente primero si desea observar este aviso. Las versiones anteriores a 1.6.4 usan su aviso original; el estilo visual destacado se conserva en 1.8.8. Haga clic en el botón de actualización cuando esté listo y apruebe la autorización de Windows.
 
 La aplicación informa del inicio del instalador, no de una instalación completada y verificada: la instalación termina después de que se cierre la aplicación antigua. Compruebe la versión mostrada de la aplicación al volver a abrirla. Windows aún puede bloquear el instalador sin firma o requerir aprobación de TI.
 

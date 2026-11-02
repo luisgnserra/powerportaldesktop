@@ -4,9 +4,15 @@
 [🇺🇸 English](../RELATIONSHIPS.md) · [🇧🇷 Português](../pt-BR/RELATIONSHIPS.md) · [🇪🇸 Español](../es/RELATIONSHIPS.md) · [🇨🇳 简体中文](RELATIONSHIPS.md) · [🇫🇷 Français](../fr/RELATIONSHIPS.md) · [🇯🇵 日本語](../ja/RELATIONSHIPS.md) · [🇮🇳 हिन्दी](../hi/RELATIONSHIPS.md) · [🇸🇦 العربية](../ar/RELATIONSHIPS.md)
 <!-- /language-selector -->
 
+**1.8.8 — 动态关系连线和经验证的主题发送**
+
+在关系图中，“线条样式”可切换曲线或仅含 90 度转角的直线。端点根据表格位置及卡片实际大小，动态连接相对的上/下或左/右边缘；侧面连接保留关联列的高度。白边黑色箭头沿直线段显示，不再斜跨转角。样式自动保存并包含在导出的图表 JSON 中；旧布局仍使用曲线。这不会改变 Power BI 原生布局，也不执行全局避障。
+
+直接发送主题到 Power BI 会在原生导入后及导出验证期间将焦点返回 Power Portal，且仅在 Power BI 位于前台时执行。验证主题后显示 Power BI；发生错误时也显示所选窗口供检查。原生对话框可能短暂出现，且不会被隐藏：Desktop 没有受支持的无对话框主题 API。确认主题前会处理导入后异步切换的功能区选项卡。经过授权的打包应用实机测试验证了导入/导出、Portal 焦点恢复及最终 Power BI 激活，随后恢复原来的默认主题，未保存 PBIX。文档截图均使用合成数据。
+
 [返回主页](../../README.zh-CN.md) · [截图](SCREENSHOTS.md) · [模型安全](USAGE.md)
 
-适用于 **Power Portal Desktop 1.8.7**。这是仅适用于 Desktop 的新工具，独立于 Power BI 自身的模型视图。它读取真实的表/列关系，并可在确认后将更改应用到已连接的本地语义模型。
+适用于 **Power Portal Desktop 1.8.8**。这是仅适用于 Desktop 的新工具，独立于 Power BI 自身的模型视图。它读取真实的表/列关系，并可在确认后将更改应用到已连接的本地语义模型。
 
 ![包含 Facts 和 Dimensions 分组、基数及彩色关系线的关系画布](../images/zh-CN/relationship-map.png)
 

@@ -4,6 +4,12 @@
 [🇺🇸 English](../UPDATES.md) · [🇧🇷 Português](../pt-BR/UPDATES.md) · [🇪🇸 Español](../es/UPDATES.md) · [🇨🇳 简体中文](../zh-CN/UPDATES.md) · [🇫🇷 Français](UPDATES.md) · [🇯🇵 日本語](../ja/UPDATES.md) · [🇮🇳 हिन्दी](../hi/UPDATES.md) · [🇸🇦 العربية](../ar/UPDATES.md)
 <!-- /language-selector -->
 
+**1.8.8 — Lignes dynamiques et envoi de thèmes vérifié**
+
+Dans la carte des relations, Style des lignes permet de choisir des courbes ou des lignes droites avec angles à 90 degrés. Les extrémités utilisent dynamiquement les bords haut/bas ou gauche/droite qui se font face, selon la taille réelle des cartes. Les connexions latérales conservent la hauteur de la colonne liée. Les flèches noires à contour blanc suivent les segments droits sans couper les angles en diagonale. Le style est enregistré automatiquement et inclus dans le JSON exporté ; les anciens schémas restent courbes. Cela ne modifie pas la disposition native de Power BI et ne réalise pas un évitement global des obstacles.
+
+Envoyer le thème directement à Power BI rend le focus à Power Portal après l’importation native et pendant la vérification par exportation, uniquement si Power BI est au premier plan. Une fois le thème vérifié, Power BI est affiché ; les erreurs affichent également la fenêtre sélectionnée. Les boîtes de dialogue natives peuvent apparaître brièvement et ne sont pas masquées : Desktop ne dispose pas d’une API de thèmes prise en charge sans dialogue. Les changements asynchrones d’onglet sont gérés avant confirmation. Un test réel autorisé de l’application empaquetée a vérifié importation/exportation, retour au Portal et activation finale de Power BI, puis restauré le thème Par défaut original sans enregistrer le PBIX. Les captures utilisent des données synthétiques.
+
 **1.8.6 — Suivez l’actualisation dans Power Portal**
 
 Lancez Actualiser et analyser dans Power Portal et suivez les cartes en direct : table, état observé, phase du moteur, durée d’activité et dernier texte natif disponible de Power BI. Power Portal reprend le focus après le lancement et, si Power BI revient au premier plan, après la fin native. Il ne reprend pas constamment le focus aux autres applications. Voir dans Power BI ouvre le fichier sélectionné sans relancer l’actualisation ; ce choix désactive le retour automatique pour cette capture.
@@ -39,12 +45,12 @@ L’exécution de développement/depuis les sources ne télécharge et n’insta
 
 ![Notification de mise à jour et bouton Mettre à jour maintenant contrôlé par l’utilisateur](../images/fr/update-available.png)
 
-La capture est une **notification simulée d’une future version 1.8.7** dans 1.8.7, montrant uniquement l’interface. Ce n’est pas une annonce de 1.8.7.
+La capture est une **notification simulée d’une future version 1.8.9** dans 1.8.8, montrant uniquement l’interface. Ce n’est pas une annonce de 1.8.9.
 
-<a name="receive-version-187-from-an-earlier-updater-enabled-version"></a>
-### Recevoir la version 1.8.7 depuis une version antérieure disposant de l’outil de mise à jour
+<a name="receive-version-188-from-an-earlier-updater-enabled-version"></a>
+### Recevoir la version 1.8.8 depuis une version antérieure disposant de l’outil de mise à jour
 
-Avec **1.6.2, 1.6.3 ou 1.6.4** installé, rouvrez l’application ou cliquez sur **Rechercher des mises à jour**. La version stable publiée **1.8.7** devrait apparaître avec **Mettre à jour maintenant**. N’installez pas d’abord 1.8.7 manuellement si vous souhaitez observer cette notification. Les versions antérieures à 1.6.4 utilisent leur bannière d’origine ; le style visuel bien visible est conservé en 1.8.7. Cliquez sur le bouton de mise à jour lorsque vous êtes prêt et acceptez l’autorisation Windows.
+Avec **1.6.2, 1.6.3 ou 1.6.4** installé, rouvrez l’application ou cliquez sur **Rechercher des mises à jour**. La version stable publiée **1.8.8** devrait apparaître avec **Mettre à jour maintenant**. N’installez pas d’abord 1.8.8 manuellement si vous souhaitez observer cette notification. Les versions antérieures à 1.6.4 utilisent leur bannière d’origine ; le style visuel bien visible est conservé en 1.8.8. Cliquez sur le bouton de mise à jour lorsque vous êtes prêt et acceptez l’autorisation Windows.
 
 L’application signale le lancement du programme d’installation, pas une installation terminée et vérifiée : l’installation se termine après la fermeture de l’ancienne application. Vérifiez la version affichée après réouverture. Windows peut encore bloquer le programme d’installation non signé ou exiger une approbation du service informatique.
 

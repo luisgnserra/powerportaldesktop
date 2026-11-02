@@ -4,6 +4,12 @@
 [🇺🇸 English](UPDATES.md) · [🇧🇷 Português](pt-BR/UPDATES.md) · [🇪🇸 Español](es/UPDATES.md) · [🇨🇳 简体中文](zh-CN/UPDATES.md) · [🇫🇷 Français](fr/UPDATES.md) · [🇯🇵 日本語](ja/UPDATES.md) · [🇮🇳 हिन्दी](hi/UPDATES.md) · [🇸🇦 العربية](ar/UPDATES.md)
 <!-- /language-selector -->
 
+**1.8.8 — Dynamic relationship lines and verified theme delivery**
+
+In Relationship map, Line style switches between Curves and Straight lines with 90-degree angles. Endpoints dynamically use facing top/bottom or left/right table borders, taking the rendered card size into account. Side connections retain the linked column height. Black arrows with white outlines follow straight segments rather than bisecting corners. The style saves automatically and travels with exported diagram JSON; older layouts remain curved. This does not change the native Power BI layout or perform global obstacle avoidance.
+
+Send theme directly to Power BI returns focus to Power Portal after native import and during export verification, only when Power BI is foreground. Once the applied theme is verified, Power BI is shown; errors also bring the selected window forward for review. Native dialogs may appear briefly and are not hidden: Desktop has no supported dialog-free theme API. Delayed ribbon tab changes after import are handled before checking the applied theme. An authorized real test in the packaged app verified import/export, Portal focus return and final Power BI activation, then restored the original Default theme without saving the PBIX. All documentation screenshots use synthetic data.
+
 **1.8.6 — Follow native refresh inside Power Portal**
 
 Start Refresh and analyze in Power Portal and follow live cards with each table, observed status, engine phase, activity time and the latest available native Power BI progress text. Power Portal regains focus after launch and, if Power BI brings itself forward again, after native completion. It does not repeatedly take focus from other applications. View in Power BI opens the selected file without starting another refresh; choosing it disables automatic focus return for that capture.
@@ -37,11 +43,11 @@ The development/source run does not download or install updates.
 
 ![Update notification and user-controlled Update now button](images/update-available.png)
 
-The screenshot is a **simulated future 1.8.7 notification** inside 1.8.7, demonstrating the UI only. It is not an announcement of 1.8.7.
+The screenshot is a **simulated future 1.8.9 notification** inside 1.8.8, demonstrating the UI only. It is not an announcement of 1.8.9.
 
-### Receive version 1.8.7 from an earlier updater-enabled version
+### Receive version 1.8.8 from an earlier updater-enabled version
 
-With **1.6.2, 1.6.3 or 1.6.4** installed, reopen the app or click **Check for updates**. The published stable **1.8.7** should appear with **Update now**. Do not install 1.8.7 manually first if you want to observe this notification. Versions before 1.6.4 use their original banner; the prominent visual styling is retained in 1.8.7. Click the update button when ready and approve Windows authorization.
+With **1.6.2, 1.6.3 or 1.6.4** installed, reopen the app or click **Check for updates**. The published stable **1.8.8** should appear with **Update now**. Do not install 1.8.8 manually first if you want to observe this notification. Versions before 1.6.4 use their original banner; the prominent visual styling is retained in 1.8.8. Click the update button when ready and approve Windows authorization.
 
 The app reports installer launch, not a verified completed installation: installation completes after the old app closes. Check the displayed application version after reopening. Windows can still block the unsigned installer or require IT approval.
 

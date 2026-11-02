@@ -4,6 +4,12 @@
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md) · [🇨🇳 简体中文](README.zh-CN.md) · [🇫🇷 Français](README.fr.md) · [🇯🇵 日本語](README.ja.md) · [🇮🇳 हिन्दी](README.hi.md) · [🇸🇦 العربية](README.ar.md)
 <!-- /language-selector -->
 
+**1.8.8 — 动态关系连线和经验证的主题发送**
+
+在关系图中，“线条样式”可切换曲线或仅含 90 度转角的直线。端点根据表格位置及卡片实际大小，动态连接相对的上/下或左/右边缘；侧面连接保留关联列的高度。白边黑色箭头沿直线段显示，不再斜跨转角。样式自动保存并包含在导出的图表 JSON 中；旧布局仍使用曲线。这不会改变 Power BI 原生布局，也不执行全局避障。
+
+直接发送主题到 Power BI 会在原生导入后及导出验证期间将焦点返回 Power Portal，且仅在 Power BI 位于前台时执行。验证主题后显示 Power BI；发生错误时也显示所选窗口供检查。原生对话框可能短暂出现，且不会被隐藏：Desktop 没有受支持的无对话框主题 API。确认主题前会处理导入后异步切换的功能区选项卡。经过授权的打包应用实机测试验证了导入/导出、Portal 焦点恢复及最终 Power BI 激活，随后恢复原来的默认主题，未保存 PBIX。文档截图均使用合成数据。
+
 **1.8.7 — 更清晰可靠的主题颜色选择**
 
 主题的全部十一种颜色现在都有可见的原生色块，以及位于可编辑 HEX 输入框旁的“选择颜色”按钮。点击色块或按钮，或聚焦按钮后按 Enter/空格即可打开。不再依赖不可见的零尺寸输入框或双击 HEX。手动输入、主题导入、实时预览和 JSON 导出保持可用，打开失败会明确提示。已在 Windows 应用中多次验证原生选择器，并测试十一按钮的鼠标和键盘操作及八种语言。
@@ -56,13 +62,13 @@ Power Portal 动画页眉现已包含文件名、连接状态以及五个读取�
 <a name="option-1-install-with-a-few-clicks"></a>
 ### 方式一：点击几次即可安装
 
-1. [下载适用于 Windows x64 的 Power Portal Desktop 1.8.7](https://github.com/luisgnserra/powerportaldesktop/releases/download/v1.8.7/PowerPortal-Setup-1.8.7-x64.exe)。
+1. [下载适用于 Windows x64 的 Power Portal Desktop 1.8.8](https://github.com/luisgnserra/powerportaldesktop/releases/download/v1.8.8/PowerPortal-Setup-1.8.8-x64.exe)。
 2. 运行安装程序，并批准 Windows 管理员权限提示。
 3. 选择安装文件夹和默认语言。
 4. 完成安装后，关闭并重新打开 Power BI Desktop。
 5. 打开一个 PBIX，选择**外部工具 > Power Portal**。
 
-**Windows 可能提示发布者未知：**1.8.7 版本尚未进行数字签名。只有在信任此分发来源时才继续。如果组织禁止未签名的软件，请联系 IT 部门，不要绕过其政策。
+**Windows 可能提示发布者未知：**1.8.8 版本尚未进行数字签名。只有在信任此分发来源时才继续。如果组织禁止未签名的软件，请联系 IT 部门，不要绕过其政策。
 
 [最新版本](https://github.com/luisgnserra/powerportaldesktop/releases/latest) · [安装指南](docs/zh-CN/INSTALLATION.md) · [配置](docs/zh-CN/CONFIGURATION.md) · [故障排除](docs/zh-CN/TROUBLESHOOTING.md)
 
@@ -75,7 +81,7 @@ Power Portal 动画页眉现已包含文件名、连接状态以及五个读取�
 
 此功能区截图的原始界面为葡萄牙语：**Ferramentas externas** 表示**外部工具**。Power Portal 打开的是**连接到 Power BI 的独立窗口**，不是嵌入式报表视觉对象，也不是 Power BI 内部的新窗格。
 
-![Power Portal 1.8.7 主页、完整侧栏及启动连接提示](docs/images/zh-CN/home.png)
+![Power Portal 1.8.8 主页、完整侧栏及启动连接提示](docs/images/zh-CN/home.png)
 
 **Power BI 已经打开？**从快捷方式启动时，Power Portal 会检测已打开的本地模型并显示连接提示。选择**查找已打开的模型**，选中您的文件并连接。之后即可查询数据，并在确认后将支持的更改发送回模型。
 
@@ -92,7 +98,7 @@ Power Portal 动画页眉现已包含文件名、连接状态以及五个读取�
 
 在**确认并备份元数据后**，可在连接的 Power BI 模型中创建、编辑、激活/停用及删除关系。视觉样式仅保存在 Power Portal 中，不会重命名表，也不会修改 Power BI 的原生布局。[完整关系教程](docs/zh-CN/RELATIONSHIPS.md)。
 
-在 1.8.7 中，可点击或拖动准确的列来准备关系；右键单击关系线可设置颜色、编辑或在确认后删除。分组支持本地图片和 30 多种图标。自动日期/时间表默认隐藏，并可切换可见性。在 Power BI 外部编辑后刷新关系图，或在事先备份后调用 Desktop 原生自动检测，并通过单独的复查/完成步骤结束。
+在 1.8.8 中，可点击或拖动准确的列来准备关系；右键单击关系线可设置颜色、编辑或在确认后删除。分组支持本地图片和 30 多种图标。自动日期/时间表默认隐藏，并可切换可见性。在 Power BI 外部编辑后刷新关系图，或在事先备份后调用 Desktop 原生自动检测，并通过单独的复查/完成步骤结束。
 
 <a name="built-in-update-checks"></a>
 ### 内置更新检查
@@ -103,7 +109,7 @@ Windows 会请求管理员授权。只有 Power Portal 会关闭，Power BI 仍�
 
 ![新版本通知和立即更新按钮](docs/images/zh-CN/update-available.png)
 
-截图使用**模拟的未来 1.8.7 通知**来展示界面，并非宣布该版本已发布。**1.8.7 现已发布：**使用 1.6.2 或更新版本的用户可以重新打开应用，或点击**检查更新**来获取更新。[更新指南](docs/zh-CN/UPDATES.md)。
+截图使用**模拟的未来 1.8.8 通知**来展示界面，并非宣布该版本已发布。**1.8.8 现已发布：**使用 1.6.2 或更新版本的用户可以重新打开应用，或点击**检查更新**来获取更新。[更新指南](docs/zh-CN/UPDATES.md)。
 
 **仍在使用 1.6.1 或更早版本？请先手动安装一次 1.6.2**，以启用此功能。检查失败或离线后，也可使用**检查更新**重试。更新程序绝不会仅因您打开应用就执行安装。
 
@@ -115,13 +121,13 @@ Windows 会请求管理员授权。只有 Power Portal 会关闭，Power BI 仍�
 ```powershell
 $script = Join-Path $env:TEMP 'Install-PowerPortal.ps1'
 [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
-Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/luisgnserra/powerportaldesktop/v1.8.7/install.ps1' -OutFile $script
+Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/luisgnserra/powerportaldesktop/v1.8.8/install.ps1' -OutFile $script
 # Review the downloaded script before running it.
 Get-Content -LiteralPath $script
 & $script
 ```
 
-此辅助脚本下载 **1.8.7 版本**，验证其固定的 SHA-256 校验和，然后打开同一个安装程序。它不会安装 Node.js、PHP 或 .NET SDK，也不会进行任何构建。
+此辅助脚本下载 **1.8.8 版本**，验证其固定的 SHA-256 校验和，然后打开同一个安装程序。它不会安装 Node.js、PHP 或 .NET SDK，也不会进行任何构建。
 
 如需无人值守安装，请在**管理员 PowerShell 窗口**中运行同一个辅助脚本：
 

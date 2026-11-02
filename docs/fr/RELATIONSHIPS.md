@@ -4,9 +4,15 @@
 [🇺🇸 English](../RELATIONSHIPS.md) · [🇧🇷 Português](../pt-BR/RELATIONSHIPS.md) · [🇪🇸 Español](../es/RELATIONSHIPS.md) · [🇨🇳 简体中文](../zh-CN/RELATIONSHIPS.md) · [🇫🇷 Français](RELATIONSHIPS.md) · [🇯🇵 日本語](../ja/RELATIONSHIPS.md) · [🇮🇳 हिन्दी](../hi/RELATIONSHIPS.md) · [🇸🇦 العربية](../ar/RELATIONSHIPS.md)
 <!-- /language-selector -->
 
+**1.8.8 — Lignes dynamiques et envoi de thèmes vérifié**
+
+Dans la carte des relations, Style des lignes permet de choisir des courbes ou des lignes droites avec angles à 90 degrés. Les extrémités utilisent dynamiquement les bords haut/bas ou gauche/droite qui se font face, selon la taille réelle des cartes. Les connexions latérales conservent la hauteur de la colonne liée. Les flèches noires à contour blanc suivent les segments droits sans couper les angles en diagonale. Le style est enregistré automatiquement et inclus dans le JSON exporté ; les anciens schémas restent courbes. Cela ne modifie pas la disposition native de Power BI et ne réalise pas un évitement global des obstacles.
+
+Envoyer le thème directement à Power BI rend le focus à Power Portal après l’importation native et pendant la vérification par exportation, uniquement si Power BI est au premier plan. Une fois le thème vérifié, Power BI est affiché ; les erreurs affichent également la fenêtre sélectionnée. Les boîtes de dialogue natives peuvent apparaître brièvement et ne sont pas masquées : Desktop ne dispose pas d’une API de thèmes prise en charge sans dialogue. Les changements asynchrones d’onglet sont gérés avant confirmation. Un test réel autorisé de l’application empaquetée a vérifié importation/exportation, retour au Portal et activation finale de Power BI, puis restauré le thème Par défaut original sans enregistrer le PBIX. Les captures utilisent des données synthétiques.
+
 [Retour à l’accueil](../../README.fr.md) · [Captures](SCREENSHOTS.md) · [Sécurité du modèle](USAGE.md)
 
-Disponible dans **Power Portal Desktop 1.8.7**. Ce nouvel outil est réservé à Desktop et distinct de la vue Modèle de Power BI. Il lit les relations réelles entre tables/colonnes et peut appliquer des modifications confirmées au modèle sémantique local connecté.
+Disponible dans **Power Portal Desktop 1.8.8**. Ce nouvel outil est réservé à Desktop et distinct de la vue Modèle de Power BI. Il lit les relations réelles entre tables/colonnes et peut appliquer des modifications confirmées au modèle sémantique local connecté.
 
 ![Canevas de relations avec groupes de faits et de dimensions, cardinalités et liens colorés](../images/fr/relationship-map.png)
 
