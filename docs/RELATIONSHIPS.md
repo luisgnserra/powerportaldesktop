@@ -6,9 +6,11 @@
 
 [Back to home](../README.md) · [Screenshots](SCREENSHOTS.md) · [Model safety](USAGE.md)
 
-Available in **Power Portal Desktop 1.7.2**. This is a new Desktop-only tool, separate from Power BI's own Model view. It reads real table/column relationships and can apply confirmed changes to the connected local semantic model.
+Available in **Power Portal Desktop 1.7.3**. This is a new Desktop-only tool, separate from Power BI's own Model view. It reads real table/column relationships and can apply confirmed changes to the connected local semantic model.
 
 ![Relationship canvas with Facts and Dimensions groups, cardinalities and colored links](images/relationship-map.png)
+
+Relationship arrows now sit directly on the curve and rotate along its local direction, including diagonal and reversed links. Larger 36 × 26 SVG arrowheads are always black with a 3-unit white outline, independently of the relationship line color. Single-direction filtering remains destination to source; bidirectional filtering shows two opposite arrows. Automatic filtering retains its question-mark indicator. This is a visual-only change.
 
 ## How to organize with groups
 

@@ -6,9 +6,11 @@
 
 [返回主页](../../README.zh-CN.md) · [截图](SCREENSHOTS.md) · [模型安全](USAGE.md)
 
-适用于 **Power Portal Desktop 1.7.2**。这是仅适用于 Desktop 的新工具，独立于 Power BI 自身的模型视图。它读取真实的表/列关系，并可在确认后将更改应用到已连接的本地语义模型。
+适用于 **Power Portal Desktop 1.7.3**。这是仅适用于 Desktop 的新工具，独立于 Power BI 自身的模型视图。它读取真实的表/列关系，并可在确认后将更改应用到已连接的本地语义模型。
 
 ![包含 Facts 和 Dimensions 分组、基数及彩色关系线的关系画布](../images/zh-CN/relationship-map.png)
+
+关系箭头现在直接位于曲线上，并按曲线局部方向旋转，包括对角线和反向连接。 更大的 SVG 箭头为 36 × 26 单位，始终为黑色并带有 3 单位白色轮廓，不受关系线颜色影响。 单向筛选仍从目标表传播到源表；双向筛选显示两个相反箭头。自动筛选保留问号标记。此更新仅更改显示效果。
 
 <a name="how-to-organize-with-groups"></a>
 ## 如何使用分组整理

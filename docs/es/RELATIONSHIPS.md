@@ -6,9 +6,11 @@
 
 [Volver al inicio](../../README.es.md) · [Capturas](SCREENSHOTS.md) · [Seguridad del modelo](USAGE.md)
 
-Disponible en **Power Portal Desktop 1.7.2**. Es una nueva herramienta exclusiva de Desktop, independiente de la vista Modelo de Power BI. Lee las relaciones reales entre tablas/columnas y puede aplicar cambios confirmados al modelo semántico local conectado.
+Disponible en **Power Portal Desktop 1.7.3**. Es una nueva herramienta exclusiva de Desktop, independiente de la vista Modelo de Power BI. Lee las relaciones reales entre tablas/columnas y puede aplicar cambios confirmados al modelo semántico local conectado.
 
 ![Lienzo de relaciones con grupos de hechos y dimensiones, cardinalidades y vínculos de colores](../images/es/relationship-map.png)
+
+Las flechas de relaciones ahora se sitúan sobre la curva y giran según su dirección local, incluso en enlaces diagonales o invertidos. Flechas SVG más grandes, de 36 × 26 unidades, siempre negras con un contorno blanco de 3 unidades, independientemente del color de la línea. El filtro unidireccional sigue del destino al origen; el bidireccional muestra dos flechas opuestas. El filtro automático conserva el signo de interrogación. Este cambio es solo visual.
 
 <a name="how-to-organize-with-groups"></a>
 ## Cómo organizar con grupos

@@ -4,6 +4,18 @@
 [🇺🇸 English](CHANGELOG.md) · [🇧🇷 Português](CHANGELOG.pt-BR.md) · [🇪🇸 Español](CHANGELOG.es.md) · [🇨🇳 简体中文](CHANGELOG.zh-CN.md) · [🇫🇷 Français](CHANGELOG.fr.md) · [🇯🇵 日本語](CHANGELOG.ja.md) · [🇮🇳 हिन्दी](CHANGELOG.hi.md) · [🇸🇦 العربية](CHANGELOG.ar.md)
 <!-- /language-selector -->
 
+## 1.7.3
+
+- Relationship arrows now sit directly on the curve and rotate along its local direction, including diagonal and reversed links.
+- Larger 36 × 26 SVG arrowheads are always black with a 3-unit white outline, independently of the relationship line color.
+- Single-direction filtering remains destination to source; bidirectional filtering shows two opposite arrows. Automatic filtering retains its question-mark indicator. This is a visual-only change.
+
+### Assets
+
+- `PowerPortal-Setup-1.7.3-x64.exe`
+- `SHA256SUMS.txt`
+- `install.ps1`
+
 ## 1.7.2
 
 - The group introduction opens on the first diagram visit of each app session. Reopen it with **How to organize with groups**. SAP and Excel are illustrative system examples, not new connectors or official logos. Empty groups are visible drop zones. Dropping on a highlighted group assigns the table; dropping outside keeps its current group.
