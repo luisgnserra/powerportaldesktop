@@ -17,7 +17,7 @@ Prévoyez environ 1 Go d’espace disque libre pour le téléchargement et les c
 ## Installation simple
 
 1. Ouvrez la [dernière version](https://github.com/luisgnserra/powerportaldesktop/releases/latest).
-2. Sous **Assets**, téléchargez `PowerPortal-Setup-1.8.1-x64.exe` pour cette version. Ne téléchargez pas les archives source générées automatiquement comme programme d’installation.
+2. Sous **Assets**, téléchargez `PowerPortal-Setup-1.8.2-x64.exe` pour cette version. Ne téléchargez pas les archives source générées automatiquement comme programme d’installation.
 3. Vous pouvez [vérifier le SHA-256](#verify-the-installer).
 4. Exécutez le fichier et acceptez le contrôle de compte d’utilisateur.
 5. Acceptez les conditions des dépendances affichées, choisissez un dossier et sélectionnez la langue par défaut avec les drapeaux. La langue de l’interface Windows est suggérée ; les langues non prises en charge utilisent l’anglais.
@@ -45,12 +45,12 @@ Un lancement depuis le raccourci Windows affiche plutôt un avis lorsque des mod
 ```powershell
 $script = Join-Path $env:TEMP 'Install-PowerPortal.ps1'
 [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
-Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/luisgnserra/powerportaldesktop/v1.8.1/install.ps1' -OutFile $script
+Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/luisgnserra/powerportaldesktop/v1.8.2/install.ps1' -OutFile $script
 Get-Content -LiteralPath $script
 & $script
 ```
 
-Cette URL versionnée fixe l’assistant à la version 1.8.1. Il ne suit pas silencieusement les versions futures. L’assistant fixe aussi le nom du programme d’installation et sa somme SHA-256, télécharge en HTTPS, vérifie l’exécutable avant de le lancer et contrôle l’enregistrement de l’installation après une sortie réussie du programme d’installation.
+Cette URL versionnée fixe l’assistant à la version 1.8.2. Il ne suit pas silencieusement les versions futures. L’assistant fixe aussi le nom du programme d’installation et sa somme SHA-256, télécharge en HTTPS, vérifie l’exécutable avant de le lancer et contrôle l’enregistrement de l’installation après une sortie réussie du programme d’installation.
 
 La ligne TLS active HTTPS TLS 1.2 dans ce processus PowerShell pour les anciens paramètres par défaut de Windows PowerShell. Elle ne modifie ni la sécurité de Windows ni les stratégies d’exécution.
 
@@ -92,7 +92,7 @@ Ne collez pas un script non examiné dans `Invoke-Expression`. Si un script tél
 Après vérification de la somme de contrôle, un administrateur peut exécuter :
 
 ```powershell
-$setup = "$env:USERPROFILE\Downloads\PowerPortal-Setup-1.8.1-x64.exe"
+$setup = "$env:USERPROFILE\Downloads\PowerPortal-Setup-1.8.2-x64.exe"
 $process = Start-Process -FilePath $setup -ArgumentList '/S' -Wait -PassThru
 if ($process.ExitCode -ne 0) { throw "Installer failed: $($process.ExitCode)" }
 ```
@@ -102,15 +102,15 @@ L’assistant PowerShell est recommandé, car il vérifie à la fois le téléch
 <a name="verify-the-installer"></a>
 ## Vérifier le programme d’installation
 
-SHA-256 attendu pour **1.8.1 x64** :
+SHA-256 attendu pour **1.8.2 x64** :
 
 ```text
-863B4F22738C8A8BDEA1D4DBAB9EDB86A5A4BBF0C678E723252B287FAA45D256
+AB1B038F2500F354E9C7D32D52F34BAC6F560DDB9AC94341C6D3902D4FFDBEF3
 ```
 
 ```powershell
-$file = "$env:USERPROFILE\Downloads\PowerPortal-Setup-1.8.1-x64.exe"
-$expected = '863B4F22738C8A8BDEA1D4DBAB9EDB86A5A4BBF0C678E723252B287FAA45D256'
+$file = "$env:USERPROFILE\Downloads\PowerPortal-Setup-1.8.2-x64.exe"
+$expected = 'AB1B038F2500F354E9C7D32D52F34BAC6F560DDB9AC94341C6D3902D4FFDBEF3'
 if ((Get-FileHash -LiteralPath $file -Algorithm SHA256).Hash -ne $expected) {
     throw 'Checksum mismatch. Do not run this installer.'
 }

@@ -4,6 +4,15 @@
 [🇺🇸 English](CHANGELOG.md) · [🇧🇷 Português](CHANGELOG.pt-BR.md) · [🇪🇸 Español](CHANGELOG.es.md) · [🇨🇳 简体中文](CHANGELOG.zh-CN.md) · [🇫🇷 Français](CHANGELOG.fr.md) · [🇯🇵 日本語](CHANGELOG.ja.md) · [🇮🇳 हिन्दी](CHANGELOG.hi.md) · [🇸🇦 العربية](CHANGELOG.ar.md)
 <!-- /language-selector -->
 
+<a name="182"></a>
+## 1.8.2
+
+**更新開始の修正**
+
+更新分析をサイドメニューとホームギャラリーのリレーションシップマップの直下に移動しました。ネイティブボタンの検索では DAX クエリビューと TMDL ビューの重複する Home タブを除外し、「Ambiguous Power BI control: home」を防ぎます。コントロールが見つからない場合は Power BI のレポート、データ、モデルビューを選択してください。
+
+確認、検証、トレースの準備中は更新ボタンを無効にし、捕捉の準備ができるまで捕捉終了ボタンを非表示にします。これにより、重複起動で「Finish the active Power BI operation before refreshing」が誤表示されることを防ぎます。ネイティブ呼び出し前と確認できる失敗では、トレースを停止し、クリーンアップを確認して再試行できます。呼び出しが実行された可能性がある場合はエラーを表示したまま捕捉を保留します。Power BI を確認し、更新を終えてダイアログを閉じてから捕捉を終了してください。重複要求は既存の捕捉を再開し、別の更新は開始しません。実際に進行中の操作は先に完了する必要があります。
+
 <a name="181"></a>
 ## 1.8.1
 

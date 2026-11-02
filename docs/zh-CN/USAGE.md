@@ -125,7 +125,7 @@ BIM 备份保护的是模型元数据，**不是报表页面、视觉对象、�
 
 [配置](CONFIGURATION.md) · [故障排除](TROUBLESHOOTING.md)
 
-在 1.8.1 中，绘制关系仅会准备草稿：点击/拖动准确的列对，并在应用前检查。右键删除使用相同的确认和备份流程。原生自动检测是独立操作，可能创建多条关系：请在 Power BI 中检查、关闭其对话框，然后先在 Power Portal 中完成流程，再执行其他写入或更新。分组图片和可见性偏好仅保存在关系图中。[新的关系工作流程](RELATIONSHIPS.md#native-automatic-relationship-detection)。
+在 1.8.2 中，绘制关系仅会准备草稿：点击/拖动准确的列对，并在应用前检查。右键删除使用相同的确认和备份流程。原生自动检测是独立操作，可能创建多条关系：请在 Power BI 中检查、关闭其对话框，然后先在 Power Portal 中完成流程，再执行其他写入或更新。分组图片和可见性偏好仅保存在关系图中。[新的关系工作流程](RELATIONSHIPS.md#native-automatic-relationship-detection)。
 
 <a name="refresh-analysis"></a>
 ## 刷新分析

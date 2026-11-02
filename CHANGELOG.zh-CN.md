@@ -4,6 +4,15 @@
 [🇺🇸 English](CHANGELOG.md) · [🇧🇷 Português](CHANGELOG.pt-BR.md) · [🇪🇸 Español](CHANGELOG.es.md) · [🇨🇳 简体中文](CHANGELOG.zh-CN.md) · [🇫🇷 Français](CHANGELOG.fr.md) · [🇯🇵 日本語](CHANGELOG.ja.md) · [🇮🇳 हिन्दी](CHANGELOG.hi.md) · [🇸🇦 العربية](CHANGELOG.ar.md)
 <!-- /language-selector -->
 
+<a name="182"></a>
+## 1.8.2
+
+**刷新启动修复**
+
+刷新分析现位于侧边菜单和首页图库中关系图的正下方。原生按钮查找会忽略 DAX 查询视图和 TMDL 视图中重复的 Home 选项卡，避免“Ambiguous Power BI control: home”错误。如果找不到控件，请在 Power BI 中选择报表、数据或模型视图。
+
+确认、验证和跟踪启动期间，刷新按钮保持禁用；捕获就绪前隐藏结束捕获按钮。这可避免重复启动误报“Finish the active Power BI operation before refreshing”。确认发生在原生调用之前的失败会停止跟踪、检查清理结果并允许重试。如果调用可能已发生，错误仍然显示，捕获保持待处理：请检查 Power BI，完成刷新并关闭对话框后再结束捕获。重复请求只会恢复现有捕获，不会再次刷新。真正进行中的 Power BI 操作仍须先完成。
+
 <a name="181"></a>
 ## 1.8.1
 

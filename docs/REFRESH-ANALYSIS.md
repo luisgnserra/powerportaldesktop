@@ -28,3 +28,9 @@ Select a saved execution and a comparison execution to see timing and row-count 
 
 <!-- refresh-correlation -->
 Only engine progress tied to an active refresh command through exact RequestID/ActivityID correlation is measured. Unrelated visual-query work is excluded. Some Power BI versions may omit these identifiers: a table timing can remain unavailable even when refresh executes.
+
+## Native launch and recovery
+
+Refresh Analysis is now immediately below Relationship map in the sidebar and home gallery. Native button discovery ignores the duplicate Home tabs belonging to DAX Query View and TMDL View, avoiding “Ambiguous Power BI control: home”. Select Report, Data or Model view in Power BI if native controls are unavailable.
+
+Start stays disabled while confirmation, validation and trace startup are pending; Finish capture is hidden until capture is ready. This prevents a second launch from incorrectly reporting “Finish the active Power BI operation before refreshing”. A failure proven to occur before native invocation stops the trace, checks cleanup and permits retry. If invocation might already have occurred, the error remains visible and the capture stays pending: review Power BI, finish its refresh and close dialogs before Finish capture. Repeated requests resume the existing capture instead of starting another refresh. Legitimate active Power BI operations still need to finish first.

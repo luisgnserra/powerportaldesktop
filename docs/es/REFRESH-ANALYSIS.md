@@ -31,3 +31,10 @@ Selecciona una ejecución guardada y otra para comparar tiempos y filas por nomb
 
 <!-- refresh-correlation -->
 Solo se mide el progreso del motor correlacionado exactamente por RequestID/ActivityID con un comando de actualización activo. Se excluyen consultas visuales ajenas. Algunas versiones de Power BI omiten estos identificadores: el tiempo de una tabla puede no estar disponible aunque se ejecute la actualización.
+
+<a name="native-launch-and-recovery"></a>
+## Inicio nativo y recuperación
+
+Análisis de actualización aparece inmediatamente debajo de Mapa de relaciones en el menú lateral y la galería. La búsqueda del botón nativo ignora las pestañas Home duplicadas de las vistas de consultas DAX y TMDL, evitando “Ambiguous Power BI control: home”. Si el control no está disponible, selecciona Informe, Datos o Modelo en Power BI.
+
+Actualizar permanece deshabilitado durante la confirmación, validación e inicio del seguimiento; Finalizar captura se oculta hasta que la captura esté lista. Esto evita un segundo inicio con el error incorrecto “Finish the active Power BI operation before refreshing”. Un fallo demostrado antes de la invocación nativa detiene el seguimiento, comprueba la limpieza y permite reintentar. Si la invocación ya pudo ocurrir, el error permanece visible y la captura sigue pendiente: revisa Power BI, termina la actualización y cierra los diálogos antes de Finalizar captura. Las solicitudes repetidas reanudan la captura existente sin iniciar otra actualización. Las operaciones realmente activas deben terminar primero.

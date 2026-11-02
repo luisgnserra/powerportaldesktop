@@ -29,12 +29,12 @@ La ejecución de desarrollo/desde el código fuente no descarga ni instala actua
 
 ![Aviso de actualización y botón Actualizar ahora controlado por el usuario](../images/es/update-available.png)
 
-La captura es un **aviso simulado de una futura versión 1.8.2** dentro de 1.8.1, únicamente para mostrar la interfaz. No es un anuncio de 1.8.2.
+La captura es un **aviso simulado de una futura versión 1.8.2** dentro de 1.8.2, únicamente para mostrar la interfaz. No es un anuncio de 1.8.2.
 
-<a name="receive-version-181-from-an-earlier-updater-enabled-version"></a>
-### Recibir la versión 1.8.1 desde una versión anterior con actualizador
+<a name="receive-version-182-from-an-earlier-updater-enabled-version"></a>
+### Recibir la versión 1.8.2 desde una versión anterior con actualizador
 
-Con **1.6.2, 1.6.3 o 1.6.4** instalado, vuelva a abrir la aplicación o haga clic en **Buscar actualizaciones**. La versión estable publicada **1.8.1** debería aparecer con **Actualizar ahora**. No instale 1.8.1 manualmente primero si desea observar este aviso. Las versiones anteriores a 1.6.4 usan su aviso original; el estilo visual destacado se conserva en 1.8.1. Haga clic en el botón de actualización cuando esté listo y apruebe la autorización de Windows.
+Con **1.6.2, 1.6.3 o 1.6.4** instalado, vuelva a abrir la aplicación o haga clic en **Buscar actualizaciones**. La versión estable publicada **1.8.2** debería aparecer con **Actualizar ahora**. No instale 1.8.2 manualmente primero si desea observar este aviso. Las versiones anteriores a 1.6.4 usan su aviso original; el estilo visual destacado se conserva en 1.8.2. Haga clic en el botón de actualización cuando esté listo y apruebe la autorización de Windows.
 
 La aplicación informa del inicio del instalador, no de una instalación completada y verificada: la instalación termina después de que se cierre la aplicación antigua. Compruebe la versión mostrada de la aplicación al volver a abrirla. Windows aún puede bloquear el instalador sin firma o requerir aprobación de TI.
 
