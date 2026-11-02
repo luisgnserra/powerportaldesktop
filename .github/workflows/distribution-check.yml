@@ -20,7 +20,7 @@ jobs:
             'docs/INSTALLATION.md', 'docs/CONFIGURATION.md', 'docs/USAGE.md',
             'docs/TROUBLESHOOTING.md', '.github/ISSUE_TEMPLATE/config.yml',
             '.github/ISSUE_TEMPLATE/installation.yml', '.github/workflows/distribution-check.yml',
-            'docs/SCREENSHOTS.md', 'docs/RELEASING.md', 'docs/UPDATES.md', 'docs/RELATIONSHIPS.md',
+            'docs/SCREENSHOTS.md', 'docs/RELEASING.md', 'docs/UPDATES.md', 'docs/RELATIONSHIPS.md', 'docs/REFRESH-ANALYSIS.md',
             'docs/images/powerbi-external-tools.png', 'docs/images/home.png',
             'docs/images/connect-open-model.png', 'docs/images/live-model-data.png',
             'docs/images/theme-generator.png', 'docs/images/theme-send.png', 'docs/images/calendar-generator.png',
@@ -30,10 +30,10 @@ jobs:
             'docs/images/model-documenter.png', 'docs/images/measure-auditor.png',
             'docs/images/consulting-training.png', 'docs/images/collapsed-sidebar.png',
             'docs/images/update-available.png', 'docs/images/relationship-map.png', 'docs/images/relationship-editor.png',
-            'docs/images/relationship-groups.png', 'docs/images/relationship-create.png'
+            'docs/images/relationship-groups.png', 'docs/images/relationship-create.png', 'docs/images/refresh-analysis.png'
           )
           $locales = @('pt-BR', 'es', 'zh-CN', 'fr', 'ja', 'hi', 'ar')
-          $guides = @('INSTALLATION', 'CONFIGURATION', 'USAGE', 'TROUBLESHOOTING', 'SCREENSHOTS', 'RELEASING', 'UPDATES', 'RELATIONSHIPS')
+          $guides = @('INSTALLATION', 'CONFIGURATION', 'USAGE', 'TROUBLESHOOTING', 'SCREENSHOTS', 'RELEASING', 'UPDATES', 'RELATIONSHIPS', 'REFRESH-ANALYSIS')
           $applicationImages = @($allowed | Where-Object { $_ -like 'docs/images/*.png' -and $_ -ne 'docs/images/powerbi-external-tools.png' })
           foreach ($locale in $locales) {
             foreach ($name in @('README', 'CHANGELOG', 'DISTRIBUTION')) { $allowed += "$name.$locale.md" }

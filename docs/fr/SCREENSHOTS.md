@@ -6,7 +6,7 @@
 
 [Retour à l’accueil](../../README.fr.md) · [Installer](INSTALLATION.md) · [Guide de sécurité](USAGE.md)
 
-**Captures de l’application : Power Portal Desktop 1.7.5, interface dans la langue sélectionnée (français).**
+**Captures de l’application : Power Portal Desktop 1.8.0, interface dans la langue sélectionnée (français).**
 Les captures utilisent des **métadonnées et valeurs de requêtes synthétiques de démonstration**, et non un PBIX client. Les états connectés illustrent les actions prises en charge par l’interface ; aucun modèle client n’a été modifié pour créer ces images. Les libellés du sélecteur de fichiers natif peuvent suivre la langue de Windows. La capture réelle du ruban Power BI a été fournie par le propriétaire et recadrée pour supprimer le titre privé du fichier ; elle conserve son portugais d’origine.
 
 Les flèches de relation sont désormais placées sur la courbe et pivotent selon sa direction locale, y compris pour les liens diagonaux ou inversés. Les flèches SVG agrandies à 36 × 26 unités restent noires avec un contour blanc de 3 unités, indépendamment de la couleur du lien. Le filtrage unidirectionnel reste de la destination vers la source ; le bidirectionnel affiche deux flèches opposées. Le filtrage automatique conserve le point d’interrogation. Ce changement est uniquement visuel.
@@ -69,7 +69,7 @@ Un lancement depuis le ruban Outils externes transmet automatiquement la connexi
 
 ![Nouvelle version disponible avec Mettre à jour maintenant et avertissement d’autorisation/de modifications non envoyées](../images/fr/update-available.png)
 
-La capture utilise un **résultat synthétique d’une future version 1.7.6** pour montrer la notification dans la version 1.7.5. Elle ne prétend pas que 1.7.6 a été publié. Les utilisateurs de 1.6.2 ou d’une version ultérieure peuvent désormais recevoir la véritable notification de 1.7.5.
+La capture utilise un **résultat synthétique d’une future version 1.8.1** pour montrer la notification dans la version 1.8.0. Elle ne prétend pas que 1.8.1 a été publié. Les utilisateurs de 1.6.2 ou d’une version ultérieure peuvent désormais recevoir la véritable notification de 1.8.0.
 
 En 1.6.4, la bannière ambrée reste visible pendant le défilement et s’anime doucement, sauf si la réduction des animations est activée. Aucune bannière « à jour » permanente n’occupe de l’espace.
 
@@ -151,7 +151,7 @@ Le nouvel outil réservé à Desktop affiche les liens réels entre les tables, 
 
 Sélectionnez une ligne pour examiner ses colonnes exactes, sa cardinalité, le sens du filtre et l’état actif. **Appliquer la relation à Power BI** ou **Supprimer la relation dans Power BI** valide chaque modification après confirmation native et sauvegarde. Les projets importés restent en lecture seule. Le style ne renomme pas les tables et ne change pas le diagramme natif de Power BI. [Parcours complet et limites de sécurité](RELATIONSHIPS.md).
 
-Dans la version 1.7.5, cliquez ou faites glisser entre des colonnes pour préparer un brouillon en pointillés, puis vérifiez-le/appliquez-le. Faites un clic droit sur une ligne pour choisir sa couleur, la modifier ou la supprimer. Les paramètres de groupe proposent des images PNG/JPEG locales et davantage d’icônes ; faites glisser l’arrière-plan ou l’en-tête du groupe. Les tables de date/heure automatiques sont masquées par défaut. **Actualiser le diagramme depuis Power BI** relit les modifications externes sans copier les coordonnées de la disposition native. **Détecter automatiquement les relations** lance la détection native de Desktop après confirmation et sauvegarde ; examinez et fermez ses dialogues avant de choisir **Terminer la détection et actualiser le diagramme**.
+Dans la version 1.8.0, cliquez ou faites glisser entre des colonnes pour préparer un brouillon en pointillés, puis vérifiez-le/appliquez-le. Faites un clic droit sur une ligne pour choisir sa couleur, la modifier ou la supprimer. Les paramètres de groupe proposent des images PNG/JPEG locales et davantage d’icônes ; faites glisser l’arrière-plan ou l’en-tête du groupe. Les tables de date/heure automatiques sont masquées par défaut. **Actualiser le diagramme depuis Power BI** relit les modifications externes sans copier les coordonnées de la disposition native. **Détecter automatiquement les relations** lance la détection native de Desktop après confirmation et sauvegarde ; examinez et fermez ses dialogues avant de choisir **Terminer la détection et actualiser le diagramme**.
 
 <a name="power-bi-tv-tool"></a>
 ### Power BI TV Tool
@@ -205,3 +205,14 @@ Auditez les mesures du modèle ou le DAX fourni avec des contrôles heuristiques
 Découvrez le conseil Power BI, Microsoft Fabric, l’ingénierie des données et les solutions complètes. Les formations In Company, vidéos mises en avant et actions de contact sont incluses. WhatsApp/e-mail ouvrent un brouillon ou une page du navigateur ; aucun message ni demande de rendez-vous n’est envoyé automatiquement.
 
 [Notes de version](../../CHANGELOG.fr.md) · [Dépannage](TROUBLESHOOTING.md)
+
+<a name="refresh-analysis"></a>
+## Analyse de l’actualisation
+
+Mesurez l’actualisation native. Comparez les durées et les lignes. [Analyse de l’actualisation](REFRESH-ANALYSIS.md).
+
+![Analyse de l’actualisation](../images/fr/refresh-analysis.png)
+
+L’activité observée est l’union des intervalles du moteur attribués exactement à chaque table, sans compter deux fois les phases imbriquées. Ce n’est ni le seul temps de requête source ni un chemin critique prouvé. Le total observé va du lancement à la détection de fin, inclut l’interface et la vérification, mais exclut le comptage ultérieur des lignes. Les événements sans table sont signalés séparément.
+
+La fin automatique exige la fin observée des commandes d’actualisation et une fenêtre Power BI prête. Fermez les dialogues de résultat. Terminer manuellement la capture signifie toujours analyse incomplète, ne prouve pas la réussite et n’annule pas l’actualisation. Les erreurs moteur/suivi sont explicites. Une capture interrompue n’est pas déclarée terminée.

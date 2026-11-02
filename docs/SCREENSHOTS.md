@@ -6,7 +6,7 @@
 
 [Back to home](../README.md) · [Install](INSTALLATION.md) · [Safety guide](USAGE.md)
 
-**Application screenshots: Power Portal Desktop 1.7.5, English interface.**
+**Application screenshots: Power Portal Desktop 1.8.0, English interface.**
 The screenshots use **synthetic demonstration metadata and query values**, not a customer PBIX. Connected states illustrate supported UI actions; no customer model was changed to make these images. Native file-picker labels can follow the Windows language. The actual Power BI ribbon screenshot was supplied by the owner and cropped to remove the private file title.
 
 Relationship arrows now sit directly on the curve and rotate along its local direction, including diagonal and reversed links. Larger 36 × 26 SVG arrowheads are always black with a 3-unit white outline, independently of the relationship line color. Single-direction filtering remains destination to source; bidirectional filtering shows two opposite arrows. Automatic filtering retains its question-mark indicator. This is a visual-only change.
@@ -63,7 +63,7 @@ Launching from the External Tools ribbon instead passes that Desktop instance's 
 
 ![New version available with Update now and the authorization/unsent-edits warning](images/update-available.png)
 
-The screenshot uses a **synthetic future 1.7.6 result** to show the notification in version 1.7.5. It is not a claim that 1.7.6 has been published. Users on 1.6.2 or newer can receive the real 1.7.5 notification now.
+The screenshot uses a **synthetic future 1.8.1 result** to show the notification in version 1.8.0. It is not a claim that 1.8.1 has been published. Users on 1.6.2 or newer can receive the real 1.8.0 notification now.
 
 In 1.6.4, the amber banner stays visible while scrolling and gently animates unless reduced motion is enabled. No persistent "up to date" banner occupies space.
 
@@ -137,7 +137,7 @@ The new Desktop-only tool shows real table links, cardinalities, filter arrows a
 
 Select a line to inspect its exact columns, cardinality, filter direction and active state. **Apply relationship to Power BI** or **Delete relationship in Power BI** commits each edit after native confirmation and backup. Imported projects remain read-only. Styling does not rename tables or change Power BI's native diagram. [Complete walkthrough and safety limits](RELATIONSHIPS.md).
 
-In 1.7.5, click or drag between columns to prepare a dashed draft, then review/apply. Right-click a line for color/edit/delete. Group settings offer local PNG/JPEG images and more icons; drag the group background or heading. Automatic date/time tables are hidden by default. **Refresh diagram from Power BI** re-reads external changes without copying native layout coordinates. **Autodetect relationships** starts Desktop's native detection after confirmation/backup; review and close its dialogs before **Finish detection and refresh diagram**.
+In 1.8.0, click or drag between columns to prepare a dashed draft, then review/apply. Right-click a line for color/edit/delete. Group settings offer local PNG/JPEG images and more icons; drag the group background or heading. Automatic date/time tables are hidden by default. **Refresh diagram from Power BI** re-reads external changes without copying native layout coordinates. **Autodetect relationships** starts Desktop's native detection after confirmation/backup; review and close its dialogs before **Finish detection and refresh diagram**.
 
 ### Power BI TV Tool
 
@@ -184,3 +184,13 @@ Audit model measures or supplied DAX with heuristic naming/size/delimiter checks
 Discover Power BI consulting, Microsoft Fabric, data engineering and complete solutions. In Company training, featured videos and contact actions are included. WhatsApp/email open a draft or browser page; no message or appointment is sent automatically.
 
 [Release notes](../CHANGELOG.md) · [Troubleshooting](TROUBLESHOOTING.md)
+
+## Refresh Analysis
+
+Measure native refresh. Compare timings and rows. [Refresh Analysis](REFRESH-ANALYSIS.md).
+
+![Refresh Analysis](images/refresh-analysis.png)
+
+Observed activity is the union of engine intervals mapped exactly to each table, avoiding double counting of nested phases. It is not pure source-query time or a proven critical path. The observed total runs from launch until completion is detected, includes UI/polling overhead, and excludes the later row counts. Missing table mappings are reported separately.
+
+Automatic completion requires observed refresh-command completion and a ready Power BI window. Close native result dialogs. Manual Finish capture is always incomplete, not evidence of success and not a cancellation of refresh. Engine/trace errors are explicit. If capture is interrupted, no completed analysis is claimed.

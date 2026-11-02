@@ -15,7 +15,7 @@ A validacao verifica tipos, pares duplicados, ligacoes diretas ativas e contagen
 <a name="first-run"></a>
 ## Primeira execução
 
-Inicie pela guia Ferramentas externas do Power BI para conectar automaticamente ao modelo local, ou pelo atalho Windows para usar ferramentas offline/importar um projeto. A página inicial exibe as onze ferramentas. **Início** retorna à galeria sem descartar o modelo carregado.
+Inicie pela guia Ferramentas externas do Power BI para conectar automaticamente ao modelo local, ou pelo atalho Windows para usar ferramentas offline/importar um projeto. A página inicial exibe as doze ferramentas. **Início** retorna à galeria sem descartar o modelo carregado.
 
 Use o botão de recolher o menu e as bandeiras quando precisar. O cabeçalho de conexão mostra o nome do arquivo quando disponível, em vez do GUID interno do banco.
 
@@ -125,4 +125,15 @@ O aplicativo não envia arquivos, metadados, linhas ou credenciais das fontes ao
 
 [Configuração](CONFIGURATION.md) · [Solução de problemas](TROUBLESHOOTING.md)
 
-Na 1.7.5, desenhar só prepara um rascunho: clique/arraste pares exatos de colunas e revise antes de aplicar. Exclusão pelo botão direito usa a mesma confirmação e backup. A detecção nativa é separada e pode criar várias ligações: revise no Power BI, feche os diálogos e conclua no Power Portal antes de gravar ou atualizar. Imagens de grupos e preferência de exibição ficam somente no diagrama. [Novo fluxo de relacionamentos](RELATIONSHIPS.md#native-automatic-relationship-detection).
+Na 1.8.0, desenhar só prepara um rascunho: clique/arraste pares exatos de colunas e revise antes de aplicar. Exclusão pelo botão direito usa a mesma confirmação e backup. A detecção nativa é separada e pode criar várias ligações: revise no Power BI, feche os diálogos e conclua no Power Portal antes de gravar ou atualizar. Imagens de grupos e preferência de exibição ficam somente no diagrama. [Novo fluxo de relacionamentos](RELATIONSHIPS.md#native-automatic-relationship-detection).
+
+<a name="refresh-analysis"></a>
+## Análise Atualização
+
+Meça a atualizacao nativa. Compare tempos e linhas. [Análise Atualização](REFRESH-ANALYSIS.md).
+
+![Análise Atualização](../images/pt-BR/refresh-analysis.png)
+
+A atividade observada e a uniao dos intervalos do mecanismo identificados exatamente por tabela, sem somar fases aninhadas duas vezes. Nao representa apenas consulta a fonte nem um caminho critico comprovado. O total observado vai do acionamento ate a deteccao da conclusao, inclui sobrecarga de interface/verificacao e exclui a contagem posterior de linhas. Eventos sem tabela identificada aparecem separadamente.
+
+A conclusao automatica exige termino observado dos comandos de atualizacao e janela do Power BI pronta. Feche os dialogos nativos de resultado. Concluir captura manualmente sempre indica analise incompleta, nao comprova sucesso nem cancela a atualizacao. Erros do mecanismo/rastreamento sao explicitos. Uma captura interrompida nao e apresentada como concluida.

@@ -15,7 +15,7 @@ La validación comprueba tipos, pares duplicados, enlaces directos activos y rec
 <a name="first-run"></a>
 ## Primer inicio
 
-Inicie desde la cinta Herramientas externas de Power BI para conectarse automáticamente al modelo local, o abra el acceso directo de Windows para usar herramientas sin conexión/importar un proyecto. La página de inicio muestra las once herramientas. **Inicio** vuelve a la galería sin descartar el modelo cargado.
+Inicie desde la cinta Herramientas externas de Power BI para conectarse automáticamente al modelo local, o abra el acceso directo de Windows para usar herramientas sin conexión/importar un proyecto. La página de inicio muestra las doce herramientas. **Inicio** vuelve a la galería sin descartar el modelo cargado.
 
 Use el botón para contraer la barra lateral y las banderas según necesite. El encabezado de conexión muestra el nombre del archivo cuando está disponible, en lugar del GUID interno de la base de datos.
 
@@ -125,4 +125,15 @@ La aplicación no envía al portal archivos del modelo, metadatos, filas ni cred
 
 [Configuración](CONFIGURATION.md) · [Solución de problemas](TROUBLESHOOTING.md)
 
-En 1.7.5, dibujar relaciones solo prepara un borrador: haga clic o arrastre entre pares de columnas exactos y revíselo antes de aplicarlo. La eliminación con el botón derecho usa la misma confirmación y copia de seguridad. La detección automática nativa es independiente y puede crear varios vínculos: revíselos en Power BI, cierre sus diálogos y después finalice en Power Portal antes de otras escrituras o actualizaciones. Las imágenes locales de grupo y las preferencias de visibilidad se guardan solo en el diagrama. [Nuevo flujo de relaciones](RELATIONSHIPS.md#native-automatic-relationship-detection).
+En 1.8.0, dibujar relaciones solo prepara un borrador: haga clic o arrastre entre pares de columnas exactos y revíselo antes de aplicarlo. La eliminación con el botón derecho usa la misma confirmación y copia de seguridad. La detección automática nativa es independiente y puede crear varios vínculos: revíselos en Power BI, cierre sus diálogos y después finalice en Power Portal antes de otras escrituras o actualizaciones. Las imágenes locales de grupo y las preferencias de visibilidad se guardan solo en el diagrama. [Nuevo flujo de relaciones](RELATIONSHIPS.md#native-automatic-relationship-detection).
+
+<a name="refresh-analysis"></a>
+## Análisis de actualización
+
+Mide la actualización nativa. Compara tiempos y filas. [Análisis de actualización](REFRESH-ANALYSIS.md).
+
+![Análisis de actualización](../images/es/refresh-analysis.png)
+
+La actividad observada es la unión de intervalos del motor identificados exactamente por tabla, sin duplicar fases anidadas. No es solo el tiempo de consulta del origen ni una ruta crítica demostrada. El total observado va desde el inicio hasta detectar la finalización, incluye la sobrecarga de interfaz/verificación y excluye el recuento posterior de filas. Los eventos sin tabla se indican aparte.
+
+La finalización automática requiere observar el fin de los comandos de actualización y una ventana de Power BI lista. Cierra los diálogos de resultado. Finalizar captura manualmente siempre indica análisis incompleto, no demuestra éxito ni cancela la actualización. Los errores del motor/rastreo son explícitos. Una captura interrumpida no se presenta como completada.

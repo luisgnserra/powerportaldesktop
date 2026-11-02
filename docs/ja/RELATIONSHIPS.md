@@ -6,7 +6,7 @@
 
 [ホームに戻る](../../README.ja.md) · [スクリーンショット](SCREENSHOTS.md) · [モデルの安全性](USAGE.md)
 
-**Power Portal Desktop 1.7.5** で利用できます。Power BI 自身のモデルビューとは別の、Desktop 専用の新しいツールです。実際のテーブル/列間のリレーションシップを読み取り、確認した変更を接続中のローカルセマンティックモデルに適用できます。
+**Power Portal Desktop 1.8.0** で利用できます。Power BI 自身のモデルビューとは別の、Desktop 専用の新しいツールです。実際のテーブル/列間のリレーションシップを読み取り、確認した変更を接続中のローカルセマンティックモデルに適用できます。
 
 ![Facts と Dimensions のグループ、カーディナリティ、色付きのつながりを示すキャンバス](../images/ja/relationship-map.png)
 

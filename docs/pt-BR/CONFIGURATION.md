@@ -11,7 +11,7 @@
 
 Use as bandeiras do menu para trocar de idioma. A preferência permanece no perfil local do aplicativo do seu usuário Windows. O estado recolhido/expandido do menu também é salvo.
 
-As onze ferramentas permanecem visíveis sem rolagem do menu nos tamanhos de janela suportados. Rótulos longos traduzidos usam até duas linhas visíveis e mantêm o nome acessível/dica completos. **Consultoria e Treinamentos** fica abaixo de **Sobre o desenvolvimento**. [Prints do menu expandido e recolhido](SCREENSHOTS.md#home-and-navigation).
+As doze ferramentas permanecem visíveis sem rolagem do menu nos tamanhos de janela suportados. Rótulos longos traduzidos usam até duas linhas visíveis e mantêm o nome acessível/dica completos. **Consultoria e Treinamentos** fica abaixo de **Sobre o desenvolvimento**. [Prints do menu expandido e recolhido](SCREENSHOTS.md#home-and-navigation).
 
 Prioridade do idioma:
 

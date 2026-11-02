@@ -4,7 +4,7 @@
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md) · [🇨🇳 简体中文](README.zh-CN.md) · [🇫🇷 Français](README.fr.md) · [🇯🇵 日本語](README.ja.md) · [🇮🇳 हिन्दी](README.hi.md) · [🇸🇦 العربية](README.ar.md)
 <!-- /language-selector -->
 
-**Once herramientas para Power BI Desktop en una sola aplicación de Windows.**
+**Doce herramientas para Power BI Desktop en una sola aplicación de Windows.**
 
 Power Portal Desktop pertenece a **Excelência Consultoria e Educação**. Se instala en la cinta **Herramientas externas** de Power BI Desktop y abre una ventana de aplicación independiente, como otras herramientas externas de modelado.
 
@@ -26,13 +26,13 @@ El Mapa de relaciones aparece ahora inmediatamente después de TV Tool en el men
 <a name="option-1-install-with-a-few-clicks"></a>
 ### Opción 1: instalar con unos pocos clics
 
-1. [Descargue Power Portal Desktop 1.7.5 para Windows x64](https://github.com/luisgnserra/powerportaldesktop/releases/download/v1.7.5/PowerPortal-Setup-1.7.5-x64.exe).
+1. [Descargue Power Portal Desktop 1.8.0 para Windows x64](https://github.com/luisgnserra/powerportaldesktop/releases/download/v1.8.0/PowerPortal-Setup-1.8.0-x64.exe).
 2. Ejecute el instalador y apruebe la solicitud de administrador de Windows.
 3. Elija la carpeta de instalación y el idioma predeterminado.
 4. Complete la instalación y, después, cierre y vuelva a abrir Power BI Desktop.
 5. Abra un PBIX y seleccione **Herramientas externas > Power Portal**.
 
-**Windows puede advertir que el editor es desconocido:** la versión 1.7.5 no está firmada digitalmente. Continúe únicamente si confía en esta distribución. Si su organización bloquea el software sin firma, contacte con TI en lugar de eludir su política.
+**Windows puede advertir que el editor es desconocido:** la versión 1.8.0 no está firmada digitalmente. Continúe únicamente si confía en esta distribución. Si su organización bloquea el software sin firma, contacte con TI en lugar de eludir su política.
 
 [Última versión](https://github.com/luisgnserra/powerportaldesktop/releases/latest) · [Guía de instalación](docs/es/INSTALLATION.md) · [Configuración](docs/es/CONFIGURATION.md) · [Solución de problemas](docs/es/TROUBLESHOOTING.md)
 
@@ -45,13 +45,13 @@ El instalador añade **Power Portal** a **Herramientas externas** de Power BI De
 
 La captura proporcionada de la cinta está en portugués: **Ferramentas externas** significa **Herramientas externas**. Power Portal abre una **ventana independiente conectada a Power BI**, no un objeto visual incrustado en el informe ni un nuevo panel interno de Power BI.
 
-![Inicio de Power Portal 1.7.5, barra lateral completa y aviso de conexión al iniciar](docs/images/es/home.png)
+![Inicio de Power Portal 1.8.0, barra lateral completa y aviso de conexión al iniciar](docs/images/es/home.png)
 
 **¿Ya tiene Power BI abierto?** Al iniciarse desde un acceso directo, Power Portal detecta los modelos locales abiertos y muestra un aviso de conexión. Elija **Buscar modelos abiertos**, seleccione su archivo y conéctese. Después podrá consultar sus datos y enviar los cambios compatibles de vuelta con confirmación.
 
 Una vez conectado, el estado se resume en el encabezado en lugar de ocupar un aviso independiente.
 
-[Vea las once herramientas, las pantallas de conexión y las acciones directas en Power BI en la guía ilustrada](docs/es/SCREENSHOTS.md).
+[Vea las doce herramientas, las pantallas de conexión y las acciones directas en Power BI en la guía ilustrada](docs/es/SCREENSHOTS.md).
 
 <a name="new-relationship-map"></a>
 ### Novedad: mapa de relaciones
@@ -62,7 +62,7 @@ Comprenda los vínculos reales entre tablas en un lienzo que permite arrastrarla
 
 Cree, edite, active/desactive y elimine relaciones en el modelo de Power BI conectado **tras confirmar y realizar una copia de seguridad de los metadatos**. El estilo visual permanece en Power Portal; no cambia los nombres de las tablas ni modifica la disposición nativa de Power BI. [Tutorial completo de relaciones](docs/es/RELATIONSHIPS.md).
 
-En 1.7.5, haga clic o arrastre entre columnas exactas para preparar un vínculo; haga clic con el botón derecho en las líneas para cambiar su color, editarlas y eliminarlas con confirmación. Los grupos admiten imágenes locales y más de 30 iconos. Las tablas automáticas de fecha/hora se ocultan de forma predeterminada con un control de visibilidad. Actualice desde Power BI después de ediciones externas o invoque la detección automática nativa de Desktop con una copia de seguridad previa y un paso independiente de revisión/finalización.
+En 1.8.0, haga clic o arrastre entre columnas exactas para preparar un vínculo; haga clic con el botón derecho en las líneas para cambiar su color, editarlas y eliminarlas con confirmación. Los grupos admiten imágenes locales y más de 30 iconos. Las tablas automáticas de fecha/hora se ocultan de forma predeterminada con un control de visibilidad. Actualice desde Power BI después de ediciones externas o invoque la detección automática nativa de Desktop con una copia de seguridad previa y un paso independiente de revisión/finalización.
 
 <a name="built-in-update-checks"></a>
 ### Comprobación de actualizaciones integrada
@@ -73,7 +73,7 @@ Windows solicita autorización de administrador. Solo se cierra Power Portal; Po
 
 ![Aviso de nueva versión y botón Actualizar ahora](docs/images/es/update-available.png)
 
-La captura utiliza un **aviso simulado de una futura versión 1.7.6** para ilustrar la interfaz, no para anunciar una versión publicada. **La versión 1.7.5 ya está publicada:** quienes tengan 1.6.2 o posterior pueden volver a abrir la aplicación o hacer clic en **Buscar actualizaciones** para recibirla. [Guía de actualizaciones](docs/es/UPDATES.md).
+La captura utiliza un **aviso simulado de una futura versión 1.8.1** para ilustrar la interfaz, no para anunciar una versión publicada. **La versión 1.8.0 ya está publicada:** quienes tengan 1.6.2 o posterior pueden volver a abrir la aplicación o hacer clic en **Buscar actualizaciones** para recibirla. [Guía de actualizaciones](docs/es/UPDATES.md).
 
 **¿Tiene 1.6.1 o anterior? Instale 1.6.2 manualmente una vez** para habilitar esta función. También puede usar **Buscar actualizaciones** para reintentar una comprobación fallida o sin conexión. El actualizador nunca instala nada por el mero hecho de abrir la aplicación.
 
@@ -85,13 +85,13 @@ Abra **Windows PowerShell 5.1 o PowerShell 7 en Windows**:
 ```powershell
 $script = Join-Path $env:TEMP 'Install-PowerPortal.ps1'
 [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
-Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/luisgnserra/powerportaldesktop/v1.7.5/install.ps1' -OutFile $script
+Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/luisgnserra/powerportaldesktop/v1.8.0/install.ps1' -OutFile $script
 # Review the downloaded script before running it.
 Get-Content -LiteralPath $script
 & $script
 ```
 
-El asistente descarga la **versión 1.7.5**, verifica su suma SHA-256 fijada y abre el mismo instalador. No instala Node.js, PHP ni un SDK de .NET, ni compila nada.
+El asistente descarga la **versión 1.8.0**, verifica su suma SHA-256 fijada y abre el mismo instalador. No instala Node.js, PHP ni un SDK de .NET, ni compila nada.
 
 Para una instalación desatendida, ejecute el mismo asistente desde una **ventana de PowerShell como administrador**:
 
@@ -134,8 +134,9 @@ La aplicación de escritorio incluye los componentes de ejecución necesarios. N
 | Auditor de medidas | Revisar medidas del modelo o DAX proporcionado mediante comprobaciones heurísticas. |
 | Formateador DAX | Formatear localmente, exportar/copiar o actualizar una medida seleccionada de un modelo conectado con confirmación. |
 | Mapa de relaciones | Arrastrar cuadros de tablas, agrupar/dar estilo a los vínculos, guardar disposiciones visuales y aplicar cambios de relaciones confirmados directamente a Power BI. |
+| Análisis de actualización | Mide la actualización nativa. Compara tiempos y filas. |
 
-También incluye una galería de inicio, una barra lateral plegable con las once herramientas visibles sin desplazamiento a los tamaños de ventana compatibles, información sobre la propiedad y el desarrollo, y un área de consultoría y formación con los dos vídeos destacados. **Consultoría y formación** aparece debajo de **Acerca del desarrollo**.
+También incluye una galería de inicio, una barra lateral plegable con las doce herramientas visibles sin desplazamiento a los tamaños de ventana compatibles, información sobre la propiedad y el desarrollo, y un área de consultoría y formación con los dos vídeos destacados. **Consultoría y formación** aparece debajo de **Acerca del desarrollo**.
 
 <a name="changes-that-interact-directly-with-your-open-power-bi-file"></a>
 ### Cambios que interactúan directamente con su archivo abierto de Power BI
@@ -148,6 +149,7 @@ También incluye una galería de inicio, una barra lateral plegable con las once
 | Crear medida HTML en Power BI | Crea una medida en la tabla seleccionada, con copia de seguridad y confirmación. Coloque manualmente un objeto visual HTML compatible. |
 | Actualizar medida en Power BI | Actualiza el DAX de la medida seleccionada, con copia de seguridad, confirmación y comprobaciones de cambios simultáneos. |
 | Crear/editar/eliminar relaciones en Power BI | Cambia relaciones entre columnas de tablas, cardinalidad, dirección del filtro y estado activo, con copia de seguridad, confirmación y comprobaciones de estado obsoleto. |
+| Análisis de actualización | La actualización nativa consulta los orígenes y reemplaza los datos importados. Guarda una copia del PBIX. Resuelve credenciales y errores en Power BI; el rastreo no cancela la actualización ni incluye todas las consultas auxiliares de Power Query. |
 
 **Conectarse nunca escribe cambios por sí solo. Guarde primero una copia del PBIX, revise cada confirmación y guarde después el PBIX usted mismo.** [Capturas y ejemplos paso a paso](docs/es/SCREENSHOTS.md#direct-interactions-with-the-open-power-bi-file).
 
@@ -195,3 +197,12 @@ Microsoft, Power BI y Microsoft Fabric son marcas comerciales de Microsoft. La i
 [Solución de problemas y soporte](docs/es/TROUBLESHOOTING.md) · [Notas de versión](CHANGELOG.es.md) · [Aviso de distribución](DISTRIBUTION.es.md) · [Mantenimiento de versiones](docs/es/RELEASING.md)
 
 Use los **recursos de la versión (Release assets)** para descargar la aplicación. Los archivos ZIP/TAR automáticos de «Source code» de GitHub contienen únicamente la documentación y el asistente de instalación de este repositorio de distribución, no la aplicación ni su código fuente.
+
+<a name="refresh-analysis"></a>
+## Análisis de actualización
+
+Mide la actualización nativa. Compara tiempos y filas. [Análisis de actualización](docs/es/REFRESH-ANALYSIS.md).
+
+Conecta el PBIX correcto, abre Análisis de actualización y pulsa Actualizar y analizar. Confirma el nombre del archivo. El rastreo empieza antes de invocar Inicio > Actualizar nativo; no actualiza tablas secuencialmente mediante TOM. Mantén Power BI abierto y resuelve allí credenciales, errores o cancelación. Una copia BIM no restaura los datos actualizados.
+
+La finalización automática requiere observar el fin de los comandos de actualización y una ventana de Power BI lista. Cierra los diálogos de resultado. Finalizar captura manualmente siempre indica análisis incompleto, no demuestra éxito ni cancela la actualización. Los errores del motor/rastreo son explícitos. Una captura interrumpida no se presenta como completada.

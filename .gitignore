@@ -82,3 +82,6 @@
 !/.github/workflows/
 /.github/workflows/*
 !/.github/workflows/distribution-check.yml
+
+!/docs/REFRESH-ANALYSIS.md
+!/docs/images/refresh-analysis.png

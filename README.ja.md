@@ -4,7 +4,7 @@
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md) · [🇨🇳 简体中文](README.zh-CN.md) · [🇫🇷 Français](README.fr.md) · [🇯🇵 日本語](README.ja.md) · [🇮🇳 हिन्दी](README.hi.md) · [🇸🇦 العربية](README.ar.md)
 <!-- /language-selector -->
 
-**Power BI Desktop 向けの 11 個のツールを、1 つの Windows アプリに。**
+**Power BI Desktop 向けの 12 個のツールを、1 つの Windows アプリに。**
 
 Power Portal Desktop は **Excelência Consultoria e Educação** が所有しています。Power BI Desktop の**外部ツール**リボンに登録され、ほかの外部モデリングツールと同様に、独立したアプリケーションウィンドウを開きます。
 
@@ -26,13 +26,13 @@ Power Portal のアニメーション付きヘッダーに、ファイル名、�
 <a name="option-1-install-with-a-few-clicks"></a>
 ### 方法 1：数回のクリックでインストール
 
-1. [Windows x64 用 Power Portal Desktop 1.7.5 をダウンロード](https://github.com/luisgnserra/powerportaldesktop/releases/download/v1.7.5/PowerPortal-Setup-1.7.5-x64.exe)します。
+1. [Windows x64 用 Power Portal Desktop 1.8.0 をダウンロード](https://github.com/luisgnserra/powerportaldesktop/releases/download/v1.8.0/PowerPortal-Setup-1.8.0-x64.exe)します。
 2. インストーラーを実行し、Windows の管理者権限の確認を承認します。
 3. インストール先フォルダーと既定の言語を選びます。
 4. インストール完了後、Power BI Desktop を閉じて開き直します。
 5. PBIX を開き、**外部ツール > Power Portal** を選びます。
 
-**Windows が発行元不明の警告を表示する場合があります：**バージョン 1.7.5 にはデジタル署名がありません。この配布元を信頼できる場合にのみ続行してください。組織が未署名のソフトウェアを禁止している場合は、ポリシーを回避せず IT 部門に連絡してください。
+**Windows が発行元不明の警告を表示する場合があります：**バージョン 1.8.0 にはデジタル署名がありません。この配布元を信頼できる場合にのみ続行してください。組織が未署名のソフトウェアを禁止している場合は、ポリシーを回避せず IT 部門に連絡してください。
 
 [最新リリース](https://github.com/luisgnserra/powerportaldesktop/releases/latest) · [インストールガイド](docs/ja/INSTALLATION.md) · [設定](docs/ja/CONFIGURATION.md) · [トラブルシューティング](docs/ja/TROUBLESHOOTING.md)
 
@@ -45,13 +45,13 @@ Power Portal のアニメーション付きヘッダーに、ファイル名、�
 
 提供されたリボンのスクリーンショットはポルトガル語の原版です。**Ferramentas externas** は**外部ツール**を意味します。Power Portal は **Power BI に接続した独立ウィンドウ**を開きます。埋め込みのレポートビジュアルや、Power BI 内部の新しいペインではありません。
 
-![Power Portal 1.7.5 のホーム、展開されたサイドバー、起動時の接続通知](docs/images/ja/home.png)
+![Power Portal 1.8.0 のホーム、展開されたサイドバー、起動時の接続通知](docs/images/ja/home.png)
 
 **すでに Power BI を開いていますか？**ショートカットから起動すると、Power Portal は開いているローカルモデルを検出し、接続通知を表示します。**開いているモデルを検索**を選び、ファイルを選択して接続してください。その後、データをクエリし、対応する変更を確認付きでモデルに送信できます。
 
 接続後は、状態がヘッダーにまとめて表示され、独立したバナーは使用しません。
 
-[11 個のツール、接続画面、Power BI への直接操作を図解ガイドで確認](docs/ja/SCREENSHOTS.md)できます。
+[12 個のツール、接続画面、Power BI への直接操作を図解ガイドで確認](docs/ja/SCREENSHOTS.md)できます。
 
 <a name="new-relationship-map"></a>
 ### 新機能：リレーションシップマップ
@@ -62,7 +62,7 @@ Power Portal のアニメーション付きヘッダーに、ファイル名、�
 
 接続中の Power BI モデルで、**確認とメタデータのバックアップ後に**リレーションシップを作成、編集、有効化/無効化、削除できます。表示スタイルは Power Portal 内にとどまり、テーブル名や Power BI の標準レイアウトは変更しません。[リレーションシップの詳細チュートリアル](docs/ja/RELATIONSHIPS.md)。
 
-1.7.5 では、正確な列をクリックまたはドラッグしてリレーションシップを準備し、線を右クリックして色の設定、編集、確認後の削除を行えます。グループにはローカル画像と 30 種類を超えるアイコンを設定できます。自動日付/時刻テーブルは既定で非表示になり、表示切替が可能です。Power BI 外で編集した後に図を更新するか、事前にバックアップして Desktop のネイティブ自動検出を呼び出し、別途確認して完了します。
+1.8.0 では、正確な列をクリックまたはドラッグしてリレーションシップを準備し、線を右クリックして色の設定、編集、確認後の削除を行えます。グループにはローカル画像と 30 種類を超えるアイコンを設定できます。自動日付/時刻テーブルは既定で非表示になり、表示切替が可能です。Power BI 外で編集した後に図を更新するか、事前にバックアップして Desktop のネイティブ自動検出を呼び出し、別途確認して完了します。
 
 <a name="built-in-update-checks"></a>
 ### 組み込みの更新チェック
@@ -73,7 +73,7 @@ Windows が管理者の承認を求めます。閉じるのは Power Portal の�
 
 ![新バージョンの通知と今すぐ更新ボタン](docs/images/ja/update-available.png)
 
-この画像は UI を説明するための**将来の 1.7.6 通知のシミュレーション**であり、公開済みバージョンの発表ではありません。**バージョン 1.7.5 は公開済みです：**1.6.2 以降のユーザーはアプリを開き直すか、**更新を確認**をクリックして更新を受け取れます。[更新ガイド](docs/ja/UPDATES.md)。
+この画像は UI を説明するための**将来の 1.8.1 通知のシミュレーション**であり、公開済みバージョンの発表ではありません。**バージョン 1.8.0 は公開済みです：**1.6.2 以降のユーザーはアプリを開き直すか、**更新を確認**をクリックして更新を受け取れます。[更新ガイド](docs/ja/UPDATES.md)。
 
 **1.6.1 以前を使用していますか？この機能を有効にするには、最初に 1.6.2 を一度手動でインストールしてください。**失敗したチェックやオフライン時のチェックは、**更新を確認**で再試行できます。アプリを開いただけでインストールされることはありません。
 
@@ -85,13 +85,13 @@ Windows 上で **Windows PowerShell 5.1 または PowerShell 7** を開きます
 ```powershell
 $script = Join-Path $env:TEMP 'Install-PowerPortal.ps1'
 [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
-Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/luisgnserra/powerportaldesktop/v1.7.5/install.ps1' -OutFile $script
+Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/luisgnserra/powerportaldesktop/v1.8.0/install.ps1' -OutFile $script
 # Review the downloaded script before running it.
 Get-Content -LiteralPath $script
 & $script
 ```
 
-補助スクリプトは**バージョン 1.7.5** をダウンロードし、固定された SHA-256 チェックサムを検証して、同じインストーラーを開きます。Node.js、PHP、.NET SDK のインストールやビルドは行いません。
+補助スクリプトは**バージョン 1.8.0** をダウンロードし、固定された SHA-256 チェックサムを検証して、同じインストーラーを開きます。Node.js、PHP、.NET SDK のインストールやビルドは行いません。
 
 無人インストールでは、**管理者の PowerShell ウィンドウ**から同じ補助スクリプトを実行します。
 
@@ -134,8 +134,9 @@ Get-Content -LiteralPath $script
 | メジャー監査ツール | ヒューリスティックな検査でモデルのメジャーや入力された DAX を確認。 |
 | DAX フォーマッター | ローカルで整形、エクスポート/コピー、または確認付きで接続先の選択メジャーを更新。 |
 | リレーションシップマップ | テーブル枠をドラッグし、つながりをグループ化/装飾し、表示レイアウトを保存して、確認済みのリレーションシップ変更を Power BI に直接適用。 |
+| 更新分析 | ネイティブ更新を測定。 所要時間と行数を比較。 |
 
-ホームギャラリー、対応するウィンドウサイズで 11 個のツールをスクロールなしで表示できる折りたたみ式サイドバー、所有権/開発情報、2 本の注目動画を含むコンサルティングと研修のエリアもあります。**コンサルティングと研修**は**開発について**の下にあります。
+ホームギャラリー、対応するウィンドウサイズで 12 個のツールをスクロールなしで表示できる折りたたみ式サイドバー、所有権/開発情報、2 本の注目動画を含むコンサルティングと研修のエリアもあります。**コンサルティングと研修**は**開発について**の下にあります。
 
 <a name="changes-that-interact-directly-with-your-open-power-bi-file"></a>
 ### 開いている Power BI ファイルと直接やり取りする変更
@@ -148,6 +149,7 @@ Get-Content -LiteralPath $script
 | Power BI に HTML メジャーを作成 | バックアップと確認を伴い、選択テーブルにメジャーを作成します。対応する HTML ビジュアルは手動で配置してください。 |
 | Power BI のメジャーを更新 | バックアップ、確認、同時変更の検査を伴い、選択メジャーの DAX を更新します。 |
 | Power BI のリレーションシップを作成/編集/削除 | バックアップ、確認、古い状態の検査を伴い、テーブル列間のリレーションシップ、カーディナリティ、フィルター方向、有効状態を変更します。 |
+| 更新分析 | ネイティブ更新はソースを照会し、インポートデータを置き換えます。PBIX のコピーを保存してください。資格情報とエラーは Power BI で処理してください。追跡は更新をキャンセルせず、すべての Power Query 補助クエリを含むものではありません。 |
 
 **接続だけでは変更を書き込みません。先に PBIX のコピーを保存し、各確認内容を確認して、最後に自分で PBIX を保存してください。**[スクリーンショットと手順付きの例](docs/ja/SCREENSHOTS.md#direct-interactions-with-the-open-power-bi-file)。
 
@@ -195,3 +197,12 @@ Microsoft、Power BI、Microsoft Fabric は Microsoft の商標です。MVP の�
 [トラブルシューティングとサポート](docs/ja/TROUBLESHOOTING.md) · [リリースノート](CHANGELOG.ja.md) · [配布に関する告知](DISTRIBUTION.ja.md) · [リリース管理](docs/ja/RELEASING.md)
 
 アプリは **Release の Assets（添付ファイル）**からダウンロードしてください。GitHub が自動生成する「Source code」の ZIP/TAR アーカイブには、この配布リポジトリのドキュメントとインストール補助スクリプトしか含まれず、アプリやそのソースコードは含まれません。
+
+<a name="refresh-analysis"></a>
+## 更新分析
+
+ネイティブ更新を測定。 所要時間と行数を比較。 [更新分析](docs/ja/REFRESH-ANALYSIS.md).
+
+正しい PBIX に接続し、更新分析で更新して分析を選び、ファイル名を確認します。ネイティブのホーム > 更新を呼び出す前に追跡を開始し、TOM でテーブルを順番に更新しません。Power BI を開いたままにし、資格情報、エラー、キャンセルはそこで処理してください。BIM バックアップでは更新データを復元できません。
+
+自動終了には更新コマンドの終了検出と Power BI ウィンドウの準備完了が必要です。結果ダイアログを閉じてください。手動でキャプチャを終了した場合は常に不完全で、成功の証明でも更新のキャンセルでもありません。エンジンや追跡のエラーを明示し、中断した計測を完了とは表示しません。
