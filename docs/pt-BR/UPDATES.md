@@ -29,12 +29,12 @@ A execução de desenvolvimento/código-fonte não baixa nem instala atualizaç�
 
 ![Aviso de atualização e botão Atualizar agora controlado pelo usuário](../images/pt-BR/update-available.png)
 
-O print mostra um **aviso futuro simulado da 1.8.2** dentro da 1.8.2, apenas para demonstrar a interface. Não anuncia a 1.8.2.
+O print mostra um **aviso futuro simulado da 1.8.3** dentro da 1.8.3, apenas para demonstrar a interface. Não anuncia a 1.8.3.
 
-<a name="receive-version-182-from-an-earlier-updater-enabled-version"></a>
-### Receber a versão 1.8.2 de uma versão anterior com atualizador
+<a name="receive-version-183-from-an-earlier-updater-enabled-version"></a>
+### Receber a versão 1.8.3 de uma versão anterior com atualizador
 
-Com **1.6.2, 1.6.3 ou 1.6.4** instalada, reabra ou clique em **Verificar atualizações**. A versão estável publicada **1.8.2** deve aparecer com **Atualizar agora**. Não instale manualmente a 1.8.2 primeiro se quiser observar o aviso. Versões anteriores à 1.6.4 usam o aviso original; o destaque visual é mantido na 1.8.2. Clique quando estiver pronto e aprove a autorização do Windows.
+Com **1.6.2, 1.6.3 ou 1.6.4** instalada, reabra ou clique em **Verificar atualizações**. A versão estável publicada **1.8.3** deve aparecer com **Atualizar agora**. Não instale manualmente a 1.8.3 primeiro se quiser observar o aviso. Versões anteriores à 1.6.4 usam o aviso original; o destaque visual é mantido na 1.8.3. Clique quando estiver pronto e aprove a autorização do Windows.
 
 O aplicativo informa o início do instalador, não uma instalação concluída e verificada: ela termina após o aplicativo antigo fechar. Confira a versão ao reabrir. O Windows ainda pode bloquear o instalador sem assinatura ou exigir aprovação da TI.
 

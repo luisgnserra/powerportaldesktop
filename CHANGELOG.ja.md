@@ -4,6 +4,13 @@
 [🇺🇸 English](CHANGELOG.md) · [🇧🇷 Português](CHANGELOG.pt-BR.md) · [🇪🇸 Español](CHANGELOG.es.md) · [🇨🇳 简体中文](CHANGELOG.zh-CN.md) · [🇫🇷 Français](CHANGELOG.fr.md) · [🇯🇵 日本語](CHANGELOG.ja.md) · [🇮🇳 हिन्दी](CHANGELOG.hi.md) · [🇸🇦 العربية](CHANGELOG.ar.md)
 <!-- /language-selector -->
 
+<a name="183"></a>
+## 1.8.3
+
+**滑らかなテーマプレビュー**
+
+テーマジェネレーターの折れ線グラフは、サンプルデータと接続モデルのデータの両方で、直線の代わりに滑らかな三次曲線を使います。曲線は元の点を通り、値の間に余分なピークを作りません。色、マーカー、ツールチップも維持されます。変更はプレビューのみで、エクスポートされるテーマ JSON と既存の Power BI ビジュアルの線の書式は変わりません。
+
 <a name="182"></a>
 ## 1.8.2
 

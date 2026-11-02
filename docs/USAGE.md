@@ -4,6 +4,10 @@
 [🇺🇸 English](USAGE.md) · [🇧🇷 Português](pt-BR/USAGE.md) · [🇪🇸 Español](es/USAGE.md) · [🇨🇳 简体中文](zh-CN/USAGE.md) · [🇫🇷 Français](fr/USAGE.md) · [🇯🇵 日本語](ja/USAGE.md) · [🇮🇳 हिन्दी](hi/USAGE.md) · [🇸🇦 العربية](ar/USAGE.md)
 <!-- /language-selector -->
 
+**1.8.3 — Smooth theme preview**
+
+The theme generator line chart now uses smooth cubic curves instead of straight segments, with both sample and connected-model data. Curves pass through the original points without overshooting between values; colors, markers and tooltips are preserved. This change affects the preview only: exported theme JSON and the line formatting of existing Power BI visuals are unchanged.
+
 [Back to home](../README.md)
 
 The animated Power Portal header now contains the file name, connection status and all five read/import/discovery/update buttons. The separate toolbar below the banner has been removed to free workspace. Content wraps inside the header on smaller windows and in all eight languages, including Arabic. Connection confirmations, notices and update behavior are unchanged.
@@ -115,7 +119,7 @@ The app does not send model files, metadata, rows or source credentials to the p
 
 [Configuration](CONFIGURATION.md) · [Troubleshooting](TROUBLESHOOTING.md)
 
-In 1.8.2, relationship drawing only prepares a draft: click/drag exact column pairs and review before applying. Right-click deletion uses the same confirmation and backup. Native autodetection is separate and may create multiple links: review in Power BI, close its dialogs, then finish in Power Portal before other writes or updates. Local group images and visibility preferences are saved only in the diagram. [New relationship workflow](RELATIONSHIPS.md#native-automatic-relationship-detection).
+In 1.8.3, relationship drawing only prepares a draft: click/drag exact column pairs and review before applying. Right-click deletion uses the same confirmation and backup. Native autodetection is separate and may create multiple links: review in Power BI, close its dialogs, then finish in Power Portal before other writes or updates. Local group images and visibility preferences are saved only in the diagram. [New relationship workflow](RELATIONSHIPS.md#native-automatic-relationship-detection).
 
 ## Refresh Analysis
 

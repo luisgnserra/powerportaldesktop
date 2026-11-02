@@ -4,6 +4,13 @@
 [🇺🇸 English](CHANGELOG.md) · [🇧🇷 Português](CHANGELOG.pt-BR.md) · [🇪🇸 Español](CHANGELOG.es.md) · [🇨🇳 简体中文](CHANGELOG.zh-CN.md) · [🇫🇷 Français](CHANGELOG.fr.md) · [🇯🇵 日本語](CHANGELOG.ja.md) · [🇮🇳 हिन्दी](CHANGELOG.hi.md) · [🇸🇦 العربية](CHANGELOG.ar.md)
 <!-- /language-selector -->
 
+<a name="183"></a>
+## 1.8.3
+
+**平滑的主题预览**
+
+主题生成器的折线图现使用平滑三次曲线代替直线段，适用于示例数据和已连接模型的数据。曲线经过原始数据点，不会在数值之间产生额外峰值，并保留颜色、标记和提示。此更改仅影响预览：导出的主题 JSON 和现有 Power BI 视觉对象的线条格式保持不变。
+
 <a name="182"></a>
 ## 1.8.2
 

@@ -12,6 +12,6 @@ Power Portal Desktop 归 **Excelência Consultoria e Educação** 所有。
 
 安装程序会显示 Microsoft AMO/TOM 依赖项的条款。第三方许可证声明随已安装的运行时组件提供。Microsoft、Power BI 和 Microsoft Fabric 是 Microsoft 的商标；MVP 身份不代表 Microsoft 拥有、赞助或认可本应用。
 
-1.8.2 版本尚未进行数字签名。请从官方 Release 附件获取，验证已发布的 SHA-256 校验和，并遵循组织的软件审批政策。
+1.8.3 版本尚未进行数字签名。请从官方 Release 附件获取，验证已发布的 SHA-256 校验和，并遵循组织的软件审批政策。
 
 自动生成的 GitHub ZIP/TAR“Source code”下载仅包含此分发仓库的文件。它们不是 Power Portal 应用、安装程序，也不是应用的源代码发布包。

@@ -4,6 +4,10 @@
 [🇺🇸 English](../USAGE.md) · [🇧🇷 Português](../pt-BR/USAGE.md) · [🇪🇸 Español](../es/USAGE.md) · [🇨🇳 简体中文](USAGE.md) · [🇫🇷 Français](../fr/USAGE.md) · [🇯🇵 日本語](../ja/USAGE.md) · [🇮🇳 हिन्दी](../hi/USAGE.md) · [🇸🇦 العربية](../ar/USAGE.md)
 <!-- /language-selector -->
 
+**1.8.3 — 平滑的主题预览**
+
+主题生成器的折线图现使用平滑三次曲线代替直线段，适用于示例数据和已连接模型的数据。曲线经过原始数据点，不会在数值之间产生额外峰值，并保留颜色、标记和提示。此更改仅影响预览：导出的主题 JSON 和现有 Power BI 视觉对象的线条格式保持不变。
+
 [返回主页](../../README.zh-CN.md)
 
 Power Portal 动画页眉现已包含文件名、连接状态以及五个读取、导入、查找和更新按钮。已移除横幅下方的独立工具栏，以释放工作空间。在较小窗口和全部八种语言（包括阿拉伯语）中，内容会在页眉内自动换行。连接确认、通知和更新行为保持不变。
@@ -125,7 +129,7 @@ BIM 备份保护的是模型元数据，**不是报表页面、视觉对象、�
 
 [配置](CONFIGURATION.md) · [故障排除](TROUBLESHOOTING.md)
 
-在 1.8.2 中，绘制关系仅会准备草稿：点击/拖动准确的列对，并在应用前检查。右键删除使用相同的确认和备份流程。原生自动检测是独立操作，可能创建多条关系：请在 Power BI 中检查、关闭其对话框，然后先在 Power Portal 中完成流程，再执行其他写入或更新。分组图片和可见性偏好仅保存在关系图中。[新的关系工作流程](RELATIONSHIPS.md#native-automatic-relationship-detection)。
+在 1.8.3 中，绘制关系仅会准备草稿：点击/拖动准确的列对，并在应用前检查。右键删除使用相同的确认和备份流程。原生自动检测是独立操作，可能创建多条关系：请在 Power BI 中检查、关闭其对话框，然后先在 Power Portal 中完成流程，再执行其他写入或更新。分组图片和可见性偏好仅保存在关系图中。[新的关系工作流程](RELATIONSHIPS.md#native-automatic-relationship-detection)。
 
 <a name="refresh-analysis"></a>
 ## 刷新分析
