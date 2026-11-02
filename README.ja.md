@@ -18,19 +18,21 @@ Power Portal Desktop は **Excelência Consultoria e Educação** が所有し�
 
 Power Portal のアニメーション付きヘッダーに、ファイル名、接続状態、読み取り・インポート・検索・更新の五つのボタンを統合しました。バナー下の独立したツールバーを削除して作業領域を広げています。小さなウィンドウやアラビア語を含む八言語でヘッダー内の内容が折り返されます。確認、通知、更新の動作は変わりません。
 
+リレーションシップ マップを、サイドバーとホームギャラリーの TV Tool の直後に移動しました。 カレンダー生成とコンポーネントライブラリから汎用の実モデルデータブロックを削除しました。各ツールの読み取りと送信操作は引き続き利用でき、実際の期間ボタンはツール内で選択したカレンダーを使用します。 ホームのカバーを、文字を含まないローカルのベクターイラストとして描き直しました。タイトル、説明、操作は画像外にあり、選択言語に従います。 元の列を別のテーブルへドラッグすると、実際の関係を作成するダイアログで接続先の列を選択できます。列上にドロップするとその列が選択されます。多重度、フィルター、有効状態を確認し、検証して適用してください。保存にはネイティブ確認と BIM バックアップが必要です。
+
 <a name="download-and-install"></a>
 ## ダウンロードとインストール
 
 <a name="option-1-install-with-a-few-clicks"></a>
 ### 方法 1：数回のクリックでインストール
 
-1. [Windows x64 用 Power Portal Desktop 1.7.4 をダウンロード](https://github.com/luisgnserra/powerportaldesktop/releases/download/v1.7.4/PowerPortal-Setup-1.7.4-x64.exe)します。
+1. [Windows x64 用 Power Portal Desktop 1.7.5 をダウンロード](https://github.com/luisgnserra/powerportaldesktop/releases/download/v1.7.5/PowerPortal-Setup-1.7.5-x64.exe)します。
 2. インストーラーを実行し、Windows の管理者権限の確認を承認します。
 3. インストール先フォルダーと既定の言語を選びます。
 4. インストール完了後、Power BI Desktop を閉じて開き直します。
 5. PBIX を開き、**外部ツール > Power Portal** を選びます。
 
-**Windows が発行元不明の警告を表示する場合があります：**バージョン 1.7.4 にはデジタル署名がありません。この配布元を信頼できる場合にのみ続行してください。組織が未署名のソフトウェアを禁止している場合は、ポリシーを回避せず IT 部門に連絡してください。
+**Windows が発行元不明の警告を表示する場合があります：**バージョン 1.7.5 にはデジタル署名がありません。この配布元を信頼できる場合にのみ続行してください。組織が未署名のソフトウェアを禁止している場合は、ポリシーを回避せず IT 部門に連絡してください。
 
 [最新リリース](https://github.com/luisgnserra/powerportaldesktop/releases/latest) · [インストールガイド](docs/ja/INSTALLATION.md) · [設定](docs/ja/CONFIGURATION.md) · [トラブルシューティング](docs/ja/TROUBLESHOOTING.md)
 
@@ -43,7 +45,7 @@ Power Portal のアニメーション付きヘッダーに、ファイル名、�
 
 提供されたリボンのスクリーンショットはポルトガル語の原版です。**Ferramentas externas** は**外部ツール**を意味します。Power Portal は **Power BI に接続した独立ウィンドウ**を開きます。埋め込みのレポートビジュアルや、Power BI 内部の新しいペインではありません。
 
-![Power Portal 1.7.4 のホーム、展開されたサイドバー、起動時の接続通知](docs/images/ja/home.png)
+![Power Portal 1.7.5 のホーム、展開されたサイドバー、起動時の接続通知](docs/images/ja/home.png)
 
 **すでに Power BI を開いていますか？**ショートカットから起動すると、Power Portal は開いているローカルモデルを検出し、接続通知を表示します。**開いているモデルを検索**を選び、ファイルを選択して接続してください。その後、データをクエリし、対応する変更を確認付きでモデルに送信できます。
 
@@ -60,7 +62,7 @@ Power Portal のアニメーション付きヘッダーに、ファイル名、�
 
 接続中の Power BI モデルで、**確認とメタデータのバックアップ後に**リレーションシップを作成、編集、有効化/無効化、削除できます。表示スタイルは Power Portal 内にとどまり、テーブル名や Power BI の標準レイアウトは変更しません。[リレーションシップの詳細チュートリアル](docs/ja/RELATIONSHIPS.md)。
 
-1.7.4 では、正確な列をクリックまたはドラッグしてリレーションシップを準備し、線を右クリックして色の設定、編集、確認後の削除を行えます。グループにはローカル画像と 30 種類を超えるアイコンを設定できます。自動日付/時刻テーブルは既定で非表示になり、表示切替が可能です。Power BI 外で編集した後に図を更新するか、事前にバックアップして Desktop のネイティブ自動検出を呼び出し、別途確認して完了します。
+1.7.5 では、正確な列をクリックまたはドラッグしてリレーションシップを準備し、線を右クリックして色の設定、編集、確認後の削除を行えます。グループにはローカル画像と 30 種類を超えるアイコンを設定できます。自動日付/時刻テーブルは既定で非表示になり、表示切替が可能です。Power BI 外で編集した後に図を更新するか、事前にバックアップして Desktop のネイティブ自動検出を呼び出し、別途確認して完了します。
 
 <a name="built-in-update-checks"></a>
 ### 組み込みの更新チェック
@@ -71,7 +73,7 @@ Windows が管理者の承認を求めます。閉じるのは Power Portal の�
 
 ![新バージョンの通知と今すぐ更新ボタン](docs/images/ja/update-available.png)
 
-この画像は UI を説明するための**将来の 1.7.5 通知のシミュレーション**であり、公開済みバージョンの発表ではありません。**バージョン 1.7.4 は公開済みです：**1.6.2 以降のユーザーはアプリを開き直すか、**更新を確認**をクリックして更新を受け取れます。[更新ガイド](docs/ja/UPDATES.md)。
+この画像は UI を説明するための**将来の 1.7.6 通知のシミュレーション**であり、公開済みバージョンの発表ではありません。**バージョン 1.7.5 は公開済みです：**1.6.2 以降のユーザーはアプリを開き直すか、**更新を確認**をクリックして更新を受け取れます。[更新ガイド](docs/ja/UPDATES.md)。
 
 **1.6.1 以前を使用していますか？この機能を有効にするには、最初に 1.6.2 を一度手動でインストールしてください。**失敗したチェックやオフライン時のチェックは、**更新を確認**で再試行できます。アプリを開いただけでインストールされることはありません。
 
@@ -83,13 +85,13 @@ Windows 上で **Windows PowerShell 5.1 または PowerShell 7** を開きます
 ```powershell
 $script = Join-Path $env:TEMP 'Install-PowerPortal.ps1'
 [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
-Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/luisgnserra/powerportaldesktop/v1.7.4/install.ps1' -OutFile $script
+Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/luisgnserra/powerportaldesktop/v1.7.5/install.ps1' -OutFile $script
 # Review the downloaded script before running it.
 Get-Content -LiteralPath $script
 & $script
 ```
 
-補助スクリプトは**バージョン 1.7.4** をダウンロードし、固定された SHA-256 チェックサムを検証して、同じインストーラーを開きます。Node.js、PHP、.NET SDK のインストールやビルドは行いません。
+補助スクリプトは**バージョン 1.7.5** をダウンロードし、固定された SHA-256 チェックサムを検証して、同じインストーラーを開きます。Node.js、PHP、.NET SDK のインストールやビルドは行いません。
 
 無人インストールでは、**管理者の PowerShell ウィンドウ**から同じ補助スクリプトを実行します。
 

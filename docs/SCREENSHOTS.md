@@ -6,12 +6,20 @@
 
 [Back to home](../README.md) · [Install](INSTALLATION.md) · [Safety guide](USAGE.md)
 
-**Application screenshots: Power Portal Desktop 1.7.4, English interface.**
+**Application screenshots: Power Portal Desktop 1.7.5, English interface.**
 The screenshots use **synthetic demonstration metadata and query values**, not a customer PBIX. Connected states illustrate supported UI actions; no customer model was changed to make these images. Native file-picker labels can follow the Windows language. The actual Power BI ribbon screenshot was supplied by the owner and cropped to remove the private file title.
 
 Relationship arrows now sit directly on the curve and rotate along its local direction, including diagonal and reversed links. Larger 36 × 26 SVG arrowheads are always black with a 3-unit white outline, independently of the relationship line color. Single-direction filtering remains destination to source; bidirectional filtering shows two opposite arrows. Automatic filtering retains its question-mark indicator. This is a visual-only change.
 
 The animated Power Portal header now contains the file name, connection status and all five read/import/discovery/update buttons. The separate toolbar below the banner has been removed to free workspace. Content wraps inside the header on smaller windows and in all eight languages, including Arabic. Connection confirmations, notices and update behavior are unchanged.
+
+## Create a real relationship in Power BI
+
+![Create a real relationship in Power BI](images/relationship-create.png)
+
+Relationship map is now immediately after TV Tool in the sidebar and home gallery. The generic Real model data block is removed from Calendar generator and Component library. Their own read/write controls remain; the real-period button uses the calendar selected inside the tool. Home covers are redrawn as local vector illustrations without embedded text. Titles, descriptions and actions remain outside the artwork and follow the selected language. Drag a source column onto another table to open a real-relationship dialog and choose its destination column. Dropping on a column preselects it. Review cardinality, filter direction and active state, then Validate and Apply with native confirmation and BIM backup.
+
+Validation checks metadata types, duplicate pairs, active direct links and actual row/distinct counts on both columns, not a sample. Duplicate values on a One side are rejected. Queries have a 20-second timeout and failures are explicit. Validate never writes. Apply repeats validation, then the native engine checks keys and filter-path ambiguity at commit. A dashed draft is not a saved relationship; only a successful confirmed write creates it. Save the PBIX afterward. Tests and screenshots use synthetic data, not a modified customer PBIX.
 
 ## How to organize with groups
 
@@ -37,7 +45,7 @@ The Portuguese tab **Ferramentas externas** corresponds to **External Tools** in
 
 ![Home gallery, all eleven tool buttons and the startup notice](images/home.png)
 
-Home shows ten official tool covers and the new Desktop-only relationship-map cover, with short descriptions. The sidebar fits all eleven tools **without navigation scrolling** at supported window sizes. **Consulting and training** sits below **About the development**, with the ownership logos below. Language flags stay in two rows.
+Relationship map is now immediately after TV Tool in the sidebar and home gallery. Home covers are redrawn as local vector illustrations without embedded text. Titles, descriptions and actions remain outside the artwork and follow the selected language.
 
 ![Collapsed sidebar keeps tool icons, flags, About and consulting accessible](images/collapsed-sidebar.png)
 
@@ -55,7 +63,7 @@ Launching from the External Tools ribbon instead passes that Desktop instance's 
 
 ![New version available with Update now and the authorization/unsent-edits warning](images/update-available.png)
 
-The screenshot uses a **synthetic future 1.7.5 result** to show the notification in version 1.7.4. It is not a claim that 1.7.5 has been published. Users on 1.6.2 or newer can receive the real 1.7.4 notification now.
+The screenshot uses a **synthetic future 1.7.6 result** to show the notification in version 1.7.5. It is not a claim that 1.7.6 has been published. Users on 1.6.2 or newer can receive the real 1.7.5 notification now.
 
 In 1.6.4, the amber banner stays visible while scrolling and gently animates unless reduced motion is enabled. No persistent "up to date" banner occupies space.
 
@@ -81,9 +89,9 @@ These are not limited to downloading text or JSON:
 
 ### Live model data
 
-![Table, column and measure selectors with a queried demonstration result](images/live-model-data.png)
+![Existing model calendar](images/live-model-data.png)
 
-Select a table/column/measure and query a value, row count, column sample or date range. Connected status is summarized in the green header text; its tooltip reminds you to save a PBIX copy. This data panel appears where relevant, such as calendars and components.
+Samples remain limited to 50 rows and queries to 20 seconds. Calendar data is read through its own calendar selector and preview; the generic data block is no longer shown in Calendar generator or Component library. Connection status stays in the header.
 
 ### Theme generator
 
@@ -129,7 +137,7 @@ The new Desktop-only tool shows real table links, cardinalities, filter arrows a
 
 Select a line to inspect its exact columns, cardinality, filter direction and active state. **Apply relationship to Power BI** or **Delete relationship in Power BI** commits each edit after native confirmation and backup. Imported projects remain read-only. Styling does not rename tables or change Power BI's native diagram. [Complete walkthrough and safety limits](RELATIONSHIPS.md).
 
-In 1.7.4, click or drag between columns to prepare a dashed draft, then review/apply. Right-click a line for color/edit/delete. Group settings offer local PNG/JPEG images and more icons; drag the group background or heading. Automatic date/time tables are hidden by default. **Refresh diagram from Power BI** re-reads external changes without copying native layout coordinates. **Autodetect relationships** starts Desktop's native detection after confirmation/backup; review and close its dialogs before **Finish detection and refresh diagram**.
+In 1.7.5, click or drag between columns to prepare a dashed draft, then review/apply. Right-click a line for color/edit/delete. Group settings offer local PNG/JPEG images and more icons; drag the group background or heading. Automatic date/time tables are hidden by default. **Refresh diagram from Power BI** re-reads external changes without copying native layout coordinates. **Autodetect relationships** starts Desktop's native detection after confirmation/backup; review and close its dialogs before **Finish detection and refresh diagram**.
 
 ### Power BI TV Tool
 

@@ -8,6 +8,10 @@
 
 L’en-tête animé de Power Portal intègre désormais le nom du fichier, l’état de connexion et les cinq boutons de lecture, importation, recherche et mise à jour. La barre séparée sous la bannière est supprimée pour libérer de l’espace. Le contenu s’adapte dans l’en-tête sur les petites fenêtres et dans les huit langues, dont l’arabe. Les confirmations, notifications et mises à jour restent inchangées.
 
+La carte des relations se trouve désormais juste après TV Tool dans le menu latéral et la galerie d’accueil. Le bloc générique Données réelles du modèle est retiré du Générateur de calendrier et de la Bibliothèque de composants. Leurs propres commandes restent disponibles ; la période réelle utilise le calendrier sélectionné dans l’outil. Les couvertures d’accueil ont été redessinées comme illustrations vectorielles locales sans texte intégré. Les titres, descriptions et actions restent hors des images et suivent la langue choisie. Glissez une colonne source sur une autre table pour ouvrir le dialogue de relation réelle et choisir la colonne cible. Un dépôt sur une colonne la présélectionne. Vérifiez cardinalité, filtre et état actif, puis validez et appliquez avec confirmation native et sauvegarde BIM.
+
+La validation vérifie types, paires en double, liens directs actifs et nombres réels de lignes et de valeurs distinctes des deux colonnes, sans échantillonnage. Les doublons du côté Un sont rejetés. Les requêtes sont limitées à 20 secondes et les erreurs sont explicites. Valider n’écrit jamais. Appliquer recommence la validation, puis le moteur vérifie clés et chemins ambigus à l’enregistrement. Le brouillon pointillé n’est pas une relation sauvegardée : seule une écriture confirmée réussie la crée. Enregistrez ensuite le PBIX. Tests et captures utilisent des données synthétiques, sans modifier de PBIX client.
+
 <a name="first-run"></a>
 ## Premier démarrage
 
@@ -24,7 +28,7 @@ Après la connexion, un état vert compact dans l’en-tête remplace la grande 
 
 Lisez les métadonnées du modèle, interrogez de petits échantillons de données, auditez les mesures, vérifiez le contraste, formatez le DAX ou exportez la documentation sans envoyer d’écritures. Les données du modèle représentent le modèle sémantique **sans les filtres ni les segments du rapport de la page active**.
 
-Les échantillons sont limités à 50 lignes, dont jusqu’à 8 affichées dans l’interface, et les requêtes ont un délai d’expiration de 20 secondes. Un panneau de données n’est affiché que là où il est utile, par exemple dans les calendriers et les composants.
+Les échantillons restent limités à 50 lignes et les requêtes à 20 secondes. Le calendrier se lit via son propre sélecteur et aperçu ; le bloc générique n’apparaît plus dans le Générateur de calendrier ni la Bibliothèque de composants. L’état de connexion reste dans l’en-tête.
 
 Les imports de projets locaux acceptent les BIM, les dossiers TMDL/PBIP/PBIR pris en charge et les ZIP. Ils sont en lecture seule. L’importateur ne peut pas analyser un PBIX brut : ouvrez-le dans Power BI Desktop et connectez-vous localement.
 
@@ -121,4 +125,4 @@ L’application n’envoie pas au portail les fichiers du modèle, métadonnées
 
 [Configuration](CONFIGURATION.md) · [Dépannage](TROUBLESHOOTING.md)
 
-Dans la version 1.7.4, le dessin de relations ne fait que préparer un brouillon : cliquez ou faites glisser entre des paires de colonnes exactes et vérifiez-le avant de l’appliquer. La suppression par clic droit utilise la même confirmation et la même sauvegarde. La détection automatique native est distincte et peut créer plusieurs liens : examinez-les dans Power BI, fermez ses dialogues, puis terminez dans Power Portal avant toute autre écriture ou mise à jour. Les images locales de groupe et les préférences de visibilité sont enregistrées uniquement dans le diagramme. [Nouveau parcours des relations](RELATIONSHIPS.md#native-automatic-relationship-detection).
+Dans la version 1.7.5, le dessin de relations ne fait que préparer un brouillon : cliquez ou faites glisser entre des paires de colonnes exactes et vérifiez-le avant de l’appliquer. La suppression par clic droit utilise la même confirmation et la même sauvegarde. La détection automatique native est distincte et peut créer plusieurs liens : examinez-les dans Power BI, fermez ses dialogues, puis terminez dans Power Portal avant toute autre écriture ou mise à jour. Les images locales de groupe et les préférences de visibilité sont enregistrées uniquement dans le diagramme. [Nouveau parcours des relations](RELATIONSHIPS.md#native-automatic-relationship-detection).

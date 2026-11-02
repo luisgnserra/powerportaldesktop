@@ -6,11 +6,19 @@
 
 [Back to home](../README.md) · [Screenshots](SCREENSHOTS.md) · [Model safety](USAGE.md)
 
-Available in **Power Portal Desktop 1.7.4**. This is a new Desktop-only tool, separate from Power BI's own Model view. It reads real table/column relationships and can apply confirmed changes to the connected local semantic model.
+Available in **Power Portal Desktop 1.7.5**. This is a new Desktop-only tool, separate from Power BI's own Model view. It reads real table/column relationships and can apply confirmed changes to the connected local semantic model.
 
 ![Relationship canvas with Facts and Dimensions groups, cardinalities and colored links](images/relationship-map.png)
 
 Relationship arrows now sit directly on the curve and rotate along its local direction, including diagonal and reversed links. Larger 36 × 26 SVG arrowheads are always black with a 3-unit white outline, independently of the relationship line color. Single-direction filtering remains destination to source; bidirectional filtering shows two opposite arrows. Automatic filtering retains its question-mark indicator. This is a visual-only change.
+
+## Create a real relationship in Power BI
+
+![Create a real relationship in Power BI](images/relationship-create.png)
+
+Relationship map is now immediately after TV Tool in the sidebar and home gallery. The generic Real model data block is removed from Calendar generator and Component library. Their own read/write controls remain; the real-period button uses the calendar selected inside the tool. Home covers are redrawn as local vector illustrations without embedded text. Titles, descriptions and actions remain outside the artwork and follow the selected language. Drag a source column onto another table to open a real-relationship dialog and choose its destination column. Dropping on a column preselects it. Review cardinality, filter direction and active state, then Validate and Apply with native confirmation and BIM backup.
+
+Validation checks metadata types, duplicate pairs, active direct links and actual row/distinct counts on both columns, not a sample. Duplicate values on a One side are rejected. Queries have a 20-second timeout and failures are explicit. Validate never writes. Apply repeats validation, then the native engine checks keys and filter-path ambiguity at commit. A dashed draft is not a saved relationship; only a successful confirmed write creates it. Save the PBIX afterward. Tests and screenshots use synthetic data, not a modified customer PBIX.
 
 ## How to organize with groups
 

@@ -6,11 +6,20 @@
 
 [Volver al inicio](../../README.es.md) · [Capturas](SCREENSHOTS.md) · [Seguridad del modelo](USAGE.md)
 
-Disponible en **Power Portal Desktop 1.7.4**. Es una nueva herramienta exclusiva de Desktop, independiente de la vista Modelo de Power BI. Lee las relaciones reales entre tablas/columnas y puede aplicar cambios confirmados al modelo semántico local conectado.
+Disponible en **Power Portal Desktop 1.7.5**. Es una nueva herramienta exclusiva de Desktop, independiente de la vista Modelo de Power BI. Lee las relaciones reales entre tablas/columnas y puede aplicar cambios confirmados al modelo semántico local conectado.
 
 ![Lienzo de relaciones con grupos de hechos y dimensiones, cardinalidades y vínculos de colores](../images/es/relationship-map.png)
 
 Las flechas de relaciones ahora se sitúan sobre la curva y giran según su dirección local, incluso en enlaces diagonales o invertidos. Flechas SVG más grandes, de 36 × 26 unidades, siempre negras con un contorno blanco de 3 unidades, independientemente del color de la línea. El filtro unidireccional sigue del destino al origen; el bidireccional muestra dos flechas opuestas. El filtro automático conserva el signo de interrogación. Este cambio es solo visual.
+
+<a name="create-a-real-relationship-in-power-bi"></a>
+## Crear una relación real en Power BI
+
+![Crear una relación real en Power BI](../images/es/relationship-create.png)
+
+El Mapa de relaciones aparece ahora inmediatamente después de TV Tool en el menú lateral y la galería inicial. Se eliminó el bloque genérico Datos reales del modelo del Generador de calendario y la Biblioteca de componentes. Se mantienen sus controles propios de lectura y envío; el período real utiliza el calendario seleccionado dentro de la herramienta. Las portadas de inicio se redibujaron como ilustraciones vectoriales locales sin texto incrustado. Los títulos, descripciones y acciones permanecen fuera de las imágenes y siguen el idioma elegido. Arrastra una columna de origen a otra tabla para abrir el diálogo de relación real y elegir la columna de destino. Soltar sobre una columna la preselecciona. Revisa cardinalidad, filtro y estado activo; luego valida y aplica con confirmación nativa y copia BIM.
+
+La validación comprueba tipos, pares duplicados, enlaces directos activos y recuentos reales de filas y valores distintos en ambas columnas, sin muestreo. Rechaza duplicados en el lado Uno. Las consultas tienen un límite de 20 segundos y errores explícitos. Validar nunca escribe. Aplicar repite la validación y el motor comprueba claves y rutas ambiguas al guardar. Un borrador discontinuo no es una relación guardada: solo una escritura confirmada correcta la crea. Guarda el PBIX después. Las pruebas e imágenes usan datos sintéticos, sin modificar archivos de clientes.
 
 <a name="how-to-organize-with-groups"></a>
 ## Cómo organizar con grupos

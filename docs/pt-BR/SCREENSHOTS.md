@@ -6,12 +6,21 @@
 
 [Voltar ao início](../../README.pt-BR.md) · [Instalar](INSTALLATION.md) · [Guia de segurança](USAGE.md)
 
-**Prints do aplicativo: Power Portal Desktop 1.7.4, interface em português.**
+**Prints do aplicativo: Power Portal Desktop 1.7.5, interface em português.**
 Os prints usam **metadados e valores de consulta sintéticos de demonstração**, não um PBIX de cliente. Estados conectados ilustram ações suportadas; nenhum modelo de cliente foi alterado para produzir as imagens. Rótulos nativos do seletor de arquivos podem seguir o idioma do Windows. O print verdadeiro da guia do Power BI foi fornecido pelo proprietário e recortado para remover o título privado do arquivo.
 
 As setas dos relacionamentos agora ficam sobre a curva e giram conforme sua direcao local, inclusive em ligacoes diagonais ou invertidas. Setas SVG maiores, de 36 × 26 unidades, sempre pretas com contorno branco de 3 unidades, independentemente da cor da linha. O filtro unidirecional continua do destino para a origem; o bidirecional mostra duas setas opostas. O filtro automatico conserva o indicador de interrogacao. Esta alteracao e apenas visual.
 
 O cabecalho animado do Power Portal agora incorpora o nome do arquivo, o status da conexao e os cinco botoes de leitura/importacao/busca/atualizacao. A faixa separada abaixo do banner foi removida para liberar espaco. O conteudo se reorganiza dentro do cabecalho em janelas menores e nos oito idiomas, incluindo arabe. Confirmacoes, avisos e comportamento das atualizacoes foram preservados.
+
+<a name="create-a-real-relationship-in-power-bi"></a>
+## Criar relacionamento real no Power BI
+
+![Criar relacionamento real no Power BI](../images/pt-BR/relationship-create.png)
+
+O Mapa de relacionamentos agora fica imediatamente depois do TV Tool no menu lateral e na galeria inicial. O bloco generico Dados reais do modelo foi removido do Gerador de Tabela Calendario e da Biblioteca de Componentes. Os controles proprios de leitura e envio continuam; o botao de periodo real usa o calendario selecionado dentro da ferramenta. As capas da pagina inicial foram redesenhadas como ilustracoes vetoriais locais sem texto embutido. Titulos, descricoes e acoes ficam fora das imagens e acompanham o idioma selecionado. Arraste uma coluna de origem para outra tabela para abrir o dialogo de relacionamento real e escolher a coluna de destino. Soltar em uma coluna ja a preseleciona. Revise cardinalidade, filtro e estado ativo; depois valide e aplique com confirmacao nativa e backup BIM.
+
+A validacao verifica tipos, pares duplicados, ligacoes diretas ativas e contagens reais de linhas e valores distintos nas duas colunas, sem amostragem. Duplicatas no lado Um sao rejeitadas. As consultas tem limite de 20 segundos e falhas explicitas. Validar nunca grava. Aplicar repete a validacao, e o engine verifica chaves e ambiguidades de filtro ao confirmar. O rascunho tracejado nao e um relacionamento salvo; apenas a gravacao confirmada com sucesso o cria. Salve o PBIX depois. Testes e prints usam dados sinteticos, sem alterar PBIX de clientes.
 
 <a name="how-to-organize-with-groups"></a>
 ## Como organizar com grupos
@@ -40,7 +49,7 @@ A guia em português **Ferramentas externas** corresponde a **External Tools** e
 
 ![Galeria inicial, onze ferramentas e aviso inicial](../images/pt-BR/home.png)
 
-O início mostra as dez capas oficiais e a capa nova do mapa de relacionamentos exclusivo do Desktop, com descrições curtas. As onze ferramentas cabem no menu **sem rolagem de navegação** nos tamanhos suportados. **Consultoria e Treinamentos** fica abaixo de **Sobre o desenvolvimento**, com os logos de propriedade abaixo. Bandeiras ficam em duas linhas.
+O Mapa de relacionamentos agora fica imediatamente depois do TV Tool no menu lateral e na galeria inicial. As capas da pagina inicial foram redesenhadas como ilustracoes vetoriais locais sem texto embutido. Titulos, descricoes e acoes ficam fora das imagens e acompanham o idioma selecionado.
 
 ![Menu recolhido mantém ícones, bandeiras, informações e consultoria acessíveis](../images/pt-BR/collapsed-sidebar.png)
 
@@ -60,7 +69,7 @@ Iniciar pela guia Ferramentas externas transmite automaticamente a conexão daqu
 
 ![Nova versão disponível com Atualizar agora e aviso de autorização/edições não enviadas](../images/pt-BR/update-available.png)
 
-O print usa um **resultado futuro sintético da 1.7.5** para mostrar o aviso na 1.7.4. Não afirma que a 1.7.5 foi publicada. Usuários da 1.6.2 ou superior podem receber agora o aviso real da 1.7.4.
+O print usa um **resultado futuro sintético da 1.7.6** para mostrar o aviso na 1.7.5. Não afirma que a 1.7.6 foi publicada. Usuários da 1.6.2 ou superior podem receber agora o aviso real da 1.7.5.
 
 Na 1.6.4, a faixa âmbar fica visível durante a rolagem e anima suavemente, exceto quando movimento reduzido está habilitado. Não há faixa permanente “aplicativo atualizado” ocupando espaço.
 
@@ -88,9 +97,9 @@ Estas ações não se limitam a baixar texto ou JSON:
 <a name="live-model-data"></a>
 ### Dados reais do modelo
 
-![Seletores de tabela, coluna e medida e resultado consultado de demonstração](../images/pt-BR/live-model-data.png)
+![Calendario existente no modelo](../images/pt-BR/live-model-data.png)
 
-Selecione tabela/coluna/medida e consulte valor, contagem, amostra de coluna ou intervalo de datas. A conexão fica resumida no texto verde do cabeçalho; a dica lembra de salvar cópia do PBIX. Esse painel aparece onde é relevante, como calendários e componentes.
+Amostras continuam limitadas a 50 linhas e consultas a 20 segundos. Os dados do calendario sao lidos pelo seletor e pela previa da propria ferramenta; o bloco generico nao aparece mais no Gerador de Calendario nem na Biblioteca de Componentes. O status da conexao fica no cabecalho.
 
 <a name="theme-generator"></a>
 ### Gerador de temas
@@ -142,7 +151,7 @@ A nova ferramenta exclusiva do Desktop mostra ligações reais, cardinalidades, 
 
 Selecione uma linha para inspecionar colunas, cardinalidade, filtros e estado ativo. **Aplicar relacionamento no Power BI** ou **Excluir relacionamento no Power BI** grava cada edição após confirmação nativa e backup. Projetos importados são somente leitura. Estilos não renomeiam tabelas nem mudam o diagrama nativo. [Passo a passo completo e limites de segurança](RELATIONSHIPS.md).
 
-Na 1.7.4, clique ou arraste entre colunas para preparar um rascunho tracejado e revise/aplique. Botão direito na linha abre cor/editar/excluir. Grupos oferecem PNG/JPEG local e mais ícones; arraste pelo fundo ou título. Tabelas automáticas de data/hora ficam ocultas por padrão. **Atualizar diagrama do Power BI** relê mudanças externas sem copiar coordenadas nativas. **Detectar relacionamentos automaticamente** inicia a detecção nativa após confirmação/backup; revise e feche seus diálogos antes de **Concluir detecção e atualizar diagrama**.
+Na 1.7.5, clique ou arraste entre colunas para preparar um rascunho tracejado e revise/aplique. Botão direito na linha abre cor/editar/excluir. Grupos oferecem PNG/JPEG local e mais ícones; arraste pelo fundo ou título. Tabelas automáticas de data/hora ficam ocultas por padrão. **Atualizar diagrama do Power BI** relê mudanças externas sem copiar coordenadas nativas. **Detectar relacionamentos automaticamente** inicia a detecção nativa após confirmação/backup; revise e feche seus diálogos antes de **Concluir detecção e atualizar diagrama**.
 
 <a name="power-bi-tv-tool"></a>
 ### Power BI TV Tool

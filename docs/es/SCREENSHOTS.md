@@ -6,12 +6,21 @@
 
 [Volver al inicio](../../README.es.md) · [Instalar](INSTALLATION.md) · [Guía de seguridad](USAGE.md)
 
-**Capturas de la aplicación: Power Portal Desktop 1.7.4, interfaz en el idioma seleccionado (español).**
+**Capturas de la aplicación: Power Portal Desktop 1.7.5, interfaz en el idioma seleccionado (español).**
 Las capturas usan **metadatos y valores de consulta sintéticos de demostración**, no un PBIX de cliente. Los estados conectados ilustran las acciones compatibles de la interfaz; no se cambió ningún modelo de cliente para crear estas imágenes. Las etiquetas del selector de archivos nativo pueden seguir el idioma de Windows. La captura real de la cinta de Power BI fue proporcionada por el propietario y recortada para eliminar el título privado del archivo; conserva su portugués original.
 
 Las flechas de relaciones ahora se sitúan sobre la curva y giran según su dirección local, incluso en enlaces diagonales o invertidos. Flechas SVG más grandes, de 36 × 26 unidades, siempre negras con un contorno blanco de 3 unidades, independientemente del color de la línea. El filtro unidireccional sigue del destino al origen; el bidireccional muestra dos flechas opuestas. El filtro automático conserva el signo de interrogación. Este cambio es solo visual.
 
 El encabezado animado de Power Portal ahora contiene el nombre del archivo, el estado de conexión y los cinco botones de lectura, importación, búsqueda y actualización. Se eliminó la barra separada debajo para liberar espacio. El contenido se adapta dentro del encabezado en ventanas pequeñas y en los ocho idiomas, incluido árabe. Se mantienen las confirmaciones, los avisos y las actualizaciones.
+
+<a name="create-a-real-relationship-in-power-bi"></a>
+## Crear una relación real en Power BI
+
+![Crear una relación real en Power BI](../images/es/relationship-create.png)
+
+El Mapa de relaciones aparece ahora inmediatamente después de TV Tool en el menú lateral y la galería inicial. Se eliminó el bloque genérico Datos reales del modelo del Generador de calendario y la Biblioteca de componentes. Se mantienen sus controles propios de lectura y envío; el período real utiliza el calendario seleccionado dentro de la herramienta. Las portadas de inicio se redibujaron como ilustraciones vectoriales locales sin texto incrustado. Los títulos, descripciones y acciones permanecen fuera de las imágenes y siguen el idioma elegido. Arrastra una columna de origen a otra tabla para abrir el diálogo de relación real y elegir la columna de destino. Soltar sobre una columna la preselecciona. Revisa cardinalidad, filtro y estado activo; luego valida y aplica con confirmación nativa y copia BIM.
+
+La validación comprueba tipos, pares duplicados, enlaces directos activos y recuentos reales de filas y valores distintos en ambas columnas, sin muestreo. Rechaza duplicados en el lado Uno. Las consultas tienen un límite de 20 segundos y errores explícitos. Validar nunca escribe. Aplicar repite la validación y el motor comprueba claves y rutas ambiguas al guardar. Un borrador discontinuo no es una relación guardada: solo una escritura confirmada correcta la crea. Guarda el PBIX después. Las pruebas e imágenes usan datos sintéticos, sin modificar archivos de clientes.
 
 <a name="how-to-organize-with-groups"></a>
 ## Cómo organizar con grupos
@@ -40,7 +49,7 @@ La pestaña portuguesa **Ferramentas externas** corresponde a **Herramientas ext
 
 ![Galería de inicio, los once botones de herramientas y el aviso de inicio](../images/es/home.png)
 
-Inicio muestra diez portadas oficiales de herramientas y la nueva portada del mapa de relaciones exclusivo de Desktop, con descripciones breves. La barra lateral incluye las once herramientas **sin desplazamiento de navegación** a los tamaños de ventana compatibles. **Consultoría y formación** aparece debajo de **Acerca del desarrollo**, con los logotipos de propiedad debajo. Las banderas de idioma permanecen en dos filas.
+El Mapa de relaciones aparece ahora inmediatamente después de TV Tool en el menú lateral y la galería inicial. Las portadas de inicio se redibujaron como ilustraciones vectoriales locales sin texto incrustado. Los títulos, descripciones y acciones permanecen fuera de las imágenes y siguen el idioma elegido.
 
 ![La barra lateral contraída mantiene accesibles los iconos de herramientas, banderas, Acerca de y consultoría](../images/es/collapsed-sidebar.png)
 
@@ -60,7 +69,7 @@ El inicio desde la cinta Herramientas externas pasa automáticamente la conexió
 
 ![Nueva versión disponible con Actualizar ahora y advertencia de autorización/ediciones no enviadas](../images/es/update-available.png)
 
-La captura usa un **resultado sintético de una futura versión 1.7.5** para mostrar el aviso en la versión 1.7.4. No afirma que 1.7.5 se haya publicado. Los usuarios de 1.6.2 o posterior ya pueden recibir el aviso real de 1.7.4.
+La captura usa un **resultado sintético de una futura versión 1.7.6** para mostrar el aviso en la versión 1.7.5. No afirma que 1.7.6 se haya publicado. Los usuarios de 1.6.2 o posterior ya pueden recibir el aviso real de 1.7.5.
 
 En 1.6.4, el aviso ámbar permanece visible al desplazarse y se anima suavemente salvo que esté activado el movimiento reducido. No hay un aviso permanente de «actualizado» ocupando espacio.
 
@@ -88,9 +97,9 @@ Estas acciones no se limitan a descargar texto o JSON:
 <a name="live-model-data"></a>
 ### Datos del modelo en vivo
 
-![Selectores de tabla, columna y medida con un resultado de consulta de demostración](../images/es/live-model-data.png)
+![Calendario existente en el modelo](../images/es/live-model-data.png)
 
-Seleccione una tabla/columna/medida y consulte un valor, recuento de filas, muestra de columna o intervalo de fechas. El estado conectado se resume en el texto verde del encabezado; su información sobre herramientas recuerda guardar una copia del PBIX. Este panel de datos aparece donde corresponde, como en calendarios y componentes.
+Las muestras siguen limitadas a 50 filas y las consultas a 20 segundos. El calendario se lee mediante su propio selector y vista previa; el bloque genérico ya no aparece en el Generador de calendario ni en la Biblioteca de componentes. El estado de conexión permanece en el encabezado.
 
 <a name="theme-generator"></a>
 ### Generador de temas
@@ -142,7 +151,7 @@ La nueva herramienta exclusiva de Desktop muestra vínculos reales entre tablas,
 
 Seleccione una línea para inspeccionar sus columnas exactas, cardinalidad, dirección del filtro y estado activo. **Aplicar relación a Power BI** o **Eliminar relación en Power BI** confirma cada edición después de la confirmación nativa y la copia de seguridad. Los proyectos importados siguen siendo de solo lectura. El estilo no cambia los nombres de las tablas ni el diagrama nativo de Power BI. [Recorrido completo y límites de seguridad](RELATIONSHIPS.md).
 
-En 1.7.4, haga clic o arrastre entre columnas para preparar un borrador discontinuo y después revíselo/aplíquelo. Haga clic con el botón derecho en una línea para cambiar su color, editarla o eliminarla. Los ajustes de grupo ofrecen imágenes PNG/JPEG locales y más iconos; arrastre el fondo o el encabezado del grupo. Las tablas automáticas de fecha/hora se ocultan de forma predeterminada. **Actualizar diagrama desde Power BI** vuelve a leer los cambios externos sin copiar las coordenadas de la disposición nativa. **Detectar relaciones automáticamente** inicia la detección nativa de Desktop después de la confirmación y la copia de seguridad; revise y cierre sus diálogos antes de **Finalizar detección y actualizar diagrama**.
+En 1.7.5, haga clic o arrastre entre columnas para preparar un borrador discontinuo y después revíselo/aplíquelo. Haga clic con el botón derecho en una línea para cambiar su color, editarla o eliminarla. Los ajustes de grupo ofrecen imágenes PNG/JPEG locales y más iconos; arrastre el fondo o el encabezado del grupo. Las tablas automáticas de fecha/hora se ocultan de forma predeterminada. **Actualizar diagrama desde Power BI** vuelve a leer los cambios externos sin copiar las coordenadas de la disposición nativa. **Detectar relaciones automáticamente** inicia la detección nativa de Desktop después de la confirmación y la copia de seguridad; revise y cierre sus diálogos antes de **Finalizar detección y actualizar diagrama**.
 
 <a name="power-bi-tv-tool"></a>
 ### Power BI TV Tool
