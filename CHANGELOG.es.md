@@ -4,6 +4,21 @@
 [🇺🇸 English](CHANGELOG.md) · [🇧🇷 Português](CHANGELOG.pt-BR.md) · [🇪🇸 Español](CHANGELOG.es.md) · [🇨🇳 简体中文](CHANGELOG.zh-CN.md) · [🇫🇷 Français](CHANGELOG.fr.md) · [🇯🇵 日本語](CHANGELOG.ja.md) · [🇮🇳 हिन्दी](CHANGELOG.hi.md) · [🇸🇦 العربية](CHANGELOG.ar.md)
 <!-- /language-selector -->
 
+<a name="172"></a>
+## 1.7.2
+
+- La introducción aparece en la primera visita al mapa de cada sesión. Ábrela de nuevo con **Cómo organizar con grupos**. SAP y Excel son ejemplos ilustrativos, no nuevos conectores ni logotipos oficiales. Los grupos vacíos son zonas de destino visibles. Soltar en un grupo resaltado asigna la tabla; fuera conserva su grupo actual.
+- Separa las tablas por sistema, tema, hechos o dimensiones. Crea un grupo y arrastra la tabla por su título hasta él. El grupo de destino se resalta.
+- El diagrama se guarda automáticamente en este equipo para el mismo modelo: grupos, imágenes, colores y posiciones. Exporta el JSON para guardar una copia o importarla después. Comprueba el mensaje de guardado.
+- La organización visual no modifica tablas, fuentes de datos ni el diseño nativo de Power BI. Para quitar una tabla del grupo, selecciona Sin grupo en el panel.
+
+<a name="assets"></a>
+### Recursos
+
+- `PowerPortal-Setup-1.7.2-x64.exe`
+- `SHA256SUMS.txt`
+- `install.ps1`
+
 <a name="171"></a>
 ## 1.7.1
 
@@ -15,7 +30,7 @@
 - Detección automática nativa de Desktop con confirmación previa, copia de seguridad BIM y un flujo explícito de finalización/revisión; las escrituras simultáneas del modelo, los cambios de modelo/proyecto y las actualizaciones siguen bloqueados hasta finalizar.
 - Documentación en ocho idiomas y las 19 capturas de la aplicación por idioma actualizadas para 1.7.1. La imagen auténtica de la cinta de Power BI sigue compartida en portugués.
 
-<a name="assets"></a>
+<a name="assets-1"></a>
 ### Recursos
 
 - `PowerPortal-Setup-1.7.1-x64.exe`
@@ -32,7 +47,7 @@
 - Los proyectos importados siguen siendo de solo lectura; las relaciones no compatibles y los fallos de validación del motor se indican explícitamente.
 - Interfaz en ocho idiomas, barra lateral compacta de once elementos sin desplazamiento, instalador actualizado y guías en inglés con 20 capturas.
 
-<a name="assets-1"></a>
+<a name="assets-2"></a>
 ### Recursos
 
 - `PowerPortal-Setup-1.7.0-x64.exe`
@@ -48,7 +63,7 @@
 - La importación de temas JSON está destacada; **Enviar tema directamente a Power BI** está ahora al final de la página. Se eliminaron párrafos explicativos redundantes de la herramienta, conservando la confirmación nativa y las limitaciones documentadas de la automatización.
 - Todo el texto nuevo es compatible con ocho idiomas. Se actualizaron el instalador, el asistente, la suma de comprobación y 18 capturas, incluida la acción de temas al final de la página.
 
-<a name="assets-2"></a>
+<a name="assets-3"></a>
 ### Recursos
 
 - `PowerPortal-Setup-1.6.4-x64.exe`
@@ -64,7 +79,7 @@
 
 Mantenga 1.6.2 instalado para probarlo: vuelva a abrir la aplicación o haga clic en **Buscar actualizaciones**. Elija **Actualizar ahora** solo cuando esté listo para instalar. El responsable de mantenimiento no actualizó la instalación local del usuario durante la publicación.
 
-<a name="assets-3"></a>
+<a name="assets-4"></a>
 ### Recursos
 
 - `PowerPortal-Setup-1.6.3-x64.exe`
@@ -82,7 +97,7 @@ Mantenga 1.6.2 instalado para probarlo: vuelva a abrir la aplicación o haga cli
 
 La aplicación sigue sin firma. Instale 1.6.2 manualmente una vez si tiene 1.6.1 o anterior. Vuelva a abrir Power Portal cuando termine una actualización.
 
-<a name="assets-4"></a>
+<a name="assets-5"></a>
 ### Recursos
 
 - `PowerPortal-Setup-1.6.2-x64.exe`
@@ -103,7 +118,7 @@ Se validaron las comparaciones de versiones, la validación de versiones oficial
 
 Se validó la barra lateral a alturas de ventana de 680, 768 y 900 píxeles en ocho idiomas, el inicio/selección/actualización sin escrituras en el modelo y el registro empaquetado/cierre mediante el instalador. Las capturas de documentación usan datos sintéticos; no se cambió ningún archivo de cliente.
 
-<a name="assets-5"></a>
+<a name="assets-6"></a>
 ### Recursos
 
 - `PowerPortal-Setup-1.6.1-x64.exe`

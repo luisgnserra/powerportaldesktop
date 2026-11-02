@@ -29,7 +29,8 @@ jobs:
             'docs/images/contrast-calculator.png', 'docs/images/project-analyzer.png',
             'docs/images/model-documenter.png', 'docs/images/measure-auditor.png',
             'docs/images/consulting-training.png', 'docs/images/collapsed-sidebar.png',
-            'docs/images/update-available.png', 'docs/images/relationship-map.png', 'docs/images/relationship-editor.png'
+            'docs/images/update-available.png', 'docs/images/relationship-map.png', 'docs/images/relationship-editor.png',
+            'docs/images/relationship-groups.png'
           )
           $locales = @('pt-BR', 'es', 'zh-CN', 'fr', 'ja', 'hi', 'ar')
           $guides = @('INSTALLATION', 'CONFIGURATION', 'USAGE', 'TROUBLESHOOTING', 'SCREENSHOTS', 'RELEASING', 'UPDATES', 'RELATIONSHIPS')

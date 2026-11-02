@@ -6,9 +6,22 @@
 
 [Retour à l’accueil](../../README.fr.md) · [Captures](SCREENSHOTS.md) · [Sécurité du modèle](USAGE.md)
 
-Disponible dans **Power Portal Desktop 1.7.1**. Ce nouvel outil est réservé à Desktop et distinct de la vue Modèle de Power BI. Il lit les relations réelles entre tables/colonnes et peut appliquer des modifications confirmées au modèle sémantique local connecté.
+Disponible dans **Power Portal Desktop 1.7.2**. Ce nouvel outil est réservé à Desktop et distinct de la vue Modèle de Power BI. Il lit les relations réelles entre tables/colonnes et peut appliquer des modifications confirmées au modèle sémantique local connecté.
 
 ![Canevas de relations avec groupes de faits et de dimensions, cardinalités et liens colorés](../images/fr/relationship-map.png)
+
+<a name="how-to-organize-with-groups"></a>
+## Organiser avec des groupes
+
+![Organisez votre modèle en groupes](../images/fr/relationship-groups.png)
+
+L’introduction apparaît lors de la première visite du diagramme à chaque session. Rouvrez-la avec **Organiser avec des groupes**. SAP et Excel sont des exemples illustratifs, pas de nouveaux connecteurs ni des logos officiels. Les groupes vides sont des zones de dépôt visibles. Déposer dans un groupe surligné affecte la table ; en dehors, son groupe actuel est conservé.
+
+Séparez les tables par système, sujet, faits ou dimensions. Créez un groupe et glissez une table par son titre dedans. Le groupe cible est mis en évidence.
+
+Votre diagramme est enregistré automatiquement sur cet ordinateur pour le même modèle : groupes, images, couleurs et positions. Exportez le JSON pour conserver une copie ou l’importer plus tard. Vérifiez le message de sauvegarde.
+
+L’organisation visuelle ne modifie ni les tables, ni les sources, ni la disposition native de Power BI. Pour retirer une table, sélectionnez Sans groupe dans le panneau.
 
 <a name="open-your-model"></a>
 ## Ouvrir votre modèle

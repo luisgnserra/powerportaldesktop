@@ -6,9 +6,21 @@
 
 [Back to home](../README.md) · [Screenshots](SCREENSHOTS.md) · [Model safety](USAGE.md)
 
-Available in **Power Portal Desktop 1.7.1**. This is a new Desktop-only tool, separate from Power BI's own Model view. It reads real table/column relationships and can apply confirmed changes to the connected local semantic model.
+Available in **Power Portal Desktop 1.7.2**. This is a new Desktop-only tool, separate from Power BI's own Model view. It reads real table/column relationships and can apply confirmed changes to the connected local semantic model.
 
 ![Relationship canvas with Facts and Dimensions groups, cardinalities and colored links](images/relationship-map.png)
+
+## How to organize with groups
+
+![Organize your model into groups](images/relationship-groups.png)
+
+The group introduction opens on the first diagram visit of each app session. Reopen it with **How to organize with groups**. SAP and Excel are illustrative system examples, not new connectors or official logos. Empty groups are visible drop zones. Dropping on a highlighted group assigns the table; dropping outside keeps its current group.
+
+Separate tables by system, subject, facts or dimensions. Create a group and drag a table by its title into it. The destination group is highlighted.
+
+Your diagram is automatically saved on this computer for the same model: groups, images, colors and positions. Export JSON to keep a copy or import it later. Check the diagram-saved message.
+
+Visual organization does not change tables, data sources or the native Power BI layout. To remove a table from its group, select No group in the inspector.
 
 ## Open your model
 

@@ -4,6 +4,19 @@
 [🇺🇸 English](CHANGELOG.md) · [🇧🇷 Português](CHANGELOG.pt-BR.md) · [🇪🇸 Español](CHANGELOG.es.md) · [🇨🇳 简体中文](CHANGELOG.zh-CN.md) · [🇫🇷 Français](CHANGELOG.fr.md) · [🇯🇵 日本語](CHANGELOG.ja.md) · [🇮🇳 हिन्दी](CHANGELOG.hi.md) · [🇸🇦 العربية](CHANGELOG.ar.md)
 <!-- /language-selector -->
 
+## 1.7.2
+
+- The group introduction opens on the first diagram visit of each app session. Reopen it with **How to organize with groups**. SAP and Excel are illustrative system examples, not new connectors or official logos. Empty groups are visible drop zones. Dropping on a highlighted group assigns the table; dropping outside keeps its current group.
+- Separate tables by system, subject, facts or dimensions. Create a group and drag a table by its title into it. The destination group is highlighted.
+- Your diagram is automatically saved on this computer for the same model: groups, images, colors and positions. Export JSON to keep a copy or import it later. Check the diagram-saved message.
+- Visual organization does not change tables, data sources or the native Power BI layout. To remove a table from its group, select No group in the inspector.
+
+### Assets
+
+- `PowerPortal-Setup-1.7.2-x64.exe`
+- `SHA256SUMS.txt`
+- `install.ps1`
+
 ## 1.7.1
 
 - Prepare relationships by clicking or dragging exact column endpoints; review an orange dashed draft and apply with confirmation/backup. Existing pairs open for editing instead of creating duplicates.

@@ -6,8 +6,20 @@
 
 [Back to home](../README.md) · [Install](INSTALLATION.md) · [Safety guide](USAGE.md)
 
-**Application screenshots: Power Portal Desktop 1.7.1, English interface.**
+**Application screenshots: Power Portal Desktop 1.7.2, English interface.**
 The screenshots use **synthetic demonstration metadata and query values**, not a customer PBIX. Connected states illustrate supported UI actions; no customer model was changed to make these images. Native file-picker labels can follow the Windows language. The actual Power BI ribbon screenshot was supplied by the owner and cropped to remove the private file title.
+
+## How to organize with groups
+
+![Organize your model into groups](images/relationship-groups.png)
+
+The group introduction opens on the first diagram visit of each app session. Reopen it with **How to organize with groups**. SAP and Excel are illustrative system examples, not new connectors or official logos. Empty groups are visible drop zones. Dropping on a highlighted group assigns the table; dropping outside keeps its current group.
+
+Separate tables by system, subject, facts or dimensions. Create a group and drag a table by its title into it. The destination group is highlighted.
+
+Your diagram is automatically saved on this computer for the same model: groups, images, colors and positions. Export JSON to keep a copy or import it later. Check the diagram-saved message.
+
+Visual organization does not change tables, data sources or the native Power BI layout. To remove a table from its group, select No group in the inspector.
 
 ## Open Power Portal from External Tools
 
@@ -39,7 +51,7 @@ Launching from the External Tools ribbon instead passes that Desktop instance's 
 
 ![New version available with Update now and the authorization/unsent-edits warning](images/update-available.png)
 
-The screenshot uses a **synthetic future 1.7.2 result** to show the notification in version 1.7.1. It is not a claim that 1.7.2 has been published. Users on 1.6.2 or newer can receive the real 1.7.1 notification now.
+The screenshot uses a **synthetic future 1.7.3 result** to show the notification in version 1.7.2. It is not a claim that 1.7.3 has been published. Users on 1.6.2 or newer can receive the real 1.7.2 notification now.
 
 In 1.6.4, the amber banner stays visible while scrolling and gently animates unless reduced motion is enabled. No persistent "up to date" banner occupies space.
 
@@ -113,7 +125,7 @@ The new Desktop-only tool shows real table links, cardinalities, filter arrows a
 
 Select a line to inspect its exact columns, cardinality, filter direction and active state. **Apply relationship to Power BI** or **Delete relationship in Power BI** commits each edit after native confirmation and backup. Imported projects remain read-only. Styling does not rename tables or change Power BI's native diagram. [Complete walkthrough and safety limits](RELATIONSHIPS.md).
 
-In 1.7.1, click or drag between columns to prepare a dashed draft, then review/apply. Right-click a line for color/edit/delete. Group settings offer local PNG/JPEG images and more icons; drag the group background or heading. Automatic date/time tables are hidden by default. **Refresh diagram from Power BI** re-reads external changes without copying native layout coordinates. **Autodetect relationships** starts Desktop's native detection after confirmation/backup; review and close its dialogs before **Finish detection and refresh diagram**.
+In 1.7.2, click or drag between columns to prepare a dashed draft, then review/apply. Right-click a line for color/edit/delete. Group settings offer local PNG/JPEG images and more icons; drag the group background or heading. Automatic date/time tables are hidden by default. **Refresh diagram from Power BI** re-reads external changes without copying native layout coordinates. **Autodetect relationships** starts Desktop's native detection after confirmation/backup; review and close its dialogs before **Finish detection and refresh diagram**.
 
 ### Power BI TV Tool
 

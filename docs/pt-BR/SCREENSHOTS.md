@@ -6,8 +6,21 @@
 
 [Voltar ao início](../../README.pt-BR.md) · [Instalar](INSTALLATION.md) · [Guia de segurança](USAGE.md)
 
-**Prints do aplicativo: Power Portal Desktop 1.7.1, interface em português.**
+**Prints do aplicativo: Power Portal Desktop 1.7.2, interface em português.**
 Os prints usam **metadados e valores de consulta sintéticos de demonstração**, não um PBIX de cliente. Estados conectados ilustram ações suportadas; nenhum modelo de cliente foi alterado para produzir as imagens. Rótulos nativos do seletor de arquivos podem seguir o idioma do Windows. O print verdadeiro da guia do Power BI foi fornecido pelo proprietário e recortado para remover o título privado do arquivo.
+
+<a name="how-to-organize-with-groups"></a>
+## Como organizar com grupos
+
+![Organize seu modelo em grupos](../images/pt-BR/relationship-groups.png)
+
+A introducao aparece na primeira visita ao mapa em cada execucao do aplicativo. Reabra em **Como organizar com grupos**. SAP e Excel sao exemplos ilustrativos de sistemas, nao novos conectores nem logos oficiais. Grupos vazios aparecem como areas de destino. Soltar no grupo destacado associa a tabela; soltar fora conserva o grupo atual.
+
+Separe tabelas por sistema, assunto, fatos ou dimensoes. Crie um grupo e arraste a tabela pelo titulo para dentro dele. O grupo de destino fica destacado.
+
+Seu diagrama e salvo automaticamente neste computador para o mesmo modelo: grupos, imagens, cores e posicoes. Exporte o JSON para guardar uma copia ou importar depois. Confira a mensagem de diagrama salvo.
+
+A organizacao visual nao altera tabelas, fontes de dados nem o layout nativo do Power BI. Para remover uma tabela do grupo, selecione Sem grupo no painel.
 
 <a name="open-power-portal-from-external-tools"></a>
 ## Abrir o Power Portal em Ferramentas externas
@@ -43,7 +56,7 @@ Iniciar pela guia Ferramentas externas transmite automaticamente a conexão daqu
 
 ![Nova versão disponível com Atualizar agora e aviso de autorização/edições não enviadas](../images/pt-BR/update-available.png)
 
-O print usa um **resultado futuro sintético da 1.7.2** para mostrar o aviso na 1.7.1. Não afirma que a 1.7.2 foi publicada. Usuários da 1.6.2 ou superior podem receber agora o aviso real da 1.7.1.
+O print usa um **resultado futuro sintético da 1.7.3** para mostrar o aviso na 1.7.2. Não afirma que a 1.7.3 foi publicada. Usuários da 1.6.2 ou superior podem receber agora o aviso real da 1.7.2.
 
 Na 1.6.4, a faixa âmbar fica visível durante a rolagem e anima suavemente, exceto quando movimento reduzido está habilitado. Não há faixa permanente “aplicativo atualizado” ocupando espaço.
 
@@ -125,7 +138,7 @@ A nova ferramenta exclusiva do Desktop mostra ligações reais, cardinalidades, 
 
 Selecione uma linha para inspecionar colunas, cardinalidade, filtros e estado ativo. **Aplicar relacionamento no Power BI** ou **Excluir relacionamento no Power BI** grava cada edição após confirmação nativa e backup. Projetos importados são somente leitura. Estilos não renomeiam tabelas nem mudam o diagrama nativo. [Passo a passo completo e limites de segurança](RELATIONSHIPS.md).
 
-Na 1.7.1, clique ou arraste entre colunas para preparar um rascunho tracejado e revise/aplique. Botão direito na linha abre cor/editar/excluir. Grupos oferecem PNG/JPEG local e mais ícones; arraste pelo fundo ou título. Tabelas automáticas de data/hora ficam ocultas por padrão. **Atualizar diagrama do Power BI** relê mudanças externas sem copiar coordenadas nativas. **Detectar relacionamentos automaticamente** inicia a detecção nativa após confirmação/backup; revise e feche seus diálogos antes de **Concluir detecção e atualizar diagrama**.
+Na 1.7.2, clique ou arraste entre colunas para preparar um rascunho tracejado e revise/aplique. Botão direito na linha abre cor/editar/excluir. Grupos oferecem PNG/JPEG local e mais ícones; arraste pelo fundo ou título. Tabelas automáticas de data/hora ficam ocultas por padrão. **Atualizar diagrama do Power BI** relê mudanças externas sem copiar coordenadas nativas. **Detectar relacionamentos automaticamente** inicia a detecção nativa após confirmação/backup; revise e feche seus diálogos antes de **Concluir detecção e atualizar diagrama**.
 
 <a name="power-bi-tv-tool"></a>
 ### Power BI TV Tool
