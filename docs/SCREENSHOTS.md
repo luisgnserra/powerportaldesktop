@@ -4,6 +4,10 @@
 [🇺🇸 English](SCREENSHOTS.md) · [🇧🇷 Português](pt-BR/SCREENSHOTS.md) · [🇪🇸 Español](es/SCREENSHOTS.md) · [🇨🇳 简体中文](zh-CN/SCREENSHOTS.md) · [🇫🇷 Français](fr/SCREENSHOTS.md) · [🇯🇵 日本語](ja/SCREENSHOTS.md) · [🇮🇳 हिन्दी](hi/SCREENSHOTS.md) · [🇸🇦 العربية](ar/SCREENSHOTS.md)
 <!-- /language-selector -->
 
+**1.8.10 — Animated foreground illustrations and richer hover**
+
+All twelve home covers now animate their main tool illustration, not just the background: a gentle float/rotation and a pulsing foreground verification badge. Hover or keyboard focus reveals additional animated bar panels, a hexagonal status indicator, a dashed orbit and particles. Extra animations pause outside hover/focus. Decorative layers do not intercept clicks or enter the accessibility tree. Windows/browser reduced-motion preferences stop foreground and extra animations while retaining static details, contrast and focus. Original local text-free artwork, eight-language labels and tool navigation are preserved. Packaged-app tests measured changing foreground and hover-panel transforms, keyboard focus, reduced motion, twelve distinct covers and layout in all eight languages. Screenshots are static captures of normal/hover states, not video; all model data is synthetic.
+
 **1.8.9 — Calendar sample and native refresh shortcut**
 
 In Calendar generator, the real sample (up to 50 rows) now appears below Generate script. Refresh in Power BI sits beside that button and, with a live connection, opens Refresh Performance and starts the same confirmed native model-data refresh. Follow table statuses, timings and row counts there. This refreshes the entire model; it does not apply the generated script, create or replace a calendar table, or save the PBIX. Create calendar in Power BI remains a separate action. The button is disabled offline, supports keyboard activation and is translated into all eight languages. Cancellation and errors use the existing refresh flow. The sample remains the last requested read: use Read selected calendar to read it again after refreshing. Packaged-app tests verified layout, all eight labels, offline gating, exact selected connection, cancellation, visible errors, retry and unchanged calendar creation. No real model refresh was started for these tests; documentation images use synthetic data.
@@ -48,7 +52,7 @@ Refresh Performance is now immediately below Relationship map in the sidebar and
 
 [Back to home](../README.md) · [Install](INSTALLATION.md) · [Safety guide](USAGE.md)
 
-**Application screenshots: Power Portal Desktop 1.8.9, English interface.**
+**Application screenshots: Power Portal Desktop 1.8.10, English interface.**
 The screenshots use **synthetic demonstration metadata and query values**, not a customer PBIX. Connected states illustrate supported UI actions; no customer model was changed to make these images. Native file-picker labels can follow the Windows language. The actual Power BI ribbon screenshot was supplied by the owner and cropped to remove the private file title.
 
 Relationship arrows now sit directly on the curve and rotate along its local direction, including diagonal and reversed links. Larger 36 × 26 SVG arrowheads are always black with a 3-unit white outline, independently of the relationship line color. Single-direction filtering remains destination to source; bidirectional filtering shows two opposite arrows. Automatic filtering retains its question-mark indicator. This is a visual-only change.
@@ -105,7 +109,7 @@ Launching from the External Tools ribbon instead passes that Desktop instance's 
 
 ![New version available with Update now and the authorization/unsent-edits warning](images/update-available.png)
 
-The screenshot uses a **synthetic future 1.8.9 result** to show the notification in version 1.8.9. It is not a claim that 1.8.9 has been published. Users on 1.6.2 or newer can receive the real 1.8.9 notification now.
+The screenshot uses a **synthetic future 1.8.10 result** to show the notification in version 1.8.10. It is not a claim that 1.8.10 has been published. Users on 1.6.2 or newer can receive the real 1.8.10 notification now.
 
 In 1.6.4, the amber banner stays visible while scrolling and gently animates unless reduced motion is enabled. No persistent "up to date" banner occupies space.
 
@@ -179,7 +183,7 @@ The new Desktop-only tool shows real table links, cardinalities, filter arrows a
 
 Select a line to inspect its exact columns, cardinality, filter direction and active state. **Apply relationship to Power BI** or **Delete relationship in Power BI** commits each edit after native confirmation and backup. Imported projects remain read-only. Styling does not rename tables or change Power BI's native diagram. [Complete walkthrough and safety limits](RELATIONSHIPS.md).
 
-In 1.8.9, click or drag between columns to prepare a dashed draft, then review/apply. Right-click a line for color/edit/delete. Group settings offer local PNG/JPEG images and more icons; drag the group background or heading. Automatic date/time tables are hidden by default. **Refresh diagram from Power BI** re-reads external changes without copying native layout coordinates. **Autodetect relationships** starts Desktop's native detection after confirmation/backup; review and close its dialogs before **Finish detection and refresh diagram**.
+In 1.8.10, click or drag between columns to prepare a dashed draft, then review/apply. Right-click a line for color/edit/delete. Group settings offer local PNG/JPEG images and more icons; drag the group background or heading. Automatic date/time tables are hidden by default. **Refresh diagram from Power BI** re-reads external changes without copying native layout coordinates. **Autodetect relationships** starts Desktop's native detection after confirmation/backup; review and close its dialogs before **Finish detection and refresh diagram**.
 
 ### Power BI TV Tool
 

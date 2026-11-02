@@ -14,6 +14,10 @@
 | 🇸🇦 العربية | [README.ar.md](README.ar.md) |
 <!-- /language-selector -->
 
+**1.8.10 — Ilustrações de primeiro plano animadas e hover mais rico**
+
+As doze capas da tela inicial agora animam a ilustração principal de cada ferramenta, não apenas o fundo: flutuação e rotação suaves, com um selo de verificação pulsante no primeiro plano. Ao passar o mouse ou focar pelo teclado aparecem painéis de barras, indicador hexagonal, órbita tracejada e partículas animados. As animações extras ficam pausadas fora do hover/foco. As camadas decorativas não interceptam cliques nem entram na árvore de acessibilidade. A preferência de reduzir movimentos do Windows/navegador desliga as animações de primeiro plano e extras, mantendo detalhes estáticos, contraste e foco. As artes locais originais sem texto, os oito idiomas e a navegação foram preservados. Testes no pacote mediram a mudança real das transformações do primeiro plano e dos painéis, foco pelo teclado, movimento reduzido, doze capas distintas e layout nos oito idiomas. Os prints são capturas estáticas dos estados normal/hover, não vídeos; os dados são sintéticos.
+
 **1.8.9 — Amostra do calendário e atalho para atualização nativa**
 
 No Gerador de Tabela Calendário, a amostra real (até 50 linhas) agora fica abaixo de Gerar script. Atualizar no Power BI fica ao lado desse botão e, com conexão ativa, abre Desempenho de Atualização e inicia o mesmo fluxo nativo de atualização dos dados com confirmação. Acompanhe ali estados das tabelas, tempos e contagens de linhas. Isso atualiza o modelo inteiro; não aplica o script gerado, não cria nem substitui a tabela calendário e não salva o PBIX. Criar calendário no Power BI continua sendo uma ação separada. O botão fica desabilitado sem conexão, funciona pelo teclado e está traduzido nos oito idiomas. Cancelamento e erros usam o fluxo de atualização existente. A amostra continua sendo a última leitura solicitada: use Ler calendário selecionado para consultá-la novamente após atualizar. Testes no aplicativo empacotado verificaram posição, oito traduções, bloqueio offline, conexão exata, cancelamento, erros visíveis, nova tentativa e criação de calendário preservada. Nenhuma atualização real foi iniciada nesses testes; os prints usam dados sintéticos.
@@ -76,13 +80,13 @@ Desempenho de Atualização fica imediatamente abaixo de Mapa de relacionamentos
 <a name="option-1-install-with-a-few-clicks"></a>
 ### Opção 1: instalar com poucos cliques
 
-1. [Baixe o Power Portal Desktop 1.8.9 para Windows x64](https://github.com/luisgnserra/powerportaldesktop/releases/download/v1.8.9/PowerPortal-Setup-1.8.9-x64.exe).
+1. [Baixe o Power Portal Desktop 1.8.10 para Windows x64](https://github.com/luisgnserra/powerportaldesktop/releases/download/v1.8.10/PowerPortal-Setup-1.8.10-x64.exe).
 2. Execute o instalador e aprove a solicitação de administrador do Windows.
 3. Escolha a pasta de instalação e o idioma padrão.
 4. Conclua a instalação, feche e abra novamente o Power BI Desktop.
 5. Abra um PBIX e selecione **Ferramentas externas > Power Portal**.
 
-**O Windows pode avisar que o editor é desconhecido:** a versão 1.8.9 não possui assinatura digital. Prossiga somente se confiar nesta distribuição. Se sua organização bloquear programas sem assinatura, procure a TI em vez de contornar a política.
+**O Windows pode avisar que o editor é desconhecido:** a versão 1.8.10 não possui assinatura digital. Prossiga somente se confiar nesta distribuição. Se sua organização bloquear programas sem assinatura, procure a TI em vez de contornar a política.
 
 [Versão mais recente](https://github.com/luisgnserra/powerportaldesktop/releases/latest) · [Guia de instalação](docs/pt-BR/INSTALLATION.md) · [Configuração](docs/pt-BR/CONFIGURATION.md) · [Solução de problemas](docs/pt-BR/TROUBLESHOOTING.md)
 
@@ -95,7 +99,7 @@ O instalador adiciona **Power Portal** à guia **Ferramentas externas** do Power
 
 O print original da guia está em português: **Ferramentas externas** corresponde a **External Tools** em inglês. O Power Portal abre em uma **janela separada conectada ao Power BI**, não como um visual do relatório ou um novo painel interno do Power BI.
 
-![Início do Power Portal 1.8.9, menu completo e aviso de conexão ao iniciar](docs/images/pt-BR/home.png)
+![Início do Power Portal 1.8.10, menu completo e aviso de conexão ao iniciar](docs/images/pt-BR/home.png)
 
 **Já está com o Power BI aberto?** Ao iniciar por um atalho, o Power Portal detecta modelos locais abertos e mostra um aviso de conexão. Escolha **Localizar modelos abertos**, selecione seu arquivo e conecte. Assim você poderá consultar os dados e enviar as alterações compatíveis, com confirmação.
 
@@ -112,7 +116,7 @@ Entenda as ligações reais entre tabelas em um canvas com movimentação livre.
 
 Crie, edite, ative/desative e exclua relacionamentos no modelo conectado do Power BI **após confirmação e backup dos metadados**. A personalização visual fica no Power Portal; ela não renomeia tabelas nem modifica o layout nativo do Power BI. [Tutorial completo de relacionamentos](docs/pt-BR/RELATIONSHIPS.md).
 
-Na 1.8.9, clique ou arraste entre colunas exatas para preparar uma ligação; use botão direito nas linhas para cor, edição e exclusão confirmada. Grupos aceitam imagens locais e mais de 30 ícones. Tabelas automáticas de data/hora ficam ocultas por padrão com opção de exibição. Atualize a partir do Power BI após edições externas ou acione a detecção nativa com backup prévio e etapa separada de revisão/conclusão.
+Na 1.8.10, clique ou arraste entre colunas exatas para preparar uma ligação; use botão direito nas linhas para cor, edição e exclusão confirmada. Grupos aceitam imagens locais e mais de 30 ícones. Tabelas automáticas de data/hora ficam ocultas por padrão com opção de exibição. Atualize a partir do Power BI após edições externas ou acione a detecção nativa com backup prévio e etapa separada de revisão/conclusão.
 
 <a name="built-in-update-checks"></a>
 ### Verificação de atualizações integrada
@@ -123,7 +127,7 @@ O Windows solicita autorização de administrador. Somente o Power Portal fecha;
 
 ![Aviso de nova versão e botão Atualizar agora](docs/images/pt-BR/update-available.png)
 
-O print usa um **aviso futuro simulado da 1.8.9** para ilustrar a interface, não para anunciar uma versão publicada. **A versão 1.8.9 já está publicada:** usuários da 1.6.2 ou superior podem reabrir o aplicativo ou clicar em **Verificar atualizações** para recebê-la. [Guia de atualização](docs/pt-BR/UPDATES.md).
+O print usa um **aviso futuro simulado da 1.8.10** para ilustrar a interface, não para anunciar uma versão publicada. **A versão 1.8.10 já está publicada:** usuários da 1.6.2 ou superior podem reabrir o aplicativo ou clicar em **Verificar atualizações** para recebê-la. [Guia de atualização](docs/pt-BR/UPDATES.md).
 
 **Está na 1.6.1 ou anterior? Instale a 1.6.2 manualmente uma vez** para habilitar o recurso. Você também pode usar **Verificar atualizações** para repetir uma verificação que falhou ou foi feita sem internet. O atualizador nunca instala apenas porque você abriu o aplicativo.
 
@@ -135,13 +139,13 @@ Abra o **Windows PowerShell 5.1 ou PowerShell 7 no Windows**:
 ```powershell
 $script = Join-Path $env:TEMP 'Install-PowerPortal.ps1'
 [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
-Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/luisgnserra/powerportaldesktop/v1.8.9/install.ps1' -OutFile $script
+Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/luisgnserra/powerportaldesktop/v1.8.10/install.ps1' -OutFile $script
 # Review the downloaded script before running it.
 Get-Content -LiteralPath $script
 & $script
 ```
 
-O auxiliar baixa a **versão 1.8.9**, verifica o SHA-256 fixado e abre o mesmo instalador. Não instala Node.js, PHP, SDK do .NET nem compila nada.
+O auxiliar baixa a **versão 1.8.10**, verifica o SHA-256 fixado e abre o mesmo instalador. Não instala Node.js, PHP, SDK do .NET nem compila nada.
 
 Para instalação sem interação, execute o mesmo auxiliar em uma **janela do PowerShell como administrador**:
 

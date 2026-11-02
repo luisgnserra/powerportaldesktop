@@ -4,6 +4,10 @@
 [🇺🇸 English](UPDATES.md) · [🇧🇷 Português](pt-BR/UPDATES.md) · [🇪🇸 Español](es/UPDATES.md) · [🇨🇳 简体中文](zh-CN/UPDATES.md) · [🇫🇷 Français](fr/UPDATES.md) · [🇯🇵 日本語](ja/UPDATES.md) · [🇮🇳 हिन्दी](hi/UPDATES.md) · [🇸🇦 العربية](ar/UPDATES.md)
 <!-- /language-selector -->
 
+**1.8.10 — Animated foreground illustrations and richer hover**
+
+All twelve home covers now animate their main tool illustration, not just the background: a gentle float/rotation and a pulsing foreground verification badge. Hover or keyboard focus reveals additional animated bar panels, a hexagonal status indicator, a dashed orbit and particles. Extra animations pause outside hover/focus. Decorative layers do not intercept clicks or enter the accessibility tree. Windows/browser reduced-motion preferences stop foreground and extra animations while retaining static details, contrast and focus. Original local text-free artwork, eight-language labels and tool navigation are preserved. Packaged-app tests measured changing foreground and hover-panel transforms, keyboard focus, reduced motion, twelve distinct covers and layout in all eight languages. Screenshots are static captures of normal/hover states, not video; all model data is synthetic.
+
 **1.8.9 — Calendar sample and native refresh shortcut**
 
 In Calendar generator, the real sample (up to 50 rows) now appears below Generate script. Refresh in Power BI sits beside that button and, with a live connection, opens Refresh Performance and starts the same confirmed native model-data refresh. Follow table statuses, timings and row counts there. This refreshes the entire model; it does not apply the generated script, create or replace a calendar table, or save the PBIX. Create calendar in Power BI remains a separate action. The button is disabled offline, supports keyboard activation and is translated into all eight languages. Cancellation and errors use the existing refresh flow. The sample remains the last requested read: use Read selected calendar to read it again after refreshing. Packaged-app tests verified layout, all eight labels, offline gating, exact selected connection, cancellation, visible errors, retry and unchanged calendar creation. No real model refresh was started for these tests; documentation images use synthetic data.
@@ -47,11 +51,11 @@ The development/source run does not download or install updates.
 
 ![Update notification and user-controlled Update now button](images/update-available.png)
 
-The screenshot is a **simulated future 1.8.10 notification** inside 1.8.9, demonstrating the UI only. It is not an announcement of 1.8.10.
+The screenshot is a **simulated future 1.8.11 notification** inside 1.8.10, demonstrating the UI only. It is not an announcement of 1.8.11.
 
-### Receive version 1.8.9 from an earlier updater-enabled version
+### Receive version 1.8.10 from an earlier updater-enabled version
 
-With **1.6.2, 1.6.3 or 1.6.4** installed, reopen the app or click **Check for updates**. The published stable **1.8.9** should appear with **Update now**. Do not install 1.8.9 manually first if you want to observe this notification. Versions before 1.6.4 use their original banner; the prominent visual styling is retained in 1.8.9. Click the update button when ready and approve Windows authorization.
+With **1.6.2, 1.6.3 or 1.6.4** installed, reopen the app or click **Check for updates**. The published stable **1.8.10** should appear with **Update now**. Do not install 1.8.10 manually first if you want to observe this notification. Versions before 1.6.4 use their original banner; the prominent visual styling is retained in 1.8.10. Click the update button when ready and approve Windows authorization.
 
 The app reports installer launch, not a verified completed installation: installation completes after the old app closes. Check the displayed application version after reopening. Windows can still block the unsigned installer or require IT approval.
 

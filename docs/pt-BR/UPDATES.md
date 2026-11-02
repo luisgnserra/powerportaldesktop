@@ -4,6 +4,10 @@
 [🇺🇸 English](../UPDATES.md) · [🇧🇷 Português](UPDATES.md) · [🇪🇸 Español](../es/UPDATES.md) · [🇨🇳 简体中文](../zh-CN/UPDATES.md) · [🇫🇷 Français](../fr/UPDATES.md) · [🇯🇵 日本語](../ja/UPDATES.md) · [🇮🇳 हिन्दी](../hi/UPDATES.md) · [🇸🇦 العربية](../ar/UPDATES.md)
 <!-- /language-selector -->
 
+**1.8.10 — Ilustrações de primeiro plano animadas e hover mais rico**
+
+As doze capas da tela inicial agora animam a ilustração principal de cada ferramenta, não apenas o fundo: flutuação e rotação suaves, com um selo de verificação pulsante no primeiro plano. Ao passar o mouse ou focar pelo teclado aparecem painéis de barras, indicador hexagonal, órbita tracejada e partículas animados. As animações extras ficam pausadas fora do hover/foco. As camadas decorativas não interceptam cliques nem entram na árvore de acessibilidade. A preferência de reduzir movimentos do Windows/navegador desliga as animações de primeiro plano e extras, mantendo detalhes estáticos, contraste e foco. As artes locais originais sem texto, os oito idiomas e a navegação foram preservados. Testes no pacote mediram a mudança real das transformações do primeiro plano e dos painéis, foco pelo teclado, movimento reduzido, doze capas distintas e layout nos oito idiomas. Os prints são capturas estáticas dos estados normal/hover, não vídeos; os dados são sintéticos.
+
 **1.8.9 — Amostra do calendário e atalho para atualização nativa**
 
 No Gerador de Tabela Calendário, a amostra real (até 50 linhas) agora fica abaixo de Gerar script. Atualizar no Power BI fica ao lado desse botão e, com conexão ativa, abre Desempenho de Atualização e inicia o mesmo fluxo nativo de atualização dos dados com confirmação. Acompanhe ali estados das tabelas, tempos e contagens de linhas. Isso atualiza o modelo inteiro; não aplica o script gerado, não cria nem substitui a tabela calendário e não salva o PBIX. Criar calendário no Power BI continua sendo uma ação separada. O botão fica desabilitado sem conexão, funciona pelo teclado e está traduzido nos oito idiomas. Cancelamento e erros usam o fluxo de atualização existente. A amostra continua sendo a última leitura solicitada: use Ler calendário selecionado para consultá-la novamente após atualizar. Testes no aplicativo empacotado verificaram posição, oito traduções, bloqueio offline, conexão exata, cancelamento, erros visíveis, nova tentativa e criação de calendário preservada. Nenhuma atualização real foi iniciada nesses testes; os prints usam dados sintéticos.
@@ -49,12 +53,12 @@ A execução de desenvolvimento/código-fonte não baixa nem instala atualizaç�
 
 ![Aviso de atualização e botão Atualizar agora controlado pelo usuário](../images/pt-BR/update-available.png)
 
-O print mostra um **aviso futuro simulado da 1.8.10** dentro da 1.8.9, apenas para demonstrar a interface. Não anuncia a 1.8.10.
+O print mostra um **aviso futuro simulado da 1.8.11** dentro da 1.8.10, apenas para demonstrar a interface. Não anuncia a 1.8.11.
 
-<a name="receive-version-189-from-an-earlier-updater-enabled-version"></a>
-### Receber a versão 1.8.9 de uma versão anterior com atualizador
+<a name="receive-version-1810-from-an-earlier-updater-enabled-version"></a>
+### Receber a versão 1.8.10 de uma versão anterior com atualizador
 
-Com **1.6.2, 1.6.3 ou 1.6.4** instalada, reabra ou clique em **Verificar atualizações**. A versão estável publicada **1.8.9** deve aparecer com **Atualizar agora**. Não instale manualmente a 1.8.9 primeiro se quiser observar o aviso. Versões anteriores à 1.6.4 usam o aviso original; o destaque visual é mantido na 1.8.9. Clique quando estiver pronto e aprove a autorização do Windows.
+Com **1.6.2, 1.6.3 ou 1.6.4** instalada, reabra ou clique em **Verificar atualizações**. A versão estável publicada **1.8.10** deve aparecer com **Atualizar agora**. Não instale manualmente a 1.8.10 primeiro se quiser observar o aviso. Versões anteriores à 1.6.4 usam o aviso original; o destaque visual é mantido na 1.8.10. Clique quando estiver pronto e aprove a autorização do Windows.
 
 O aplicativo informa o início do instalador, não uma instalação concluída e verificada: ela termina após o aplicativo antigo fechar. Confira a versão ao reabrir. O Windows ainda pode bloquear o instalador sem assinatura ou exigir aprovação da TI.
 

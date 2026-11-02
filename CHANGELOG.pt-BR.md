@@ -4,6 +4,13 @@
 [🇺🇸 English](CHANGELOG.md) · [🇧🇷 Português](CHANGELOG.pt-BR.md) · [🇪🇸 Español](CHANGELOG.es.md) · [🇨🇳 简体中文](CHANGELOG.zh-CN.md) · [🇫🇷 Français](CHANGELOG.fr.md) · [🇯🇵 日本語](CHANGELOG.ja.md) · [🇮🇳 हिन्दी](CHANGELOG.hi.md) · [🇸🇦 العربية](CHANGELOG.ar.md)
 <!-- /language-selector -->
 
+<a name="1810"></a>
+## 1.8.10
+
+**Ilustrações de primeiro plano animadas e hover mais rico**
+
+As doze capas da tela inicial agora animam a ilustração principal de cada ferramenta, não apenas o fundo: flutuação e rotação suaves, com um selo de verificação pulsante no primeiro plano. Ao passar o mouse ou focar pelo teclado aparecem painéis de barras, indicador hexagonal, órbita tracejada e partículas animados. As animações extras ficam pausadas fora do hover/foco. As camadas decorativas não interceptam cliques nem entram na árvore de acessibilidade. A preferência de reduzir movimentos do Windows/navegador desliga as animações de primeiro plano e extras, mantendo detalhes estáticos, contraste e foco. As artes locais originais sem texto, os oito idiomas e a navegação foram preservados. Testes no pacote mediram a mudança real das transformações do primeiro plano e dos painéis, foco pelo teclado, movimento reduzido, doze capas distintas e layout nos oito idiomas. Os prints são capturas estáticas dos estados normal/hover, não vídeos; os dados são sintéticos.
+
 <a name="189"></a>
 ## 1.8.9
 
