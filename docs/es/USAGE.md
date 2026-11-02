@@ -6,6 +6,8 @@
 
 [Volver al inicio](../../README.es.md)
 
+El encabezado animado de Power Portal ahora contiene el nombre del archivo, el estado de conexión y los cinco botones de lectura, importación, búsqueda y actualización. Se eliminó la barra separada debajo para liberar espacio. El contenido se adapta dentro del encabezado en ventanas pequeñas y en los ocho idiomas, incluido árabe. Se mantienen las confirmaciones, los avisos y las actualizaciones.
+
 <a name="first-run"></a>
 ## Primer inicio
 
@@ -119,4 +121,4 @@ La aplicación no envía al portal archivos del modelo, metadatos, filas ni cred
 
 [Configuración](CONFIGURATION.md) · [Solución de problemas](TROUBLESHOOTING.md)
 
-En 1.7.3, dibujar relaciones solo prepara un borrador: haga clic o arrastre entre pares de columnas exactos y revíselo antes de aplicarlo. La eliminación con el botón derecho usa la misma confirmación y copia de seguridad. La detección automática nativa es independiente y puede crear varios vínculos: revíselos en Power BI, cierre sus diálogos y después finalice en Power Portal antes de otras escrituras o actualizaciones. Las imágenes locales de grupo y las preferencias de visibilidad se guardan solo en el diagrama. [Nuevo flujo de relaciones](RELATIONSHIPS.md#native-automatic-relationship-detection).
+En 1.7.4, dibujar relaciones solo prepara un borrador: haga clic o arrastre entre pares de columnas exactos y revíselo antes de aplicarlo. La eliminación con el botón derecho usa la misma confirmación y copia de seguridad. La detección automática nativa es independiente y puede crear varios vínculos: revíselos en Power BI, cierre sus diálogos y después finalice en Power Portal antes de otras escrituras o actualizaciones. Las imágenes locales de grupo y las preferencias de visibilidad se guardan solo en el diagrama. [Nuevo flujo de relaciones](RELATIONSHIPS.md#native-automatic-relationship-detection).

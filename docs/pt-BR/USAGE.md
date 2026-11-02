@@ -6,6 +6,8 @@
 
 [Voltar ao início](../../README.pt-BR.md)
 
+O cabecalho animado do Power Portal agora incorpora o nome do arquivo, o status da conexao e os cinco botoes de leitura/importacao/busca/atualizacao. A faixa separada abaixo do banner foi removida para liberar espaco. O conteudo se reorganiza dentro do cabecalho em janelas menores e nos oito idiomas, incluindo arabe. Confirmacoes, avisos e comportamento das atualizacoes foram preservados.
+
 <a name="first-run"></a>
 ## Primeira execução
 
@@ -119,4 +121,4 @@ O aplicativo não envia arquivos, metadados, linhas ou credenciais das fontes ao
 
 [Configuração](CONFIGURATION.md) · [Solução de problemas](TROUBLESHOOTING.md)
 
-Na 1.7.3, desenhar só prepara um rascunho: clique/arraste pares exatos de colunas e revise antes de aplicar. Exclusão pelo botão direito usa a mesma confirmação e backup. A detecção nativa é separada e pode criar várias ligações: revise no Power BI, feche os diálogos e conclua no Power Portal antes de gravar ou atualizar. Imagens de grupos e preferência de exibição ficam somente no diagrama. [Novo fluxo de relacionamentos](RELATIONSHIPS.md#native-automatic-relationship-detection).
+Na 1.7.4, desenhar só prepara um rascunho: clique/arraste pares exatos de colunas e revise antes de aplicar. Exclusão pelo botão direito usa a mesma confirmação e backup. A detecção nativa é separada e pode criar várias ligações: revise no Power BI, feche os diálogos e conclua no Power Portal antes de gravar ou atualizar. Imagens de grupos e preferência de exibição ficam somente no diagrama. [Novo fluxo de relacionamentos](RELATIONSHIPS.md#native-automatic-relationship-detection).

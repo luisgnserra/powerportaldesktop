@@ -6,6 +6,8 @@
 
 [Retour à l’accueil](../../README.fr.md)
 
+L’en-tête animé de Power Portal intègre désormais le nom du fichier, l’état de connexion et les cinq boutons de lecture, importation, recherche et mise à jour. La barre séparée sous la bannière est supprimée pour libérer de l’espace. Le contenu s’adapte dans l’en-tête sur les petites fenêtres et dans les huit langues, dont l’arabe. Les confirmations, notifications et mises à jour restent inchangées.
+
 <a name="first-run"></a>
 ## Premier démarrage
 
@@ -119,4 +121,4 @@ L’application n’envoie pas au portail les fichiers du modèle, métadonnées
 
 [Configuration](CONFIGURATION.md) · [Dépannage](TROUBLESHOOTING.md)
 
-Dans la version 1.7.3, le dessin de relations ne fait que préparer un brouillon : cliquez ou faites glisser entre des paires de colonnes exactes et vérifiez-le avant de l’appliquer. La suppression par clic droit utilise la même confirmation et la même sauvegarde. La détection automatique native est distincte et peut créer plusieurs liens : examinez-les dans Power BI, fermez ses dialogues, puis terminez dans Power Portal avant toute autre écriture ou mise à jour. Les images locales de groupe et les préférences de visibilité sont enregistrées uniquement dans le diagramme. [Nouveau parcours des relations](RELATIONSHIPS.md#native-automatic-relationship-detection).
+Dans la version 1.7.4, le dessin de relations ne fait que préparer un brouillon : cliquez ou faites glisser entre des paires de colonnes exactes et vérifiez-le avant de l’appliquer. La suppression par clic droit utilise la même confirmation et la même sauvegarde. La détection automatique native est distincte et peut créer plusieurs liens : examinez-les dans Power BI, fermez ses dialogues, puis terminez dans Power Portal avant toute autre écriture ou mise à jour. Les images locales de groupe et les préférences de visibilité sont enregistrées uniquement dans le diagramme. [Nouveau parcours des relations](RELATIONSHIPS.md#native-automatic-relationship-detection).

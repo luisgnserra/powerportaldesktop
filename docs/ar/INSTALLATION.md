@@ -19,7 +19,7 @@
 ## التثبيت البسيط
 
 1. افتح [أحدث Release](https://github.com/luisgnserra/powerportaldesktop/releases/latest).
-2. من قسم **Assets**، نزّل `PowerPortal-Setup-1.7.3-x64.exe` لهذا الإصدار. لا تنزّل أرشيفات المصدر التي أُنشئت تلقائياً على أنها مثبّت.
+2. من قسم **Assets**، نزّل `PowerPortal-Setup-1.7.4-x64.exe` لهذا الإصدار. لا تنزّل أرشيفات المصدر التي أُنشئت تلقائياً على أنها مثبّت.
 3. يمكنك اختيارياً [التحقق من SHA-256](#verify-the-installer).
 4. شغّل الملف التنفيذي ووافق على User Account Control.
 5. اقبل شروط التبعيات المعروضة، واختر مجلداً ولغة افتراضية باستخدام الأعلام. تُقترح لغة واجهة Windows؛ وتُستخدم الإنجليزية للغات غير المدعومة.
@@ -49,14 +49,14 @@
 ```powershell
 $script = Join-Path $env:TEMP 'Install-PowerPortal.ps1'
 [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
-Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/luisgnserra/powerportaldesktop/v1.7.3/install.ps1' -OutFile $script
+Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/luisgnserra/powerportaldesktop/v1.7.4/install.ps1' -OutFile $script
 Get-Content -LiteralPath $script
 & $script
 ```
 
 </div>
 
-يثبت هذا الرابط ذي الإصدار المحدد المساعد على إصدار 1.7.3؛ ولا يتتبع الإصدارات المستقبلية بصمت. كما يثبت المساعد اسم المثبّت وقيمة SHA-256، وينزّل عبر HTTPS، ويتحقق من الملف التنفيذي قبل تشغيله، ويفحص تسجيل الأداة الخارجية بعد خروج المثبّت بنجاح.
+يثبت هذا الرابط ذي الإصدار المحدد المساعد على إصدار 1.7.4؛ ولا يتتبع الإصدارات المستقبلية بصمت. كما يثبت المساعد اسم المثبّت وقيمة SHA-256، وينزّل عبر HTTPS، ويتحقق من الملف التنفيذي قبل تشغيله، ويفحص تسجيل الأداة الخارجية بعد خروج المثبّت بنجاح.
 
 يمكّن سطر TLS الإصدار TLS 1.2 لـ HTTPS في عملية PowerShell هذه عند استخدام الإعدادات الافتراضية القديمة لـ Windows PowerShell. ولا يغيّر أمان Windows أو سياسات التنفيذ.
 
@@ -108,7 +108,7 @@ Get-Content -LiteralPath $script
 <div dir="ltr">
 
 ```powershell
-$setup = "$env:USERPROFILE\Downloads\PowerPortal-Setup-1.7.3-x64.exe"
+$setup = "$env:USERPROFILE\Downloads\PowerPortal-Setup-1.7.4-x64.exe"
 $process = Start-Process -FilePath $setup -ArgumentList '/S' -Wait -PassThru
 if ($process.ExitCode -ne 0) { throw "Installer failed: $($process.ExitCode)" }
 ```
@@ -120,17 +120,17 @@ if ($process.ExitCode -ne 0) { throw "Installer failed: $($process.ExitCode)" }
 <a name="verify-the-installer"></a>
 ## التحقق من المثبّت
 
-قيمة SHA-256 المتوقعة لـ **1.7.3 x64**:
+قيمة SHA-256 المتوقعة لـ **1.7.4 x64**:
 
 <div dir="ltr">
 
 ```text
-CE8D4A1B88DC70F35827F5EBAEFED93E3DC92E6253560F601198D6F5F9CB1511
+CDF6A22A7FE6A7872FD1A987EE3B0A54648801786B5546B9C343427272014F12
 ```
 
 ```powershell
-$file = "$env:USERPROFILE\Downloads\PowerPortal-Setup-1.7.3-x64.exe"
-$expected = 'CE8D4A1B88DC70F35827F5EBAEFED93E3DC92E6253560F601198D6F5F9CB1511'
+$file = "$env:USERPROFILE\Downloads\PowerPortal-Setup-1.7.4-x64.exe"
+$expected = 'CDF6A22A7FE6A7872FD1A987EE3B0A54648801786B5546B9C343427272014F12'
 if ((Get-FileHash -LiteralPath $file -Algorithm SHA256).Hash -ne $expected) {
     throw 'Checksum mismatch. Do not run this installer.'
 }

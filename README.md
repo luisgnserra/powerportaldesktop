@@ -16,17 +16,19 @@ Your diagram is automatically saved on this computer for the same model: groups,
 
 Relationship arrows now sit directly on the curve and rotate along its local direction, including diagonal and reversed links. Larger 36 × 26 SVG arrowheads are always black with a 3-unit white outline, independently of the relationship line color. Single-direction filtering remains destination to source; bidirectional filtering shows two opposite arrows. Automatic filtering retains its question-mark indicator. This is a visual-only change.
 
+The animated Power Portal header now contains the file name, connection status and all five read/import/discovery/update buttons. The separate toolbar below the banner has been removed to free workspace. Content wraps inside the header on smaller windows and in all eight languages, including Arabic. Connection confirmations, notices and update behavior are unchanged.
+
 ## Download and install
 
 ### Option 1: Install with a few clicks
 
-1. [Download Power Portal Desktop 1.7.3 for Windows x64](https://github.com/luisgnserra/powerportaldesktop/releases/download/v1.7.3/PowerPortal-Setup-1.7.3-x64.exe).
+1. [Download Power Portal Desktop 1.7.4 for Windows x64](https://github.com/luisgnserra/powerportaldesktop/releases/download/v1.7.4/PowerPortal-Setup-1.7.4-x64.exe).
 2. Run the installer and approve the Windows administrator prompt.
 3. Choose the installation folder and default language.
 4. Finish installation, then close and reopen Power BI Desktop.
 5. Open a PBIX and select **External Tools > Power Portal**.
 
-**Windows may warn that the publisher is unknown:** version 1.7.3 is not digitally signed. Only proceed if you trust this distribution. If your organization blocks unsigned software, contact IT rather than bypassing its policy.
+**Windows may warn that the publisher is unknown:** version 1.7.4 is not digitally signed. Only proceed if you trust this distribution. If your organization blocks unsigned software, contact IT rather than bypassing its policy.
 
 [Latest release](https://github.com/luisgnserra/powerportaldesktop/releases/latest) · [Installation guide](docs/INSTALLATION.md) · [Configuration](docs/CONFIGURATION.md) · [Troubleshooting](docs/TROUBLESHOOTING.md)
 
@@ -38,7 +40,7 @@ The installer adds **Power Portal** to **External Tools** in Power BI Desktop. C
 
 The supplied ribbon screenshot uses Portuguese: **Ferramentas externas** means **External Tools**. Power Portal opens a **separate window connected to Power BI**, not an embedded report visual or a new internal Power BI pane.
 
-![Power Portal 1.7.3 home, full sidebar and startup connection notice](docs/images/home.png)
+![Power Portal 1.7.4 home, full sidebar and startup connection notice](docs/images/home.png)
 
 **Already have Power BI open?** When launched from a shortcut, Power Portal detects open local models and displays a connection notice. Choose **Find open models**, select your file, and connect. You can then query its data and send supported changes back with confirmation.
 
@@ -54,7 +56,7 @@ Understand real table links in a freely draggable canvas. Organize Facts, Dimens
 
 Create, edit, activate/deactivate and delete relationships in the connected Power BI model **after confirmation and a metadata backup**. Visual styling stays in Power Portal; it does not rename tables or modify Power BI's native layout. [Full relationship tutorial](docs/RELATIONSHIPS.md).
 
-In 1.7.3, click or drag between exact columns to prepare a link; right-click lines for color, editing and confirmed deletion. Groups support local images and more than 30 icons. Automatic date/time tables are hidden by default with a visibility toggle. Refresh from Power BI after external edits, or invoke native Desktop autodetection with prior backup and a separate review/finish step.
+In 1.7.4, click or drag between exact columns to prepare a link; right-click lines for color, editing and confirmed deletion. Groups support local images and more than 30 icons. Automatic date/time tables are hidden by default with a visibility toggle. Refresh from Power BI after external edits, or invoke native Desktop autodetection with prior backup and a separate review/finish step.
 
 ### Built-in update checks
 
@@ -64,7 +66,7 @@ Windows asks for administrator authorization. Only Power Portal closes; Power BI
 
 ![New-version notification and Update now button](docs/images/update-available.png)
 
-The screenshot uses a **simulated future 1.7.4 notification** to illustrate the UI, not an announcement of a published version. **Version 1.7.3 is now published:** users on 1.6.2 or newer can reopen the app or click **Check for updates** to receive the update. [Update guide](docs/UPDATES.md).
+The screenshot uses a **simulated future 1.7.5 notification** to illustrate the UI, not an announcement of a published version. **Version 1.7.4 is now published:** users on 1.6.2 or newer can reopen the app or click **Check for updates** to receive the update. [Update guide](docs/UPDATES.md).
 
 **On 1.6.1 or older? Install 1.6.2 manually once** to enable this feature. You can also use **Check for updates** to retry a failed/offline check. The updater never installs merely because you opened the application.
 
@@ -75,13 +77,13 @@ Open **Windows PowerShell 5.1 or PowerShell 7 on Windows**:
 ```powershell
 $script = Join-Path $env:TEMP 'Install-PowerPortal.ps1'
 [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
-Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/luisgnserra/powerportaldesktop/v1.7.3/install.ps1' -OutFile $script
+Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/luisgnserra/powerportaldesktop/v1.7.4/install.ps1' -OutFile $script
 # Review the downloaded script before running it.
 Get-Content -LiteralPath $script
 & $script
 ```
 
-The helper downloads **version 1.7.3**, verifies its pinned SHA-256 checksum, and opens the same installer. It does not install Node.js, PHP, a .NET SDK, or build anything.
+The helper downloads **version 1.7.4**, verifies its pinned SHA-256 checksum, and opens the same installer. It does not install Node.js, PHP, a .NET SDK, or build anything.
 
 For unattended installation, run the same helper from an **administrator PowerShell window**:
 
