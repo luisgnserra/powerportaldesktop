@@ -16,7 +16,7 @@ jobs:
           $ErrorActionPreference = 'Stop'
           $allowed = @(
             '.gitattributes', '.gitignore', 'README.md', 'CHANGELOG.md',
-            'DISTRIBUTION.md', 'SHA256SUMS.txt', 'release.json', 'install.ps1',
+            'DISTRIBUTION.md', 'PRIVACY.md', 'SHA256SUMS.txt', 'release.json', 'install.ps1',
             'docs/INSTALLATION.md', 'docs/CONFIGURATION.md', 'docs/USAGE.md',
             'docs/TROUBLESHOOTING.md', '.github/ISSUE_TEMPLATE/config.yml',
             '.github/ISSUE_TEMPLATE/installation.yml', '.github/workflows/distribution-check.yml',
@@ -87,7 +87,7 @@ jobs:
           foreach ($file in $allowed | Where-Object { $_ -like '*.md' }) {
             $text = Get-DocumentText $file
             $selector = [regex]::Match($text, '(?s)<!-- language-selector -->(.*?)<!-- /language-selector -->')
-            if (-not $selector.Success -or [regex]::Matches($selector.Groups[1].Value, '\]\(').Count -ne 8) {
+            if ($file -ne 'PRIVACY.md' -and (-not $selector.Success -or [regex]::Matches($selector.Groups[1].Value, '\]\(').Count -ne 8)) {
               throw "Missing eight-language selector: $file"
             }
             $prose = Get-Prose $text
