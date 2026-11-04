@@ -5,6 +5,10 @@
 <!-- /language-selector -->
 
 <a name="1811"></a>
+## 1.8.13 - 2026-11-04
+
+- Accueil en fenêtre modale et installation illustrée: L’accueil apparaît désormais dans une fenêtre modale centrée, et non dans le contenu de la page. L’arrière-plan est bloqué et le focus clavier reste dans la fenêtre. Échap ou Continuer vers les outils ferme uniquement la présentation actuelle. Le bouton de démarrage enregistré et Bienvenue sur l’accueil sont conservés. La fin de l’installation explique Outils externes > Power Portal dans Power BI Desktop et affiche l’image de référence fournie. Si Power BI était déjà ouvert, fermez-le puis rouvrez-le. Les huit langues sont prises en charge ; l’image montre le ruban en portugais. L’option existante de lancer Power Portal est conservée ; elle ne clique pas automatiquement dans Power BI. Aucun modèle n’est modifié par l’accueil.
+
 ## 1.8.12
 
 **Accueil et préférence de démarrage enregistrée**

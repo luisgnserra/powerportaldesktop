@@ -4,6 +4,10 @@
 [🇺🇸 English](CHANGELOG.md) · [🇧🇷 Português](CHANGELOG.pt-BR.md) · [🇪🇸 Español](CHANGELOG.es.md) · [🇨🇳 简体中文](CHANGELOG.zh-CN.md) · [🇫🇷 Français](CHANGELOG.fr.md) · [🇯🇵 日本語](CHANGELOG.ja.md) · [🇮🇳 हिन्दी](CHANGELOG.hi.md) · [🇸🇦 العربية](CHANGELOG.ar.md)
 <!-- /language-selector -->
 
+## 1.8.13 - 2026-11-04
+
+- Welcome popup and illustrated installer: Welcome now opens in a centered modal popup, not inside the Home content. The background is blocked and keyboard focus stays in the popup. Escape or Continue to tools closes it for this session only. The saved show-on-startup switch and Welcome button on Home keep their existing behavior. The installer finish page explains External Tools > Power Portal in Power BI Desktop and shows the supplied ribbon reference image. Close and reopen Power BI if it was already running. All eight languages are supported; the reference picture shows the Portuguese ribbon. The existing option to launch Power Portal after installation is preserved; it does not automatically click Power BI. No model is changed by onboarding.
+
 ## 1.8.12
 
 **Welcome screen and saved startup preference**

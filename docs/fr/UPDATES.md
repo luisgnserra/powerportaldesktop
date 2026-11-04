@@ -4,7 +4,7 @@
 [🇺🇸 English](../UPDATES.md) · [🇧🇷 Português](../pt-BR/UPDATES.md) · [🇪🇸 Español](../es/UPDATES.md) · [🇨🇳 简体中文](../zh-CN/UPDATES.md) · [🇫🇷 Français](UPDATES.md) · [🇯🇵 日本語](../ja/UPDATES.md) · [🇮🇳 हिन्दी](../hi/UPDATES.md) · [🇸🇦 العربية](../ar/UPDATES.md)
 <!-- /language-selector -->
 
-**1.8.12 — Envoyez des idées sans encombrer le menu**
+**1.8.13 — Envoyez des idées sans encombrer le menu**
 
 Envoyer des idées apparaît juste au-dessus de À propos du développement. Le formulaire accessible accepte un titre (120 caractères maximum) et une description (1000). Ouvrir l’e-mail avec l’idée demande l’ouverture de la messagerie par défaut avec le destinataire fixe contato@consultoriaexcelencia.com.br, l’objet et le message remplis. Vérifiez et envoyez depuis cette application : Power Portal n’envoie rien automatiquement et ne confirme pas la livraison. Configurez un client par défaut si nécessaire ou envoyez manuellement. Aucune donnée du modèle, aucun fichier ni identifiant n’est joint ; aucun brouillon n’est enregistré sur disque. Ne saisissez pas d’informations confidentielles. Les erreurs sont explicites et conservent le texte pour réessayer ou copier. Le formulaire fonctionne hors ligne ; l’envoi dépend du compte et du réseau.
 
@@ -59,12 +59,12 @@ L’exécution de développement/depuis les sources ne télécharge et n’insta
 
 ![Notification de mise à jour et bouton Mettre à jour maintenant contrôlé par l’utilisateur](../images/fr/update-available.png)
 
-La capture est une **notification simulée d’une future version 1.8.12** dans 1.8.12, montrant uniquement l’interface. Ce n’est pas une annonce de 1.8.12.
+La capture est une **notification simulée de la version 1.8.12** dans 1.8.13, montrant uniquement l’interface. Ce n’est pas une annonce de 1.8.13.
 
 <a name="receive-version-1811-from-an-earlier-updater-enabled-version"></a>
-### Recevoir la version 1.8.12 depuis une version antérieure disposant de l’outil de mise à jour
+### Recevoir la version 1.8.13 depuis une version antérieure disposant de l’outil de mise à jour
 
-Avec **1.6.2, 1.6.3 ou 1.6.4** installé, rouvrez l’application ou cliquez sur **Rechercher des mises à jour**. La version stable publiée **1.8.12** devrait apparaître avec **Mettre à jour maintenant**. N’installez pas d’abord 1.8.12 manuellement si vous souhaitez observer cette notification. Les versions antérieures à 1.6.4 utilisent leur bannière d’origine ; le style visuel bien visible est conservé en 1.8.12. Cliquez sur le bouton de mise à jour lorsque vous êtes prêt et acceptez l’autorisation Windows.
+Avec **1.6.2, 1.6.3 ou 1.6.4** installé, rouvrez l’application ou cliquez sur **Rechercher des mises à jour**. La version stable publiée **1.8.13** devrait apparaître avec **Mettre à jour maintenant**. N’installez pas d’abord 1.8.13 manuellement si vous souhaitez observer cette notification. Les versions antérieures à 1.6.4 utilisent leur bannière d’origine ; le style visuel bien visible est conservé en 1.8.13. Cliquez sur le bouton de mise à jour lorsque vous êtes prêt et acceptez l’autorisation Windows.
 
 L’application signale le lancement du programme d’installation, pas une installation terminée et vérifiée : l’installation se termine après la fermeture de l’ancienne application. Vérifiez la version affichée après réouverture. Windows peut encore bloquer le programme d’installation non signé ou exiger une approbation du service informatique.
 

@@ -4,7 +4,7 @@
 [🇺🇸 English](../SCREENSHOTS.md) · [🇧🇷 Português](../pt-BR/SCREENSHOTS.md) · [🇪🇸 Español](../es/SCREENSHOTS.md) · [🇨🇳 简体中文](../zh-CN/SCREENSHOTS.md) · [🇫🇷 Français](SCREENSHOTS.md) · [🇯🇵 日本語](../ja/SCREENSHOTS.md) · [🇮🇳 हिन्दी](../hi/SCREENSHOTS.md) · [🇸🇦 العربية](../ar/SCREENSHOTS.md)
 <!-- /language-selector -->
 
-**1.8.12 — Envoyez des idées sans encombrer le menu**
+**1.8.13 — Envoyez des idées sans encombrer le menu**
 
 Envoyer des idées apparaît juste au-dessus de À propos du développement. Le formulaire accessible accepte un titre (120 caractères maximum) et une description (1000). Ouvrir l’e-mail avec l’idée demande l’ouverture de la messagerie par défaut avec le destinataire fixe contato@consultoriaexcelencia.com.br, l’objet et le message remplis. Vérifiez et envoyez depuis cette application : Power Portal n’envoie rien automatiquement et ne confirme pas la livraison. Configurez un client par défaut si nécessaire ou envoyez manuellement. Aucune donnée du modèle, aucun fichier ni identifiant n’est joint ; aucun brouillon n’est enregistré sur disque. Ne saisissez pas d’informations confidentielles. Les erreurs sont explicites et conservent le texte pour réessayer ou copier. Le formulaire fonctionne hors ligne ; l’envoi dépend du compte et du réseau.
 
@@ -60,7 +60,7 @@ Performances de l’actualisation se trouve directement sous Carte des relations
 
 [Retour à l’accueil](../../README.fr.md) · [Installer](INSTALLATION.md) · [Guide de sécurité](USAGE.md)
 
-**Captures de l’application : Power Portal Desktop 1.8.12, interface dans la langue sélectionnée (français).**
+**Captures de l’application : Power Portal Desktop 1.8.13, interface dans la langue sélectionnée (français).**
 Les captures utilisent des **métadonnées et valeurs de requêtes synthétiques de démonstration**, et non un PBIX client. Les états connectés illustrent les actions prises en charge par l’interface ; aucun modèle client n’a été modifié pour créer ces images. Les libellés du sélecteur de fichiers natif peuvent suivre la langue de Windows. La capture réelle du ruban Power BI a été fournie par le propriétaire et recadrée pour supprimer le titre privé du fichier ; elle conserve son portugais d’origine.
 
 Les flèches de relation sont désormais placées sur la courbe et pivotent selon sa direction locale, y compris pour les liens diagonaux ou inversés. Les flèches SVG agrandies à 36 × 26 unités restent noires avec un contour blanc de 3 unités, indépendamment de la couleur du lien. Le filtrage unidirectionnel reste de la destination vers la source ; le bidirectionnel affiche deux flèches opposées. Le filtrage automatique conserve le point d’interrogation. Ce changement est uniquement visuel.
@@ -123,7 +123,7 @@ Un lancement depuis le ruban Outils externes transmet automatiquement la connexi
 
 ![Nouvelle version disponible avec Mettre à jour maintenant et avertissement d’autorisation/de modifications non envoyées](../images/fr/update-available.png)
 
-La capture utilise un **résultat synthétique d’une future version 1.8.12** pour montrer la notification dans la version 1.8.12. Elle ne prétend pas que 1.8.12 a été publié. Les utilisateurs de 1.6.2 ou d’une version ultérieure peuvent désormais recevoir la véritable notification de 1.8.12.
+La capture utilise un **résultat synthétique d’une future version 1.8.13** pour montrer la notification dans la version 1.8.13. Elle ne prétend pas que 1.8.13 a été publié. Les utilisateurs de 1.6.2 ou d’une version ultérieure peuvent désormais recevoir la véritable notification de 1.8.13.
 
 En 1.6.4, la bannière ambrée reste visible pendant le défilement et s’anime doucement, sauf si la réduction des animations est activée. Aucune bannière « à jour » permanente n’occupe de l’espace.
 
@@ -205,7 +205,7 @@ Le nouvel outil réservé à Desktop affiche les liens réels entre les tables, 
 
 Sélectionnez une ligne pour examiner ses colonnes exactes, sa cardinalité, le sens du filtre et l’état actif. **Appliquer la relation à Power BI** ou **Supprimer la relation dans Power BI** valide chaque modification après confirmation native et sauvegarde. Les projets importés restent en lecture seule. Le style ne renomme pas les tables et ne change pas le diagramme natif de Power BI. [Parcours complet et limites de sécurité](RELATIONSHIPS.md).
 
-Dans la version 1.8.12, cliquez ou faites glisser entre des colonnes pour préparer un brouillon en pointillés, puis vérifiez-le/appliquez-le. Faites un clic droit sur une ligne pour choisir sa couleur, la modifier ou la supprimer. Les paramètres de groupe proposent des images PNG/JPEG locales et davantage d’icônes ; faites glisser l’arrière-plan ou l’en-tête du groupe. Les tables de date/heure automatiques sont masquées par défaut. **Actualiser le diagramme depuis Power BI** relit les modifications externes sans copier les coordonnées de la disposition native. **Détecter automatiquement les relations** lance la détection native de Desktop après confirmation et sauvegarde ; examinez et fermez ses dialogues avant de choisir **Terminer la détection et actualiser le diagramme**.
+Dans la version 1.8.13, cliquez ou faites glisser entre des colonnes pour préparer un brouillon en pointillés, puis vérifiez-le/appliquez-le. Faites un clic droit sur une ligne pour choisir sa couleur, la modifier ou la supprimer. Les paramètres de groupe proposent des images PNG/JPEG locales et davantage d’icônes ; faites glisser l’arrière-plan ou l’en-tête du groupe. Les tables de date/heure automatiques sont masquées par défaut. **Actualiser le diagramme depuis Power BI** relit les modifications externes sans copier les coordonnées de la disposition native. **Détecter automatiquement les relations** lance la détection native de Desktop après confirmation et sauvegarde ; examinez et fermez ses dialogues avant de choisir **Terminer la détection et actualiser le diagramme**.
 
 <a name="power-bi-tv-tool"></a>
 ### Power BI TV Tool
@@ -286,3 +286,7 @@ Survolez une carte ou sélectionnez-la au clavier pour afficher cadre et halo do
 ## Accueil et préférence de démarrage enregistrée
 
 La page d’accueil explique comment ouvrir un fichier dans Power BI Desktop, rechercher son modèle ouvert et envoyer les modifications prises en charge après confirmation. Afficher cet accueil à chaque ouverture est activé par défaut ; désactivez-le pour masquer la présentation aux prochains démarrages. Continuer vers les outils ferme uniquement la présentation actuelle. Bienvenue sur l’accueil permet de la rouvrir et de réactiver le bouton. Le réglage reste dans le profil local, séparé de l’édition Store. Huit langues et le clavier sont pris en charge. Ouvrir cet écran ne modifie aucun modèle. Faites une copie avant et enregistrez le PBIX dans Power BI après. Les tests ont vérifié de vrais redémarrages, la persistance, la recherche de modèles et la mise en page traduite. Les opérations étaient simulées ; aucune donnée réelle n’a été modifiée.
+
+## Accueil en fenêtre modale et installation illustrée
+
+L’accueil apparaît désormais dans une fenêtre modale centrée, et non dans le contenu de la page. L’arrière-plan est bloqué et le focus clavier reste dans la fenêtre. Échap ou Continuer vers les outils ferme uniquement la présentation actuelle. Le bouton de démarrage enregistré et Bienvenue sur l’accueil sont conservés. La fin de l’installation explique Outils externes > Power Portal dans Power BI Desktop et affiche l’image de référence fournie. Si Power BI était déjà ouvert, fermez-le puis rouvrez-le. Les huit langues sont prises en charge ; l’image montre le ruban en portugais. L’option existante de lancer Power Portal est conservée ; elle ne clique pas automatiquement dans Power BI. Aucun modèle n’est modifié par l’accueil.

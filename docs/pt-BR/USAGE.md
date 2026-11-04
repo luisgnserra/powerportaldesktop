@@ -4,7 +4,7 @@
 [🇺🇸 English](../USAGE.md) · [🇧🇷 Português](USAGE.md) · [🇪🇸 Español](../es/USAGE.md) · [🇨🇳 简体中文](../zh-CN/USAGE.md) · [🇫🇷 Français](../fr/USAGE.md) · [🇯🇵 日本語](../ja/USAGE.md) · [🇮🇳 हिन्दी](../hi/USAGE.md) · [🇸🇦 العربية](../ar/USAGE.md)
 <!-- /language-selector -->
 
-**1.8.12 — Envie ideias de melhorias sem apertar o menu**
+**1.8.13 — Envie ideias de melhorias sem apertar o menu**
 
 Enviar ideias agora fica imediatamente acima de Sobre o desenvolvimento. O formulário acessível aceita título (até 120 caracteres) e descrição (até 1000). Abrir e-mail com a ideia solicita a abertura do aplicativo de e-mail padrão com destinatário fixo contato@consultoriaexcelencia.com.br, assunto e mensagem preenchidos. Revise e envie nesse aplicativo: o Power Portal não envia automaticamente nem confirma entrega. Se não abrir, configure um cliente padrão ou envie manualmente. Não são anexados dados do modelo, arquivos ou credenciais, e o formulário não salva rascunhos em disco. Não inclua informações confidenciais. Erros são explícitos e preservam o texto para tentar novamente ou copiar. O formulário funciona offline até abrir o aplicativo de e-mail; a entrega depende da sua conta e conexão.
 
@@ -161,7 +161,7 @@ O aplicativo não envia arquivos, metadados, linhas ou credenciais das fontes ao
 
 [Configuração](CONFIGURATION.md) · [Solução de problemas](TROUBLESHOOTING.md)
 
-Na 1.8.12, desenhar só prepara um rascunho: clique/arraste pares exatos de colunas e revise antes de aplicar. Exclusão pelo botão direito usa a mesma confirmação e backup. A detecção nativa é separada e pode criar várias ligações: revise no Power BI, feche os diálogos e conclua no Power Portal antes de gravar ou atualizar. Imagens de grupos e preferência de exibição ficam somente no diagrama. [Novo fluxo de relacionamentos](RELATIONSHIPS.md#native-automatic-relationship-detection).
+Na 1.8.13, desenhar só prepara um rascunho: clique/arraste pares exatos de colunas e revise antes de aplicar. Exclusão pelo botão direito usa a mesma confirmação e backup. A detecção nativa é separada e pode criar várias ligações: revise no Power BI, feche os diálogos e conclua no Power Portal antes de gravar ou atualizar. Imagens de grupos e preferência de exibição ficam somente no diagrama. [Novo fluxo de relacionamentos](RELATIONSHIPS.md#native-automatic-relationship-detection).
 
 <a name="refresh-performance"></a>
 ## Desempenho de Atualização
@@ -177,3 +177,7 @@ A conclusao automatica exige termino observado dos comandos de atualizacao e jan
 ## Boas-vindas e preferência de exibição salva
 
 A página inicial explica como abrir o arquivo no Power BI Desktop, procurar seu modelo aberto e enviar alterações compatíveis com confirmação. Mostrar boas-vindas sempre que abrir vem ligado; desligue para ocultar a apresentação nas próximas aberturas. Continuar para as ferramentas fecha apenas a apresentação atual. Boas-vindas na página inicial permite reabrir e reativar o toggle. A escolha fica no perfil local, independente da edição Store. Há oito idiomas e acesso por teclado. Abrir essa tela não altera modelos. Faça uma cópia antes de alterar e salve o PBIX no Power BI depois. Os testes verificaram reinícios reais do processo, estados ligado/desligado salvos, descoberta de modelos e layout traduzido. As operações de modelo foram simuladas; nenhum dado real foi alterado.
+
+## Pop-up de boas-vindas e instalador ilustrado
+
+As boas-vindas agora abrem em um pop-up modal centralizado, e não dentro do conteúdo da página inicial. O fundo fica bloqueado e o foco do teclado permanece no pop-up. Escape ou Continuar para as ferramentas fecha apenas a apresentação atual. O toggle salvo para exibir ao iniciar e o botão Boas-vindas na página inicial continuam funcionando. A conclusão do instalador explica Ferramentas Externas > Power Portal no Power BI Desktop e mostra a imagem de referência enviada. Se o Power BI já estava aberto, feche e reabra. Há suporte aos oito idiomas; a imagem de referência mostra a guia em português. A opção existente para iniciar o Power Portal ao concluir foi mantida; ela não clica automaticamente dentro do Power BI. As boas-vindas não alteram modelos.

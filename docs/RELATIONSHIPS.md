@@ -12,7 +12,7 @@ Send theme directly to Power BI returns focus to Power Portal after native impor
 
 [Back to home](../README.md) · [Screenshots](SCREENSHOTS.md) · [Model safety](USAGE.md)
 
-Available in **Power Portal Desktop 1.8.12**. This is a new Desktop-only tool, separate from Power BI's own Model view. It reads real table/column relationships and can apply confirmed changes to the connected local semantic model.
+Available in **Power Portal Desktop 1.8.13**. This is a new Desktop-only tool, separate from Power BI's own Model view. It reads real table/column relationships and can apply confirmed changes to the connected local semantic model.
 
 ![Relationship canvas with Facts and Dimensions groups, cardinalities and colored links](images/relationship-map.png)
 

@@ -5,6 +5,10 @@
 <!-- /language-selector -->
 
 <a name="1811"></a>
+## 1.8.13 - 2026-11-04
+
+- Ventana emergente de bienvenida e instalador ilustrado: La bienvenida ahora aparece en una ventana modal centrada, no dentro del contenido de Inicio. El fondo queda bloqueado y el foco del teclado permanece en la ventana. Escape o Continuar a las herramientas solo cierra la presentación actual. Se conservan el interruptor de inicio guardado y el botón Bienvenida. Al finalizar, el instalador explica Herramientas externas > Power Portal en Power BI Desktop y muestra la imagen de referencia proporcionada. Si Power BI estaba abierto, ciérrelo y vuelva a abrirlo. Admite ocho idiomas; la imagen muestra la cinta en portugués. Se mantiene la opción de iniciar Power Portal al finalizar; no hace clic automáticamente en Power BI. La bienvenida no modifica modelos.
+
 ## 1.8.12
 
 **Bienvenida y preferencia de inicio guardada**

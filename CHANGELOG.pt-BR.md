@@ -5,6 +5,10 @@
 <!-- /language-selector -->
 
 <a name="1811"></a>
+## 1.8.13 - 2026-11-04
+
+- Pop-up de boas-vindas e instalador ilustrado: As boas-vindas agora abrem em um pop-up modal centralizado, e não dentro do conteúdo da página inicial. O fundo fica bloqueado e o foco do teclado permanece no pop-up. Escape ou Continuar para as ferramentas fecha apenas a apresentação atual. O toggle salvo para exibir ao iniciar e o botão Boas-vindas na página inicial continuam funcionando. A conclusão do instalador explica Ferramentas Externas > Power Portal no Power BI Desktop e mostra a imagem de referência enviada. Se o Power BI já estava aberto, feche e reabra. Há suporte aos oito idiomas; a imagem de referência mostra a guia em português. A opção existente para iniciar o Power Portal ao concluir foi mantida; ela não clica automaticamente dentro do Power BI. As boas-vindas não alteram modelos.
+
 ## 1.8.12
 
 **Boas-vindas e preferência de exibição salva**

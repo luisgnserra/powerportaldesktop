@@ -4,7 +4,7 @@
 [🇺🇸 English](../USAGE.md) · [🇧🇷 Português](../pt-BR/USAGE.md) · [🇪🇸 Español](../es/USAGE.md) · [🇨🇳 简体中文](../zh-CN/USAGE.md) · [🇫🇷 Français](USAGE.md) · [🇯🇵 日本語](../ja/USAGE.md) · [🇮🇳 हिन्दी](../hi/USAGE.md) · [🇸🇦 العربية](../ar/USAGE.md)
 <!-- /language-selector -->
 
-**1.8.12 — Envoyez des idées sans encombrer le menu**
+**1.8.13 — Envoyez des idées sans encombrer le menu**
 
 Envoyer des idées apparaît juste au-dessus de À propos du développement. Le formulaire accessible accepte un titre (120 caractères maximum) et une description (1000). Ouvrir l’e-mail avec l’idée demande l’ouverture de la messagerie par défaut avec le destinataire fixe contato@consultoriaexcelencia.com.br, l’objet et le message remplis. Vérifiez et envoyez depuis cette application : Power Portal n’envoie rien automatiquement et ne confirme pas la livraison. Configurez un client par défaut si nécessaire ou envoyez manuellement. Aucune donnée du modèle, aucun fichier ni identifiant n’est joint ; aucun brouillon n’est enregistré sur disque. Ne saisissez pas d’informations confidentielles. Les erreurs sont explicites et conservent le texte pour réessayer ou copier. Le formulaire fonctionne hors ligne ; l’envoi dépend du compte et du réseau.
 
@@ -161,7 +161,7 @@ L’application n’envoie pas au portail les fichiers du modèle, métadonnées
 
 [Configuration](CONFIGURATION.md) · [Dépannage](TROUBLESHOOTING.md)
 
-Dans la version 1.8.12, le dessin de relations ne fait que préparer un brouillon : cliquez ou faites glisser entre des paires de colonnes exactes et vérifiez-le avant de l’appliquer. La suppression par clic droit utilise la même confirmation et la même sauvegarde. La détection automatique native est distincte et peut créer plusieurs liens : examinez-les dans Power BI, fermez ses dialogues, puis terminez dans Power Portal avant toute autre écriture ou mise à jour. Les images locales de groupe et les préférences de visibilité sont enregistrées uniquement dans le diagramme. [Nouveau parcours des relations](RELATIONSHIPS.md#native-automatic-relationship-detection).
+Dans la version 1.8.13, le dessin de relations ne fait que préparer un brouillon : cliquez ou faites glisser entre des paires de colonnes exactes et vérifiez-le avant de l’appliquer. La suppression par clic droit utilise la même confirmation et la même sauvegarde. La détection automatique native est distincte et peut créer plusieurs liens : examinez-les dans Power BI, fermez ses dialogues, puis terminez dans Power Portal avant toute autre écriture ou mise à jour. Les images locales de groupe et les préférences de visibilité sont enregistrées uniquement dans le diagramme. [Nouveau parcours des relations](RELATIONSHIPS.md#native-automatic-relationship-detection).
 
 <a name="refresh-performance"></a>
 ## Performances de l’actualisation
@@ -177,3 +177,7 @@ La fin automatique exige la fin observée des commandes d’actualisation et une
 ## Accueil et préférence de démarrage enregistrée
 
 La page d’accueil explique comment ouvrir un fichier dans Power BI Desktop, rechercher son modèle ouvert et envoyer les modifications prises en charge après confirmation. Afficher cet accueil à chaque ouverture est activé par défaut ; désactivez-le pour masquer la présentation aux prochains démarrages. Continuer vers les outils ferme uniquement la présentation actuelle. Bienvenue sur l’accueil permet de la rouvrir et de réactiver le bouton. Le réglage reste dans le profil local, séparé de l’édition Store. Huit langues et le clavier sont pris en charge. Ouvrir cet écran ne modifie aucun modèle. Faites une copie avant et enregistrez le PBIX dans Power BI après. Les tests ont vérifié de vrais redémarrages, la persistance, la recherche de modèles et la mise en page traduite. Les opérations étaient simulées ; aucune donnée réelle n’a été modifiée.
+
+## Accueil en fenêtre modale et installation illustrée
+
+L’accueil apparaît désormais dans une fenêtre modale centrée, et non dans le contenu de la page. L’arrière-plan est bloqué et le focus clavier reste dans la fenêtre. Échap ou Continuer vers les outils ferme uniquement la présentation actuelle. Le bouton de démarrage enregistré et Bienvenue sur l’accueil sont conservés. La fin de l’installation explique Outils externes > Power Portal dans Power BI Desktop et affiche l’image de référence fournie. Si Power BI était déjà ouvert, fermez-le puis rouvrez-le. Les huit langues sont prises en charge ; l’image montre le ruban en portugais. L’option existante de lancer Power Portal est conservée ; elle ne clique pas automatiquement dans Power BI. Aucun modèle n’est modifié par l’accueil.

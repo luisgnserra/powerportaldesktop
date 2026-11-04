@@ -4,7 +4,7 @@
 [🇺🇸 English](../UPDATES.md) · [🇧🇷 Português](UPDATES.md) · [🇪🇸 Español](../es/UPDATES.md) · [🇨🇳 简体中文](../zh-CN/UPDATES.md) · [🇫🇷 Français](../fr/UPDATES.md) · [🇯🇵 日本語](../ja/UPDATES.md) · [🇮🇳 हिन्दी](../hi/UPDATES.md) · [🇸🇦 العربية](../ar/UPDATES.md)
 <!-- /language-selector -->
 
-**1.8.12 — Envie ideias de melhorias sem apertar o menu**
+**1.8.13 — Envie ideias de melhorias sem apertar o menu**
 
 Enviar ideias agora fica imediatamente acima de Sobre o desenvolvimento. O formulário acessível aceita título (até 120 caracteres) e descrição (até 1000). Abrir e-mail com a ideia solicita a abertura do aplicativo de e-mail padrão com destinatário fixo contato@consultoriaexcelencia.com.br, assunto e mensagem preenchidos. Revise e envie nesse aplicativo: o Power Portal não envia automaticamente nem confirma entrega. Se não abrir, configure um cliente padrão ou envie manualmente. Não são anexados dados do modelo, arquivos ou credenciais, e o formulário não salva rascunhos em disco. Não inclua informações confidenciais. Erros são explícitos e preservam o texto para tentar novamente ou copiar. O formulário funciona offline até abrir o aplicativo de e-mail; a entrega depende da sua conta e conexão.
 
@@ -59,12 +59,12 @@ A execução de desenvolvimento/código-fonte não baixa nem instala atualizaç�
 
 ![Aviso de atualização e botão Atualizar agora controlado pelo usuário](../images/pt-BR/update-available.png)
 
-O print mostra um **aviso futuro simulado da 1.8.12** dentro da 1.8.12, apenas para demonstrar a interface. Não anuncia a 1.8.12.
+O print mostra um **aviso simulado da 1.8.12** dentro da 1.8.13, apenas para demonstrar a interface. Não anuncia a 1.8.13.
 
 <a name="receive-version-1811-from-an-earlier-updater-enabled-version"></a>
-### Receber a versão 1.8.12 de uma versão anterior com atualizador
+### Receber a versão 1.8.13 de uma versão anterior com atualizador
 
-Com **1.6.2, 1.6.3 ou 1.6.4** instalada, reabra ou clique em **Verificar atualizações**. A versão estável publicada **1.8.12** deve aparecer com **Atualizar agora**. Não instale manualmente a 1.8.12 primeiro se quiser observar o aviso. Versões anteriores à 1.6.4 usam o aviso original; o destaque visual é mantido na 1.8.12. Clique quando estiver pronto e aprove a autorização do Windows.
+Com **1.6.2, 1.6.3 ou 1.6.4** instalada, reabra ou clique em **Verificar atualizações**. A versão estável publicada **1.8.13** deve aparecer com **Atualizar agora**. Não instale manualmente a 1.8.13 primeiro se quiser observar o aviso. Versões anteriores à 1.6.4 usam o aviso original; o destaque visual é mantido na 1.8.13. Clique quando estiver pronto e aprove a autorização do Windows.
 
 O aplicativo informa o início do instalador, não uma instalação concluída e verificada: ela termina após o aplicativo antigo fechar. Confira a versão ao reabrir. O Windows ainda pode bloquear o instalador sem assinatura ou exigir aprovação da TI.
 

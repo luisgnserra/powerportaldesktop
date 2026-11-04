@@ -14,7 +14,7 @@
 | 🇸🇦 العربية | [README.ar.md](README.ar.md) |
 <!-- /language-selector -->
 
-**1.8.12 — Envoyez des idées sans encombrer le menu**
+**1.8.13 — Envoyez des idées sans encombrer le menu**
 
 Envoyer des idées apparaît juste au-dessus de À propos du développement. Le formulaire accessible accepte un titre (120 caractères maximum) et une description (1000). Ouvrir l’e-mail avec l’idée demande l’ouverture de la messagerie par défaut avec le destinataire fixe contato@consultoriaexcelencia.com.br, l’objet et le message remplis. Vérifiez et envoyez depuis cette application : Power Portal n’envoie rien automatiquement et ne confirme pas la livraison. Configurez un client par défaut si nécessaire ou envoyez manuellement. Aucune donnée du modèle, aucun fichier ni identifiant n’est joint ; aucun brouillon n’est enregistré sur disque. Ne saisissez pas d’informations confidentielles. Les erreurs sont explicites et conservent le texte pour réessayer ou copier. Le formulaire fonctionne hors ligne ; l’envoi dépend du compte et du réseau.
 
@@ -86,13 +86,13 @@ Performances de l’actualisation se trouve directement sous Carte des relations
 <a name="option-1-install-with-a-few-clicks"></a>
 ### Option 1 : installer en quelques clics
 
-1. [Téléchargez Power Portal Desktop 1.8.12 pour Windows x64](https://github.com/luisgnserra/powerportaldesktop/releases/download/v1.8.12/PowerPortal-Setup-1.8.12-x64.exe).
+1. [Téléchargez Power Portal Desktop 1.8.13 pour Windows x64](https://github.com/luisgnserra/powerportaldesktop/releases/download/v1.8.13/PowerPortal-Setup-1.8.13-x64.exe).
 2. Exécutez le programme d’installation et acceptez la demande d’autorisation administrateur de Windows.
 3. Choisissez le dossier d’installation et la langue par défaut.
 4. Terminez l’installation, puis fermez et rouvrez Power BI Desktop.
 5. Ouvrez un PBIX et sélectionnez **Outils externes > Power Portal**.
 
-**Windows peut signaler un éditeur inconnu :** la version 1.8.12 n’est pas signée numériquement. Ne continuez que si vous faites confiance à cette distribution. Si votre organisation bloque les logiciels non signés, contactez le service informatique au lieu de contourner sa politique.
+**Windows peut signaler un éditeur inconnu :** la version 1.8.13 n’est pas signée numériquement. Ne continuez que si vous faites confiance à cette distribution. Si votre organisation bloque les logiciels non signés, contactez le service informatique au lieu de contourner sa politique.
 
 [Dernière version](https://github.com/luisgnserra/powerportaldesktop/releases/latest) · [Guide d’installation](docs/fr/INSTALLATION.md) · [Configuration](docs/fr/CONFIGURATION.md) · [Dépannage](docs/fr/TROUBLESHOOTING.md)
 
@@ -105,7 +105,7 @@ Le programme d’installation ajoute **Power Portal** aux **Outils externes** de
 
 La capture du ruban fournie est en portugais : **Ferramentas externas** signifie **Outils externes**. Power Portal ouvre une **fenêtre distincte connectée à Power BI**, et non un visuel intégré au rapport ou un nouveau volet interne de Power BI.
 
-![Accueil de Power Portal 1.8.12, barre latérale complète et avis de connexion au démarrage](docs/images/fr/home.png)
+![Accueil de Power Portal 1.8.13, barre latérale complète et avis de connexion au démarrage](docs/images/fr/home.png)
 
 **Power BI est déjà ouvert ?** Lorsqu’il est lancé depuis un raccourci, Power Portal détecte les modèles locaux ouverts et affiche un avis de connexion. Choisissez **Rechercher les modèles ouverts**, sélectionnez votre fichier et connectez-vous. Vous pourrez ensuite interroger ses données et lui renvoyer les modifications prises en charge, après confirmation.
 
@@ -122,7 +122,7 @@ Comprenez les liens réels entre les tables sur un canevas où vous pouvez les d
 
 Créez, modifiez, activez/désactivez et supprimez des relations dans le modèle Power BI connecté **après confirmation et sauvegarde des métadonnées**. Le style visuel reste dans Power Portal ; il ne renomme pas les tables et ne modifie pas la disposition native de Power BI. [Tutoriel complet sur les relations](docs/fr/RELATIONSHIPS.md).
 
-Dans la version 1.8.12, cliquez ou faites glisser entre des colonnes exactes pour préparer un lien ; faites un clic droit sur les lignes pour choisir leur couleur, les modifier et les supprimer avec confirmation. Les groupes prennent en charge des images locales et plus de 30 icônes. Les tables de date/heure automatiques sont masquées par défaut avec une option de visibilité. Actualisez depuis Power BI après des modifications externes, ou invoquez la détection automatique native de Desktop avec une sauvegarde préalable et une étape distincte de vérification/finalisation.
+Dans la version 1.8.13, cliquez ou faites glisser entre des colonnes exactes pour préparer un lien ; faites un clic droit sur les lignes pour choisir leur couleur, les modifier et les supprimer avec confirmation. Les groupes prennent en charge des images locales et plus de 30 icônes. Les tables de date/heure automatiques sont masquées par défaut avec une option de visibilité. Actualisez depuis Power BI après des modifications externes, ou invoquez la détection automatique native de Desktop avec une sauvegarde préalable et une étape distincte de vérification/finalisation.
 
 <a name="built-in-update-checks"></a>
 ### Recherche de mises à jour intégrée
@@ -133,7 +133,7 @@ Windows demande l’autorisation administrateur. Seul Power Portal se ferme ; Po
 
 ![Notification d’une nouvelle version et bouton Mettre à jour maintenant](docs/images/fr/update-available.png)
 
-La capture utilise une **notification simulée d’une future version 1.8.12** pour illustrer l’interface, et non pour annoncer une version publiée. **La version 1.8.12 est désormais publiée :** les utilisateurs de 1.6.2 ou d’une version ultérieure peuvent rouvrir l’application ou cliquer sur **Rechercher des mises à jour** pour la recevoir. [Guide des mises à jour](docs/fr/UPDATES.md).
+La capture utilise une **notification simulée de la version 1.8.12** pour illustrer l’interface, et non pour annoncer une version publiée. **La version 1.8.13 est désormais publiée :** les utilisateurs de 1.6.2 ou d’une version ultérieure peuvent rouvrir l’application ou cliquer sur **Rechercher des mises à jour** pour la recevoir. [Guide des mises à jour](docs/fr/UPDATES.md).
 
 **Vous utilisez 1.6.1 ou une version antérieure ? Installez manuellement 1.6.2 une fois** pour activer cette fonction. Vous pouvez aussi utiliser **Rechercher des mises à jour** pour réessayer après une vérification échouée ou hors ligne. L’outil de mise à jour n’installe jamais quoi que ce soit simplement parce que vous ouvrez l’application.
 
@@ -145,13 +145,13 @@ Ouvrez **Windows PowerShell 5.1 ou PowerShell 7 sous Windows** :
 ```powershell
 $script = Join-Path $env:TEMP 'Install-PowerPortal.ps1'
 [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
-Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/luisgnserra/powerportaldesktop/v1.8.12/install.ps1' -OutFile $script
+Invoke-WebRequest -UseBasicParsing 'https://raw.githubusercontent.com/luisgnserra/powerportaldesktop/v1.8.13/install.ps1' -OutFile $script
 # Review the downloaded script before running it.
 Get-Content -LiteralPath $script
 & $script
 ```
 
-L’assistant télécharge la **version 1.8.12**, vérifie sa somme SHA-256 figée et ouvre le même programme d’installation. Il n’installe ni Node.js, ni PHP, ni SDK .NET et ne compile rien.
+L’assistant télécharge la **version 1.8.13**, vérifie sa somme SHA-256 figée et ouvre le même programme d’installation. Il n’installe ni Node.js, ni PHP, ni SDK .NET et ne compile rien.
 
 Pour une installation sans assistance, exécutez le même assistant depuis une **fenêtre PowerShell administrateur** :
 
@@ -280,3 +280,7 @@ Survolez une carte ou sélectionnez-la au clavier pour afficher cadre et halo do
 ## Accueil et préférence de démarrage enregistrée
 
 La page d’accueil explique comment ouvrir un fichier dans Power BI Desktop, rechercher son modèle ouvert et envoyer les modifications prises en charge après confirmation. Afficher cet accueil à chaque ouverture est activé par défaut ; désactivez-le pour masquer la présentation aux prochains démarrages. Continuer vers les outils ferme uniquement la présentation actuelle. Bienvenue sur l’accueil permet de la rouvrir et de réactiver le bouton. Le réglage reste dans le profil local, séparé de l’édition Store. Huit langues et le clavier sont pris en charge. Ouvrir cet écran ne modifie aucun modèle. Faites une copie avant et enregistrez le PBIX dans Power BI après. Les tests ont vérifié de vrais redémarrages, la persistance, la recherche de modèles et la mise en page traduite. Les opérations étaient simulées ; aucune donnée réelle n’a été modifiée.
+
+## Accueil en fenêtre modale et installation illustrée
+
+L’accueil apparaît désormais dans une fenêtre modale centrée, et non dans le contenu de la page. L’arrière-plan est bloqué et le focus clavier reste dans la fenêtre. Échap ou Continuer vers les outils ferme uniquement la présentation actuelle. Le bouton de démarrage enregistré et Bienvenue sur l’accueil sont conservés. La fin de l’installation explique Outils externes > Power Portal dans Power BI Desktop et affiche l’image de référence fournie. Si Power BI était déjà ouvert, fermez-le puis rouvrez-le. Les huit langues sont prises en charge ; l’image montre le ruban en portugais. L’option existante de lancer Power Portal est conservée ; elle ne clique pas automatiquement dans Power BI. Aucun modèle n’est modifié par l’accueil.
