@@ -4,7 +4,7 @@
 [🇺🇸 English](SCREENSHOTS.md) · [🇧🇷 Português](pt-BR/SCREENSHOTS.md) · [🇪🇸 Español](es/SCREENSHOTS.md) · [🇨🇳 简体中文](zh-CN/SCREENSHOTS.md) · [🇫🇷 Français](fr/SCREENSHOTS.md) · [🇯🇵 日本語](ja/SCREENSHOTS.md) · [🇮🇳 हिन्दी](hi/SCREENSHOTS.md) · [🇸🇦 العربية](ar/SCREENSHOTS.md)
 <!-- /language-selector -->
 
-**1.8.11 — Send improvement ideas without crowding the menu**
+**1.8.12 — Send improvement ideas without crowding the menu**
 
 Send ideas now appears immediately above About development. The accessible dialog accepts an idea title (up to 120 characters) and description (up to 1000). Open email with idea requests your default email app with the fixed recipient contato@consultoriaexcelencia.com.br, subject and message filled in. Review and send in that app: Power Portal does not send automatically or confirm delivery. If no app opens, configure a default email client or send manually. No model data, files or credentials are attached, and the form does not save drafts to disk. Do not enter confidential information. Errors are explicit and preserve your text for retrying or copying. The form works offline up to handing off to the email app; actual delivery depends on your mail account/network.
 
@@ -60,7 +60,7 @@ Refresh Performance is now immediately below Relationship map in the sidebar and
 
 [Back to home](../README.md) · [Install](INSTALLATION.md) · [Safety guide](USAGE.md)
 
-**Application screenshots: Power Portal Desktop 1.8.11, English interface.**
+**Application screenshots: Power Portal Desktop 1.8.12, English interface.**
 The screenshots use **synthetic demonstration metadata and query values**, not a customer PBIX. Connected states illustrate supported UI actions; no customer model was changed to make these images. Native file-picker labels can follow the Windows language. The actual Power BI ribbon screenshot was supplied by the owner and cropped to remove the private file title.
 
 Relationship arrows now sit directly on the curve and rotate along its local direction, including diagonal and reversed links. Larger 36 × 26 SVG arrowheads are always black with a 3-unit white outline, independently of the relationship line color. Single-direction filtering remains destination to source; bidirectional filtering shows two opposite arrows. Automatic filtering retains its question-mark indicator. This is a visual-only change.
@@ -117,7 +117,7 @@ Launching from the External Tools ribbon instead passes that Desktop instance's 
 
 ![New version available with Update now and the authorization/unsent-edits warning](images/update-available.png)
 
-The screenshot uses a **synthetic future 1.8.11 result** to show the notification in version 1.8.11. It is not a claim that 1.8.11 has been published. Users on 1.6.2 or newer can receive the real 1.8.11 notification now.
+The screenshot uses a **synthetic future 1.8.12 result** to show the notification in version 1.8.12. It is not a claim that 1.8.12 has been published. Users on 1.6.2 or newer can receive the real 1.8.12 notification now.
 
 In 1.6.4, the amber banner stays visible while scrolling and gently animates unless reduced motion is enabled. No persistent "up to date" banner occupies space.
 
@@ -191,7 +191,7 @@ The new Desktop-only tool shows real table links, cardinalities, filter arrows a
 
 Select a line to inspect its exact columns, cardinality, filter direction and active state. **Apply relationship to Power BI** or **Delete relationship in Power BI** commits each edit after native confirmation and backup. Imported projects remain read-only. Styling does not rename tables or change Power BI's native diagram. [Complete walkthrough and safety limits](RELATIONSHIPS.md).
 
-In 1.8.11, click or drag between columns to prepare a dashed draft, then review/apply. Right-click a line for color/edit/delete. Group settings offer local PNG/JPEG images and more icons; drag the group background or heading. Automatic date/time tables are hidden by default. **Refresh diagram from Power BI** re-reads external changes without copying native layout coordinates. **Autodetect relationships** starts Desktop's native detection after confirmation/backup; review and close its dialogs before **Finish detection and refresh diagram**.
+In 1.8.12, click or drag between columns to prepare a dashed draft, then review/apply. Right-click a line for color/edit/delete. Group settings offer local PNG/JPEG images and more icons; drag the group background or heading. Automatic date/time tables are hidden by default. **Refresh diagram from Power BI** re-reads external changes without copying native layout coordinates. **Autodetect relationships** starts Desktop's native detection after confirmation/backup; review and close its dialogs before **Finish detection and refresh diagram**.
 
 ### Power BI TV Tool
 
@@ -259,3 +259,7 @@ The twelve home cards now use the same navy-blue base as the sidebar (#041e43), 
 
 Hover or focus a card with the keyboard to reveal a golden frame and glow, a light sweep, a brighter scene, a circular launch arrow and a gold action. Pressing gives immediate visual feedback without delaying navigation. Enter/Space still activate the same tool. Windows/browser reduced-motion preferences stop movement while keeping static highlights and visible focus. Titles and actions remain outside the artwork and follow the selected language. These screenshots show static normal/hover states, not video.
 
+
+## Welcome screen and saved startup preference
+
+Home now explains how to open a file in Power BI Desktop, find its open model and send supported changes with confirmation. Show welcome every time I open the app is enabled by default; switch it off to hide the presentation on future launches. Continue to tools closes it only for the current session. Welcome on Home reopens it and lets you re-enable the switch. The setting is saved in the local user profile, independently of the Store edition. All eight languages and keyboard access are supported. Opening this screen does not modify models. Make a backup before changes and save the PBIX in Power BI afterwards. Tests verified real process restarts, saved on/off states, discovery routing and localized layout. Model operations were mocked; no real data was changed.

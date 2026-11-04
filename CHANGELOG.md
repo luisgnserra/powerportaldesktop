@@ -4,6 +4,12 @@
 [🇺🇸 English](CHANGELOG.md) · [🇧🇷 Português](CHANGELOG.pt-BR.md) · [🇪🇸 Español](CHANGELOG.es.md) · [🇨🇳 简体中文](CHANGELOG.zh-CN.md) · [🇫🇷 Français](CHANGELOG.fr.md) · [🇯🇵 日本語](CHANGELOG.ja.md) · [🇮🇳 हिन्दी](CHANGELOG.hi.md) · [🇸🇦 العربية](CHANGELOG.ar.md)
 <!-- /language-selector -->
 
+## 1.8.12
+
+**Welcome screen and saved startup preference**
+
+Home now explains how to open a file in Power BI Desktop, find its open model and send supported changes with confirmation. Show welcome every time I open the app is enabled by default; switch it off to hide the presentation on future launches. Continue to tools closes it only for the current session. Welcome on Home reopens it and lets you re-enable the switch. The setting is saved in the local user profile, independently of the Store edition. All eight languages and keyboard access are supported. Opening this screen does not modify models. Make a backup before changes and save the PBIX in Power BI afterwards. Tests verified real process restarts, saved on/off states, discovery routing and localized layout. Model operations were mocked; no real data was changed.
+
 ## 1.8.11
 
 **Send improvement ideas without crowding the menu**

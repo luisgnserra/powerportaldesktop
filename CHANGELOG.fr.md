@@ -5,6 +5,12 @@
 <!-- /language-selector -->
 
 <a name="1811"></a>
+## 1.8.12
+
+**Accueil et préférence de démarrage enregistrée**
+
+La page d’accueil explique comment ouvrir un fichier dans Power BI Desktop, rechercher son modèle ouvert et envoyer les modifications prises en charge après confirmation. Afficher cet accueil à chaque ouverture est activé par défaut ; désactivez-le pour masquer la présentation aux prochains démarrages. Continuer vers les outils ferme uniquement la présentation actuelle. Bienvenue sur l’accueil permet de la rouvrir et de réactiver le bouton. Le réglage reste dans le profil local, séparé de l’édition Store. Huit langues et le clavier sont pris en charge. Ouvrir cet écran ne modifie aucun modèle. Faites une copie avant et enregistrez le PBIX dans Power BI après. Les tests ont vérifié de vrais redémarrages, la persistance, la recherche de modèles et la mise en page traduite. Les opérations étaient simulées ; aucune donnée réelle n’a été modifiée.
+
 ## 1.8.11
 
 **Envoyez des idées sans encombrer le menu**

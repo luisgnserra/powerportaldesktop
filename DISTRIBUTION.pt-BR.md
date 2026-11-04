@@ -12,6 +12,6 @@ Este repositório não estabelece novos termos de licenciamento do aplicativo. P
 
 O instalador apresenta os termos das dependências Microsoft AMO/TOM. Os avisos de licenças de terceiros acompanham os componentes de execução instalados. Microsoft, Power BI e Microsoft Fabric são marcas da Microsoft; a identificação MVP não implica propriedade, patrocínio ou endosso da Microsoft.
 
-A versão 1.8.11 não possui assinatura digital. Obtenha-a nos Assets oficiais da Release, verifique o SHA-256 publicado e respeite as políticas de aprovação de software da sua organização.
+A versão 1.8.12 não possui assinatura digital. Obtenha-a nos Assets oficiais da Release, verifique o SHA-256 publicado e respeite as políticas de aprovação de software da sua organização.
 
 Os downloads ZIP/TAR automáticos “Source code” do GitHub contêm apenas os arquivos deste repositório de distribuição. Não são o aplicativo Power Portal, um instalador ou uma publicação do código-fonte do aplicativo.

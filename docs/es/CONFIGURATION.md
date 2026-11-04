@@ -111,3 +111,7 @@ Para restablecer las preferencias de interfaz, seleccione otro idioma o expanda 
 No hay claves de API, contraseñas, credenciales del portal ni archivos de configuración de código fuente que deba proporcionar para instalar.
 
 [Instalación](INSTALLATION.md) · [Uso y seguridad](USAGE.md) · [Comportamiento de las actualizaciones](UPDATES.md)
+
+## Bienvenida y preferencia de inicio guardada
+
+La página inicial explica cómo abrir un archivo en Power BI Desktop, buscar su modelo abierto y enviar cambios compatibles con confirmación. Mostrar bienvenida cada vez que abra la aplicación viene activado; desactívalo para ocultarla en futuros inicios. Continuar a las herramientas solo cierra la presentación actual. Bienvenida en Inicio permite reabrirla y reactivar el interruptor. La opción se guarda en el perfil local, separado de la edición Store. Admite ocho idiomas y teclado. Abrir esta pantalla no modifica modelos. Guarda una copia antes y guarda el PBIX en Power BI después. Las pruebas verificaron reinicios reales, persistencia, búsqueda de modelos y diseño traducido. Las operaciones fueron simuladas; no se modificaron datos reales.

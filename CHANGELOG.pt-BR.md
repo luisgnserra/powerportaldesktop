@@ -5,6 +5,12 @@
 <!-- /language-selector -->
 
 <a name="1811"></a>
+## 1.8.12
+
+**Boas-vindas e preferência de exibição salva**
+
+A página inicial explica como abrir o arquivo no Power BI Desktop, procurar seu modelo aberto e enviar alterações compatíveis com confirmação. Mostrar boas-vindas sempre que abrir vem ligado; desligue para ocultar a apresentação nas próximas aberturas. Continuar para as ferramentas fecha apenas a apresentação atual. Boas-vindas na página inicial permite reabrir e reativar o toggle. A escolha fica no perfil local, independente da edição Store. Há oito idiomas e acesso por teclado. Abrir essa tela não altera modelos. Faça uma cópia antes de alterar e salve o PBIX no Power BI depois. Os testes verificaram reinícios reais do processo, estados ligado/desligado salvos, descoberta de modelos e layout traduzido. As operações de modelo foram simuladas; nenhum dado real foi alterado.
+
 ## 1.8.11
 
 **Envie ideias de melhorias sem apertar o menu**

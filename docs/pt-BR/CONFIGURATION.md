@@ -111,3 +111,7 @@ Para redefinir preferências, escolha outro idioma ou expanda o menu no aplicati
 Não há chaves de API, senhas, credenciais do portal ou arquivos de configuração de código-fonte para fornecer na instalação.
 
 [Instalação](INSTALLATION.md) · [Uso e segurança](USAGE.md) · [Comportamento das atualizações](UPDATES.md)
+
+## Boas-vindas e preferência de exibição salva
+
+A página inicial explica como abrir o arquivo no Power BI Desktop, procurar seu modelo aberto e enviar alterações compatíveis com confirmação. Mostrar boas-vindas sempre que abrir vem ligado; desligue para ocultar a apresentação nas próximas aberturas. Continuar para as ferramentas fecha apenas a apresentação atual. Boas-vindas na página inicial permite reabrir e reativar o toggle. A escolha fica no perfil local, independente da edição Store. Há oito idiomas e acesso por teclado. Abrir essa tela não altera modelos. Faça uma cópia antes de alterar e salve o PBIX no Power BI depois. Os testes verificaram reinícios reais do processo, estados ligado/desligado salvos, descoberta de modelos e layout traduzido. As operações de modelo foram simuladas; nenhum dado real foi alterado.

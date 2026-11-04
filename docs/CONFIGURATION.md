@@ -106,3 +106,7 @@ To reset UI preferences, select another language or expand the sidebar in the ap
 There are no API keys, passwords, portal credentials or source-code configuration files to supply for installation.
 
 [Installation](INSTALLATION.md) · [Usage and safety](USAGE.md) · [Update behavior](UPDATES.md)
+
+## Welcome screen and saved startup preference
+
+Home now explains how to open a file in Power BI Desktop, find its open model and send supported changes with confirmation. Show welcome every time I open the app is enabled by default; switch it off to hide the presentation on future launches. Continue to tools closes it only for the current session. Welcome on Home reopens it and lets you re-enable the switch. The setting is saved in the local user profile, independently of the Store edition. All eight languages and keyboard access are supported. Opening this screen does not modify models. Make a backup before changes and save the PBIX in Power BI afterwards. Tests verified real process restarts, saved on/off states, discovery routing and localized layout. Model operations were mocked; no real data was changed.
